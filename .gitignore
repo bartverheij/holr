@@ -1,0 +1,7 @@
+*.aux
+evidential-reasoning.bbl
+*.blg
+evidential-reasoning.log
+evidential-reasoning.pdf
+*.toc
+evidential-reasoning.synctex
