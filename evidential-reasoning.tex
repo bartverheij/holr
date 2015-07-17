@@ -177,6 +177,107 @@ In the following sections, each of these questions is addressed. Before that, we
 \subsection{Probabilities}
 
 
+\section{Conflicting evidence}
+
+So far we assessed the evidential strength of pieces of evidence considered individually.
+When different pieces of evidence are combined, as realistically happens in criminal cases, we might find that they conflict with one another.
+For instance, a witness claims that the criminal has blond hair, but the suspect whose DNA matched that of the trace at the crime scene, has dark hair. What to do in case of such conflicts? We first need a general account of how to 
+model the \textit{combination} of two pieces of evidence E1 and E2, each supporting, with its own degree of strength, the same hypothesis H. If the strength of a single pieces of 
+evidence $E$ depends on how much it impacts $P(H)$, the same applies to 
+the combination of two pieces of evidence. 
+Bayes' theorem shows us how the combination of E1 and E2 
+impacts the probability $P(H)$, as follows:
+%
+\[\frac{P(H| E1, E2)}{P(\neg H| E1, E2)}=\frac{P(E1\wedge E2|H)}{P(E1\wedge E2|\neg H)}\times \frac{P(H)}{P(\neg H)}.\]
+%
+If E1 and E2 are independent and do not influence one another, we have:
+%
+\[\frac{P(H| E1, E2)}{P(\neg H| E1, E2)}=\frac{P(E1|H)}{P(E1|\neg H)}\times\frac{P(E2|H)}{P(E2|\neg H)}\times \frac{P(H)}{P(\neg H)}.\]
+%
+\[\frac{P(H| E1, E2)}{P(\neg H| E1, E2)}= LR1\times LR2 \times \frac{P(H)}{P(\neg H)}.\]
+%
+Suppose, in a criminal case, DNA evidence shows that the crime traces match with defendant's 
+DNA. The DNA match has a likelihood ratio, relative to hypothesis $S$, of 1,000. Another piece of evidence, independent of the DNA evidence, shows that the crime scene blood type is the same as the defendant's blood type. Suppose the likelihood ratio is now just 10. 
+So, the combined evidential strength of the two pieces 
+of evidence is $1,000\times 10=10,000$. This is an example of how two pieces of evidence converge  toward the 
+same hypothesis.
+
+More generally, two pieces of evidence E1 and E2 are \textit{convergent}, relative to a hypothesis H, whenever they each impact 
+upwards the probability $P(H)$, or in other words, whenever their likelihood ratios relative to H are 
+both positive, as follows:
+%
+\[\textsc{Convergence: } LR1=\frac{P(E1| H)}{P(E1|\neg H)}>1 \text{ and } LR2=\frac{P(E2|H)}{P(E2|\neg H)}>1.\]
+%
+Let's now examine when two pieces of evidence \textit{conflict} with one another. 
+[SHOULD WE TALK ABOUT ARGUMENT HERE SOMEWHERE?\footnote{In terms of arguments, if two pieces of evidence conflict, two divergent arguments can be constructed. One will have E1 as its premise and H as its conclusion. The other will have 
+E2 as its premise and not-H as its conclusion (or a proposition that entails the negation of H). Indeed, the arguments in question will consist of other premises besides E1 and E2. So, in order to locate the source of the conflict in E1 and E2,  the only difference between the two arguments must be in the premises 
+corresponding to E1 and E2.}] In probabilistic terms, the fact that the two pieces of evidence, E1 and E2, are in conflict relative to a hypothesis H can be represented as follows. One piece of evidence E1 raises the probability of H, while the other piece of evidence E2 raises the probability of not-H (or lowers the probability of H). 
+So, $P(H)<P(H|E1)$, but $P(H)>P(H|E2)$. In terms of likelihood ratios, this means that
+%
+\[\textsc{Conflict: } LR1=\frac{P(E1| H)}{P(E1|\neg H)}>1 \text{ and } LR2=\frac{P(E2|H)}{P(E2|\neg H)}<1.\]
+%
+How can we weight the relative strength of two conflicting pieces of evidence?
+Consider an example. At trial, there are two conflicting eyewitness testimonies W1 and W2. One witness asserts that the defendant was around the scene of the crime 
+when the crime was committed, abbreviated SC. The other witness offers an alibi for the defendant and asserts that she was with the defendant 
+during the time of the crime, abbreviated $\neg SC$.  Suppose SC has a probability of 0.5, regardless of the testimonies W1 or W2.
+Suppose, also, that W1 brings the probability of SC to 0.9, whereas W2 brings the probability of H to 0.1 (and thus brings the probability of $\neg SC$ to 0.9). Each testimony has the \textit{same  yet divergent impact} on the probability $P(SC)$. Testimony $W1$ raises the probability of $SC$ while testimony W1 lowers the probability SC. 
+They each do so to the same extent but in opposite directions. 
+Absent any further information about the trustworthiness of W1 and W2, the two testimonies should cancel one another. 
+The evidential strength of each testimony W1 and W2  can be represented, in terms of likelihood ratios, 
+as follows:
+%
+\[LR1=\frac{P(W1| SC)}{P(W1|\neg SC)}=\frac{0.9}{0.1}=9 \text{ and } LR2=\frac{P(W2|SC)}{P(W2|\neg SC)}=\frac{0.1}{0.9}=\frac{1}{9}.\]
+%
+The combined evidential strength of the two testimonies, $LR1\times LR2=9\times \frac{1}{9}=1$.
+When combined, two two testimonies have no impact whatsoever on the probability of SC.
+As expected, absent any other information about W1 and W2, the two testimonies 
+cancel one another. Their combined evidential strength is therefore null. What should the posterior 
+probability $P(SC| W1, W2)$ be? If the combined evidential strength of W1 and W2, is null, then 
+$P(SC| W1, W2)=P(SC)$. In our case, $P(SC| W1, W2)=P(SC)=0.5$,  because the value originally assigned to $P(SC)$, 
+regardless of the testimonies, was 0.5.
+
+
+
+In the British case, R v Adams [1996] 2 Cr App R 467, there was a conflict between DNA evidence and other forms of evidence. The victim was raped and Adam's DNA matched with the traces of semen found on the victim's body. The probability that a random person would match those traces was estimated to be 1 in 200 million. By contrast, the victim gave a description of the perpetrator that did not match Adam's features. Second, when the victim was asked whether Adam raped her, she was unable to identify him. Finally, Adam had an alibi: his girlfriend claimed he was with her during the time of crime. For one thing, DNA evidence suggests Adam's guilt. For the other thing, Adam's alibi, the victim's failure to recognize Adam as the perpetrator, and the fact that Adams did not match the victim's description of the perpetrator, all these pieces of information point toward Adam's innocence. How can we handle conflicting evidence? 
+
+We can propose a simple analysis of the case based on combining likelihood ratios. 
+Let;s openly consider the DNS evidence match, call it M; Adam's alibi, call it A; and the hypothesis 
+that visited the crime scene, call it SC. As far as the DNA evidence match is concerned, 
+the likelihood ratio of interests is as follows:
+%
+\[LR_M=\frac{P(M| SC)}{P(M| \neg SC)}=200,000,000.\]
+%
+When it comes to alibi a possible assignment for the like hood ratios is 
+as follows:
+%
+\[LR_A=\frac{P(A| SC)}{P(A| \neg SC)}=\frac{\frac{1}{100}}{\frac{99}{100}} \approx \frac{1}{100}.\]
+%
+We can see that $LR_A$ is below one, so the alibi doe snot support the hypothesis SC as expected.
+The basic idea behind the assignment $LR_A=1/100$ is this. 
+Adams's girlfriend would offer an alibi to his boyfriend with a probability of 1 in 100 
+even when his boyfriend was in fact not with her. S0, $P(A| \neg SC)=1/100$. This is a low probability. 
+The assumption is that Adam's alibi was a good alibi and that Adam's girlfriend was trustworthy. 
+If at trial evidence had emerged that Adam's girlfriend was not truth worthy, 
+this estimate should be revised downwards. 
+(Indeed, these values are somewhat arbitrary, and this is meant to be no more than 
+a theoretical exercise.) Further, it is natural to assume $P(A| \neg SC)=99/100$ given that 
+Adam's girlfriend would almost always give an alibi for Adam if he 
+was not involved in the crime. By combing the two likelihood ratios, we 
+get $LR_M\times LR_A=2,000$. The combine likelihood ratio is much lower than 
+$LR_M$ but much higher than $LR_A$.
+
+As a matter of fact, Adam was convicted. The jury was persuaded that the strength of DNA evidence 
+outweighed the other pieces of evidence. Was the jury justified?
+
+
+
+
+
+
+
+
+
+
 \section{Evidential strength}
 
 A piece of evidence E can support a hypothesis H more or less strongly. 
@@ -497,111 +598,6 @@ about our psychology that justifies the equivalence above.
 
 DO THE SAME WITH EYEWITNESS EVIDENCE AND LIKELIHOOD RATIOS. POSSIBLE?
 ANY NEED OF BAYES NETWORK HERE? USELESS? TOO COMPLICATED?
-
-\section{Conflicting evidence}
-
-So far we assessed the evidential strength of pieces of evidence considered individually.
-When different pieces of evidence are combined, as realistically happens in criminal cases, we might find that they conflict with one another.
-For instance, a witness claims that the criminal has blond hair, but the suspect whose DNA matched that of the trace at the crime scene, has dark hair. What to do in case of such conflicts? We first need a general account of how to 
-model the \textit{combination} of two pieces of evidence E1 and E2, each supporting, with its own degree of strength, the same hypothesis H. If the strength of a single pieces of 
-evidence $E$ depends on how much it impacts $P(H)$, the same applies to 
-the combination of two pieces of evidence. 
-Bayes' theorem shows us how the combination of E1 and E2 
-impacts the probability $P(H)$, as follows:
-%
-\[\frac{P(H| E1, E2)}{P(\neg H| E1, E2)}=\frac{P(E1\wedge E2|H)}{P(E1\wedge E2|\neg H)}\times \frac{P(H)}{P(\neg H)}.\]
-%
-If E1 and E2 are independent and do not influence one another, we have:
-%
-\[\frac{P(H| E1, E2)}{P(\neg H| E1, E2)}=\frac{P(E1|H)}{P(E1|\neg H)}\times\frac{P(E2|H)}{P(E2|\neg H)}\times \frac{P(H)}{P(\neg H)}.\]
-%
-\[\frac{P(H| E1, E2)}{P(\neg H| E1, E2)}= LR1\times LR2 \times \frac{P(H)}{P(\neg H)}.\]
-%
-Suppose, in a criminal case, DNA evidence shows that the crime traces match with defendant's 
-DNA. The DNA match has a likelihood ratio, relative to hypothesis $S$, of 1,000. Another piece of evidence, independent of the DNA evidence, shows that the crime scene blood type is the same as the defendant's blood type. Suppose the likelihood ratio is now just 10. 
-So, the combined evidential strength of the two pieces 
-of evidence is $1,000\times 10=10,000$. This is an example of how two pieces of evidence converge  toward the 
-same hypothesis.
-
-More generally, two pieces of evidence E1 and E2 are \textit{convergent}, relative to a hypothesis H, whenever they each impact 
-upwards the probability $P(H)$, or in other words, whenever their likelihood ratios relative to H are 
-both positive, as follows:
-%
-\[\textsc{Convergence: } LR1=\frac{P(E1| H)}{P(E1|\neg H)}>1 \text{ and } LR2=\frac{P(E2|H)}{P(E2|\neg H)}>1.\]
-%
-Let's now examine when two pieces of evidence \textit{conflict} with one another. 
-[SHOULD WE TALK ABOUT ARGUMENT HERE SOMEWHERE?\footnote{In terms of arguments, if two pieces of evidence conflict, two divergent arguments can be constructed. One will have E1 as its premise and H as its conclusion. The other will have 
-E2 as its premise and not-H as its conclusion (or a proposition that entails the negation of H). Indeed, the arguments in question will consist of other premises besides E1 and E2. So, in order to locate the source of the conflict in E1 and E2,  the only difference between the two arguments must be in the premises 
-corresponding to E1 and E2.}] In probabilistic terms, the fact that the two pieces of evidence, E1 and E2, are in conflict relative to a hypothesis H can be represented as follows. One piece of evidence E1 raises the probability of H, while the other piece of evidence E2 raises the probability of not-H (or lowers the probability of H). 
-So, $P(H)<P(H|E1)$, but $P(H)>P(H|E2)$. In terms of likelihood ratios, this means that
-%
-\[\textsc{Conflict: } LR1=\frac{P(E1| H)}{P(E1|\neg H)}>1 \text{ and } LR2=\frac{P(E2|H)}{P(E2|\neg H)}<1.\]
-%
-How can we weight the relative strength of two conflicting pieces of evidence?
-Consider an example. At trial, there are two conflicting eyewitness testimonies W1 and W2. One witness asserts that the defendant was around the scene of the crime 
-when the crime was committed, abbreviated SC. The other witness offers an alibi for the defendant and asserts that she was with the defendant 
-during the time of the crime, abbreviated $\neg SC$.  Suppose SC has a probability of 0.5, regardless of the testimonies W1 or W2.
-Suppose, also, that W1 brings the probability of SC to 0.9, whereas W2 brings the probability of H to 0.1 (and thus brings the probability of $\neg SC$ to 0.9). Each testimony has the \textit{same  yet divergent impact} on the probability $P(SC)$. Testimony $W1$ raises the probability of $SC$ while testimony W1 lowers the probability SC. 
-They each do so to the same extent but in opposite directions. 
-Absent any further information about the trustworthiness of W1 and W2, the two testimonies should cancel one another. 
-The evidential strength of each testimony W1 and W2  can be represented, in terms of likelihood ratios, 
-as follows:
-%
-\[LR1=\frac{P(W1| SC)}{P(W1|\neg SC)}=\frac{0.9}{0.1}=9 \text{ and } LR2=\frac{P(W2|SC)}{P(W2|\neg SC)}=\frac{0.1}{0.9}=\frac{1}{9}.\]
-%
-The combined evidential strength of the two testimonies, $LR1\times LR2=9\times \frac{1}{9}=1$.
-When combined, two two testimonies have no impact whatsoever on the probability of SC.
-As expected, absent any other information about W1 and W2, the two testimonies 
-cancel one another. Their combined evidential strength is therefore null. What should the posterior 
-probability $P(SC| W1, W2)$ be? If the combined evidential strength of W1 and W2, is null, then 
-$P(SC| W1, W2)=P(SC)$. In our case, $P(SC| W1, W2)=P(SC)=0.5$,  because the value originally assigned to $P(SC)$, 
-regardless of the testimonies, was 0.5.
-
-
-
-In the British case, R v Adams [1996] 2 Cr App R 467, there was a conflict between DNA evidence and other forms of evidence. The victim was raped and Adam's DNA matched with the traces of semen found on the victim's body. The probability that a random person would match those traces was estimated to be 1 in 200 million. By contrast, the victim gave a description of the perpetrator that did not match Adam's features. Second, when the victim was asked whether Adam raped her, she was unable to identify him. Finally, Adam had an alibi: his girlfriend claimed he was with her during the time of crime. For one thing, DNA evidence suggests Adam's guilt. For the other thing, Adam's alibi, the victim's failure to recognize Adam as the perpetrator, and the fact that Adams did not match the victim's description of the perpetrator, all these pieces of information point toward Adam's innocence. How can we handle conflicting evidence? 
-
-We can propose a simple analysis of the case based on combining likelihood ratios. 
-Let;s openly consider the DNS evidence match, call it M; Adam's alibi, call it A; and the hypothesis 
-that visited the crime scene, call it SC. As far as the DNA evidence match is concerned, 
-the likelihood ratio of interests is as follows:
-%
-\[LR_M=\frac{P(M| SC)}{P(M| \neg SC)}=200,000,000.\]
-%
-When it comes to alibi a possible assignment for the like hood ratios is 
-as follows:
-%
-\[LR_A=\frac{P(A| SC)}{P(A| \neg SC)}=\frac{\frac{1}{100}}{\frac{99}{100}} \approx \frac{1}{100}.\]
-%
-We can see that $LR_A$ is below one, so the alibi doe snot support the hypothesis SC as expected.
-The basic idea behind the assignment $LR_A=1/100$ is this. 
-Adams's girlfriend would offer an alibi to his boyfriend with a probability of 1 in 100 
-even when his boyfriend was in fact not with her. S0, $P(A| \neg SC)=1/100$. This is a low probability. 
-The assumption is that Adam's alibi was a good alibi and that Adam's girlfriend was trustworthy. 
-If at trial evidence had emerged that Adam's girlfriend was not truth worthy, 
-this estimate should be revised downwards. 
-(Indeed, these values are somewhat arbitrary, and this is meant to be no more than 
-a theoretical exercise.) Further, it is natural to assume $P(A| \neg SC)=99/100$ given that 
-Adam's girlfriend would almost always give an alibi for Adam if he 
-was not involved in the crime. By combing the two likelihood ratios, we 
-get $LR_M\times LR_A=2,000$. The combine likelihood ratio is much lower than 
-$LR_M$ but much higher than $LR_A$.
-
-As a matter of fact, Adam was convicted. The jury was persuaded that the strength of DNA evidence 
-outweighed the other pieces of evidence. Was the jury justified?
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 \section{Coherently interpreting the evidence}
 
