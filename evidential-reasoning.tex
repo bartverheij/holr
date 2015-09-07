@@ -116,7 +116,8 @@ The primary aim of this chapter is to explain the nature of evidential reasoning
 \section{Setting the stage}
 
 
-Fact-finders, the jurors, judges, or both, aim to reconstruct what has happened in the crime on the basis of the evidence. We will use two types of evidence to develop a list of central questions associated with evidential reasoning: eyewitness testimony and DNA analysis.
+Fact-finders, the jurors, judges, or both, aim to reconstruct what has happened in the crime on the basis of the evidence. 
+We will use two types of evidence to develop a list of central questions associated with evidential reasoning: eyewitness testimony and DNA analysis.
 
 \subsection{Eyewitness testimony}
 
@@ -168,57 +169,182 @@ After a careful and exhaustive investigation in the pretrial and trial phases of
 
 In the following sections, each of these questions is addressed. Before that, we discuss three normative tools that can help understand how to correctly handle the evidence.
 
-\section{Three frameworks}
+\subsection{Three normative frameworks [brief intro]}
 
-\subsection{Arguments}
+\subsubsection{Arguments}
+
+			Argument diagrams
+
+			Wigmore
+
+			Pollock
+
+\subsubsection{Probabilities}
+
+			Bayesian approaches
+
+			LRs
 
 \subsection{Scenarios}
 
-\subsection{Probabilities}
+			Scenario comparison
+
+			Pennington and Hastie
+
+			Anchored narratives (Crombag, Van Koppen, Wagenaar)
+			
+\subsection{Paper plan}
+
+
+		A-1
+
+		B-2
+
+		C-3
+
+			(3x3 matrix with most on the diagonal)
+
+		D
+
+		E
+			
 
 
 \section{Conflicting evidence}
 
-So far we assessed the evidential strength of pieces of evidence considered individually.
-When different pieces of evidence are combined, as realistically happens in criminal cases, we might find that they conflict with one another.
-For instance, a witness claims that the criminal has blond hair, but the suspect whose DNA matched that of the trace at the crime scene, has dark hair. What to do in case of such conflicts? We first need a general account of how to 
-model the \textit{combination} of two pieces of evidence E1 and E2, each supporting, with its own degree of strength, the same hypothesis H. If the strength of a single pieces of 
-evidence $E$ depends on how much it impacts $P(H)$, the same applies to 
-the combination of two pieces of evidence. 
-Bayes' theorem shows us how the combination of E1 and E2 
-impacts the probability $P(H)$, as follows:
-%
-\[\frac{P(H| E1, E2)}{P(\neg H| E1, E2)}=\frac{P(E1\wedge E2|H)}{P(E1\wedge E2|\neg H)}\times \frac{P(H)}{P(\neg H)}.\]
-%
-If E1 and E2 are independent and do not influence one another, we have:
-%
-\[\frac{P(H| E1, E2)}{P(\neg H| E1, E2)}=\frac{P(E1|H)}{P(E1|\neg H)}\times\frac{P(E2|H)}{P(E2|\neg H)}\times \frac{P(H)}{P(\neg H)}.\]
-%
-\[\frac{P(H| E1, E2)}{P(\neg H| E1, E2)}= LR1\times LR2 \times \frac{P(H)}{P(\neg H)}.\]
-%
-Suppose, in a criminal case, DNA evidence shows that the crime traces match with defendant's 
-DNA. The DNA match has a likelihood ratio, relative to hypothesis $S$, of 1,000. Another piece of evidence, independent of the DNA evidence, shows that the crime scene blood type is the same as the defendant's blood type. Suppose the likelihood ratio is now just 10. 
-So, the combined evidential strength of the two pieces 
-of evidence is $1,000\times 10=10,000$. This is an example of how two pieces of evidence converge  toward the 
-same hypothesis.
 
-More generally, two pieces of evidence E1 and E2 are \textit{convergent}, relative to a hypothesis H, whenever they each impact 
-upwards the probability $P(H)$, or in other words, whenever their likelihood ratios relative to H are 
-both positive, as follows:
-%
-\[\textsc{Convergence: } LR1=\frac{P(E1| H)}{P(E1|\neg H)}>1 \text{ and } LR2=\frac{P(E2|H)}{P(E2|\neg H)}>1.\]
-%
-Let's now examine when two pieces of evidence \textit{conflict} with one another. 
-[SHOULD WE TALK ABOUT ARGUMENT HERE SOMEWHERE?\footnote{In terms of arguments, if two pieces of evidence conflict, two divergent arguments can be constructed. One will have E1 as its premise and H as its conclusion. The other will have 
-E2 as its premise and not-H as its conclusion (or a proposition that entails the negation of H). Indeed, the arguments in question will consist of other premises besides E1 and E2. So, in order to locate the source of the conflict in E1 and E2,  the only difference between the two arguments must be in the premises 
-corresponding to E1 and E2.}] In probabilistic terms, the fact that the two pieces of evidence, E1 and E2, are in conflict relative to a hypothesis H can be represented as follows. One piece of evidence E1 raises the probability of H, while the other piece of evidence E2 raises the probability of not-H (or lowers the probability of H). 
-So, $P(H)<P(H|E1)$, but $P(H)>P(H|E2)$. In terms of likelihood ratios, this means that
+\subsection{Motivation}
+ 	
+\paragraph{Legal cases arise because there are reasons pros and cons a position} 
+
+
+In many cases, the law and the facts are not in dispute. Consider a routine traffic violation such as speeding. 
+You are driving at 100 km/h; the speed limit is 50 km/h; and a police officer issues you a ticket. In cases like that, there is often 
+little to dispute. Cases that go to court, by contrast, are usually more controversial because the interpretation of 
+the law is not straightforward or there existing conflicting reconstructions of the the facts. 
+(For disputes about matters of law, see OTHER CHAPTER IN HANDBOOK).
+%; what interests us here %are conflicts concerning matters of fact.   
+%One party may offer evidence that supports a certain reconstruction of the facts and the other party may bring evidence that support a radically different factual reconstruction. 
+Conflicting reconstrcutions of the facts emerge because different pieces of evidence support opposite conclusions. 
+For example, an eyewitness may assert that she saw the defendant around the crime scene at the time of the crime, 
+while DNA evidence may indicate that the defendant does not match with the crime scene DNA.  
+The two pieces of evidence support different reconstructions of what happened, one leading to the defendant's 
+guilt and the other to his innocence. When two pieces of evidence lead to contradictory conclusions, it is not easy 
+to decide which piece of evidence to trust more or which reconstruction to believe. 
+%Conflicts between different items of evidence are ubiquitous in trials. %These conflicts trigger the need to have trials in the first place. 
+%The point of a trial, in fact, is precisely to decide between conflicting factual reconstructions.
+
+%and evidential reasoning play a pivotal role. 
+
+\paragraph{evidential reasoning in the law is dialectical} 
+
+In order to resolve evidential and factual disagreements, legal trials take the form of adversarial confrontations.  Each party is given the opportunity to make its case on the basis of the evidence she thinks important. But trials are not confined to the mere presentation of the 
+evidence by the interested parties. Since the parties will advance conflicting reconstructions of the facts, 
+the dialectical testing of the evidence is necessary. The examination and cross examination of the evidence 
+is the legal machinery that is used to identify which party has the stronger case. In ordinary life, if someone makes a good argument backed up by good evidence, you may believe her on these grounds alone. That is not the case in a trial. Although one party may make a strong case, backed up by good evidence, this need not be enough. The other party, after all, may come up with a stronger case, backed up by better evidence.  In the law, more often than not, reasoning toward factual conclusions on the basis of evidences is a dialectical, not a monological, process. 
+
+\subsection{Arguments}
+
+
+\paragraph{Args are for different, possibly conflicting positions (Van Eemeren et al 2014; not specific for evidence)}
+
+???
+
+\paragraph{Dialectical aspect of arguments and Argument can support a certain conclusion (i.e. premises support a conclusion)}
+
+Arguments are well suited to represent the dialectical aspect of evidential reasoning in court. Arguments are 
+often defined as a collection of statements in which one statement is the conclusion and 
+the others are the premises functioning as evidence for the conclusion. But this definition is incomplete. 
+Consider the collection of statements $\{$I am getting wet; it is raining $\}$. Which are the premises? Which is the conclusion? 
+It depends. If the weather condition is at issue, 
+getting wet functions as evidence that it is raining. If, instead, one's physical condition is at issue, the fact that it 
+is raining functions as evidence that one is getting wet. 
+In this sense, arguments exist primarily in the context of ongoing disagreements 
+between two or more parties. 
+
+\paragraph{Arguments can attack other arguments 
+			Rebutting: Arg2 leads to a different conclusion from Arg1 
+			Undercutting: Arg2 attacks the relation between Premises and Conclusion in Arg1
+			Undermining: Arg2 attacks the premises on which Arg1 is based
+		References (Pollock 1995, Dung 1995; ?mention nonmonlog, Toulmin's anti-logicism)}
+		
+There are different ways in which disagreements in the form of conflicting arguments 
+can manifest themselves. The argumentation theorist Pollock (REFERENCE) has distinguished two. 
+Suppose A offers an argument for conclusion X, and B responds with an argument 
+for conclusion Y, while X and Y cannot be both true. When two arguments support contradictory 
+conclusions, they are attacking one another in 
+the form of \textit{rebutting}. Here is an example. One witness claims that she saw the defendant 
+near the crime scene at the time of the crime, and the defendant provides an alibi that places him far way from the crime scene at the time of the crime. 
+Or, a witness claims that the criminal has blond hair, but the suspect whose DNA matched 
+that of the trace at the crime scene, has dark hair. 
+%For example, A claims that it is raining outside because the streets are wet, while B claims that it is \textit{not} raining because the sun is shining. 
+
+Argument can also attack one another in the form of what Pollock calls \textit{undercutting}.
+Suppose A offers an argument for X consisting in premises 
+P1, P2, \dots leading to conclusion X, and B shows that the premises used by A in support of X 
+do not actually support X, or at least, not as strongly as A wanted us to believe. 
+%This form of argument attack is known as \textit{undercutting}.
+%For example, A claims that it is raining outside because the streets are wet, while B remarks that the streets are 
+%wet because the sprinklers are on. B has shown that the premise `the streets are wet' 
+%does not support the conclusion 'it is raining' since 
+%the street got wet because of the sprinklers not the rain.
+%Here is another example. A claims that it is \textit{not} raining because 
+%the sun is shining, and B remarks that sometime she saw the sun shine while rain was falling.
+%B has shown that the premise 'the sun is shining' does not support the conclusion `it is not raining' 
+%because there are cases in which the premise is true but the conclusion false.  These are cases of \textit{undercutting}.  
+%Here is an example. Premise 1: The victim was killed with a knife. Premises 2: The defendant has a cut on his hand. Conclusion: The defendant killed the victim. Premises 1 and 2, together, do lend some support to the conclusion. Yet, if we knew that the defendant had caused his cut on his hand while cooking, the premises would be undercut, in the sense that they would cease to lend any support to the conclusion. 
+ Here is an example. Premise: The defendant's DNA matches with the crime scene DNA. Conclusion: 
+ the defendant was around the crime scene at some point. Now, suppose we learn that 
+ the defendant has a twin brother. This new piece of information undercuts, or at least weakens, 
+ the support that the DNA match lends to the conclusion that the defendant was around the crime scene. 
+His twin brother, after all, might have visited the crime scene in his stead. 
+
+Besides rebutting and undercutting, some argumentation theorists (REFERENCES) identify a third way in which 
+an argument can attack another. This is called by some authors \textit{undermining}.
+Suppose A offers an argument for conclusion X consisting in premises P1, P2, \dots, 
+while B shows that one of the premises is false. Here is an example. The prosecutor argues 
+for the conclusion that the defendant was at the crime scene on the basis of the premise that the defendant's DNA 
+matches the crime scene DNA. The defense, on the other hand, points out that 
+a laboratory error occurred,thereby suggesting that one of the premises in the prosecutor's 
+argument, namely the DNA match, is false. This is a case of undermining. 
+ 
+
+\subsection{Scenarios}
+
+\paragraph{Mutually inconsistent, different hypotheses/scenarios}
+
+\paragraph{Conflicting scenarios can offer alternative explanations for the evidence}
+
+\paragraph{Comparative adequacy of alternative scenarios/hypotheses in explaining the evidence}
+
+
+
+
+
+\subsection{Probabilities}
+
+\paragraph{Different, incompatible outcomes}
+
+\paragraph{Same hypothesis can receive different probability assignments depending on evidence (or interpretation thereof)}
+
+\paragraph{Relative to the same hypothesis, likelihood ratios for different pieces of evidence can be positive or negative.}
+
+
+\paragraph{If LR for E1 relative to H is positive, while LR for E2 relative to H is negative, E1 and E2 are in conflict}
+
+In probabilistic terms, the fact that the two pieces of evidence, E1 and E2, 
+are in conflict relative to a hypothesis H can be represented as follows. One piece of evidence E1 raises the probability of H, 
+while the other piece of evidence E2 lowers the probability of H. 
+%So, $P(H)<P(H|E1)$, but $P(H)>P(H|E2)$. 
+In other words, E1 favors H, while E2 disfavors H. 
+In terms of likelihood ratios (SEE EARLIER SECTION), this means that
 %
 \[\textsc{Conflict: } LR1=\frac{P(E1| H)}{P(E1|\neg H)}>1 \text{ and } LR2=\frac{P(E2|H)}{P(E2|\neg H)}<1.\]
 %
-How can we weight the relative strength of two conflicting pieces of evidence?
-Consider an example. At trial, there are two conflicting eyewitness testimonies W1 and W2. One witness asserts that the defendant was around the scene of the crime 
-when the crime was committed, abbreviated SC. The other witness offers an alibi for the defendant and asserts that she was with the defendant 
+%How can we weight the relative strength of two conflicting pieces of evidence?
+
+\begin{comment}
+Consider an example. At trial, there are two conflicting eyewitness testimonies W1 and W2. One witness asserts that the defendant was around the scene of the crime when the crime was committed, abbreviated SC. The other witness offers an alibi for the defendant and asserts that she was with the defendant 
 during the time of the crime, abbreviated $\neg SC$.  Suppose SC has a probability of 0.5, regardless of the testimonies W1 or W2.
 Suppose, also, that W1 brings the probability of SC to 0.9, whereas W2 brings the probability of H to 0.1 (and thus brings the probability of $\neg SC$ to 0.9). Each testimony has the \textit{same  yet divergent impact} on the probability $P(SC)$. Testimony $W1$ raises the probability of $SC$ while testimony W1 lowers the probability SC. 
 They each do so to the same extent but in opposite directions. 
@@ -236,59 +362,79 @@ probability $P(SC| W1, W2)$ be? If the combined evidential strength of W1 and W2
 $P(SC| W1, W2)=P(SC)$. In our case, $P(SC| W1, W2)=P(SC)=0.5$,  because the value originally assigned to $P(SC)$, 
 regardless of the testimonies, was 0.5.
 
+\end{comment}
 
+\paragraph{If LR for E1 and E2 relative to H are both positive, E1 and E2 are in agreement}
 
-In the British case, R v Adams [1996] 2 Cr App R 467, there was a conflict between DNA evidence and other forms of evidence. The victim was raped and Adam's DNA matched with the traces of semen found on the victim's body. The probability that a random person would match those traces was estimated to be 1 in 200 million. By contrast, the victim gave a description of the perpetrator that did not match Adam's features. Second, when the victim was asked whether Adam raped her, she was unable to identify him. Finally, Adam had an alibi: his girlfriend claimed he was with her during the time of crime. For one thing, DNA evidence suggests Adam's guilt. For the other thing, Adam's alibi, the victim's failure to recognize Adam as the perpetrator, and the fact that Adams did not match the victim's description of the perpetrator, all these pieces of information point toward Adam's innocence. How can we handle conflicting evidence? 
-
-We can propose a simple analysis of the case based on combining likelihood ratios. 
-Let;s openly consider the DNS evidence match, call it M; Adam's alibi, call it A; and the hypothesis 
-that visited the crime scene, call it SC. As far as the DNA evidence match is concerned, 
-the likelihood ratio of interests is as follows:
+By contrast, two pieces of evidence E1 and E2 are \textit{convergent}, relative to a hypothesis H, whenever they each impact 
+upwards the probability $P(H)$, or in other words, whenever their likelihood ratios relative to H are 
+both positive, as follows:
 %
-\[LR_M=\frac{P(M| SC)}{P(M| \neg SC)}=200,000,000.\]
+\[\textsc{Convergence: } LR1=\frac{P(E1| H)}{P(E1|\neg H)}>1 \text{ and } LR2=\frac{P(E2|H)}{P(E2|\neg H)}>1.\]
 %
-When it comes to alibi a possible assignment for the like hood ratios is 
+
+
+\paragraph{Illustration}
+
+In the British case, R v Adams [1996] 2 Cr App R 467, there was a conflict between DNA evidence and the defendant's alibi. 
+The victim was raped and Adam's DNA matched with the traces of semen found on the victim's body. The probability that a random person would match those traces was estimated to be 1 in 200 million. But, %the victim gave a description of the perpetrator that did not match Adam's features. Second, when the victim was asked whether Adam raped her, she was unable to identify him. Finally, 
+Adam had an alibi: his girlfriend claimed he was with her during the time of crime. The DNA evidence suggests Adam's guilt, while his alibi %, the victim's failure to recognize Adam as the perpetrator, and the fact that Adams did not match the victim's description of the perpetrator, all these pieces of information 
+points to his innocence. How can we represent probabilistically the conflict between the DNA evidence and the alibi? 
+%We can propose a simple analysis of the case based on combining likelihood ratios. 
+%Let's openly consider the DNS evidence match, call it M; Adam's alibi, call it A; 
+Let CS stand for the hypothesis that Adam visited the crime scene; M stand for the 
+proposition that the crime scene DNA matches Adam's DNA; and A stand for Adam's alibi.
+The likelihood ratio for the DNA 
+match is as follows:
+%
+\[LR_M=\frac{P(M| CS)}{P(M| \neg CS)}=200,000,000.\]
+%
+As for Adam's alibi, a possible 
+assignment of the likelihood ratio is 
 as follows:
 %
-\[LR_A=\frac{P(A| SC)}{P(A| \neg SC)}=\frac{\frac{1}{100}}{\frac{99}{100}} \approx \frac{1}{100}.\]
+\[LR_A=\frac{P(A| CS)}{P(A| \neg CS)}=\frac{\frac{1}{100}}{\frac{99}{100}} \approx \frac{1}{100}.\]
 %
-We can see that $LR_A$ is below one, so the alibi doe snot support the hypothesis SC as expected.
-The basic idea behind the assignment $LR_A=1/100$ is this. 
-Adams's girlfriend would offer an alibi to his boyfriend with a probability of 1 in 100 
-even when his boyfriend was in fact not with her. S0, $P(A| \neg SC)=1/100$. This is a low probability. 
+%We can see that $LR_A$ is below one, so the alibi does not support the hypothesis SC as expected.
+The idea behind the assignment $LR_A=1/100$ is this. Adams's girlfriend would offer an alibi to his boyfriend with a probability of 1 in 100 
+even when his boyfriend was in fact not with her. So, $P(A| \neg CS)=1/100$. This is a low probability. 
 The assumption is that Adam's alibi was a good alibi and that Adam's girlfriend was trustworthy. 
-If at trial evidence had emerged that Adam's girlfriend was not truth worthy, 
-this estimate should be revised downwards. 
-(Indeed, these values are somewhat arbitrary, and this is meant to be no more than 
-a theoretical exercise.) Further, it is natural to assume $P(A| \neg SC)=99/100$ given that 
-Adam's girlfriend would almost always give an alibi for Adam if he 
-was not involved in the crime. By combing the two likelihood ratios, we 
-get $LR_M\times LR_A=2,000$. The combine likelihood ratio is much lower than 
-$LR_M$ but much higher than $LR_A$.
+If at trial evidence had emerged that Adam's girlfriend was not trustworthy, this estimate should be revised downwards. (Indeed, these values are somewhat arbitrary, and this is meant to be no more than a theoretical exercise.) Further, it is natural to assume $P(A| \neg CS)=99/100$ given that 
+Adam's girlfriend would almost always give an alibi for Adam if he was not involved in the crime.  In short, the two pieces of evidence conflict because one has a likelihood ratio greater than one and the other a likelihood ratio smaller than one. 
 
-As a matter of fact, Adam was convicted. The jury was persuaded that the strength of DNA evidence 
-outweighed the other pieces of evidence. Was the jury justified?
+%The further step here is to assess the relative weight of the pieces of evidence and decide 
+%which of the two pieces should be accorded more weight. (SEE SECTION ...)
 
+\paragraph{Comparison between the three frameworks}
 
+The conflict between the DNA evidence match and Adam's alibi is also an example of an argument rebutting another. What the probabilistic framework allows us to do---which the argumentation framework does not---to is to assign numbers and describe the extent of the evidential conflict in a seemingly more precise manner. 
+On the other hand, the probabilistic framework does not seem to be well equipped to distinguish 
+between rebutting, undercutting and undermining. CHECK THAT! IS THAT TRUE?
 
-
-
-
+%By combing the two likelihood ratios, we 
+%get $LR_M\times LR_A=2,000$. The combine likelihood ratio is much lower than 
+%$LR_M$ but much higher than $LR_A$.
 
 
 
 
 \section{Evidential strength}
 
-A piece of evidence E can support a hypothesis H more or less strongly. 
-The evidential strength of E, relative to a hypothesis H, has to do with the extent 
-to which E can impact, upwards or downwards, the initial probability of H. The value of the initial probability $P(H)$, 
-often improperly called the \textit{prior probability} of H, is determined without 
-taking into account evidence E.  The conditional probability $P(H|E)$, often improperly called the \textit{posterior probability} of H, 
+\subsection{Probability}
+
+
+\paragraph{Likelihood ratios can model evidential strength vs ``posterior probability'' (difference between the two)}
+		
+
+%A piece of evidence E can support a hypothesis H more or less strongly. 
+The evidential strength of a piece of evidence E, relative to a hypothesis H, has to do with the extent 
+to which E can impact, upwards or downwards, the initial probability of H. The value of the initial probability $P(H)$
+% often improperly called the \textit{prior probability} of H, 
+is determined without taking into account evidence E.  The conditional probability $P(H|E)$
+%, often improperly called the \textit{posterior probability} of H, 
 takes into account the new evidence E. 
 If E raises the probability of H, that is, $P(H|E)>P(H)$, or equivalently the likelihood ratio $\frac{P(E|H)}{P(E\neg H)}>1$, then
-E  supports the hypothesis H. 
-By contrast, if E does not raise the probability of H, or equivalently the likelihood ratio is equal to or below 1, then 
+E  supports the hypothesis H.  By contrast, if E does not raise the probability of H, or equivalently the likelihood ratio is equal to or below 1, then 
 $E$ does not support $H$.  More precisely, E's evidential strength toward H is
 %
 \[\textit{\textsc{postitive} iff }  P(H|E)> P(H) \textit{ iff }\frac{P(E|H)}{P(E|\neg H)}>1\]
@@ -344,10 +490,17 @@ Prior Odds & LR  &  Posterior Odds &  $P(H | E)$ \\
 \end{centering}
 \vspace{2mm}
 
+
+
+\paragraph{Confusions may arise between likelihood (ratios) and posterior probability (i.e. prosecutor?s fallacy)}
+
+\paragraph{Likelihood ratios can model sources of weakness/error/uncertainty (illustrate this through DNA evidence)}
+
+		
 Consider now a criminal case in which DNA evidence agains the defendant is offered. Laboratory analyses show that the defendant matches with the genetic traces 
 found at the crime scene. Call this piece of evidence M. The prosecutor's hypothesis is that the defendant is the source of the genetic material found at the crime; call this hypothesis $S$. 
-(Note that hypothesis $S$ is not quite the same as the hypothesis that the defendant is guilty. The fact that the defendant is the source of the crimine scene genetic 
-material need not entail that he is guilty. He could have left the genetic traces accidentally 
+(Note that hypothesis $S$ is not quite the same as the hypothesis that the defendant is guilty. The fact that the defendant is the source of the crime 
+scene genetic material need not entail that he is guilty. He could have left the genetic traces accidentally 
 or in a way consistent with his innocence.) What should we conclude about S given M?
 How are we to assess the evidential strength of M relative to S?
 As said at the beginning, we can identify three major sources of uncertainty 
@@ -482,7 +635,7 @@ $= { 0.99 \over 0.00000000099 + 0.00999999999}$
 $= { 0.99 \over 0.01000000098 }\approx 98 \approx 100$
 }
 \]
-Relatively small error rates can therefore significantly diminish the evidential stregth of a DNA evidence match by dramatically 
+Relatively small error rates can therefore significantly diminish the evidential strength of a DNA evidence match by dramatically 
 reducing the likelihood ratio. In the example, we went from one billion to only one hundred.\footnote{For a  amore systematic discussion of this point, see \cite{Thomason2003How-the-Probabi} who show how even a small margin of laboratory 
 error can substantially diminish the probative value of DNA evidence.} 
 The impact of laboratory error rates is an indication that no matter how 
@@ -535,7 +688,7 @@ analysis can be used for blood types, glass evidence, and any other type of trac
 But, again, we do need an estimate of the Random Match Probability 
 which we often lack. 
 
-
+\begin{comment}
 We now turn to \textit{eyewitness testimony}. It will soon become clear 
 that, unlike with the case of DNA evidence, we lack the numbers 
 to assign probabilities. It is nevertheless useful to see how likelihood ratios can express 
@@ -585,21 +738,57 @@ or whether we have an interest in lying. Whether a certain fact F occurred does 
 have a direct influence on our assertions (if not indirectly through 
 our cognitive states). This, at least, is the assumptions 
 about our psychology that justifies the equivalence above. 
+\end{comment}
 
 
+\paragraph{Mention the fiction of chains of independent evidence; perhaps postpone discussion to section on coherence}
+		
+\paragraph{References (Carnap, Skyrms, Fitelson, Schum, Kaye, Thompson)}
+		
+\paragraph{ASIDE: LJ Cohen?s challenge (negation, conjunction paradox) and the Bayesian response}
+
+\paragraph{[The problem of the old evidence? The issue of evidential strength of a DNA match after a database search?]}
 
 
+\section{Arguments}
 
+\paragraph{Difference between deductive and presumptive arguments [inductive, abductive, ampliative, defeasible; what have you]}
 
+\paragraph{Args are good when surviving scrutiny under critical questions (arg schemes; Walton et al ...)}
 
+\paragraph{Args win when they can defend themselves against attacks (Dung 1995)}
 
+\paragraph{Args win when they are better/stronger than/preferred over conflicting args}
 
+\paragraph{Pros and cons can be weighed (accrual)}
 
+\paragraph{(Mention ?Pollock's anti-probabilism)}
 
-DO THE SAME WITH EYEWITNESS EVIDENCE AND LIKELIHOOD RATIOS. POSSIBLE?
-ANY NEED OF BAYES NETWORK HERE? USELESS? TOO COMPLICATED?
+\section{Scenarios}
+
 
 \section{Coherently interpreting the evidence}
+
+
+We first need a general account of how to 
+model the \textit{combination} of two pieces of evidence E1 and E2, each supporting, with its own degree of strength, the same hypothesis H. If the strength of a single pieces of evidence $E$ depends on how much it impacts $P(H)$, the same applies to the combination of two pieces of evidence. 
+Bayes' theorem shows us how the combination of E1 and E2  impacts the probability $P(H)$, as follows:
+%
+\[\frac{P(H| E1, E2)}{P(\neg H| E1, E2)}=\frac{P(E1\wedge E2|H)}{P(E1\wedge E2|\neg H)}\times \frac{P(H)}{P(\neg H)}.\]
+%
+If E1 and E2 are independent and do not influence one another, we have:
+%
+\[\frac{P(H| E1, E2)}{P(\neg H| E1, E2)}=\frac{P(E1|H)}{P(E1|\neg H)}\times\frac{P(E2|H)}{P(E2|\neg H)}\times \frac{P(H)}{P(\neg H)}.\]
+%
+\[\frac{P(H| E1, E2)}{P(\neg H| E1, E2)}= LR1\times LR2 \times \frac{P(H)}{P(\neg H)}.\]
+%
+Suppose, in a criminal case, DNA evidence shows that the crime traces match with defendant's 
+DNA. The DNA match has a likelihood ratio, relative to hypothesis $S$, of 1,000. Another piece of evidence, independent of the DNA evidence, shows that the crime scene blood type is the same as the defendant's blood type. Suppose the likelihood ratio is now just 10. 
+So, the combined evidential strength of the two pieces 
+of evidence is $1,000\times 10=10,000$. This is an example of how two pieces of evidence converge  toward the 
+same hypothesis.
+
+
 
 Often criminal cases form a mosaic. A DNA  match can support the hypothesis that the suspect is the source, and a witness can add information about how the crime was committed. There is a lot of evidence that needs to be coherently combined in order to make sense of what has happened. How do we combine all information in a coherent whole? 
 Consider a fairly realistic, though still quite simplified, scenario:
