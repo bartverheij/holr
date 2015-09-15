@@ -393,7 +393,7 @@ and raise reasonable doubts. ILLUSTRATE HOW THIS GOES.
 \subsection{Probabilities}
 
 We have seen how the premises of an argument can function as evidence favoring the conclusion. We can represent this relation 
-probabilistically by saying that $E$ is evidence favoring hypothesis $H$ whenever $E$ raises the probability of $H$, or more precisely, whenever taking into consideration $E$ makes it more likely that $H$ is true than it would be without taking into consideration $E$. (REFERENCE TO FEDERAL RULES 403 OF EVIDENCE AND DEFINiTION OF RELEVANCE)
+probabilistically by saying that $E$ is evidence favoring hypothesis $H$ whenever $E$ raises the probability of $H$, or more precisely, whenever taking into consideration $E$ makes it more likely that $H$ is true than it would be without taking into consideration $E$. (REFERENCE TO FEDERAL RULE OF EVIDENCE 403 AND DEFINITION OF RELEVANCE)
 %This characterization is not that $E$ is evidence for $H$ whenever the probability of $H$ conditional on $E$ is sufficiently high or greater than zero. 
 Note that the fact alone that the probability of $H$ given $E$ is high does not mean---according to the characterization of `evidential favoring' just given---that 
 $E$ is evidence for $H$. There should be a probability shift upwards for $E$ to be evidence favoring hypothesis $H$. 
@@ -539,48 +539,31 @@ the likelihood ratio $\frac{P(H|E)}{P(H|\neg E)}$.
 \end{quote}
 %
 The likelihood ratios is a good measure of evidential strength because it tells how much a piece 
-of evidence $E$ can impact the initial probability of a hypothesis $H$. This can be visualized by means of 
-Bayes' theorem:
-%
-\[\frac{P(H|E)}{P(\neg H | E)} = \frac{P(E|H)}{P(E|\neg H)} \times \frac{P(H)}{P(\neg H)}.\]
-%
-The formulation in terms of prior and posterior odds might appear cumbersome at first, but it is the easiest
-formulation as far as calculations are concerned. When the hypotheses in the likelihood ratio are one the negation of the other---such as $H$ and $\neg H$---there 
-is a formula that allows us to derive the posterior probability of a hypothesis H given the new evidence E
-from the posterior odds PO, as follows:
- %
-\[ \textit{posterior probability of H given E} = \frac{PO}{1+PO}.\]
-%
-%Even more succinctly,
-%
-%\[\textit{posterior odd} = \textit{LR} \times \textit{prior odds}.\]
-%
-The table below shows how a likelihood ratio of 1,000 can 
-impact the prior odds and lead to different values of the 
-posterior odds and the posterior 
-probability of the hypothesis of interest. 
+of evidence $E$ can impact the initial probability of a hypothesis $H$. Evidential strength of a 
+piece of is not measured in terms of how high  the probability of a certain hypothesis 
+is given the evidence. If the probability of $H$ given $E$ is high, this does 
+not mean that $E$ strongly favors $H$. 
 
-\vspace{2mm}
-\hspace{0.5cm}
-\begin{centering}
-\begin{tabular}{lcccc}
-\hline
-Prior Odds & LR  &  Posterior Odds &  $P(H | E)$ \\
-\hline
-1:10,000 & 1,000 & 1:10 & 0.09  \\
-1: 1,000  & 1,000&  1:1 &0.5 \\
-1: 100 & 1,000 &  10:1 &  0.909 \\
-1: 1 & 1,000 &  1000:1 &  0.999 \\
-\hline
-\end{tabular}
-\end{centering}
-\vspace{2mm}
+This allows us to address a paradox 
+that has been formulated against a probabilistic account of evidential strength (REFERENCE TO COHEN).
+Suppose the probability of $H$ given $E$ is low because, say, the evidence is meager. For example, the probability that it will rain tomorrow given that the stock market crashed 
+seems rather low. If so, according to the probability calculus, the probability that it will \textit{not} rain tomorrow given that the stock market crashed must be rather high. But how can that be? How can meager or irrelevant evidence make a certain hypothesis---in our case, that it will not rain tomorrow---highly probable? L.J. Cohen summarized the paradox here by saying that ``the probability calculus creates evidence from ignorance'' (REFERENCE). This paradox can be address by noting that evidential strength is not a function of 
+the conditional probability of $H$ given $E$, but a function of the likelihood ratio $\frac{P(E | H)}{P(E | \neg H)}$ or of the difference $P(H|E) - P(H)$. Now, learning about the stock market crash does not raise or lowers the probability that it will rain or not rain tomorrow, so the difference $P(H|E) - P(H)$ must be roughly zero and 
+the likelihood ratio must be roughly 1. This means that the information that the stock mark crashed 
+has no evidential strength relative to the hypothesis that it will rain (or not) tomorrow. 
+The probability that it will rain or that it will not rain tomorrow, given that the stock market crashed, is whether 
+probability the event of rain has regardless of considering the fact that the stock market crashed. The probability of rain, or not rain, 
+tomorrow could be high or low. Whatever its value, it will be independent from the stock market crashing. 
+The paradox, then, seems merely an artifact, but it is instructive to illustrative the difference between likelihood ratio and the 
+conditional probability of an hypothesis given the evidence (sometimes also called the ''posterior probability'' because it 
+is the probability resulting from taking into account a new item of evidence). It is certainly paradoxical to measure evidential strength in terms of mere conditional probability. 
+The likelihood account must be adopted instead.
 
 
 \paragraph{Illustration}
 
-In the British case R v Adams. 
-Adam's DNA matched the traces of semen found on the victim's body
+In the British case R v Adams, Adam's DNA matched the traces 
+of semen found on the victim's body.
 %but Adam also had an alibi provided by his girlfriend.  
 %When we discussed the argument-based framework, we presented this 
 %as an example of rebutting. 
@@ -590,19 +573,28 @@ Adam's DNA matched the traces of semen found on the victim's body
 %How can we represent probabilistically the conflict between the DNA match and Adam's alibi? 
 %We can propose a simple analysis of the case based on combining likelihood ratios. 
 %Let's openly consider the DNS evidence match, call it M; Adam's alibi, call it A; 
-The advantage of the probability-based framework is that it can 
-into account the probabilistic estimates underpinning DNA evidence. In the case, 
-the probability that a random person would match the crime 
-traces was estimated to be 1 in 200 million. This value can 
-be incorporated in the likelihood ratio. Let $CV$ stand for the hypothesis that Adam had 
+Earlier we analyzed this probabilistically by saying that the DNA match favors 
+the hypothesis that Adam had contact with the victim. The advantage of the probability-based framework is the analyst can be much more refined tan that. 
+As known, a DNA evidence is always accompanied by a probabilistic estimate, and in the Adam's case, the DNA lab analyst testified that 
+the probability that a random person would match the crime traces was estimated to be 1 in 200 million. This value can 
+be incorporated in the likelihood ratio as a me sure of the strength of the evidential strength of the DNA match. 
+Let $CV$ stand for the hypothesis that Adam had 
 contact with the victim and $M$ stand for the 
 proposition that the crime scene DNA matches Adam's DNA
 % and A stand for Adam's alibi.
-The likelihood ratio for the DNA match, relative to hypothesis $CV$---can be described as follows:
+The likelihood ratio for the DNA match, relative to hypothesis $CV$---
+can be described as follows:
 %
 \[LR_M=\frac{P(M| CV)}{P(M| \neg CV)}=200,000,000.\]
 %
-This a rather high value and therefore the strength of the evidence is high.
+The idea benign this assignment is as follows. If the Adam has in fact contact with the victim, we can assume that there the match would be found, so 
+$P(M| CV)=1$, and if instead Adam did not have contact with the victim, there would still be a 1 in 200 million chance that the DNA 
+analysis would show match. This is because the probability that a random person---that is, someone who 
+had nothing to do with the crime---would match is 1 in 200 million, so $P(M| \neg CV)$ is 1 in 200 million. 
+The likelihood ratio $\frac{P(M| CV)}{P(M| \neg CV)}$ is therefore 200 million. This a rather high value 
+and therefore the strength of the evidence is high, at least relative to the hypothesis that Adam has contact with the victim.
+
+\begin{comment}
 It is instructive too compare it with Adam's alibi. 
 The problem is that with Adam's alibi, the numbers can only be educated 
 guesses. Suppose, for the sake of argument, that Adam's girlfriend is trustworthy.
@@ -624,7 +616,7 @@ than one smaller than one. What is more interesting at this point is that the ex
 of this conflict can be---at least in theory---quantified. Which one of the two 
 pieces of evidence is stronger? Given the numbers we have, the DNA evidence is 
 significantly stronger than Adam's alibi. This 
-
+\end{comment}
 
 
 
@@ -637,18 +629,44 @@ significantly stronger than Adam's alibi. This
 %which of the two pieces should be accorded more weight. (SEE SECTION ...)
 
 \paragraph{Confusions may arise between likelihood (ratios) and posterior probability (i.e. prosecutor?s fallacy)}
-SEE LATER
+Given that the likelihood ratio is such a high number, the DNA match relative to 
+hypothesis S has a great deal of evidential strength. 
+But, we should not be fooled by the high likelihood ratio.  
+The inference from the premise `it is unlikely that a random person would match' to 
+the conclusion 'it is unlikely that someone who matches is a random person' is wrong. 
+The inference is a confusion of $P(M |\neg CV)$, which is indeed low, with $P(\neg CV | M)$, 
+which need not be low at all. This confusion is known in the literature 
+as the \textit{inversion fallacy} or the \textit{prosecutor's fallacy} \citep{Thompson1987Interpretation}. 
+Bayes' theorem can protect us from this fallacy. By applying the theorem, 
+with different prior odds and a LR=100,000,0000,  
+the posterior odds are as follows:
+
+\vspace{2mm}
+\hspace{0.5cm}
+\begin{centering}
+\begin{tabular}{lcccc}
+\hline
+Prior Odds & Likelihood Ratios  &  Posterior Odds &  $P(S | M)$ \\
+\hline
+1: 10 million & 100 million & 10 & 0.9  \\
+1: 100 million  & 100 million &  1 &0.5 \\
+1: 1 billion & 100 million &  0.1 &  0.09 \\
+\hline
+\end{tabular}
+\end{centering}
+\vspace{2mm}
+
 
 \paragraph{Likelihood ratios can model sources of weakness/error/uncertainty (illustrate this through DNA evidence)}
 
-		
-Consider now a criminal case in which DNA evidence agains the defendant is offered. Laboratory analyses show that the defendant matches with the genetic traces 
-found at the crime scene. Call this piece of evidence M. The prosecutor's hypothesis is that the defendant is the source of the genetic 
+The analyzes of the strength of a DNA match can be more refined than what we have done so far. 
+Consider a generic criminal case in which there is a DNA evidence against the defendant. Laboratory analyses show that the defendant matches with the genetic traces found at the crime scene. Call this piece of evidence $M$. 
+Let us suppose the prosecutor's hypothesis is that the defendant is the source of the genetic 
 material found at the crime; call this hypothesis $S$. 
 (Note that hypothesis $S$ is not quite the same as the hypothesis that the defendant is guilty. The fact that the defendant is the source of the crime 
 scene genetic material need not entail that he is guilty. He could have left the genetic traces accidentally 
-or in a way consistent with his innocence.) What should we conclude about S given M?
-How are we to assess the evidential strength of M relative to S?
+or in a way consistent with his innocence.) What should we conclude about $S$ given $M$?
+How are we to assess the evidential strength of $M$ relative to $S$?
 As said at the beginning, we can identify three major sources of uncertainty 
 while drawing inferences from a DNA evidence match:
 %
@@ -663,7 +681,7 @@ these three uncertainties and assess the evidential strength of a DNA
 evidence match accordingly. 
 
 Let's start with the possibility of a \textit{coincidental match}. Suppose the defendant matches with 
-the crime scene DNA; there was no laboratory error; and no close relative has the same DNA. Even under these assumptions, 
+the crime scene DNA; there was no laboratory error; and no close relative had the same DNA. Even under these assumptions, 
 the match could still be a pure coincidence. 
 This is why DNA evidence matches typically come with a Random Match Probability. 
 The RMP expresses the probability that a random person would show a match, so a RMP
@@ -692,31 +710,6 @@ The likelihood ratio would be as follows:
 \[\frac{P(M |S)}{P( M | \neg S )}=\frac{1}{\frac{1}{100,000,000}}=100,000,000.\]
 %
 
-Given that the likelihood ratio is such a high number, the DNA match relative to 
-hypothesis S has a great deal of evidential strength. 
-But, we should not be fooled by the high likelihood ratio. The inference
-from the premise `it is unlikely that a random person would match' to 
-the conclusion 'it is unlikely that someone who matches is a random person' is wrong. 
-The inference is a confusion of $P(M|\neg S)$, which is indeed low, with $P(\neg S | M)$, 
-which need not be low at all. This confusion is known in the literature 
-as the \textit{inversion fallacy} or the \textit{prosecutor's fallacy} \citep{Thompson1987Interpretation}. 
-Bayes' theorem can protect us from this fallacy. By applying the theorem, with different prior odds and a LR=100,000,0000,  
-the posterior odds are as follows:
-
-\vspace{2mm}
-\hspace{0.5cm}
-\begin{centering}
-\begin{tabular}{lcccc}
-\hline
-Prior Odds & Likelihood Ratios  &  Posterior Odds &  $P(S | M)$ \\
-\hline
-1: 10 million & 100 million & 10 & 0.9  \\
-1: 100 million  & 100 million &  1 &0.5 \\
-1: 1 billion & 100 million &  0.1 &  0.09 \\
-\hline
-\end{tabular}
-\end{centering}
-\vspace{2mm}
 
 Beside a coincidental match, another source of uncertainty with a DNA evidence match is the possibility of a 
 \textit{laboratory error}. If the RMP equals 1 in 100,000,000, assigning a likelihood ratio of 100,000,000 rests on two simplifications. 
@@ -833,6 +826,67 @@ Random Match Probability for fingerprint profiles \citep{Zabell2005Fingerprint-E
 analysis can be used for blood types, glass evidence, and any other type of trace evidence. 
 But, again, we do need an estimate of the Random Match Probability 
 which we often lack. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+ This can be visualized by means of 
+Bayes' theorem:
+%
+\[\frac{P(H|E)}{P(\neg H | E)} = \frac{P(E|H)}{P(E|\neg H)} \times \frac{P(H)}{P(\neg H)}.\]
+%
+The formulation in terms of prior and posterior odds might appear cumbersome at first, but it is the easiest
+formulation as far as calculations are concerned. When the hypotheses in the likelihood ratio are one the negation of the other---such as $H$ and $\neg H$---there 
+is a formula that allows us to derive the posterior probability of a hypothesis H given the new evidence E
+from the posterior odds PO, as follows:
+ %
+\[ \textit{posterior probability of H given E} = \frac{PO}{1+PO}.\]
+%
+%Even more succinctly,
+%
+%\[\textit{posterior odd} = \textit{LR} \times \textit{prior odds}.\]
+%
+The table below shows how a likelihood ratio of 1,000 can 
+impact the prior odds and lead to different values of the 
+posterior odds and the posterior 
+probability of the hypothesis of interest. 
+
+\vspace{2mm}
+\hspace{0.5cm}
+\begin{centering}
+\begin{tabular}{lcccc}
+\hline
+Prior Odds & LR  &  Posterior Odds &  $P(H | E)$ \\
+\hline
+1:10,000 & 1,000 & 1:10 & 0.09  \\
+1: 1,000  & 1,000&  1:1 &0.5 \\
+1: 100 & 1,000 &  10:1 &  0.909 \\
+1: 1 & 1,000 &  1000:1 &  0.999 \\
+\hline
+\end{tabular}
+\end{centering}
+\vspace{2mm}
+
+
 
 \begin{comment}
 We now turn to \textit{eyewitness testimony}. It will soon become clear 
