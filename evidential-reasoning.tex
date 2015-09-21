@@ -396,89 +396,101 @@ and raise reasonable doubts. ILLUSTRATE HOW THIS GOES.
 We have seen how the premises of an argument can function as evidence favoring the conclusion. We can represent this relation 
 probabilistically by saying that $E$ is evidence favoring hypothesis $H$ whenever $E$ raises the probability of $H$, or more precisely, whenever taking into consideration $E$ makes it more likely that $H$ is true than it would be without taking into consideration $E$. (REFERENCE TO FEDERAL RULE OF EVIDENCE 403 AND DEFINITION OF RELEVANCE)
 %This characterization is not that $E$ is evidence for $H$ whenever the probability of $H$ conditional on $E$ is sufficiently high or greater than zero. 
-Note that the fact alone that the probability of $H$ given $E$ is high does not mean---according to the characterization of `evidential favoring' just given---that 
-$E$ is evidence for $H$. There should be a probability shift upwards for $E$ to be evidence favoring hypothesis $H$. 
+The relation of evidential favoring can also be described probabilistically 
+by means of likelihood ratios.
+%This will be become particularly useful in the rest of the chapter. 
+If $E$ raises the probability of $H$, the likelihood ratio
+$\frac{P(E|H)}{P(E | \neg H)}$ will be greater than 1. In short, 
+%
+\[\textit{\text{$E$ favors $H$} iff }   P(H|E)> P(H) \textit{ iff }\frac{P(E|H)}{P(E|\neg H)}>1.\]
+%
+%\[\textit{\textsc{null} iff }  P(H|E) = P(H) \textit{ iff } \frac{P(E|H)}{P(E|\neg H)}=1\]
+%
+%\[\textit{\text{$E$ disfavors $H$} iff }   P(H|E)< P(H) \textit{ iff } \frac{P(E|H)}{P(E|\neg H)}<1\]
+%
+%The fact alone that the probability of $H$ given $E$ is high does not mean---according to the characterization of `evidential favoring' just given---that 
+%$E$ is evidence for $H$. There should be a probability shift upwards for $E$ to be evidence favoring hypothesis $H$. (On this point, more later.)
 
 \paragraph{Different, incompatible outcomes}
 
-In a criminal trial, the prosecutor and the defendant will will put forward conflicting hypotheses. These can be as complex as the final proposition `guilty' or `not-guilty', but also more circumscribed such as 'the defendant had contact with the victim' or 'the defendant was away from the crime when the crime occurred'. Recall the British case R v Adams. Adam's DNA matched the traces of semen found on the victim's body, but Adam also had an alibi provided by his girlfriend. How can we represent probabilistically the conflict between the DNA match and Adam's alibi?  For one, we should identify the two conflicting hypotheses. Let $CV$ stand for the hypothesis that Adam had contact with the victim and $AW$ stand for the hypothesis that Adam was away from the scene of the crime when it was committed. The hypotheses $CV$ and $AW$ are incompatible---after all, if the defendant was away from the crime scene, he could not have had contact with the victim, at least, not as the crime occurred. The next step is to identify the pieces of evidence of interest. Let $M$ stand for the proposition that the crime scene DNA matches Adam's DNA and $A$ stand for Adam's alibi. Note that $M$ raises the probability of $CV$, while $A$ raises the probability of $AW$. If Adam's DNA matches the crime scene DNA, it is more probable that he visited the crime scene than if the DNA did not match. Similarly, if Adam has an alibi, 
-it is more probable that he was away from the crime than if he did not have an alibi. So, $M$ is evidence for $CV$ because $P(CV|M)> P(CV)$ and 
-$A$ is evidence for $AW$ because $P(AW|A)> P(AW)$. Pieces of $M$ and $A$ are in conflict because they favor incompatible hypotheses. 
-More generally, two pieces of evidence $E1$ and $E2$ conflict with one another whenever they 
-favor incompatible hypotheses $H1$ and $H2$, as follows:
+In a criminal trial, the prosecutor and the defense will put forward conflicting hypotheses about what happened during the crime or who committed the crime. 
+These can be as complex as the final proposition `the defendant is guilty' or `the defendant is not guilty', but also more circumscribed such as 'the defendant had contact with the victim' or 'the defendant was away from the crime when the crime occurred'. We say that two pieces of evidence are in 
+conflict with one another whenever they favor incompatible hypotheses. More explicitly, if hypothesis $H1$ and $H2$ are incompatible,
+two pieces of evidence $E1$ and $E2$ conflict with one another whenever 
 %
-\[\textsc{Conflict (I): } P(H1| E1)>P(H1) \text{ and } P(H2|E2)>P(H1) \text{ with  $H1$ and $H2$ incompatible.}\]
+\[P(H1| E1)>P(H1) \text{ and } P(H2|E2)>P(H1),\]
 %
-This description is not much different from a case of rebuttal in which two arguments conflict with one another 
-because their conclusions are incompatible. Instead of contradictory or incompatible conclusions, here 
-we speak of contradictory or incompatible hypotheses. 
+or in terms of likelihood ratios, whenever
+%
+\[\frac{P(E1| H1)}{P(E1|\neg H1)}>1 \text{ and } \frac{P(E2|H2)}{P(E2|\neg H2)}>1.\] 
+%
+%\[\text{ where  $H1$ and $H2$ are incompatible hypotheses}.\]
+%
+%This characterization is not much different from a case of rebuttal in which two arguments conflict with one another 
+%because their conclusions are incompatible. Instead of contradictory or incompatible conclusions, here 
+%we speak of contradictory or incompatible hypotheses, each favored by distinct pieces of evidence. 
+
+Recall the earlier case in which Adam's DNA matched the traces of semen found on the victim's body, 
+but Adam also had an alibi provided by his girlfriend. In other words, 
+the DNA match (abbreviated $M$) and the alibi (abbreviated $A$) conflicted with one another. How can we represent this probabilistically?  
+We should identify the two conflicting hypotheses, namely, 
+that Adam had contact with the victim during the crime (abbreviated $CV$) and that Adam was away from the scene 
+of the crime when it was committed (abbreviated $WA$). These are conflicting hypotheses because if the defendant was away from the crime scene, 
+he could not have had any contact with the victim (at least, not when  the crime occurred). 
+Note that $M$ raises the probability of hypothesis $CV$, while $A$ raises the probability of hypothesis $AW$. Taking into consideration 
+that Adam's DNA matches the crime scene DNA makes it more probable that he visited the crime scene than without taking 
+into consideration the DNA match. Similarly, taking into consideration Adam's alibi makes it more probable that he was away from the crime than without taking into consideration the alibi. 
+So, $M$ is evidence favoring $CV$ because $P(CV|M)> P(CV)$ and 
+$A$ is evidence favoring $AW$ because $P(AW|A)> P(AW)$. The two pieces of evidence are in conflict with one another 
+because they favor incompatible hypotheses. 
+
 
 \paragraph{Same hypothesis can receive different probability assignments depending on evidence (or interpretation thereof)}
 
-We can represent---probabilistically---a conflict between two pieces 
-evidence also in a different way. As discussed earlier, a piece of evidence favors a hypothesis whenever it raises the probability of the hypothesis. 
-If, on the other hand, the probability of the hypothesis shifts downwards as we take into account the evidence, then the evidence disfavors the hypothesis. 
+We can represent---again probabilistically---a conflict between two pieces 
+evidence also in a slightly different way. As discussed earlier, a piece of evidence favors a hypothesis whenever 
+it raises its probability or whenever the likelihood ratio is greater than one. 
+If, on the other hand, the probability of the hypothesis shifts downwards as 
+we take into account the evidence or the likelihood ratio is less than one, 
+the evidence disfavors the hypothesis. 
 %The null case is the one in which the evidence neither favors nor disfavors the hypothesis. 
 In short:
 %
-\[\textit{\text{$E$ favors $H$} iff }  P(H|E)> P(H);\]
+\[\textit{\text{$E$ disfavors $H$} iff }   P(H|E)< P(H) \textit{ iff } \frac{P(E|H)}{P(E|\neg H)}<1.\]
 %
-%\[\textit{\textsc{null} iff }  P(H|E) = P(H);\]
-%
-\[\textit{\text{$E$ disfavors $H$} iff }  P(H|E)< P(H).\]
-%
-Let's now consider the hypothesis $CV$ that Adam had contact with the victim (as the crime occurred). 
+Consider now the hypothesis $CV$ that Adam had contact with the victim (as the crime occurred). 
 The probability of $CV$ raises as we take into account the DNA evidence match $M$, but the probability of $CV$ decreases as we take 
-into account the Adam's alibi $A$. This, at least, is a plausible stipulation. 
-In this sense, then, we can say that the two pieces of evidence $M$ and $A$ conflict with one another because one 
-favors and other disfavors $CV$.
+into account  Adam's alibi $A$. This, at least, is a plausible stipulation. It is less likely that Adam had 
+contact with the victim during the crime, given he has an alibi, than if it did not have an alibi. 
+So, we can also say the two pieces of evidence $M$ and $A$ conflict with one another because one 
+favors and the other disfavors the same hypothesis $CV$.
 %
 %\[\textsc{Conflict: } LR1=\frac{P(E1| H)}{P(E1|\neg H)}>1 \text{ and } LR2=\frac{P(E2|H)}{P(E2|\neg H)}<1.\]
 %
 More generally, two pieces of evidence $E1$ and $E2$ conflict 
-with one another whenever one favors and the other disfavors the same hypothesis 
-$H$, as follows:
+with one another whenever 
 %
-\[\textsc{Conflict (II): } P(H| E1)>P(H) \text{ and } P(H|E2)<P(H).\]
+\[P(H| E1)>P(H) \text{ and } P(H|E2)<P(H),\]
 %
-What is the relation between \textsc{Conflict (I)}  and \textsc{Conflict (II)}?
- It is easy to see that \textsc{Conflict (II)} entails \textsc{Conflict (I)} because if $P(H|E2)<P(H)$, then 
- $P(\text{not-}H|E2)>P(\text{not-}H)$.  WHAT ABOUT THE OTHER DIRECTION?
+or in terms of likelihood ratios,
+%
+\[LR1=\frac{P(E1| H)}{P(E1|\neg H)}>1 \text{ and } LR2=\frac{P(E2|H)}{P(E2|\neg H)}<1.\]
+%
+To recapitulate, we have seen two ways in which the probabilistic framework can represent evidential conflicts.
+First, two pieces of evidence conflict with one another whenever they favor incompatible hypotheses; second, they conflict whenever 
+one favors and the other disfavors the same hypothesis.It is easy toe see that the latter form entails the former, because 
+if $P(H|E1)>P(H)$ and $P(H|E2)<P(H)$, then $P(H|E1)>P(H)$ and $P(\neg H|E2)>P(\neg H)$, 
+where $H$ and $\neg H$ are clearly compatible hypothesis. 
+ WHAT ABOUT THE OTHER DIRECTION?
  
 \paragraph{Relative to the same hypothesis, likelihood ratios for different pieces of evidence can be positive or negative.}
 
-We can describe the relation of evidential favoring and disfavoring by means of likelihood ratios, as well.
-%This will be become particularly useful in the rest of the chapter. 
-If $E$ raises the probability of $H$,  this is equivalent to a likelihood ratio
-$\frac{P(E|H)}{P(E | \neg H)}$ greater than 1. If $E$ lowers the probability of $H$, this is equivalent to a likelihood ratio
-$\frac{P(E|H)}{P(E | \neg H)}$ smaller than 1. %If $E$ neither raises nor lowers the probability of $H$, that is, $P(H|E)<P(H)$, this is equivalent to a likelihood 
-%$\frac{P(E|H)}{P(E | \neg H)}$ of 1. 
-In short:
-%
-\[\textit{\text{$E$ favors $H$} iff }   P(H|E)> P(H) \textit{ iff }\frac{P(E|H)}{P(E|\neg H)}>1\]
-%
-%\[\textit{\textsc{null} iff }  P(H|E) = P(H) \textit{ iff } \frac{P(E|H)}{P(E|\neg H)}=1\]
-%
-\[\textit{\text{$E$ disfavors $H$} iff }   P(H|E)< P(H) \textit{ iff } \frac{P(E|H)}{P(E|\neg H)}<1\]
-%
+ALREADY ADDRESSED EARLIER
 
 \paragraph{If LR for E1 relative to H is positive, while LR for E2 relative to H is negative, E1 and E2 are in conflict}
 
-\textsc{Conflict (I)}  can be suitably rewritten in terms of 
-likelihood ratios, as follows:
-%
-\[\textsc{Conflict (I): } LR1=\frac{P(E1| H1)}{P(E1|\neg H1)}>1 \text{ and } LR2=\frac{P(E2|H2)}{P(E2|\neg H2)}>1,\] 
-%
-\[\text{ where  $H1$ and $H2$ are incompatible hypotheses}.\]
-%
-The idea here is, once again, that two pieces of evidence are in conflict with one another 
-when they favor incompatible hypotheses.  Similarly, \textsc{Conflict (II)}  can also be suitably rewritten in terms of 
-likelihood ratios, as follows:
-%
-\[\textsc{Conflict (II): } LR1=\frac{P(E1| H)}{P(E1|\neg H)}>1 \text{ and } LR2=\frac{P(E2|H)}{P(E2|\neg H)}<1.\]
-%
-The idea here is that two pieces of evidence are in conflict with one another 
-when tone favors and the other disfavor the same hypothesis. 
+ALREADY ADDRESS EARLIER
+
 
 \begin{comment}
 Consider an example. At trial, there are two conflicting eyewitness testimonies W1 and W2. One witness asserts that the defendant was around the scene of the crime when the crime was committed, abbreviated SC. The other witness offers an alibi for the defendant and asserts that she was with the defendant 
@@ -512,7 +524,7 @@ both positive, as follows:
 
 \end{comment}
 
-\paragraph{Comparison between the three frameworks}
+\paragraph{Comparison between the three frameworks} IS THIS NEEDED?
 
 
 
@@ -525,46 +537,48 @@ both positive, as follows:
 \paragraph{Likelihood ratios can model evidential strength vs ``posterior probability'' (difference between the two)}
 
 So far we have only represented---probabilistically---the fact that a piece of 
-evidence favors (or disfavors) a certain hypothesis. The probabilistic framework 
-allows us to quantify the strength of this support relation between evidence and hypothesis. 
-There are different approaches in the literature \citep{Fitelson2006}. Here are a couple. 
-We can consider the difference $P(H|E) - P(H)$. The larger the positive difference, the stronger the support 
-which E offers toward H. Alternatively, we can consider the likelihood ratio $\frac{P(E|H)}{P(E| \neg H)}$. 
-The higher the positive likelihood ratio, the stronger the support which E offers toward H. 
-Since it is common to speak of evidential strength in terms of likelihood ratios, 
-we shall do the same here. 
+evidence favors (or disfavors) a certain hypothesis. Instead of the evidence \textit{favoring} a certain hypothesis, we can we also speak of the evidence 
+\textit{supporting} a certain hypothesis. These expressions are interchangeable. The probabilistic framework 
+allows us to quantify the strength of the evidential support relation between evidence and hypothesis 
+by the difference $P(H|E) - P(H)$, so that the larger the positive difference, the stronger the support 
+which E offers toward H. Alternatively, the strength of the evidential support can also be quantified by means of 
+the likelihood ratio $\frac{P(E|H)}{P(E| \neg H)}$, so that the higher the positive likelihood ratio, 
+the stronger the support which E offers toward H. %For simplicity, we shall speak of evidential strength 
+%in terms of likelihood ratios, as follows:
 %
-\begin{quote}
-\textsc{Measuring evidential strength:} The evidential strength of E relative to H is proportional to 
-the likelihood ratio $\frac{P(H|E)}{P(H|\neg E)}$. 
-\end{quote}
+%\begin{quote}
+%\textsc{Evidential strength:} The evidential strength of $E$ relative to $H$ is proportional to 
+%the likelihood ratio $\frac{P(H|E)}{P(H|\neg E)}$. 
+%\end{quote}
 %
-The likelihood ratios is a good measure of evidential strength because it tells how much a piece 
-of evidence $E$ can impact the initial probability of a hypothesis $H$. Evidential strength of a 
-piece of is not measured in terms of how high  the probability of a certain hypothesis 
-is given the evidence. If the probability of $H$ given $E$ is high, this does 
-not mean that $E$ strongly favors $H$. 
+Both the difference $P(H|E) - P(H)$ and the likelihood ratios are good measures of evidential support because they tell 
+how much a piece of evidence $E$ can impact, upwards or downwards, the initial probability of a hypothesis $H$. There are subtle differences between the two approaches, 
+but these should not concern us here (FITELSON REFERENCE HERE).
 
-This allows us to address a paradox 
-that has been formulated against a probabilistic account of evidential strength (REFERENCE TO COHEN).
-Suppose the probability of $H$ given $E$ is low because, say, the evidence is meager. For example, the probability that it will rain tomorrow given that the stock market crashed 
-seems rather low. If so, according to the probability calculus, the probability that it will \textit{not} rain tomorrow given that the stock market crashed must be rather high. But how can that be? How can meager or irrelevant evidence make a certain hypothesis---in our case, that it will not rain tomorrow---highly probable? L.J. Cohen summarized the paradox here by saying that ``the probability calculus creates evidence from ignorance'' (REFERENCE). This paradox can be address by noting that evidential strength is not a function of 
-the conditional probability of $H$ given $E$, but a function of the likelihood ratio $\frac{P(E | H)}{P(E | \neg H)}$ or of the difference $P(H|E) - P(H)$. Now, learning about the stock market crash does not raise or lowers the probability that it will rain or not rain tomorrow, so the difference $P(H|E) - P(H)$ must be roughly zero and 
-the likelihood ratio must be roughly 1. This means that the information that the stock mark crashed 
-has no evidential strength relative to the hypothesis that it will rain (or not) tomorrow. 
-The probability that it will rain or that it will not rain tomorrow, given that the stock market crashed, is whether 
-probability the event of rain has regardless of considering the fact that the stock market crashed. The probability of rain, or not rain, 
-tomorrow could be high or low. Whatever its value, it will be independent from the stock market crashing. 
-The paradox, then, seems merely an artifact, but it is instructive to illustrative the difference between likelihood ratio and the 
-conditional probability of an hypothesis given the evidence (sometimes also called the ''posterior probability'' because it 
-is the probability resulting from taking into account a new item of evidence). It is certainly paradoxical to measure evidential strength in terms of mere conditional probability. 
-The likelihood account must be adopted instead.
+The important point is that evidential strength is not measured in terms of the conditional probability of a certain hypothesis 
+given the evidence. In fact, identifying 
+evidential strength with mere conditional probability leads to the so-called \textit{negation paradox} formulated by LJ Cohen (REFERENCE).
+If the probability of $H$ given $E$ is low, then the probability of $\neg H$ given $E$ must be high.
+For example, if the probability that it will rain tomorrow given that the stock market crashed 
+is low, then the probability that it will \textit{not} rain tomorrow given that the stock market crashed must be high. 
+LJ Cohen here remarks that the probability calculus ``creates evidence from ignorance'' and thus 
+cannot offer an adequate account of evidential strength. Indeed, if we identified evidential strength 
+ and conditional probability, the market crash would be strong evidence that there will be no rain tomorrow, and this is patently 
+ absurd. But, according to the probabilistic account of evidential strength presented here, the information that the stock mark crashed 
+is not strong evidence that there will be or not be rain tomorrow. Learning about the market crash does not raise or lowers the probability that it will 
+rain or not rain tomorrow. In other words, the difference $P(H|E) - P(H)$ is roughly zero and the likelihood ratio roughly one. 
+Cohen's negation paradox, then, only suggests that we should not measure evidential strength in terms of mere conditional probability.
+%llustrates the difference between the likelihood ratio and the 
+%conditional probability of a hypothesis given the evidence (sometimes also called the ''posterior probability'' because it 
+%is the probability resulting from taking into account a new item of evidence). 
+%It is certainly paradoxical to measure evidential strength in terms of mere conditional probability. The likelihood account must be adopted instead.
+
 
 
 \paragraph{Illustration}
 
-In the British case R v Adams, Adam's DNA matched the traces 
-of semen found on the victim's body.
+%In the British case R v Adams, Adam's DNA matched the traces 
+%of semen found on the victim's body.
 %but Adam also had an alibi provided by his girlfriend.  
 %When we discussed the argument-based framework, we presented this 
 %as an example of rebutting. 
@@ -574,26 +588,131 @@ of semen found on the victim's body.
 %How can we represent probabilistically the conflict between the DNA match and Adam's alibi? 
 %We can propose a simple analysis of the case based on combining likelihood ratios. 
 %Let's openly consider the DNS evidence match, call it M; Adam's alibi, call it A; 
-Earlier we analyzed this probabilistically by saying that the DNA match favors 
-the hypothesis that Adam had contact with the victim. The advantage of the probability-based framework is the analyst can be much more refined tan that. 
-As known, a DNA evidence is always accompanied by a probabilistic estimate, and in the Adam's case, the DNA lab analyst testified that 
-the probability that a random person would match the crime traces was estimated to be 1 in 200 million. This value can 
-be incorporated in the likelihood ratio as a me sure of the strength of the evidential strength of the DNA match. 
-Let $CV$ stand for the hypothesis that Adam had 
-contact with the victim and $M$ stand for the 
-proposition that the crime scene DNA matches Adam's DNA
-% and A stand for Adam's alibi.
-The likelihood ratio for the DNA match, relative to hypothesis $CV$---
-can be described as follows:
+%Earlier we analyzed the British case R v Adams by saying that the DNA match favors 
+%the hypothesis that Adam had contact with the victim (and the alibi did not or favored an incompatible hypothesis). 
+%The advantage of the probability-based framework is the analysis can be more refined than that. 
+We now examine the evidential strength of a DNA match in probabilistic terms. How strongly does a DNA match between the defendant and the crime 
+traces support the hypothesis that the defendant is guilty? To begin with, it is not obvious that a DNA match bears on 
+the hypothesis of guilt. This depends on what kind of traces we are considering and whether they 
+are compatible with innocent or accidental contact. A more cautious and conservative hypothesis is that the defendant 
+is the source of the crime traces, call this $S$, without committing oneself to the hypothesis of guilt. 
+Still, the question remains. How strongly does a DNA match support hypothesis $S$? Clearly, if the matching DNA were not shared by anyone and the laboratory testing was infallible, 
+the DNA match would be an assailable proof that the defendant was the source of the traces. 
+But, DNA profiles need not be unique because they could be shared by an identical twin 
+or because another individual could just happen to have, as a mere accident, the exact same genetic profile.
+Also, laboratories make mistakes. Let us consider the sources of uncertainty in turn. 
+
+When it is presented in a court of law, a DNA match is routinely accompanied by an estimate of the probability 
+that a random person unrelated to the crime would match the crime traces. In R v Adam, this probability was estimated to be 1 in 200 million. 
+This probability highlights that there is still a chance that a random person would match. 
+
+
+
+
+
+This is a low number, but we would still expect 5 individuals with the same DNA profile as Adam's. Sometimes those probabilities are astronomically low, such as 1 in 500 billion, but even then, 
+and assuming that the astronomically low numbers are accurate, there is no scientific proof that the DNA profile in question is unique.
+DNA profiles cannot be said to be unique. The uncertainty stemming from the possibility that 
+the same DNA profile could be shared by other individuals can be embedded in the likelihood ratio as a measure of the 
+DNA match's evidential strength.  The numerator in the likelihood ratio is the probability $P(M | S)$, that is, the probability that a match would be be reported assuming 
+that Adam was the source. The value of this probability can be approximated to one, because if Adam was the source, the match would be reported (setting aside 
+the possibility of a false negative laboratory error for the time being). The denominator is the probability $P(M| \neg S)$, that is, the probability 
+that a match would be reported assuming that
+Adam was \textit{not} the source. This equals 1 in 200 million, that is, the chance that a random person---someone who 
+had nothing to do with the crime or had no contact with the victim---would match anyway.
+The likelihood ratio for the DNA match, relative to hypothesis $S$, is thus the following:
 %
-\[LR_M=\frac{P(M| CV)}{P(M| \neg CV)}=200,000,000.\]
+\[\frac{P(M| CV)}{P(M| \neg CV)}\approx 200,000,000.\]
 %
-The idea benign this assignment is as follows. If the Adam has in fact contact with the victim, we can assume that there the match would be found, so 
-$P(M| CV)=1$, and if instead Adam did not have contact with the victim, there would still be a 1 in 200 million chance that the DNA 
-analysis would show match. This is because the probability that a random person---that is, someone who 
-had nothing to do with the crime---would match is 1 in 200 million, so $P(M| \neg CV)$ is 1 in 200 million. 
-The likelihood ratio $\frac{P(M| CV)}{P(M| \neg CV)}$ is therefore 200 million. This a rather high value 
-and therefore the strength of the evidence is high, at least relative to the hypothesis that Adam has contact with the victim.
+This a high value and so the 
+strength of the DNA match is high, at least relative to the hypothesis $S$
+that Adam was the source of the crime traces. 
+
+But what if a laboratory error was committed? The likelihood ratio of 200 million does not take this possibility into account. 
+The laboratory could have falsely reported a match while in fact Adam did not match. This is a \textit{false positive}. Also, the laboratory could 
+have failed to report a match while in fact the defendant 
+did match. This is a \textit{ false negative}. The likelihood ratio can modified accordingly to take the lab error rates into account. 
+There are some suggestions in the literature on how this can be done. The point is that by taking in to account the possibility of 
+laboratory error the likelihood ratio diminish significantly, even if the error rate is relatively low
+Fo example, it can be shown that a likelihood ratio as high as 1 billion must be brought to just about 100 
+if the laboratory error rare is just 1\%.\footnote{If the RMP equals 1 in 100,000,000, assigning a likelihood ratio of 100,000,000 rests on two simplifications. 
+For one, $P(\text{match}|\neg S)=\frac{1}{100,000,000}$, or more generally $P(M | \neg S)=p$. Intuitively, given a RMP=100,000,000
+the probability that someone who is not the source would show as a match is 1 in 100,000,000. This is a simplification because  
+the defendant might \textit{not} possess the DNA profile in question, yet laboratory analyses could show that he does
+(what is called a \textit{false positive}). To take false positives into account, instead of a match $M$, we should properly speak of a reported match $M_r$. 
+A reported match $M_r$ can occur in two situations: when there is a true, factual match $M_t$ or when there is a true, 
+factual non-match $\neg M_t$. So, we have:
+%
+\[
+P(M_r | \neg S)= P(M_r | M_t)P(M_t| \neg S) + P( M_r | \neg M_t) P(\neg M_t | \neg S).\footnote{For an explanation, 
+see \citep{Thomason2003How-the-Probabi}.}
+\]
+%
+Now, $P(M_t | \neg S)$ equals $p$, and thus $P(\neg M_t | \neg S)$ equals $1-p$.
+Also, $P(M_r | \neg M_t)$ describes the laboratory's false positive rate, abbreviated by $FP$.
+Finally, $P(M_r | M_t)$ describes the laboratory's true positive rate, or the inverse 
+of the laboratory's false negative rate, abbreviated  $FN$. So, we have:
+%
+\[
+P(M | \neg S)= [(1-FN) \times p] + [ FP \times (1- p)].\footnote{See \citep{Thomason2003How-the-Probabi} and \citep{Buckleton2005A-Framework-for}.}
+\]
+ %
+ The formula above shows that in order to properly estimate the value of
+ $P(M_r | \neg S)$, we need a statistical estimate of the DNA profile's RMP \textit{as well as} 
+ the laboratory's error rates (false positive and negative rates). 
+ 
+The second simplification is $P(M |S)=1$, that is, given that the defendant is in fact the source, 
+the probability of finding a DNA match for him is one. This is a simplification because 
+the laboratory analyses might fail to show a match even though the defendant did leave 
+the traces (what is called a \textit{false negative}). In our new notation, this second 
+simplification can be stated as $P(M_r | S)=1$. To take the possibility of a false negative 
+into account, we write:
+%
+\[
+P(M_r | S)= P(M_r | M_t)P(M_t| S) + P( M_r | \neg M_t) P(\neg M_t | S).
+\]
+In the equation, $P(M_t| S)=1$ and $P(\neg M_t | S)=0$. Thus, 
+$P(M_r | S)= 1- FN$. 
+
+Putting everything together, a formulation of the likelihood ratio 
+that takes into account laboratory errors is as follows:
+\[
+{P(M_r | S) \over P(M_r | \neg S)} = { 1- FN \over [(1-FN) \times p] + [ FP \times (1- p)]}.
+\]
+%
+Laboratory error rates do impact the likelihood ratio quite dramatically. 
+Suppose a DNA profile  has a frequency as low as of 1 in 1 billion. Suppose laboratory false positive 
+and false negative rates equal 0.01. If the likelihood ratio is simply equivalent 
+to $1/p$, then it would be 1 billion. With the new formulation, we have:
+\[
+{P(M_r | S) \over P(M_r | \neg S)} = { 1- 0.01 \over [(1-0.01) \times 0.000000001] + [ 0.01 \times (1- 0.000000001)]}\approx 100.\footnote{
+The calculation is as follows:
+
+$= { 1- 0.01 \over [(1-0.01) \times 0.000000001] + [ 0.01 \times (1- 0.000000001)]}$
+
+$= { 0.99 \over 0.99 \times 0.000000001 + [ 0.01 \times (0.999999999)]}$
+
+$= { 0.99 \over 0.00000000099 + 0.00999999999}$
+
+$= { 0.99 \over 0.01000000098 }\approx 98 \approx 100$
+}
+\]
+}
+Relatively small error rates can therefore significantly diminish the evidential strength of a DNA evidence match by dramatically 
+reducing the likelihood ratio.(REFERENCE \cite{Thomason2003How-the-Probabi}.)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \begin{comment}
 It is instructive too compare it with Adam's alibi. 
@@ -660,26 +779,6 @@ Prior Odds & Likelihood Ratios  &  Posterior Odds &  $P(S | M)$ \\
 
 \paragraph{Likelihood ratios can model sources of weakness/error/uncertainty (illustrate this through DNA evidence)}
 
-The analyzes of the strength of a DNA match can be more refined than what we have done so far. 
-Consider a generic criminal case in which there is a DNA evidence against the defendant. Laboratory analyses show that the defendant matches with the genetic traces found at the crime scene. Call this piece of evidence $M$. 
-Let us suppose the prosecutor's hypothesis is that the defendant is the source of the genetic 
-material found at the crime; call this hypothesis $S$. 
-(Note that hypothesis $S$ is not quite the same as the hypothesis that the defendant is guilty. The fact that the defendant is the source of the crime 
-scene genetic material need not entail that he is guilty. He could have left the genetic traces accidentally 
-or in a way consistent with his innocence.) What should we conclude about $S$ given $M$?
-How are we to assess the evidential strength of $M$ relative to $S$?
-As said at the beginning, we can identify three major sources of uncertainty 
-while drawing inferences from a DNA evidence match:
-%
-\begin{enumerate}
-\item an accidental match
-\item a laboratory error
-\item a twin brother or a close relative with the same DNA as the defendant 
-\end{enumerate}
-%
-We shall now see how likelihood ratios can represent  
-these three uncertainties and assess the evidential strength of a DNA 
-evidence match accordingly. 
 
 Let's start with the possibility of a \textit{coincidental match}. Suppose the defendant matches with 
 the crime scene DNA; there was no laboratory error; and no close relative had the same DNA. Even under these assumptions, 
@@ -713,75 +812,7 @@ The likelihood ratio would be as follows:
 
 
 Beside a coincidental match, another source of uncertainty with a DNA evidence match is the possibility of a 
-\textit{laboratory error}. If the RMP equals 1 in 100,000,000, assigning a likelihood ratio of 100,000,000 rests on two simplifications. 
-For one, $P(\text{match}|\neg S)=\frac{1}{100,000,000}$, or more generally $P(M | \neg S)=p$. Intuitively, given a RMP=100,000,000
-the probability that someone who is not the source would show as a match is 1 in 100,000,000. This is a simplification because  
-the defendant might \textit{not} possess the DNA profile in question, yet laboratory analyses could show that he does
-(what is called a \textit{false positive}). To take false positives into account, instead of a match $M$, we should properly speak of a reported match $M_r$. 
-A reported match $M_r$ can occur in two situations: when there is a true, factual match $M_t$ or when there is a true, 
-factual non-match $\neg M_t$. So, we have:
-%
-\[
-P(M_r | \neg S)= P(M_r | M_t)P(M_t| \neg S) + P( M_r | \neg M_t) P(\neg M_t | \neg S).\footnote{For an explanation, 
-see \citep{Thomason2003How-the-Probabi}.}
-\]
-%
-Now, $P(M_t | \neg S)$ equals $p$, and thus $P(\neg M_t | \neg S)$ equals $1-p$.
-Also, $P(M_r | \neg M_t)$ describes the laboratory's false positive rate, abbreviated by $FP$.
-Finally, $P(M_r | M_t)$ describes the laboratory's true positive rate, or the inverse 
-of the laboratory's false negative rate, abbreviated  $FN$. So, we have:
-%
-\[
-P(M | \neg S)= [(1-FN) \times p] + [ FP \times (1- p)].\footnote{See \citep{Thomason2003How-the-Probabi} and \citep{Buckleton2005A-Framework-for}.}
-\]
- %
- The formula above shows that in order to properly estimate the value of
- $P(M_r | \neg S)$, we need a statistical estimate of the DNA profile's RMP \textit{as well as} 
- the laboratory's error rates (false positive and negative rates). 
- 
-The second simplification is $P(M |S)=1$, that is, given that the defendant is in fact the source, 
-the probability of finding a DNA match for him is one. This is a simplification because 
-the laboratory analyses might fail to show a match even though the defendant did leave 
-the traces (what is called a \textit{false negative}). In our new notation, this second 
-simplification can be stated as $P(M_r | S)=1$. To take the possibility of a false negative 
-into account, we write:
-%
-\[
-P(M_r | S)= P(M_r | M_t)P(M_t| S) + P( M_r | \neg M_t) P(\neg M_t | S).
-\]
-In the equation, $P(M_t| S)=1$ and $P(\neg M_t | S)=0$. Thus, 
-$P(M_r | S)= 1- FN$. 
-
-Putting everything together, a formulation of the likelihood ratio 
-that takes into account laboratory errors is as follows:
-\[
-{P(M_r | S) \over P(M_r | \neg S)} = { 1- FN \over [(1-FN) \times p] + [ FP \times (1- p)]}.
-\]
-%
-Laboratory error rates do impact the likelihood ratio quite dramatically. 
-Suppose a DNA profile  has a frequency as low as of 1 in 1 billion. Suppose laboratory false positive 
-and false negative rates equal 0.01. If the likelihood ratio is simply equivalent 
-to $1/p$, then it would be 1 billion. With the new formulation, we have:
-\[
-{P(M_r | S) \over P(M_r | \neg S)} = { 1- 0.01 \over [(1-0.01) \times 0.000000001] + [ 0.01 \times (1- 0.000000001)]}\approx 100.\footnote{
-The calculation is as follows:
-
-$= { 1- 0.01 \over [(1-0.01) \times 0.000000001] + [ 0.01 \times (1- 0.000000001)]}$
-
-$= { 0.99 \over 0.99 \times 0.000000001 + [ 0.01 \times (0.999999999)]}$
-
-$= { 0.99 \over 0.00000000099 + 0.00999999999}$
-
-$= { 0.99 \over 0.01000000098 }\approx 98 \approx 100$
-}
-\]
-Relatively small error rates can therefore significantly diminish the evidential strength of a DNA evidence match by dramatically 
-reducing the likelihood ratio. In the example, we went from one billion to only one hundred.\footnote{For a  amore systematic discussion of this point, see \cite{Thomason2003How-the-Probabi} who show how even a small margin of laboratory 
-error can substantially diminish the probative value of DNA evidence.} 
-The impact of laboratory error rates is an indication that no matter how 
-low the RMP turns out to be, it will be of relatively little significance when it is unaccompanied 
-by an estimate of the laboratory error rates. But the important point here is that the likelihood ratio, as a measure of the strength of the evidence, 
-allows us to take this complication into account. 
+\textit{laboratory error}. 
 
 There is a third source of uncertainty in assessing the evidential strength of a DNA evidence match. There could 
 a \textit{twin brother} or a \textit{close relative} who share the same DNA as the defendant.
