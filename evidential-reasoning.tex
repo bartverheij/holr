@@ -2,6 +2,23 @@
 \documentclass[10pt]{article}
 %\documentclass[11pt]{amsart}
 %\documentclass[preprint,12pt]{elsarticle}
+
+\usepackage{etex}
+\usepackage{standalone}
+\usepackage{tikz}
+\input{styles}
+
+%tikz
+\usepackage{dcolumn}
+\usepackage{booktabs}
+% \usepackage{tikz}
+\usetikzlibrary{positioning,shapes,arrows}
+\newcolumntype{M}[1]{D{.}{.}{1.#1}}
+
+%images
+\usepackage{subcaption}
+\usepackage{graphicx}
+
 \usepackage{multirow}
 \usepackage[all]{xy}
 \usepackage{verbatim} 
@@ -111,15 +128,15 @@ Marcello Di Bello \& Bart Verheij --  \today \\
 
 \noindent When a suspect appears in front of a criminal court, there is a very high probability that he will be found guilty. In the Netherlands, for instance, the conviction rate of suspects that appear in criminal courts is reported to be around 95\% year after year.\footnote{Source: CBS, the Dutch central bureau of statistics, publishing its data at www.cbs.nl.} In the United States, the conviction rate in federal courts has been roughly 75\% and in Japan it has reached as high a rate as 99\%.\footnote{\textbf{SOURCE TO BE ADDED}} This does not mean that fact-finders deciding about the facts of a criminal case have an easy job. Whether laypeople, such as jury members selected from the general public, or professionals, often experienced judges having completed postgraduate education, all face the difficulties associated with handling the evidence that is presented in court. What to do with conflicting testimonies? Does an established DNA match outweigh the testimony that the suspect was not on the crime scene? How to coherently interpret a large body of evidence? What to do with illegally obtained evidence? When is there enough evidence to convict `beyond a reasonable doubt'? 
 
-The primary aim of this chapter is to explain the nature of evidential reasoning, the characteristic difficulties encountered, and the tools to address these difficulties. There is an extensive scholarly literature on these topics, and it is a secondary aim of the chapter to provide readers the means to find their way in historical and ongoing debates. Before diving into the literature, we set the stage by using two important and often encountered kinds of evidence as an illustration: eyewitness testimony and DNA profiling. Similarities and differences between these kinds of evidence are used to establish a list of central questions and  structure the exposition that follows.
+The primary aim of this chapter is to explain the nature of evidential reasoning, the characteristic difficulties encountered, and the tools to address these difficulties. There is an extensive scholarly literature on these topics, and it is a secondary aim of the chapter to provide readers the means to find their way in historical and ongoing debates. Before diving into the literature, we set the stage by using two important and often encountered kinds of evidence as an illustration: eyewitness testimony and DNA profiling. Similarities and differences between these kinds of evidence are used to establish a list of central questions that structure the exposition that follows.
 
 %\subsection{Setting the stage: eyewitness testimony and DNA profiling}
 
 \section{Setting the stage}
 
 
-Fact-finders, the jurors, judges, or both, aim to reconstruct what has happened in the crime on the basis of the evidence. 
-We will use two types of evidence to develop a list of central questions associated with evidential reasoning: eyewitness testimony and DNA analysis.
+Fact-finders---typically jurors and judges---aim to reconstruct what has happened in the crime on the basis of the evidence. 
+We will use two central types of evidence to develop a list of central questions associated with evidential reasoning: eyewitness testimony and DNA analysis.
 
 \subsection{Eyewitness testimony}
 
@@ -144,7 +161,7 @@ On the basis of eyewitness testimony, we can form a hypothesis about what has ha
 
 DNA profiling has become an important tool in courts. DNA profiling has a strong scientific underpinning, and comes with precise statistical information. The evidential relevance of a DNA profile stems from the fact that, although most of the structure of DNA is shared among all human beings (more than 99\%), the variations that do exist are very specific for each individual. 
 
-A profile is determined by analyzing a number of specific locations---the so-called loci---of a DNA molecule, and establish the type of structure found there. These types are called alleles, and typically consist of the number of repetitions of a small DNA structure at a location. For instance, one locus used in the profiles stored in forensic DNA databases in the USA is referred to as CSF1PO, and it can have alleles 5, 6, 7 and then up to 16, depending on how often the molecular sequence AGAT is repeated at that location.\footnote{See \url{http://www.cstl.nist.gov/strbase/str\_CSF1PO.htm.}} Different countries use different sets of what are called core loci for their forensic DNA profile databases. For instance, the USA CODIS system has 13 core loci. As said, each specific DNA profile is rare, and reference databases of profiles are used to numerically measure how rare it really is. This is done by counting the number of occurrences of each allele at each core locus in the reference database, which gives an estimate of the proportional frequency of that allele at that locus in the population. The measured proportional frequencies for the individual alleles at the core loci are then multiplied to compute what is called the Random Match Probability of the DNA profile.\footnote{Some special care is needed to accommodate for the fact that an allele can be from either part of the double helix that comprises our DNA.} These Random Match Probabilities---and numbers mathematically related to them---are the numbers reported by forensic experts in courts, and the smaller they are, the higher the evidential value of the profile is taken to be. The sets of core loci have been chosen such that Random Match Probabilities are typically very small, for instance, in the order of 1 in 50 billion, amply exceeding the number of people on our planet. The use of more loci leads to smaller Random Match Probabilities. A key assumption underlying the model is that there are no dependencies among the alleles at different loci. Scientists have found that this is not entirely true, as some dependencies have been established, for instance among the profiles within ethnic groups. It is also accepted that the independence assumption is hard to test in full generality, as that would require assessing more profiles than possible.
+A profile is determined by analyzing a number of specific locations---the so-called loci---of a DNA molecule, and establish the type of structure found there. These types are called alleles, and typically consist of the number of repetitions of a small DNA structure at a location. For instance, one locus used in the profiles stored in forensic DNA databases in the USA is referred to as CSF1PO, and it can have alleles 5, 6, 7 and then up to 16, depending on how often the molecular sequence AGAT is repeated at that location.\footnote{See \url{http://www.cstl.nist.gov/strbase/str\_CSF1PO.htm.}} Different countries use different sets of---what are called---core loci for their forensic DNA profile databases. For instance, the USA CODIS system has 13 core loci. As said, each specific DNA profile is rare, and reference databases of profiles are used to numerically measure how rare a profile really is. This is done by counting the number of occurrences of each allele at each core locus in the reference database, which gives an estimate of the proportional frequency of that allele at that locus in the population. The measured proportional frequencies for the individual alleles at the core loci are then multiplied to compute what is called the Random Match Probability of the DNA profile.\footnote{Some special care is needed to accommodate for the fact that an allele can be from either part of the double helix that comprises our DNA.} These Random Match Probabilities---and numbers mathematically related to them---are the numbers reported by forensic experts in courts, and the smaller they are, the higher the evidential value of the profile is taken to be. The sets of core loci have been chosen such that Random Match Probabilities are typically very small, for instance, in the order of 1 in 50 billion, amply exceeding the number of people on our planet. The use of more loci leads to smaller Random Match Probabilities. A key assumption underlying the model (used when multiplying the estimated probabilities of specific alleles) is that there are no dependencies among the alleles at different loci in the population considered. Scientists have found that this is not entirely true, as some dependencies have been established, for instance among the profiles within ethnic groups. It is also accepted that the independence assumption is hard to test in full generality, as that would require assessing more profiles than possible.
 
 Suppose now that a trace of blood has been found on the scene of the crime, and that the found DNA profile matches that of the suspect's DNA. Using this evidence, we form the hypothesis that the suspect is the source of the blood trace, and the Random Match Probability associated with the profile provides a measure of the evidential strength of the match. It is a common misunderstanding to equate this number with the probability that the suspect is not the source of the trace. This well-known misunderstanding is referred to as the prosecutor's fallacy. The probability that the suspect is not the source of the trace can be determined from the Random Match Probability, after a correction for the prior odds that the suspect is the source.
 
@@ -170,51 +187,108 @@ During the collection of evidence all kinds of things can happen. A witness' ans
 \textit{Question 5:	How should we decide about the facts given the evidence? When are we done?}
 After a careful and exhaustive investigation in the pretrial and trial phases of the criminal proceedings, the question arises when a decision can be made and what that decision is. When is the burden of proof met? What is the meaning of ``beyond a reasonable doubt''? When have we collected enough evidence to make a decision?
 
-In the following sections, each of these questions is addressed. Before that, we discuss three normative tools that can help understand how to correctly handle the evidence.
+In the following sections, each of these questions is addressed. Before that, we discuss three normative tools that can help understand how to correctly handle the evidence. 
 
 \subsection{Three normative frameworks}
 
+In this section, we discuss three normative frameworks for the correct handling of the evidence, as distinguished in the scholarly literature \citep{andersonEtal2005,kapteinEtal2009,dawidEtal2011}. The first framework discussed uses arguments as primary tool, the second scenarios, and the third probabilities. 
+
 \subsubsection{Arguments}
 
-			Argument diagrams
+The first normative framework for the handling of evidence that we discuss uses arguments as primary tool. Arguments contain reasons that support or attack the conclusions considered. For instance, when a witness reports that she saw the suspect at the crime scene, there is a reason for the suspect having been at the crime scene. There is a reason attacking that conclusion when the DNA profile found at the crime scene does not match the suspect's. When it is found that the witness is a member of a rivalling gang, it is concluded that the witness is lying. This resolves the conflict of reasons since the lying of the witness attacks the support for the suspect being at the crime scene on the basis of the witness testimony. Figure~\ref{fig:arg} summarizes these reasons for and against conclusions in a diagram. 
 
-			Wigmore
+\begin{figure}[bt]
+\centering
+\input{img/argument}
+\caption{Arguments contain supporting and attacking reasons\label{fig:arg}}
+\end{figure}
 
-			Pollock
+The analysis of the structure of arguments goes back to the early twentieth century when John Henry Wigmore developed his famous evidence charts~\citep{wigmore1913,wigmore1931}. The work by the New Evidence Scholarship~\citep{andersonEtal2005} continued from Wigmore's insights. Independently, and not focusing on evidence in criminal cases, the structure of arguments for and against conclusions was formalized and computationally studied by the philosopher John~\citet{pollock1987,pollock1995}, who distinguished two kinds of attacking reasons. The first kind of attacking reasons---that he referred to as rebutting reasons---are reasons that support the opposite of the conclusion of the attacked reason. In the example, the non-matching DNA profile is a rebutting reason attacking the reason from the witness report since it supports that the suspect was not at the crime scene. The second kind of attacking reasons distinguished by Pollock, undercutting reasons, only attack the supporting connection of the attacked reason. In the example, the lying by the witness is an undercutting attack of the reason based on the witness report since it is not a reason that supports that the suspect was \emph{not} at the crime scene. The work by Pollock stimulated an extensive literature on the formal and computational study of arguments for and against conclusions~\citep{vanEemerenEtal2014Ch11}.
 
 \subsubsection{Probabilities}
+The second normative framework for the correct handling of the evidence uses probabilities as main tool. The probability calculus is used to connect the probabilities of evidence and events, conditioned on each other. Consider for instance a trace found at the crime scene with a rare DNA profile of estimated frequency 1 in a billion, and let $E$ be the evidence that the suspect's profile matches the trace's. We are interested in the hypothetical event $H$ that the suspect is the source of the trace. Because the profile is rare, a match is not often found accidentally, only when the suspect actually is the source of the trace. Intuitively, finding a match therefore has a high evidential value for establishing that the suspect is the source of the trace. 
 
-			Bayesian approaches
+This intuition can be made precise in the probability calculus, as follows. If the suspect is not the source, written as $\neg H$, the probability of still finding the match by accident is 1 in a billion:
 
-			LRs
+\begin{quotation}
+	$\Pr(E|\neg H) = 1/10^9$
+\end{quotation}
+
+\noindent Ignoring sources of error, e.g., made in the lab, we take it that finding a match is certain when the suspect is the source of the trace:
+
+\begin{quotation}
+	$\Pr(E|H) = 1$
+\end{quotation}
+
+\noindent The ratio $\Pr(E|H)/\Pr(E|\neg H)$ of these two conditional probabilities is called the likelihood ratio, in the example $10^9$. The posterior odds ${\Pr(H|E)}/{\Pr(\neg H|E)}$ of a hypothesis after the evidence is taken into account can be found by multiplying the likelihood ratio with the prior odds ${\Pr(H)}/{\Pr(\neg H)}$ before the evidence is taken into account:
+
+\begin{quotation}
+	$
+	\dfrac{\Pr(H|E)}{\Pr(\neg H|E)} = \dfrac{\Pr(E|H)}{\Pr(E| \neg H)}\cdot\dfrac{\Pr(H)}{\Pr(\neg H)}  
+	$
+\end{quotation}
+
+\noindent This likelihood ratio formula explains why the likelihood ratio is a useful measure for the evidential value of new evidence: if the likelihood ratio is greater than 1, the posterior odds of the hypothesis are larger than the prior odds. In other words, the evidence makes the hypothesis more strongly supported, and the larger the likelihood ratio is, the larger the difference between posterior and prior. In our example, the likelihood ratio is large, $10^9$, indicating a high evidential value of finding the match, as expected by the rarity of the profile. When the likelihood ratio is 1, the evidence does not change the odds; and when it is smaller than 1, the evidence decreases the support of the hypothesis. Then the posterior odds are smaller than the prior odds.
+
+The likelihood ratio holds in the probability calculus, and is closely related to the famous Bayes' theorem:
+
+\begin{quotation}
+	$\Pr(H|E) = \dfrac{\Pr(E|H)}{\Pr(E)}\cdot\Pr(H)$
+\end{quotation}
+
+\noindent This formula shows how the posterior probability $\Pr(H|E)$ of the hypothesis given the evidence can be computed by multiplying the prior probability $\Pr(H)$ and the Bayes factor $\Pr(E|H)/\Pr(E)$.
+
+The interest in probabilistic calculations as a tool for the good handling of the evidence has recently been stimulated by the statistics related to DNA profiling, and by some infamous miscarriages of justice that involved statistics, in particular the Lucia de Berk and Sally Clark cases~\citep{dawidEtal2011,fenton2011,schnepsColmez2013}. The interest is not new~\citep{tillers2011}, and goes in fact back to the early days of forensic science~\citep{taroniEtal1998}. To what extent probabilistic calculations have a place in courts has always been, and remains the subject of debate.\footnote{A recent instance of the debate concerns the R v T case, where the UK Court of Appeal restricted the use of Bayes' theorem in courts to cases with a solid statistical foundation such as DNA; see the 2012 special issue of Law, Probability and Risk; Vol. 4, No. 2. For a 1970s instance of the debate, see~\citet{finkelsteinFairley1970,tribe1971}.}
 
 \subsubsection{Scenarios}
 
-			Scenario comparison
+The third normative framework for the correct handling of the evidence centers around scenario analysis. In a scenario, a coherent account of what may have happened in a case is made explicit. Different scenarios are contrasted, and evaluated, by considering their plausibility and by checking to what extent they match and contradict the available evidence. 
 
-			Pennington and Hastie
+For instance, consider a murder case in which some skin tissue is found under the victim's nails. The former partner of the victim is considered a suspect because of the recent breakup. A hypothetical scenario then can be that, before the killing, the suspect had a fight with the murdered victim, who scratched the suspect so heavily that some skin tissue was left under his nails. The prosecution tests this scenario finding out that the DNA profile of the suspect matches that of the trace. The suspect's defense can report an alternative scenario that indeed the suspect had had a fight with the victim on the occasion of their breaking up, but that she is not the murderer as she was in the theater that specific night. As evidence, she produces proof that here bank card was used at the theater's counter. The prosecution agrees that their guilty scenario cannot be considered true beyond a reasonable doubt, and cannot close the case, until a drug-using robber arrested in another case breaks, and confesses having killed the victim who accidentally entered during a robbery.
 
-			Anchored narratives (Crombag, Van Koppen, Wagenaar)
-			
+We now have three scenarios:
+
+\begin{description}
+	\item S1: The victim's former partner killed the victim after a fight.
+	\item S2: The victim's former partner has had a fight with the victim, but has not killed him and was in the theater that night.
+	\item S3: The drug-dealing robber killed the victim when caught during a robbery.	
+\end{description}
+
+We also have three pieces of evidence:
+
+\begin{description}
+	\item E1: There is a match of the DNA profile of the trace and that of the victim's former partner.
+	\item E2: The victim's former partner's bank card was used at the theater that night.
+	\item E3: The drug-dealing robber confesses having killed the victim during a robbery.	
+\end{description}
+
+\noindent The breakup murder scenario $S1$ explains the skin trace $E1$, but is contradicted by the use of the bank card $E2$, and again by the confession $E3$. The innocent former partner scenario $S2$ explains the skin trace $E1$ and the bank card use $E2$, and is independent from the confession $E3$. The caught robber scenario explains the confession $E3$, and is independent from the skin trace $E1$ and the bank card use $E2$. Considering these scenarios and this evidence, breakup murder scenario $S1$ is hard to believe, the innocent former partner and caught robber scenarios $S2$ and $S3$ seem to be true.
+
+Attention for scenario analysis rose when it was realized that scenarios are helpful when considering a complex case and its evidence. The coherent explanation of the evidence provided by a scenario can be regarded as a sense-making tool for handling cases with a large dossier. In particular, legal psychology has contributed to our knowledge about the role of scenarios in handling the evidence~\citep{bennettFeldman1981,penningtonHastie1993}. Scenarios were shown to be misleading, as experiments showed that a false scenario told in a sensible chronological order was more easily believed than a true scenario that was told in a random order. Still, the legal psychologists~\citet{wagenaarEtal1993} emphasised the usefulness of scenario analysis for the rational handling of the evidence, using the technique in their work on debunking dubious case decisions. Scenario analysis is connected with inference to the best explanation~\citep{pardoAllen2008}.
+
 \subsection{Paper plan}
 
+The three normative frameworks for the handling of evidence, arguments, scenarios, and probabilities, are connected to the first three of the central questions that we have discussed:
 
-		A-1
+\begin{description}
+	\item Question 1: How should we handle conflicting evidence?
+	\item Question 2: How should we handle the strength of the evidence?
+	\item Question 3: How should we coherently interpret the available evidence? 
+When are we done?
+\end{description}
 
-		B-2
+\noindent Although---as we shall see---each of the three normative frameworks provides relevant insights for answering each of these three questions, the first question about conflicting evidence is especially closely related to the arguments framework, the second question about strength of the evidence in particular to the probabilities framework, and the third question about coherently interpreting the evidence most strongly to the scenarios framework.
 
-		C-3
+In the following sections, these three questions will be discussed, consecutively, while emphasising the role of the three normative frameworks (Sections~\ref{sec:conf},~\ref{sec:str} and~\ref{sec:cohint}). The remaining two questions are less strongly connected to the normative frameworks, and are discussed in Sections~\ref{sec:intexc} and~\ref{sec:whenconv}:
 
-			(3x3 matrix with most on the diagonal)
-
-		D
-
-		E
-			
+\begin{description}
+	\item Question 4: How should we collect, include, exclude evidence?
+	\item Question 5: How should we decide about the facts given the evidence? When are we done?
+\end{description}
 
 
 \section{Conflicting evidence}
-
+\label{sec:conf}
  	
 \paragraph{Legal cases arise because there are reasons pros and cons a position} 
 
@@ -581,6 +655,7 @@ both positive, as follows:
 
 
 \section{Evidential strength}
+\label{sec:str}
 
 \subsection{Probability}
 
@@ -1098,6 +1173,7 @@ about our psychology that justifies the equivalence above.
 
 
 \section{Coherently interpreting the evidence}
+\label{sec:cohint}
 
 \subsection{Scenarios}
 
@@ -1281,6 +1357,7 @@ same hypothesis.
 
 
 \section{Introduction and exclusion of the evidence}
+\label{sec:intexc}
 
 %In many democratic countries, the trial system is designed to favor the introduction 
 %of the evidence. At the same time,  certain rules exist which restrict the admissibility of the evidence for reasons such as prejudice or confusion of the issue. 
@@ -1531,6 +1608,7 @@ THIS PARAGRAPH WILL DISCUSS ALTERNATIVES TO THE SYSTEM OF ADMISSIBILITY RULES. O
 
 
 \section{When can we convict?}
+\label{sec:whenconv}
 
 
 %\subsection{Beyond a reasonable doubt}
@@ -1654,7 +1732,7 @@ lacks a well-established theory, but it is closer to trial practice.
 
 %\bibliographystyle{spbasic}
 \bibliographystyle{plainnat}	
-\bibliography{dissertation}
+\bibliography{dissertation,cumulative}
 
 
 

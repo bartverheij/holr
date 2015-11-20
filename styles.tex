@@ -1,0 +1,53 @@
+% !TEX root=img/arguments_and_attack.tex
+
+% \usetikzlibrary{external} 
+% \tikzexternalize[prefix=tikz/] 
+
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.markings}
+% \usetikzlibrary{intersections}
+\usetikzlibrary{fit}
+\usetikzlibrary{shapes}
+% \usetikzlibrary{trees}
+
+
+\tikzset{
+	every path/.style={thick},
+	align=center,
+	observed/.style={
+		fill=black!20,
+	},
+	bn/.style={
+		draw,
+		ellipse,
+		-{Triangle[angle=60:6pt 0]}
+	},
+	scn/.style={
+		draw,
+		rectangle,
+		% signal,
+		% signal from=west,
+		% signal pointer angle=120,
+		-{Triangle[angle=60:6pt 0]},
+	},
+	possibly/.style={dashed},
+	arg/.style={
+		draw,
+		rectangle,
+		-{Straight Barb[angle=60:6pt 0]}
+	},
+	attack/.style={
+		-{Rays[width=10pt,length=10pt,sep=-3.9pt]}
+	},
+	subscn/.style={
+		double,
+		-{Triangle[angle=60:6pt 0]},
+	},
+	specific/.style={
+		double,
+		-{Stealth[angle=60:6pt 0]}
+	},
+}
+
