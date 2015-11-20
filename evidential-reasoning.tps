@@ -17,7 +17,7 @@ Class=LaTeXView
 Document=evidential-reasoning.tex
 
 [Frame0_View0,0]
-TopLine=523
+TopLine=778
 Cursor=25343
 
 [Frame1]
@@ -35,7 +35,7 @@ Class=BibTeXView
 Document=cumulative.bib
 
 [Frame1_View0,0]
-TopLine=1312
+TopLine=1356
 Cursor=37048
 
 [SessionInfo]
