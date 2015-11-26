@@ -10,15 +10,15 @@ MinPos.y=-1
 MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
-NormalPos.top=36
-NormalPos.right=1110
-NormalPos.bottom=549
+NormalPos.top=26
+NormalPos.right=649
+NormalPos.bottom=637
 Class=LaTeXView
 Document=evidential-reasoning.tex
 
 [Frame0_View0,0]
-TopLine=778
-Cursor=25343
+TopLine=965
+Cursor=41855
 
 [Frame1]
 Flags=0
@@ -28,17 +28,35 @@ MinPos.y=-1
 MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
-NormalPos.top=36
-NormalPos.right=1110
-NormalPos.bottom=549
+NormalPos.top=26
+NormalPos.right=649
+NormalPos.bottom=637
 Class=BibTeXView
 Document=cumulative.bib
 
 [Frame1_View0,0]
-TopLine=1356
+TopLine=1552
 Cursor=37048
 
+[Frame2]
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-1
+MaxPos.y=-1
+NormalPos.left=4
+NormalPos.top=26
+NormalPos.right=649
+NormalPos.bottom=637
+Class=LaTeXView
+Document=img\scenarios.tex
+
+[Frame2_View0,0]
+TopLine=3
+Cursor=629
+
 [SessionInfo]
-FrameCount=2
+FrameCount=3
 ActiveFrame=0
 
