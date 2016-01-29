@@ -487,36 +487,63 @@ Scenarios can be considered as alternative explanations of the evidence. Returni
 
 \subsection{Probabilities}
 
-We have seen how the premises of an argument can function as evidence favoring the conclusion. We can represent this relation 
-probabilistically. We say that $E$ is evidence favoring or supporting hypothesis $H$ whenever $E$ raises the probability of $H$, or more precisely, 
-whenever taking into consideration $E$ makes it more probable that $H$ is true than it would be without taking into consideration $E$. 
-%This formulation closely resembles the notion of relevant evidence in the Federal Rules of Evidence. (SEE SECTION LATER)
-%This characterization is not that $E$ is evidence for $H$ whenever the probability of $H$ conditional on $E$ is sufficiently high or greater than zero. 
-The relation of evidential favoring or evidential support can also be described 
-by means of likelihood ratios, that is, $E$ is evidence favoring or supporting hypothesis $H$ whenever the likelihood ratio
-$\frac{P(E|H)}{P(E | \neg H)}$ is greater than one. In fact, the two 
-characterizations are equivalent, since the following holds:
+\paragraph{Evidential favoring and disfavoring can be characterized probabilistically} A piece of evidence $E$ favors an 
+hypothesis $H$ whenever $E$ raises the probability of $H$, or in symbols, 
+$P(H|E) > P(H)$. 
+%
+%\[ E \text{ favors } H \text{ iff }  P(H|E) > P(H).\]
+%
+In terms of likelihood ratios, $E$ favors 
+$H$ whenever the likelihood ratio
+$\frac{P(E|H)}{P(E | \neg H)}$ is greater than one. 
+%In symbols,
+%
+%\[ E \text{ favors } H \text{ iff}  \frac{P(E|H)}{P(E|\neg H)}>1.\]
+%
+%Whenever the likelihood ratio is greater than one, 
+%the probability of finding the evidence is greater 
+%if the hypothesis is true than if the hypothesis is false. 
+%The presence of the evidence, in other words, tracks 
+%the truth of the hypothesis of interest. 
+For example, a witness 
+testifies that she saw the defendant around the crime scene
+ at the time of the crime. The testimony favors the hypothesis 
+ that the defendant is guilty. 
+Probabilistically, 
+ %
+ \[ P(\textit{guilt}|\textit{testimony}) > P(\textit{guilt}) \text{ or }  \frac{P(\textit{testimony}|\textit{guilt})}{P(\textit{testimony}|\neg \textit{guilt})} > 1.\]
+%
+By contrast, a piece of evidence $E$ disfavors an hypothesis $H$ whenever $E$ lowers 
+the probability of $H$, or whenever the likelihood ratio is lower than one.
+For example, if a DNA test shows no match between the crime
+ scene DNA and the defendant, this fact 
+ disfavors the the hypothesis that the defendant is guilty. Probabilistically, 
+%
+\[ P(\textit{guilt}|\textit{no DNA match}) < P(\textit{guilt})  \text{ or }  \frac{P(\textit{no DBA match}|\textit{guilt})}{P(\textit{no DNA match}|\neg \textit{guilt})} < 1.\]
+ %
+ 
+ \paragraph{Two characterizations of evidential favoring and disfavoring are equivalent} 
+The two characterizations of evidential favoring and disfavoring we have been using---the one in terms of probability 
+increase and decrease, and the other in terms of a likelihood ratio greater than one and lower than one---are 
+in fact equivalent. 
+For the following statements hold:
 %
 %\[\textit{\text{$E$ favors (or supports) $H$} iff }   P(H|E)> P(H) \textit{ iff }\frac{P(E|H)}{P(E|\neg H)}>1.\]
-\[ P(H|E)> P(H) \textit{ iff }\frac{P(E|H)}{P(E|\neg H)}>1.\footnote{This holds because of Bayes' theorem:
+\[ P(H|E)> P(H) \text{ iff }\frac{P(E|H)}{P(E|\neg H)}>1.\footnote{To see why, recall that 
 %
-\[ \frac{P(H|E)}{P(\neg H | E)} = \frac{P(E | H)}{P(E| \neg H)}\times \frac{P(H)}{P(\neg H)}\]
+\[ \frac{P(H|E)}{P(\neg H | E)} = \frac{P(E | H)}{P(E| \neg H)}\times \frac{P(H)}{P(\neg H)},\]
 %
-$\frac{P(E|H)}{P(E|\neg H)}>1$ iff $\frac{P(H|E)}{P(\neg H | E)} > \frac{P(H)}{P(\neg H)}$
-
-If $P(H|E)> P(H)$, then $1- P(H|E)< 1- P(H)$, which implies 
-$\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$. 
-The latter is equivalent to
-$\frac{P(H|E)}{P(\neg H | E)} > \frac{P(H)}{P(\neg H)}$.
-
-If $\frac{P(E|H)}{P(E|\neg H)}>1$, then $\frac{P(H|E)}{P(\neg H | E)} > \frac{P(H)}{P(\neg H)}$, which is equivalent to 
-$\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$. 
-
-
-
-
-}\]
-
+which implies
+%
+\[\frac{P(E|H)}{P(E|\neg H)}>1 \text{ iff } \frac{P(H|E)}{P(\neg H | E)} > \frac{P(H)}{P(\neg H)}.\]
+%
+For one direction, if $P(H|E)> P(H)$, then $1- P(H|E)< 1- P(H)$. This means that 
+$\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$, and thus
+$\frac{P(H|E)}{P(\neg H | E)} > \frac{P(H)}{P(\neg H)}$. So, by the equivalence above, $\frac{P(E|H)}{P(E|\neg H)}>1$.
+For the other direction, if $\frac{P(E|H)}{P(E|\neg H)}>1$, then $\frac{P(H|E)}{P(\neg H | E)} > \frac{P(H)}{P(\neg H)}$, by the equivalence above. 
+The latter is the same as $\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$. To establish $P(H|E)> P(H)$, suppose for contradiction that
+$P(H|E) \leq P(H)$, which implies $1- P(H|E) \geq 1- P(H)$. This means that $\frac{P(H|E)}{1- P(H | E)} \leq \frac{P(H)}{1- P(H)}$. 
+This contradicts $\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$, and thus $P(H|E)> P(H)$.}\]
 %
 %\[\textit{\textsc{null} iff }  P(H|E) = P(H) \textit{ iff } \frac{P(E|H)}{P(E|\neg H)}=1\]
 %
@@ -524,6 +551,48 @@ $\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$.
 %
 %The fact alone that the probability of $H$ given $E$ is high does not mean---according to the characterization of `evidential favoring' just given---that 
 %$E$ is evidence for $H$. There should be a probability shift upwards for $E$ to be evidence favoring hypothesis $H$. (On this point, more later.)
+ %Similarly, the two characterizations 
+ %of evidential disfavoring are equivalent, so the following holds:
+ %
+\[ P(H|E) < P(H) \text{ iff}  \frac{P(E|H)}{P(E|\neg H)} < 1.\]
+%
+%If a piece of evidence $E$ neither favors nor disfavors an hypothesis $H$, then $E$ 
+%neither increases nor decreases the probability of $H$, 
+%or equivalently, the likelihood ratio $\frac{P(E|H)}{P(E|\neg H)}$ 
+%equals one, as follows: 
+%
+%\[ E \text{ is neutral relative to } H \text{ iff }  P(H|E) = P(H) \text{ iff}  \frac{P(E|H)}{P(E|\neg H)} = 1.\]
+%
+
+\paragraph{The conflict between two pieces of evidence can be described probabilistically}
+Two pieces of evidence come into 
+conflict with one another insofar as one favors an hypothesis 
+and the other disfavors the same hypothesis. 
+The conflict can be described probabilistically, in that one pieces of evidence increases 
+the probability of the hypothesis, while the other decreases it, or equivalently, the likelihood ratio is positive (for one piece 
+of evidence) and negative (for the other). 
+%In short:
+%
+%\[ E1 \text{ conflicts with  } E2 \textit{ relative to } H \text{ iff }  P(H|E1) > P(H) \text{ and}   P(H|E2) < P(H),\]
+%
+%or equivalently,
+%
+%\[ E1 \text{ conflicts with  } E2 \textit{ relative to } H \text{ iff }  \frac{P(E1|H)}{P(E1|\neg H)} > 1 \text{ and}   \frac{P(E2|H)}{P(E2|\neg H)} < 1.\]
+%
+For example, the testimony that the defendant was around the crime scene conflicts 
+with the lack of a DNA match. Probabilistically, the testimony 
+increases the probability of the defendant's guilt (or equivalently, the likelihood ratio is greater than one),
+while the lack of a DNA match decreases the probability of the same hypothesis 
+(or equivalently, the likelihood ratio is lower than one).
+
+
+
+
+
+
+
+
+\begin{comment}
 
 \paragraph{Different, incompatible outcomes}
 
@@ -592,7 +661,7 @@ This resembles a case of \textit{undercutting} between arguments.
 Although the testimony by the prosecutor witness increases the probability that the defendant visited the crime scene, 
 the testimony by the defense witness undercuts the reliability of this testimony. 
 
-\begin{comment}
+%\begin{comment}
 As discussed earlier, a piece of evidence favors a hypothesis whenever 
 it raises its probability or whenever the likelihood ratio is greater than one. 
 If, on the other hand, the probability of the hypothesis shifts downwards as 
@@ -628,16 +697,10 @@ if $P(H|E1)>P(H)$ and $P(H|E2)<P(H)$, then $P(H|E1)>P(H)$ and $P(\neg H|E2)>P(\n
 where $H$ and $\neg H$ are clearly compatible hypothesis. 
  WHAT ABOUT THE OTHER DIRECTION?
  
- \end{comment}
+ %\end{comment}
  
  
-\paragraph{Relative to the same hypothesis, likelihood ratios for different pieces of evidence can be positive or negative.}
-
-ALREADY ADDRESSED EARLIER
-
-\paragraph{If LR for E1 relative to H is positive, while LR for E2 relative to H is negative, E1 and E2 are in conflict}
-
-ALREADY ADDRESS EARLIER
+\end{comment}
 
 
 \begin{comment}
@@ -670,33 +733,42 @@ both positive, as follows:
 \[\textsc{Convergence: } LR1=\frac{P(E1| H)}{P(E1|\neg H)}>1 \text{ and } LR2=\frac{P(E2|H)}{P(E2|\neg H)}>1.\]
 %
 
+
+
+%\paragraph{Comparison between the three frameworks} IS THIS NEEDED?
+
+
 \end{comment}
 
-\paragraph{Comparison between the three frameworks} IS THIS NEEDED?
-
-
-
-
-\section{Evidential strength}
+\section{Evidential Value}
 \label{sec:str}
 
 \subsection{Probability}
 
 
-\paragraph{Likelihood ratios can model evidential strength vs ``posterior probability'' (difference between the two)}
+%\paragraph{Likelihood ratios can model evidential strength vs ``posterior probability'' (difference between the two)}
 
 %Instead of the evidence \textit{favoring} a certain hypothesis, we can we also speak of the evidence 
 %\textit{supporting} a certain hypothesis. These expressions are interchangeable. 
-The probabilistic framework allows us to quantify the strength of the evidential favoring or support relation between evidence and hypothesis. 
-The are different approaches in the literature (FITELSON REFERENCE HERE). 
-One approach is to look at the difference between the probability of the hypothesis with and without considering the evidence, that is, $P(H | E) - P(H)$.
+
+\paragraph{Evidential value can be quantified as probability difference and as likelihood ratio}
+So far we have seen how a piece of evidence can favor 
+or disfavor an hypothesis. This is a qualitative difference. 
+The probabilistic framework allows us to quantify
+ the value of the evidence for or against an hypothesis.  
+%The probabilistic framework allows us to quantify the strength of the evidential favoring or support relation between evidence and hypothesis. 
+%The are different approaches in the literature. % (FITELSON REFERENCE HERE). 
+One approach considers the difference between the probability of 
+the hypothesis with and without the evidence, that is, $P(H | E) - P(H)$.
 %If $P(H | E)$ is higher than $P(H)$, this means that the evidence lends some support to
 %the hypothesis. 
-The larger the difference, the stronger the evidential support. 
+The larger the positive difference, the higher the value of the evidence 
+for the hypothesis. By contrast, the larger the negative difference, 
+the higher the value of the evidence against the hypothesis. 
 An alternative approach is given by the likelihood ratio $\frac{P(E|H)}{P(E| \neg H)}$. 
 %For the evidence to offer some support to the hypothesis, the likelihood ratio should be at least greater than one. 
-For any value greater than one,  the higher the likelihood ratio, 
-the stronger the evidential support. %For simplicity, we shall speak of evidential strength 
+For any value greater than one, the higher the likelihood ratio, 
+the higher the value of the evidence for the hypothesis. %For simplicity, we shall speak of evidential strength 
 %in terms of likelihood ratios, as follows:
 %
 %\begin{quote}
@@ -704,25 +776,36 @@ the stronger the evidential support. %For simplicity, we shall speak of evidenti
 %the likelihood ratio $\frac{P(H|E)}{P(H|\neg E)}$. 
 %\end{quote}
 %
-Both the difference $P(H|E) - P(H)$ and the likelihood ratio tell 
-how much a piece of evidence $E$ can impact, upwards or downwards, 
-the initial probability of a hypothesis $H$. There are subtle differences between the two approaches, 
-but these should not concern us here.
+By contrast, for any value lower than one, the lower the likelihood ratio 
+the higher value of the evidence against the hypothesis. 
 
-Evidential strength is not measured in terms of the conditional probability of an hypothesis 
-given the evidence, often referred to as \textit{posterior probability}. It is not true  that a strong evidential strength amounts 
-to a high posterior probability. This depends on the probability of the hypothesis 
-regardless of the evidence, often referred to as \textit{prior probability}. 
-The following table shows how the posterior probability 
-varies depending on the prior probability, 
-with a fixed likelihood ratio of 1,000:
+Both the difference $P(H|E) - P(H)$ and 
+the likelihood ratio $\frac{P(E|H)}{P(E| \neg H)}$ 
+tell us how much a piece of evidence $E$ can impact, upwards or downwards, 
+the initial probability of a hypothesis $H$. There are subtle 
+differences between the two approaches, but these should 
+not concern us here. Since the most used approach in the literature in based on 
+likelihood ratios,we shall do the same, making occasionally 
+references to the other approach when necessary. 
+
+\paragraph{The overall probability is not the same as probability difference and likelihood ratio}
+
+Intuitively, the value of a piece of evidence should also be measured by the probability of the hypothesis given the evidence $P(H|E)$. 
+The latter, however,  should not be confused with the probability difference and the likelihood ratio. 
+This is because, by Bayes' theorem, the probability $P(H|E)$ depends on the probability $P(H)$.  
+Even if $E$ dramatically increase the probability of $H$, 
+or the likelihood ratio $\frac{P(E|H)}{P(E| \neg H)}$ is very large, the probability $P(H|E)$ 
+could still be very low insofar as $P(H)$ itself
+is low. The table below shows how $P(H|E)$
+varies depending on $P(H)$, while both the likelihood ratio 
+and the probability deference are fairly high throughout:
 
 \vspace{2mm}
 \hspace{0.5cm}
 \begin{centering}
 \begin{tabular}{lcccc}
 \hline
-$P(H)$ & Likelihood Ratio  &   $P(H | E)$ \\
+$P(H)$ & Likelihood Ratio  &  $P(H | E)$ \\
 \hline
 0.0001 & 1,000 & 0.09  \\
 0.001 & 1,000 & 0.5  \\
@@ -734,6 +817,39 @@ $P(H)$ & Likelihood Ratio  &   $P(H | E)$ \\
 \end{tabular}
 \end{centering}
 \vspace{2mm}
+
+
+Suppose a witness testifies that he saw the defendant beat the victim to death. But, as it turns out, the witness was drunk at 
+the time he witnessed the event. Without judging the testimony completely worthless, intuitively, the evidential value of the testifying for the hypothesis that the defendant is guilty must be low. This can be expressed with a low positive probably difference and low likelihood. If the testimony by the drunk witness is the only incriminating evidence, the probability $P(\textit{guilt} | \textit{drunk witness testimony})$ should also be low.  So, by the rules of probability, $P(\textit{innocence} | \textit{drunk witness testimony})$
+should be high insofar as the hypothesis of innocent is the complement of the hypothesis of guilt. Yet, it is odd to say that the evidence value of the testimony by a drunk witness for the hypothesis of innocence is high. A drunk witness  can be of no help in establishing the defendant's innocence.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ overall probability of 
+
+Evidential strength is not measured in terms of the conditional probability of an hypothesis 
+given the evidence, often referred to as \textit{posterior probability}. It is not true  that a strong evidential strength amounts 
+to a high posterior probability. This depends on the probability of the hypothesis 
+regardless of the evidence, often referred to as \textit{prior probability}. 
 
 
 The posterior probability of the hypothesis is not high 
