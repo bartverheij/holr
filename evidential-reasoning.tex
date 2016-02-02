@@ -509,24 +509,28 @@ For example, a witness
 testifies that she saw the defendant around the crime scene
  at the time of the crime. The testimony favors the hypothesis 
  that the defendant is guilty. 
-Probabilistically, 
+This can be described probabilistically, as follows:
  %
- \[ P(\textit{guilt}|\textit{testimony}) > P(\textit{guilt}) \text{ or }  \frac{P(\textit{testimony}|\textit{guilt})}{P(\textit{testimony}|\neg \textit{guilt})} > 1.\]
+ \[ P(\textit{guilt}|\textit{testimony}) > P(\textit{guilt}) \text{ or }\] 
+ %
+ \[\frac{P(\textit{testimony}|\textit{guilt})}{P(\textit{testimony}|\neg \textit{guilt})} > 1.\]
 %
 By contrast, a piece of evidence $E$ disfavors an hypothesis $H$ whenever $E$ lowers 
 the probability of $H$, or whenever the likelihood ratio is lower than one.
-For example, if a DNA test shows no match between the crime
- scene DNA and the defendant, this fact 
+For example, if a DNA test shows no match between traces at crime
+ scene and the defendant, this fact 
  disfavors the the hypothesis that the defendant is guilty. Probabilistically, 
 %
-\[ P(\textit{guilt}|\textit{no DNA match}) < P(\textit{guilt})  \text{ or }  \frac{P(\textit{no DBA match}|\textit{guilt})}{P(\textit{no DNA match}|\neg \textit{guilt})} < 1.\]
+\[ P(\textit{guilt}|\textit{no DNA match}) < P(\textit{guilt})  \text{ or }\]  
+%
+\[\frac{P(\textit{no DBA match}|\textit{guilt})}{P(\textit{no DNA match}|\neg \textit{guilt})} < 1.\]
  %
  
- \paragraph{Two characterizations of evidential favoring and disfavoring are equivalent} 
-The two characterizations of evidential favoring and disfavoring we have been using---the one in terms of probability 
-increase and decrease, and the other in terms of a likelihood ratio greater than one and lower than one---are 
+% \paragraph{Two characterizations of evidential favoring and disfavoring are equivalent} 
+Interestingly enough, the two characterizations of evidential favoring/disfavoring---in terms of probability 
+increase/decrease, and in terms of a likelihood ratio greater/lower than one---are 
 in fact equivalent. 
-For the following statements hold:
+For the following hold:
 %
 %\[\textit{\text{$E$ favors (or supports) $H$} iff }   P(H|E)> P(H) \textit{ iff }\frac{P(E|H)}{P(E|\neg H)}>1.\]
 \[ P(H|E)> P(H) \text{ iff }\frac{P(E|H)}{P(E|\neg H)}>1.\footnote{To see why, recall that 
@@ -540,7 +544,8 @@ which implies
 For one direction, if $P(H|E)> P(H)$, then $1- P(H|E)< 1- P(H)$. This means that 
 $\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$, and thus
 $\frac{P(H|E)}{P(\neg H | E)} > \frac{P(H)}{P(\neg H)}$. So, by the equivalence above, $\frac{P(E|H)}{P(E|\neg H)}>1$.
-For the other direction, if $\frac{P(E|H)}{P(E|\neg H)}>1$, then $\frac{P(H|E)}{P(\neg H | E)} > \frac{P(H)}{P(\neg H)}$, by the equivalence above. 
+For the other direction, if $\frac{P(E|H)}{P(E|\neg H)}>1$, then $\frac{P(H|E)}{P(\neg H | E)} > \frac{P(H)}{P(\neg H)}$, again 
+by the equivalence above. 
 The latter is the same as $\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$. To establish $P(H|E)> P(H)$, suppose for contradiction that
 $P(H|E) \leq P(H)$, which implies $1- P(H|E) \geq 1- P(H)$. This means that $\frac{P(H|E)}{1- P(H | E)} \leq \frac{P(H)}{1- P(H)}$. 
 This contradicts $\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$, and thus $P(H|E)> P(H)$.}\]
@@ -568,7 +573,7 @@ This contradicts $\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$, and thus $
 Two pieces of evidence come into 
 conflict with one another insofar as one favors an hypothesis 
 and the other disfavors the same hypothesis. 
-The conflict can be described probabilistically, in that one pieces of evidence increases 
+The conflict can be described probabilistically, in that one piece of evidence increases 
 the probability of the hypothesis, while the other decreases it, or equivalently, the likelihood ratio is positive (for one piece 
 of evidence) and negative (for the other). 
 %In short:
@@ -751,20 +756,19 @@ both positive, as follows:
 %Instead of the evidence \textit{favoring} a certain hypothesis, we can we also speak of the evidence 
 %\textit{supporting} a certain hypothesis. These expressions are interchangeable. 
 
-\paragraph{Evidential value can be quantified as probability difference and as likelihood ratio}
-So far we have seen how a piece of evidence can favor 
-or disfavor an hypothesis. This is a qualitative difference. 
-The probabilistic framework allows us to quantify
- the value of the evidence for or against an hypothesis.  
+\paragraph{Evidential value can be quantified as probability difference, likelihood ratio or overall probability}
+The value of the evidence for, or against, an hypothesis 
+can be quantified probabilistically in various ways. 
 %The probabilistic framework allows us to quantify the strength of the evidential favoring or support relation between evidence and hypothesis. 
 %The are different approaches in the literature. % (FITELSON REFERENCE HERE). 
+%Let us begin with quantifying the value of the evidence \textit{for} an hypothesis. 
 One approach considers the difference between the probability of 
 the hypothesis with and without the evidence, that is, $P(H | E) - P(H)$.
 %If $P(H | E)$ is higher than $P(H)$, this means that the evidence lends some support to
 %the hypothesis. 
 The larger the positive difference, the higher the value of the evidence 
-for the hypothesis. By contrast, the larger the negative difference, 
-the higher the value of the evidence against the hypothesis. 
+for the hypothesis. 
+%By contrast, the larger the negative difference, the higher the value of the evidence against the hypothesis. 
 An alternative approach is given by the likelihood ratio $\frac{P(E|H)}{P(E| \neg H)}$. 
 %For the evidence to offer some support to the hypothesis, the likelihood ratio should be at least greater than one. 
 For any value greater than one, the higher the likelihood ratio, 
@@ -776,96 +780,94 @@ the higher the value of the evidence for the hypothesis. %For simplicity, we sha
 %the likelihood ratio $\frac{P(H|E)}{P(H|\neg E)}$. 
 %\end{quote}
 %
-By contrast, for any value lower than one, the lower the likelihood ratio 
-the higher value of the evidence against the hypothesis. 
-
-Both the difference $P(H|E) - P(H)$ and 
-the likelihood ratio $\frac{P(E|H)}{P(E| \neg H)}$ 
-tell us how much a piece of evidence $E$ can impact, upwards or downwards, 
-the initial probability of a hypothesis $H$. There are subtle 
-differences between the two approaches, but these should 
-not concern us here. Since the most used approach in the literature in based on 
-likelihood ratios,we shall do the same, making occasionally 
-references to the other approach when necessary. 
-
-\paragraph{The overall probability is not the same as probability difference and likelihood ratio}
-
-Intuitively, the value of a piece of evidence should also be measured by the probability of the hypothesis given the evidence $P(H|E)$. 
-The latter, however,  should not be confused with the probability difference and the likelihood ratio. 
-This is because, by Bayes' theorem, the probability $P(H|E)$ depends on the probability $P(H)$.  
-Even if $E$ dramatically increase the probability of $H$, 
-or the likelihood ratio $\frac{P(E|H)}{P(E| \neg H)}$ is very large, the probability $P(H|E)$ 
-could still be very low insofar as $P(H)$ itself
-is low. The table below shows how $P(H|E)$
-varies depending on $P(H)$, while both the likelihood ratio 
-and the probability deference are fairly high throughout:
+%By contrast, for any value lower than one, the lower the likelihood ratio 
+%the higher value of the evidence against the hypothesis. 
+\begin{comment} 
+The following table %, whose calculations are approximations based on Bayes' theorem, offers 
+offers some illustrations:
 
 \vspace{2mm}
 \hspace{0.5cm}
 \begin{centering}
-\begin{tabular}{lcccc}
+\begin{tabular}{lccccc}
 \hline
-$P(H)$ & Likelihood Ratio  &  $P(H | E)$ \\
+$P(H)$ & Likelihood Ratio & $P(H | E)$ &  $P(H|E)-P(H)$ \\
 \hline
-0.0001 & 1,000 & 0.09  \\
-0.001 & 1,000 & 0.5  \\
-0.01  & 1,000 &  0.9 \\
-0.1 & 1,000 &   0.99 \\
+0.0001 & 1,000 & 0.09 &  0.0899   \\
+%0.001 & 1,000 & 0.049 & 0.5  \\
+%0.01  & 1,000 & 0.08  & 0.9 \\
+0.1 & 1,000  & 0.99 &  0.89 \\
+\hline
 %0.5 & 1,000 &   0.999 \\
 %0.9 & 1,000 &   0.9999 \\
+0.0001 & 10  & 0.001 &  0.0009 \\
+0.01 & 10  & 0.09 &  0.08  \\
 \hline
 \end{tabular}
 \end{centering}
 \vspace{2mm}
 
+\noindent
+%Note that even if the likelihood ratio is high, the probability $P(G|E)$ can 
+%still be low if the initial probability $P(H)$ is itself low. 
+All in all, a positive difference $P(H|E) - P(H)$ and a likelihood ratio $\frac{P(E|H)}{P(E| \neg H)}$ greater than one
+%tell us how much a piece of evidence $E$ can impact upwards the initial 
+%probability of a hypothesis $H$. They 
+quantify, albeit in different ways, the value of the evidence \textit{for} 
+an hypothesis. 
+\end{comment}
+ By contrast, a negative difference $P(H | E) - P(H)$ and a likelihood ratio lower than one  
+quantify the value of the evidence \textit{against} an hypothesis.
+The larger the negative difference and the lower the likelihood ratio (for any value below one), 
+the higher the value of the evidence against the hypothesis.
 
-Suppose a witness testifies that he saw the defendant beat the victim to death. But, as it turns out, the witness was drunk at 
-the time he witnessed the event. Without judging the testimony completely worthless, intuitively, the evidential value of the testifying for the hypothesis that the defendant is guilty must be low. This can be expressed with a low positive probably difference and low likelihood. If the testimony by the drunk witness is the only incriminating evidence, the probability $P(\textit{guilt} | \textit{drunk witness testimony})$ should also be low.  So, by the rules of probability, $P(\textit{innocence} | \textit{drunk witness testimony})$
-should be high insofar as the hypothesis of innocent is the complement of the hypothesis of guilt. Yet, it is odd to say that the evidence value of the testimony by a drunk witness for the hypothesis of innocence is high. A drunk witness  can be of no help in establishing the defendant's innocence.
+%As one can see from the table, there are quantitive 
+%differences between the two approaches, but these should 
+%not concern us here. Since the most widely used approach to quantify evidential value relies on 
+%likelihood ratios, we shall use that, making occasional 
+%references to the other approach if necessary. 
 
+%\paragraph{The overall probability is not the same as probability difference and likelihood ratio}
 
+Intuitively, the value of a piece of evidence for or against an hypothesis can also be quantified by the probability 
+of the hypothesis given the evidence. The higher, or lower, the probability $P(H|E)$, the higher 
+the value of the evidence for, or against, the hypothesis. The probability $P(H|E)$, however, should not be confused with the probability difference or the likelihood ratio. To illustrate, suppose a witness testifies that the defendant beat the victim to death, but as it turns out, the witness 
+was drunk at the time, so the evidential value of the testimony in favor of guilt should 
+be low. If the testimony by the drunk witness is the only incriminating evidence, the probability 
+$P(\textit{guilt} | \textit{drunk witness})$ should also be low. Now, it follows that $P(\textit{innocence} | \textit{drunk witness})$ 
+should be high insofar as \textit{innocence} is the negation of \textit{guilt}. 
+But this seems problematic. A drunk witness, in fact, is of little help in establishing 
+innocence (just as it is of little help in establishing guilt).
 
+It is instructive to quantify the value of the testimony in favor of guilt by means of 
+the probability difference and the likelihood ratio. Since the witness was drunk, the value of the evidence in favor of guilt is 
+low, that is:
+%
+\[\text{the positive difference $P(\textit{guilt} | \textit{drunk witness}) - P(\textit{guilt})$ is small, or}\]
+%
+%
+\[\text{the likelihood ratio $\frac{P(\textit{guilt} | \textit{drunk witness})}{P(\textit{guilt} | \neg\textit{drunk witness})}$ is only slightly above one}.\] 
+%
+Similarly, the value of the evidence in favor of innocence is also low, that is:
+%
+\[\text{the negative difference $P(\textit{innocence} | \textit{drunk witness}) - P(\textit{guilt})$ is small, or}\]
+%
+%
+\[\text{the likelihood ratio $\frac{P(\textit{innocence} | \textit{drunk witness})}{P(\textit{innocence} | \neg\textit{drunk witness})}$ is only slightly below one}.\] 
+%
+So, the value of the testimony in favor of guilt, and in favor of innocence, is low 
+in both cases. This means that $P(\textit{guilt} | \textit{drunk witness})$
+and $P(\textit{guilt})$ will be roughly the same value, and the same can be said of $P(\textit{innocence} | \textit{drunk witness})$ 
+and $P(\textit{innocence})$. Consequently, if $P(\textit{innocence})$ is high, 
+and thus $P(\textit{guilt})$ low, $P(\textit{innocence} | \textit{drunk witness})$ will 
+also be high, and thus $P(\textit{guilt} | \textit{drunk witness})$ low. %, given the little evidential value of the testimony. 
+This is because, by Bayes' theorem, $P(H|E)$ depends on $P(H)$.  
+Even if $E$ does not change significantly the probability of $H$, or the likelihood ratio (positive or negative) 
+$\frac{P(E|H)}{P(E| \neg H)}$ is small, $P(H|E)$ could still be high or low, insofar as $P(H)$ itself is high or low. 
+We should thus be careful in not confusing a high probability $P(H|E)$ with a high 
+evidential value in terms of a large probability difference or a high likelihood ratio.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- overall probability of 
-
-Evidential strength is not measured in terms of the conditional probability of an hypothesis 
-given the evidence, often referred to as \textit{posterior probability}. It is not true  that a strong evidential strength amounts 
-to a high posterior probability. This depends on the probability of the hypothesis 
-regardless of the evidence, often referred to as \textit{prior probability}. 
-
-
-The posterior probability of the hypothesis is not high 
-if its prior probability is particularly low, and in particular, 
-if the likelihood ratio is $n$ and the prior probability is $1/n$ or lower, the posterior 
-probability will not be greater than 0.5.
-
-
-
-
-
-
-
-
-
-
+\begin{comment}
 
 \paragraph{ASIDE: LJ Cohen?s challenge (negation, conjunction paradox) and the Bayesian response}
 
@@ -890,9 +892,9 @@ in terms of conditional probability. %, and not that we cannot characterize evid
 %is the probability resulting from taking into account a new item of evidence). 
 %It is certainly paradoxical to measure evidential strength in terms of mere conditional probability. The likelihood account must be adopted instead.
 
+\end{comment}
 
-
-\paragraph{DNA evidence illustration}
+\paragraph{Likelihood ratio can quantify the value of DNA evidence}
 
 %In the British case R v Adams, Adam's DNA matched the traces 
 %of semen found on the victim's body.
@@ -908,23 +910,89 @@ in terms of conditional probability. %, and not that we cannot characterize evid
 %Earlier we analyzed the British case R v Adams by saying that the DNA match favors 
 %the hypothesis that Adam had contact with the victim (and the alibi did not or favored an incompatible hypothesis). 
 %The advantage of the probability-based framework is the analysis can be more refined than that. 
-As an illustration, we now describe the evidential strength of a DNA match in probabilistic terms. The first step is to decide on the hypothesis of interest. If the hypothesis is that the defendant is guilty, the evidential strength will be expressed by the likelihood ratio
+As an illustration, consider the evidential value of DNA match in favor of guilt. %, where the match is between
+%the crime scene's genetic profile and the defendant's. 
+It is instructive to see how the hypothesis of guilt stands in  
+relation to other propositions: %which are progressively more removed from guilt: 
+
+- the \textit{lab reports} that the defendant's 
+genetic profile matches with the crime traces;
+
+- the defendant's genetic profile \textit{truly matches} with the crime traces; 
+
+- the defendant is the \textit{source} of the traces; and
+
+%the defendant \textit{left} the crime traces; 
+
+%the defendant \textit{visited} the crime scene; 
+
+%the defendant \textit{participated} in the crime; 
+
+- the defendant is \textit{guilty}.
+
+\noindent
+To ease exposition, we make three simplifying 
+assumptions. The first is that the DNA test yielding a match (or a non-match) is infallible. 
+The match reported by the lab technician, in other words, is assumed to be a true match. This, of course, need be the case because laboratories make mistakes. The second assumption is that whoever is the source of the crime traces is the perpetrator of the crime, so 'guilt' and 'source' are treated as interchangeable. This need not be the case because, for example, one could be the source of the traces at the crime scene without participating in the crime, or while participating, one might not have done so with the requisite mental state. 
+The third assumption concerns the relation between `true match' and `source'.
+Even if one is a true match, one need not be the source. We should bear in mind that genetic profiles 
+are not unique. Based on statistical and genetic modeling, a profile is expected to occur with a frequency in a select population. This expected frequency is often called the Random Match Probability, that is, the probability that a random person would match.  If RMP equal 1 in 200, then we would expected 1 such profile every two hundred people, or in other words, the probability that a random person would match 
+the profile is 1 in 200 or 0.5\%. So, the third assumption is that in drawing an inference from `true match' to `source', 
+the only uncertainty accounted for is the RMP. Other uncertainties---for example, a twin brother might be the source or an artificially synthesized DNA material could be the source---will not be taken into account. 
+
+
+Suppose now that the DNA test yields a match between the crime 
+traces and the defendant.  Given our simplifying assumptions, 
+the evidential value of the DNA match in favor of guilt, in terms of likelihood ratio, 
+is as follows % \citep{Dawid02, Balding2005Weight}:
+%
+\[
+{P(M | G) \over P(M | \neg G)} =   {1 \over RMP}.
+\]
+%
+If the RMP is 1 in 200 million, the likelihood ratio would be
+%
+\[\frac{P(M |S)}{P( M | \neg G)}=\text{200 million}\]
+%
+The numerator $P(M | S)$ equal 1 because of our simplifying assumption that 'source' and guilt' are interchangeable 
+and the laboratory test is infallible. If the defendant is guilty and thus the source of the crime traces, the infallible 
+lab test must declare a match. Turning now to the denominator, keep in mind that $RMP$ is the probability that a random person, 
+unrelated to the crime or the defendant, would be found to have a matching DNA. 
+Putting $P(M | \neg G)=RMP$ is plausible because (1) the probability that a match would be reported assuming that the defendant was \textit{not} the source is roughly the same as the chance that a random person---someone who had nothing to do with the crime or had no contact with the victim---would match anyway, and (2) given our identification between 'source' and 'guilt', the denominator equals RMP. 
+
+
+%To quantify the evidential value in terms of probability difference, 
+%the initial probability $P(G)$ must be known. So, as often done in the literature, it is 
+%more convenient to focus on likelihood ratios.
+
+Since the likelihood ratio in question is a high number, the DNA match in favor of guilt 
+has a high evidential value. We should not forget, however, 
+our simplifying assumptions. For example, a likelihood ratio as high as 
+1 billion reduces to about 100 if the laboratory error rate is 1\% \citep{Thomason2003How-the-Probabi}.
+More generally, the fallibility of a DNA test has negative impact on the value of the evidence insofar as a higher 
+value in the denominator results in a lower likelihood ratio. The identification of 'source' and 
+`guilt' must also be taken into account, and this further weakens the value of a DNA match in favor of guilt.
+
+
+\begin{comment}
+
+
+
+The first step is to decide on the hypothesis of interest. If the hypothesis is that the defendant is guilty, the evidential strength will be expressed by the likelihood ratio
 $\frac{P(M | G)}{P( M | \neg G)}$, where $M$ is the DNA match and $G$ is the hypothesis of guilt. 
 But, it is not obvious that a DNA match bears directly on 
 guilt itself. This depends on what kind of genetic traces we are considering. 
 If the presence of the traces is incompatible 
 with the innocent conduct of whoever left them, the DNA match would bear directly 
 on guilt. But that is not always the case. The psychologist Jonathan Koheler has distinguished different 
-hypotheses that are progressively more circumscribed: the defendant is guilty; the defendant partook in the crime; the defendant visited 
-the crime scene; the defendant left the crime traces; the defendant is the source of the traces. 
-The truth of a more circumscribed hypothesis does not necessarily entail the truth of a less circumscribe one. The defendant could have visited the 
+hypotheses that are progressively more circumscribed: The defendant could have visited the 
 crime scene without partaking in the crime or could have being the source of the traces without leaving them. (REFERENCE)
 
 In what follows, we shall focus on the most circumscribed hypothesis that the defendant is the source of the crime traces. 
 The extent to which the DNA match support this hypothesis is expressed by the likelihood ratio 
 $\frac{P(M | S)}{P( M | \neg S)}$, where $M$ is the DNA match and $S$ is the hypothesis that the defendant is the source. 
 The higher the value of the ratio, the stronger the evidential support. 
-Let us consider the numerator first. It is customary to put $P(M | S)=1$ because if the defendant is the source of the crime traces, we expect that the genetic analyst would declare a match. This, to be sure, is a simplification, and we shall say more later in the chapter. Turning now to the denominator, it is customary to put $P(M | \neg S)=RMP$, where $RMP$ is the probability that a random person, unrelated to the crime and to the defendant, would be found to have a matching DNA.  This identification is plausible in the sense that the probability that a match would be reported assuming that the defendant was \textit{not} the source is roughly the same as the chance that a random person---someone who had nothing to do with the crime or had no contact with the victim---would match anyway.  The lower the RMP, the lower the denominator and thus the higher the likelihood ratio.  
+
 
 %When it is presented in a court of law, a DNA match is routinely accompanied by an estimate of the RMP, and this highlights that there is still a chance that someone other than the defendant would match.  In R v Adam, the RMP was estimated to be 1 in 200 million. This is a low number, but we would still expect 2 individuals with the same DNA profile in a a country with a population of 400 million. Sometimes the RMPs are astronomically low, such as 1 in 500 billion, but even then, and assuming that the astronomically low numbers are accurate, there is no scientific proof that the DNA profile in question is unique. 
 
@@ -943,28 +1011,37 @@ In the case, given that the likelihood ratio is such a high number, the DNA matc
 hypothesis S has a great deal of evidential strength, although this does not immediately translate into a high probability of guilty 
 or in a high probability of the hypothesis `source'. 
 
-The likelihood ratio analysis presented here can be extended to other forms of trace evidence. For example, it can 
-be extended to fingerprints: instead of a genetic match, we will have a match 
+
+
+
+The likelihood ratio analysis presented here can be extended to other forms of trace evidence. 
+It can be extended to fingerprints: instead of a genetic match, we will have a match 
 between fingerprint profiles. The difference with DNA evidence is that we do not have a 
 Random Match Probability for fingerprint profiles \citep{Zabell2005Fingerprint-Evi}. Besides fingerprints, the same 
 analysis can be used for blood types, glass evidence, and any other type of trace evidence. 
 But, again, we would need an estimate of the Random Match Probability 
 which we often lack. 
 
+\end{comment}
 
-\paragraph{Confusions may arise between likelihood (ratios) and posterior probability (i.e. prosecutor?s fallacy)}
-There is an error people routinely make while reasoning with the RMP. The mistake is to think that since the RMP is low---that is, the probability that a random person would match is low---it follows that there is a low probability that the defendant is a random person (or that the defendant has nothing to do with the crime or is innocent).
-The inference from the premise `it is unlikely that a random person would match' to 
-the conclusion 'it is unlikely that someone who matches is a random person' is wrong. 
-This is a confusion of $P(M |\neg S)$, which is indeed low if the RMP is low, with $P(\neg S | M)$, 
-which need not be low at all. The application of Bayes' theorem can protect us from this confusion, as illustrated by the following table: 
+
+\paragraph{Confusion sometimes arises with the RMP, generally known as prosecutor's fallacy}
+There is an error people sometimes make while reasoning with the RMP. The mistake is to think 
+that if the RMP is low---that is, the probability that a random person would match is low---the 
+probability that the defendant is a random person (or that the defendant is innocent) is also low, 
+and thus the probability of guilt is high. 
+The inference from `it is unlikely that a random (innocent) person would match' to 
+the  `it is unlikely that someone who matches is a random (innocent) person' is wrong. 
+This is a confusion of $P(M |\neg G)$, which is indeed low if the RMP is low (given our simplifying assumptions), 
+with $P(\neg G | M)$, which need not be low at all. The application of Bayes' theorem can 
+protect us from this confusion, as illustrated by the following table: 
 
 \vspace{2mm}
 \hspace{0.5cm}
 \begin{centering}
 \begin{tabular}{lcccc}
 \hline
-$P(\neg S)$ &  $P(M | \neg S)$ (or RMP) &   $P(\neg S | M)$ \\
+$P(\neg G)$ &  $P(M | \neg G)$ (or RMP) &   $P(\neg G | M)$ \\
 \hline
 0.9999999 & 1 in 100 million & 0.1  \\
 0.99999999 & 1 in 100 million & 0.5  \\
@@ -978,16 +1055,18 @@ $P(\neg S)$ &  $P(M | \neg S)$ (or RMP) &   $P(\neg S | M)$ \\
 \end{centering}
 \vspace{2mm}
 
-If the probability that the defendant is \textit{not} the source is high prior 
+If the probability that the defendant is \textit{not} guilty is high prior 
 to considering the DNA match, this probability can still remain  
 high even after taking into account the DNA match, or at least, 
 no identification can be made between the probability 
-of $\neg S$ and the RMP. (EXPLAIN MORE?) 
+of $\neg G$ and the RMP. %(EXPLAIN MORE?) 
 The confusion is an instance of a reasoning fallacy known in the probabilistic 
 literature as the \textit{inversion fallacy} and consists in confusing the probability of
 $P(E|H)$ and $P(H|E)$. In the legal literature, this confusion is known as the \textit{prosecutor's fallacy} because this fallacy typically works to 
-the advantage of prosecutors \citep{Thompson1987Interpretation}.  We have just seen an example of it in DNA evidence cases, 
-namely the confusion was between $P(M| \neg S)$ and $P(\neg S| M)$. MENTION COLLINS AS ANOTHER EXAMPLE?
+the advantage of prosecutors \citep{Thompson1987Interpretation}.  
+
+%We have just seen an example of it in DNA evidence cases, 
+%namely the confusion was between $P(M| \neg S)$ and $P(\neg S| M)$. MENTION COLLINS AS ANOTHER EXAMPLE?
 
 \begin{comment}
 
@@ -995,6 +1074,7 @@ namely the confusion was between $P(M| \neg S)$ and $P(\neg S| M)$. MENTION COLL
 \end{comment}
 
 
+\begin{comment}
 \paragraph{Likelihood ratios can model sources of weakness/error/uncertainty (illustrate this through DNA evidence)}
 
 Let us now address some of the complications we left out as we provided a probabilistic 
@@ -1099,7 +1179,7 @@ it does make the reasoning clearer \citep{Robertson1995DNA-Evidence:-W}.}
 
 
 
-
+\end{comment}
 
 
 
@@ -1285,6 +1365,7 @@ our cognitive states). This, at least, is the assumptions
 about our psychology that justifies the equivalence above. 
 \end{comment}
 
+\begin{comment}
 
 \paragraph{Mention the fiction of chains of independent evidence; perhaps postpone discussion to section on coherence}
 		
@@ -1293,7 +1374,7 @@ about our psychology that justifies the equivalence above.
 
 \paragraph{[The problem of the old evidence? The issue of evidential strength of a DNA match after a database search?]}
 
-
+\end{comment}
 \subsection{Arguments}
 
 \paragraph{Difference between deductive and presumptive arguments [inductive, abductive, ampliative, defeasible; what have you]}
