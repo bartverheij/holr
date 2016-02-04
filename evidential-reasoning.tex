@@ -487,15 +487,12 @@ Scenarios can be considered as alternative explanations of the evidence. Returni
 
 \subsection{Probabilities}
 
-\paragraph{Evidential favoring and disfavoring can be characterized probabilistically} A piece of evidence $E$ favors an 
+\paragraph{Evidential favoring and disfavoring can be characterized as ``probability difference''} A piece of evidence $E$ favors an 
 hypothesis $H$ whenever $E$ raises the probability of $H$, or in symbols, 
 $P(H|E) > P(H)$. 
 %
 %\[ E \text{ favors } H \text{ iff }  P(H|E) > P(H).\]
 %
-In terms of likelihood ratios, $E$ favors 
-$H$ whenever the likelihood ratio
-$\frac{P(E|H)}{P(E | \neg H)}$ is greater than one. 
 %In symbols,
 %
 %\[ E \text{ favors } H \text{ iff}  \frac{P(E|H)}{P(E|\neg H)}>1.\]
@@ -511,22 +508,36 @@ testifies that she saw the defendant around the crime scene
  that the defendant is guilty. 
 This can be described probabilistically, as follows:
  %
- \[ P(\textit{guilt}|\textit{testimony}) > P(\textit{guilt}) \text{ or }\] 
+ \[ P(\textit{guilt}|\textit{testimony}) > P(\textit{guilt}).\] 
  %
- \[\frac{P(\textit{testimony}|\textit{guilt})}{P(\textit{testimony}|\neg \textit{guilt})} > 1.\]
-%
 By contrast, a piece of evidence $E$ disfavors an hypothesis $H$ whenever $E$ lowers 
-the probability of $H$, or whenever the likelihood ratio is lower than one.
+the probability of $H$, or in symbols, $P(H|E) < P(H)$.
 For example, if a DNA test shows no match between traces at crime
- scene and the defendant, this fact 
- disfavors the the hypothesis that the defendant is guilty. Probabilistically, 
+ scene and the defendant, this fact  disfavors the the hypothesis that the defendant is guilty. 
+ Probabilistically, 
 %
-\[ P(\textit{guilt}|\textit{no DNA match}) < P(\textit{guilt})  \text{ or }\]  
+\[ P(\textit{guilt}|\textit{no DNA match}) < P(\textit{guilt}).\]  
 %
-\[\frac{P(\textit{no DBA match}|\textit{guilt})}{P(\textit{no DNA match}|\neg \textit{guilt})} < 1.\]
  %
  
 % \paragraph{Two characterizations of evidential favoring and disfavoring are equivalent} 
+\paragraph{Evidential favoring and disfavoring can be characterized as ``likelihood ratio''} 
+
+There is another characterization of evidential favoring and disfavoring. 
+Instead of comparing the initial probability $P(H)$ and the probability $P(H|E)$ 
+of the hypothesis given the evidence, we can use likelihood ratios of 
+the form $\frac{P(E| H)}{P(E |\neg H)}$.
+So, $E$ favors $H$ whenever the likelihood ratio
+$\frac{P(E|H)}{P(E | \neg H)}$ is greater than one. Intuitively, this means that the presence of the 
+evidence is more likely if the hypothesis is true than if the hypothesis is false. 
+By contrast, a piece of evidence $E$ disfavors an hypothesis $H$ whenever 
+the likelihood ratio is lower than one. This means that the presence of the evidence is less likely if the 
+hypothesis is true than if the hypothesis is false. In terms of the two examples considered earlier, we have:
+%
+ \[\frac{P(\textit{testimony}|\textit{guilt})}{P(\textit{testimony}|\neg \textit{guilt})} > 1.\]
+ %
+ \[\frac{P(\textit{no DBA match}|\textit{guilt})}{P(\textit{no DNA match}|\neg \textit{guilt})} < 1.\]
+%
 Interestingly enough, the two characterizations of evidential favoring/disfavoring---in terms of probability 
 increase/decrease, and in terms of a likelihood ratio greater/lower than one---are 
 in fact equivalent. 
@@ -832,8 +843,8 @@ the higher the value of the evidence against the hypothesis.
 Intuitively, the value of a piece of evidence for or against an hypothesis can also be quantified by the probability 
 of the hypothesis given the evidence. The higher, or lower, the probability $P(H|E)$, the higher 
 the value of the evidence for, or against, the hypothesis. The probability $P(H|E)$, however, should not be confused with the probability difference or the likelihood ratio. To illustrate, suppose a witness testifies that the defendant beat the victim to death, but as it turns out, the witness 
-was drunk at the time, so the evidential value of the testimony in favor of guilt should 
-be low. If the testimony by the drunk witness is the only incriminating evidence, the probability 
+was drunk at the time, so the evidential value of the testimony in favor of guilt is low. 
+If the testimony by the drunk witness is the only incriminating evidence, the probability 
 $P(\textit{guilt} | \textit{drunk witness})$ should also be low. Now, it follows that $P(\textit{innocence} | \textit{drunk witness})$ 
 should be high insofar as \textit{innocence} is the negation of \textit{guilt}. 
 But this seems problematic. A drunk witness, in fact, is of little help in establishing 
@@ -855,16 +866,17 @@ Similarly, the value of the evidence in favor of innocence is also low, that is:
 %
 \[\text{the likelihood ratio $\frac{P(\textit{innocence} | \textit{drunk witness})}{P(\textit{innocence} | \neg\textit{drunk witness})}$ is only slightly below one}.\] 
 %
-So, the value of the testimony in favor of guilt, and in favor of innocence, is low 
+So, the value of the testimony in favor of guilt, and innocence, is low 
 in both cases. This means that $P(\textit{guilt} | \textit{drunk witness})$
-and $P(\textit{guilt})$ will be roughly the same value, and the same can be said of $P(\textit{innocence} | \textit{drunk witness})$ 
+and $P(\textit{guilt})$ are roughly the same value, and so are $P(\textit{innocence} | \textit{drunk witness})$ 
 and $P(\textit{innocence})$. Consequently, if $P(\textit{innocence})$ is high, 
 and thus $P(\textit{guilt})$ low, $P(\textit{innocence} | \textit{drunk witness})$ will 
-also be high, and thus $P(\textit{guilt} | \textit{drunk witness})$ low. %, given the little evidential value of the testimony. 
+be high, and thus $P(\textit{guilt} | \textit{drunk witness})$ low. %, given the little evidential value of the testimony. 
+We should thus not be surprised that $P(\textit{innocence} | \textit{drunk witness})$ is high. 
 This is because, by Bayes' theorem, $P(H|E)$ depends on $P(H)$.  
 Even if $E$ does not change significantly the probability of $H$, or the likelihood ratio (positive or negative) 
 $\frac{P(E|H)}{P(E| \neg H)}$ is small, $P(H|E)$ could still be high or low, insofar as $P(H)$ itself is high or low. 
-We should thus be careful in not confusing a high probability $P(H|E)$ with a high 
+All in all, we should be careful in not confusing a high probability $P(H|E)$ with a high 
 evidential value in terms of a large probability difference or a high likelihood ratio.
 
 \begin{comment}
@@ -932,8 +944,9 @@ genetic profile matches with the crime traces;
 
 \noindent
 To ease exposition, we make three simplifying 
-assumptions. The first is that the DNA test yielding a match (or a non-match) is infallible. 
-The match reported by the lab technician, in other words, is assumed to be a true match. This, of course, need be the case because laboratories make mistakes. The second assumption is that whoever is the source of the crime traces is the perpetrator of the crime, so 'guilt' and 'source' are treated as interchangeable. This need not be the case because, for example, one could be the source of the traces at the crime scene without participating in the crime, or while participating, one might not have done so with the requisite mental state. 
+assumptions. The first is that the the inference from `reported match' to `true match' is unobjectionable. In other words, we assume that 
+the DNA test yielding a match (or a non-match) is infallible, so that the match reported by the lab technician counts as 
+a true match. This, of course, need be the case because laboratories make mistakes. The second assumption is that whoever is the source of the crime traces is the perpetrator of the crime, so `guilt' and `source' are treated as interchangeable. This need not be the case because, for example, one could be the source of the traces at the crime scene without participating in the crime, or while participating, one might not have done so with the requisite mental state. 
 The third assumption concerns the relation between `true match' and `source'.
 Even if one is a true match, one need not be the source. We should bear in mind that genetic profiles 
 are not unique. Based on statistical and genetic modeling, a profile is expected to occur with a frequency in a select population. This expected frequency is often called the Random Match Probability, that is, the probability that a random person would match.  If RMP equal 1 in 200, then we would expected 1 such profile every two hundred people, or in other words, the probability that a random person would match 
@@ -952,13 +965,13 @@ is as follows % \citep{Dawid02, Balding2005Weight}:
 %
 If the RMP is 1 in 200 million, the likelihood ratio would be
 %
-\[\frac{P(M |S)}{P( M | \neg G)}=\text{200 million}\]
+\[\frac{P(M |G)}{P( M | \neg G)}=\frac{1}{\frac{1}{\text{200 million}}}=\text{200 million}.\]
 %
-The numerator $P(M | S)$ equal 1 because of our simplifying assumption that 'source' and guilt' are interchangeable 
+The numerator $P(M | G)$ equal 1 because of our simplifying assumption that 'source' and guilt' are interchangeable 
 and the laboratory test is infallible. If the defendant is guilty and thus the source of the crime traces, the infallible 
 lab test must declare a match. Turning now to the denominator, keep in mind that $RMP$ is the probability that a random person, 
 unrelated to the crime or the defendant, would be found to have a matching DNA. 
-Putting $P(M | \neg G)=RMP$ is plausible because (1) the probability that a match would be reported assuming that the defendant was \textit{not} the source is roughly the same as the chance that a random person---someone who had nothing to do with the crime or had no contact with the victim---would match anyway, and (2) given our identification between 'source' and 'guilt', the denominator equals RMP. 
+Putting $P(M | \neg G)=RMP$ is plausible because (1) the probability that a match would be reported assuming that the defendant was \textit{not} the source is roughly the same as the chance that a random person---someone who had nothing to do with the crime or had no contact with the victim---would match anyway, and (2) we are identifying, by assumption,  'source' and 'guilt'. 
 
 
 %To quantify the evidential value in terms of probability difference, 
@@ -971,7 +984,8 @@ our simplifying assumptions. For example, a likelihood ratio as high as
 1 billion reduces to about 100 if the laboratory error rate is 1\% \citep{Thomason2003How-the-Probabi}.
 More generally, the fallibility of a DNA test has negative impact on the value of the evidence insofar as a higher 
 value in the denominator results in a lower likelihood ratio. The identification of 'source' and 
-`guilt' must also be taken into account, and this further weakens the value of a DNA match in favor of guilt.
+`guilt' must also be taken into account, and relaxing this identification 
+further weakens the value of a DNA match in favor of guilt.
 
 
 \begin{comment}
@@ -1030,8 +1044,8 @@ There is an error people sometimes make while reasoning with the RMP. The mistak
 that if the RMP is low---that is, the probability that a random person would match is low---the 
 probability that the defendant is a random person (or that the defendant is innocent) is also low, 
 and thus the probability of guilt is high. 
-The inference from `it is unlikely that a random (innocent) person would match' to 
-the  `it is unlikely that someone who matches is a random (innocent) person' is wrong. 
+The inference from `it is unlikely that a random (or innocent) person would match' to 
+the  `it is unlikely that someone who matches is a random (or innocent) person' is wrong. 
 This is a confusion of $P(M |\neg G)$, which is indeed low if the RMP is low (given our simplifying assumptions), 
 with $P(\neg G | M)$, which need not be low at all. The application of Bayes' theorem can 
 protect us from this confusion, as illustrated by the following table: 
@@ -1702,30 +1716,139 @@ Ennio is the perpetrator: he has a matching DNA profile whose frequency is as lo
 \paragraph{Combining difference pieces of evidence using probability}
 
 
-\paragraph{Multiplying likelihood ratios and question of independence among difference pieces of evidence}
+\paragraph{Independent items of evidence can be combined by multiplying the likelihood ratios}
+
+In a criminal case, there may more than one piece of evidence, for example, 
+there may be an eyewitness testimony and a DNA match, and these need to be combined together. 
+If $P(\textit{guilt}| \textit{testimony})=0.7$
+and $P(\textit{guilt} | \textit{DNA match})=0.7$, and the two items are independent, 
+it is tempting to say $P(\textit{guilt}| \textit{DNA match} \wedge \textit{testimony})$ equals 
+$0.7\times 0.7=0.49$, because $P(A\wedge B)$ equals $P(A)\times P(B)$, provided 
+$A$ and $B$ are independent. 
+But this is paradoxical. 
+%How can  $P(\textit{guilt}| \textit{DNA match}, \textit{testimony})$ be lower than  
+%$P(\textit{guilt}| \textit{testimony})$ or $P(\textit{guilt}| \textit{DNA match})$? 
+The combination of two pieces of evidence, each favoring guilt to some extent, should strengthen the case for guilt, 
+not weaken it. To see what is wrong here, 
+let us work analytically.  We know 
+ %
+\[\frac{P(\textit{guilt} | \textit{DNA match}\wedge \textit{testimony})}{P(\neg \textit{guilt} | \textit{DNA match}\wedge \textit{testimony})}=\frac{P(\textit{DNA match}\wedge \textit{testimony} | \textit{guilt})}{P(\textit{DNA match}\wedge \textit{testimony} | \neg \textit{guilt})}\times \frac{P(\textit{guilt})}{P(\neg \textit{guilt})},\]
+ %
+ and if \textit{DNA match} and \textit{testimony} are independent, conditional on \textit{guilt}, then 
+  %
+\[\frac{P(\textit{DNA match}\wedge \textit{testimony} | \textit{guilt})}{P(\textit{DNA match}\wedge \textit{testimony} | \neg \textit{guilt})}=\frac{P(\textit{DNA match}| \textit{guilt})}{P(\textit{DNA match}|\neg \textit{guilt})}\times\frac{P(\textit{testimony} | \textit{guilt})}{P(\textit{testimony} | \neg \textit{guilt})}.\]
+%
+%or more succinctly,
+%
+%\[LR12 = LR1 \times LR2.\]
+ %
+%So, putting everything together,
+ %
+ %\[\frac{P(\textit{guilt} | \textit{DNA match}, \textit{testimony})}{P(\neg \textit{guilt} | \textit{DNA match}, \textit{testimony})}=LR1\times LR2\times \frac{P(\textit{guilt})}{P(\neg \textit{guilt})}.\]
+ %
+%
+The point is that the likelihood ratios should be multiplied, not the posterior probabilities. 
+Suppose DNA evidence shows that the crime traces match with defendant, and 
+the match has a likelihood ratio $\frac{P(\textit{DNA match} | \textit{guilt})}{P(\textit{DNA match}| \neg \textit{guilt})}$ of 1000. 
+Suppose the witness testimony still favors the hypothesis of guilt but has a likelihood ratio $\frac{P(\textit{testimony} | \textit{guilt})}{P(\textit{testimony}| \neg \textit{guilt})}$ of just 100. 
+The combined evidential value of the two pieces of evidence is $1000\times 100=100,000$. This is a higher value then 
+the two pieces of evidence considered separately, so by Bayes' theorem, 
+$P(\textit{guilt}| \textit{DNA match}, \textit{testimony})$ 
+will be greater than $P(\textit{guilt}| \textit{DNA match})$ 
+or $P(\textit{guilt}| \textit{testimony})$ considered separately, as expected. 
+ 
+Multiplying the likelihood ratios increases the evidential 
+value if the likelihood ratios are greater than one, and decreases the evidential value if the likelihood ratio 
+are lower than one. If one likelihood ratio is greater and the lower than one, that is, 
+one item of evidence favors the hypothesis and the other disfavors it, 
+their combined evidential value will vary.  To illustrate, consider a case in which 
+%two items of evidence, 
+%intuitively, cancel one another out.  
+there are two conflicting testimonies. 
+One witness asserts that the defendant was around the scene of the 
+crime when the crime was committed. This incriminating testimony 
+favors the hypothesis of guilt, for example,
+%
+\[\frac{P(\textit{incriminating witness}| \textit{guilt})}{P(\textit{incriminating witness} | \neg \textit{guilt)}}=\frac{0.9}{0.1}=9,\]
+%
+where the numbers are purely illustrative. 
+The other witness offers an alibi for the defendant and asserts that she was with the defendant 
+during the time of the crime. The alibi disfavor the hypothesis of guilt, so that 
+%
+\[\frac{P(\textit{alibi}| \textit{guilt})}{P(\textit{alibi}| \neg \textit{guilt})}=\frac{0.1}{0.9}=1/9,\] 
+%
+where the numbers are, once again, purely illustrative. 
+ %Suppose $G$ has a probability of 0.5, regardless of the two testimonies.
+%Suppose, also, that the incriminating testimony brings the probability of $G$ to 0.9, whereas the alibi brings the probability of 
+%$G$ to 0.1 (and thus brings the probability of $\neg G$ to 0.9). Each testimony has the \textit{same yet divergent impact} on 
+%$P(G)$. The incriminating testimony raises the probability of $G$ while the alibi lowers the probability SC. 
+%They each do so to the same extent but in opposite directions. 
+Absent further information about the trustworthiness of the testimonies, 
+they should cancel one another. 
+%The evidential value of each testimony  
+%can be represented, in terms of likelihood ratios, 
+%as follows:
+%
+%\[LR1=\frac{P(W1| G)}{P(W1|\neg G)}=\frac{0.9}{0.1}=9 \text{ and } LR2=\frac{P(W2|G)}{P(W2|\neg G)}=\frac{0.1}{0.9}=\frac{1}{9}.\]
+%
+The combined evidential value of the two testimonies is null, as expected, for
+%
+\[\frac{P(\textit{alibi}|  \textit{guilt})}{P(\textit{alibi}  \neg \textit{guilt})}\times \frac{P(\textit{incriminating witness}| \textit{guilt} )}{P(\textit{incriminating witness}| \neg\textit{guilt})}=9\times \frac{1}{9}=1.\] 
+%
+The multiplication of the likelihood ratios as a procedure to combine items of evidence 
+applies to more than two items of evidence. 
+Again assuming independence, the general 
+formula would be
+%
+\[LR_{1 \dots ,k}=LR_1\times \dots \times LR_k,\]
+%
+where $LR_i=\frac{P(E_i | H)}{P(E_i | \neg H)}$, for $i\in \{1, \dots, k\}$, and $H$ is the hypothesis of interest.
+
+\paragraph{Items of evidence can be combined 
+even if they are not independent}
+
+So far we have assumed that the items of evidence to be combined are independent, 
+conditional on guilt or on whatever hypothesis of interest. 
+More precisely, for the case of two items of evidence, 
+%
+\[ \text{E_1$ and $E_2$ are independent, conditional on $H$, iff $P(E_1 | H)= P(E_2 | E_1 \wedge H)$ }\]
+%
+If this assumption is dropped, the combined likelihood ratio is no longer the multiplication of the individual likelihood ratios, 
+but rather, it becomes:
+%
+\[ LR_{1,2}=\frac{P(E_1\wedge E_2 | H)}{P(E_1\wedge E_2 | \neg H)}=\frac{P(E_1| H)}{P(E_1| \neg H)}\times \frac{P(E_2 | E_1\wedge H)}{P(E_2| E_1\wedge \neg H)}.\]
+%
+For the case of more than two items of evidence, we have:
+%
+\[ LR_{1, \dots, k } =\frac{P(E_1\wedge \dots \wedge E_k | H)}{P(E_1\wedge \dots \wedge E_k | \neg H)}=\frac{P(E_1| H)}{P(E_1| \neg H)} \times \dots \times \frac{P(E_k | E_1  \wedge \dots \wedge E_{k-1} \wedge H)}{P(E_k| E_1 \wedge \dots \wedge E_{k-1} \wedge \neg H)} .\]
 
 
 
-We first need a general account of how to 
-model the \textit{combination} of two pieces of evidence E1 and E2, each supporting, with its own degree of strength, the same hypothesis H. If the strength of a single pieces of evidence $E$ depends on how much it impacts $P(H)$, the same applies to the combination of two pieces of evidence. 
-Bayes' theorem shows us how the combination of E1 and E2  impacts the probability $P(H)$, as follows:
+
+\paragraph{Difference hypotheses}
+
+So far we assumed that that the different items of evidence favor or disfavor the same hypothesis. This assumption can be relaxed. 
+Suppose a DNA match links the defendant to the crime scene, while an email written by the defendant indicates 
+that he planned to killed the victim. Suppose we are able to assess, independently, the evidential value of the DNA match in favor 
+of the hypothesis that the defendant had contact with the victim, and the evidential value of defendant's email in favor of 
+the hypothesis that the defendant had a plan to kill the victim, that is:
 %
-\[\frac{P(H| E1, E2)}{P(\neg H| E1, E2)}=\frac{P(E1\wedge E2|H)}{P(E1\wedge E2|\neg H)}\times \frac{P(H)}{P(\neg H)}.\]
+\[\frac{P(\textit{DNA match}| \textit{contact})}{P(\textit{DNA match} | \neg \textit{contact})}=n\]
 %
-If E1 and E2 are independent and do not influence one another, we have:
+\[\frac{P(\textit{email}| \textit{plan to kill})}{P(\textit{email}| \neg \textit{plan to kill})}=m\]
 %
-\[\frac{P(H| E1, E2)}{P(\neg H| E1, E2)}=\frac{P(E1|H)}{P(E1|\neg H)}\times\frac{P(E2|H)}{P(E2|\neg H)}\times \frac{P(H)}{P(\neg H)}.\]
+We are interested in the combined evidential value of the two items of evidence, \textit{DNA match} and \textit{emails}, 
+in favor of the overall hypothesis including \textit{contact} and \textit{plan to kill}, that is:
 %
-\[\frac{P(H| E1, E2)}{P(\neg H| E1, E2)}= LR1\times LR2 \times \frac{P(H)}{P(\neg H)}.\]
+\[\frac{P(\textit{DNA match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan to kill})}{P(\textit{DNA match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan to kill}))}=?\]
 %
-Suppose, in a criminal case, DNA evidence shows that the crime traces match with defendant's 
-DNA. The DNA match has a likelihood ratio, relative to hypothesis $S$, of 1,000. Another piece of evidence, independent of the DNA evidence, shows that the crime scene blood type is the same as the defendant's blood type. Suppose the likelihood ratio is now just 10. 
-So, the combined evidential strength of the two pieces 
-of evidence is $1,000\times 10=10,000$. This is an example of how two pieces of evidence converge  toward the 
-same hypothesis.
+ How should we proceed?
 
 
-\paragraph{This seems a largely unsolved problem for probabilistic accounts (and for the others accounts as well)}
+
+
+
+
 
 \paragraph{The BN connection}
 
