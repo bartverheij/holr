@@ -1721,22 +1721,22 @@ Ennio is the perpetrator: he has a matching DNA profile whose frequency is as lo
 In a criminal case, there may more than one piece of evidence, for example, 
 there may be an eyewitness testimony and a DNA match, and these need to be combined together. 
 If $P(\textit{guilt}| \textit{testimony})=0.7$
-and $P(\textit{guilt} | \textit{DNA match})=0.7$, and the two items are independent, 
-it is tempting to say $P(\textit{guilt}| \textit{DNA match} \wedge \textit{testimony})$ equals 
+and $P(\textit{guilt} | \textit{match})=0.7$, and the two items are independent, 
+it is tempting to say $P(\textit{guilt}| \textit{match} \wedge \textit{testimony})$ equals 
 $0.7\times 0.7=0.49$, because $P(A\wedge B)$ equals $P(A)\times P(B)$, provided 
 $A$ and $B$ are independent. 
-But this is paradoxical. 
-%How can  $P(\textit{guilt}| \textit{DNA match}, \textit{testimony})$ be lower than  
-%$P(\textit{guilt}| \textit{testimony})$ or $P(\textit{guilt}| \textit{DNA match})$? 
+But this would be a mistake. 
+%How can  $P(\textit{guilt}| \textit{match}, \textit{testimony})$ be lower than  
+%$P(\textit{guilt}| \textit{testimony})$ or $P(\textit{guilt}| \textit{match})$? 
 The combination of two pieces of evidence, each favoring guilt to some extent, should strengthen the case for guilt, 
 not weaken it. To see what is wrong here, 
-let us work analytically.  We know 
+observe that 
  %
-\[\frac{P(\textit{guilt} | \textit{DNA match}\wedge \textit{testimony})}{P(\neg \textit{guilt} | \textit{DNA match}\wedge \textit{testimony})}=\frac{P(\textit{DNA match}\wedge \textit{testimony} | \textit{guilt})}{P(\textit{DNA match}\wedge \textit{testimony} | \neg \textit{guilt})}\times \frac{P(\textit{guilt})}{P(\neg \textit{guilt})},\]
+\[\frac{P(\textit{guilt} | \textit{match}\wedge \textit{testimony})}{P(\neg \textit{guilt} | \textit{match}\wedge \textit{testimony})}=\frac{P(\textit{match}\wedge \textit{testimony} | \textit{guilt})}{P(\textit{match}\wedge \textit{testimony} | \neg \textit{guilt})}\times \frac{P(\textit{guilt})}{P(\neg \textit{guilt})},\]
  %
- and if \textit{DNA match} and \textit{testimony} are independent, conditional on \textit{guilt}, then 
+ and if \textit{match} and \textit{testimony} are independent, conditional on \textit{guilt}, then 
   %
-\[\frac{P(\textit{DNA match}\wedge \textit{testimony} | \textit{guilt})}{P(\textit{DNA match}\wedge \textit{testimony} | \neg \textit{guilt})}=\frac{P(\textit{DNA match}| \textit{guilt})}{P(\textit{DNA match}|\neg \textit{guilt})}\times\frac{P(\textit{testimony} | \textit{guilt})}{P(\textit{testimony} | \neg \textit{guilt})}.\]
+\[\frac{P(\textit{match}\wedge \textit{testimony} | \textit{guilt})}{P(\textit{match}\wedge \textit{testimony} | \neg \textit{guilt})}=\frac{P(\textit{match}| \textit{guilt})}{P(\textit{match}|\neg \textit{guilt})}\times\frac{P(\textit{testimony} | \textit{guilt})}{P(\textit{testimony} | \neg \textit{guilt})}.\]
 %
 %or more succinctly,
 %
@@ -1744,22 +1744,22 @@ let us work analytically.  We know
  %
 %So, putting everything together,
  %
- %\[\frac{P(\textit{guilt} | \textit{DNA match}, \textit{testimony})}{P(\neg \textit{guilt} | \textit{DNA match}, \textit{testimony})}=LR1\times LR2\times \frac{P(\textit{guilt})}{P(\neg \textit{guilt})}.\]
+ %\[\frac{P(\textit{guilt} | \textit{match}, \textit{testimony})}{P(\neg \textit{guilt} | \textit{match}, \textit{testimony})}=LR1\times LR2\times \frac{P(\textit{guilt})}{P(\neg \textit{guilt})}.\]
  %
 %
-The point is that the likelihood ratios should be multiplied, not the posterior probabilities. 
+The point is that the likelihood ratios should be multiplied, not the probabilities of each hypothesis given the evidence. 
 Suppose DNA evidence shows that the crime traces match with defendant, and 
-the match has a likelihood ratio $\frac{P(\textit{DNA match} | \textit{guilt})}{P(\textit{DNA match}| \neg \textit{guilt})}$ of 1000. 
+the match has a likelihood ratio $\frac{P(\textit{match} | \textit{guilt})}{P(\textit{match}| \neg \textit{guilt})}$ of 1000. 
 Suppose the witness testimony still favors the hypothesis of guilt but has a likelihood ratio $\frac{P(\textit{testimony} | \textit{guilt})}{P(\textit{testimony}| \neg \textit{guilt})}$ of just 100. 
-The combined evidential value of the two pieces of evidence is $1000\times 100=100,000$. This is a higher value then 
+The combined evidential value of the two pieces of evidence is $1000\times 100$. This is a higher value than 
 the two pieces of evidence considered separately, so by Bayes' theorem, 
-$P(\textit{guilt}| \textit{DNA match}, \textit{testimony})$ 
-will be greater than $P(\textit{guilt}| \textit{DNA match})$ 
+$P(\textit{guilt}| \textit{match} \wedge \textit{testimony})$ 
+is greater than $P(\textit{guilt}| \textit{match})$ 
 or $P(\textit{guilt}| \textit{testimony})$ considered separately, as expected. 
  
 Multiplying the likelihood ratios increases the evidential 
 value if the likelihood ratios are greater than one, and decreases the evidential value if the likelihood ratio 
-are lower than one. If one likelihood ratio is greater and the lower than one, that is, 
+are lower than one. If one likelihood ratio is greater and the other lower than one, that is, 
 one item of evidence favors the hypothesis and the other disfavors it, 
 their combined evidential value will vary.  To illustrate, consider a case in which 
 %two items of evidence, 
@@ -1773,7 +1773,7 @@ favors the hypothesis of guilt, for example,
 %
 where the numbers are purely illustrative. 
 The other witness offers an alibi for the defendant and asserts that she was with the defendant 
-during the time of the crime. The alibi disfavor the hypothesis of guilt, so that 
+during the time of the crime. The alibi disfavors the hypothesis of guilt, so that 
 %
 \[\frac{P(\textit{alibi}| \textit{guilt})}{P(\textit{alibi}| \neg \textit{guilt})}=\frac{0.1}{0.9}=1/9,\] 
 %
@@ -1796,11 +1796,11 @@ The combined evidential value of the two testimonies is null, as expected, for
 \[\frac{P(\textit{alibi}|  \textit{guilt})}{P(\textit{alibi}  \neg \textit{guilt})}\times \frac{P(\textit{incriminating witness}| \textit{guilt} )}{P(\textit{incriminating witness}| \neg\textit{guilt})}=9\times \frac{1}{9}=1.\] 
 %
 The multiplication of the likelihood ratios as a procedure to combine items of evidence 
-applies to more than two items of evidence. 
-Again assuming independence, the general 
-formula would be
+can be used for more than two items of evidence. 
+Assuming independence, the general 
+formula is as follows:
 %
-\[LR_{1 \dots ,k}=LR_1\times \dots \times LR_k,\]
+\[LR_1\times \dots \times LR_k,\]
 %
 where $LR_i=\frac{P(E_i | H)}{P(E_i | \neg H)}$, for $i\in \{1, \dots, k\}$, and $H$ is the hypothesis of interest.
 
@@ -1811,38 +1811,128 @@ So far we have assumed that the items of evidence to be combined are independent
 conditional on guilt or on whatever hypothesis of interest. 
 More precisely, for the case of two items of evidence, 
 %
-\[ \text{E_1$ and $E_2$ are independent, conditional on $H$, iff $P(E_1 | H)= P(E_2 | E_1 \wedge H)$ }\]
+\[ \text{$E_1$ and $E_2$ are independent, conditional on $H$, iff $P(E_1 | H)= P(E_2 | E_1 \wedge H)$ }\]
 %
-If this assumption is dropped, the combined likelihood ratio is no longer the multiplication of the individual likelihood ratios, 
+If this assumption is dropped, the combined likelihood ratio is no longer the simple 
+multiplication of the individual likelihood ratios, 
 but rather, it becomes:
 %
-\[ LR_{1,2}=\frac{P(E_1\wedge E_2 | H)}{P(E_1\wedge E_2 | \neg H)}=\frac{P(E_1| H)}{P(E_1| \neg H)}\times \frac{P(E_2 | E_1\wedge H)}{P(E_2| E_1\wedge \neg H)}.\]
+\[\frac{P(E_1\wedge E_2 | H)}{P(E_1\wedge E_2 | \neg H)}=\frac{P(E_1| H)}{P(E_1| \neg H)}\times \frac{P(E_2 | E_1\wedge H)}{P(E_2| E_1\wedge \neg H)},\]
 %
-For the case of more than two items of evidence, we have:
+and for more than two items of non independent evidence, the formula becomes:
 %
-\[ LR_{1, \dots, k } =\frac{P(E_1\wedge \dots \wedge E_k | H)}{P(E_1\wedge \dots \wedge E_k | \neg H)}=\frac{P(E_1| H)}{P(E_1| \neg H)} \times \dots \times \frac{P(E_k | E_1  \wedge \dots \wedge E_{k-1} \wedge H)}{P(E_k| E_1 \wedge \dots \wedge E_{k-1} \wedge \neg H)} .\]
+\[\frac{P(E_1\wedge \dots \wedge E_k | H)}{P(E_1\wedge \dots \wedge E_k | \neg H)}=\frac{P(E_1| H)}{P(E_1| \neg H)} \times \dots \times \frac{P(E_k | E_1  \wedge \dots \wedge E_{k-1} \wedge H)}{P(E_k| E_1 \wedge \dots \wedge E_{k-1} \wedge \neg H)} .\]
 
 
 
 
-\paragraph{Difference hypotheses}
+\paragraph{Different items of evidence for different hypotheses can also be combined}
 
-So far we assumed that that the different items of evidence favor or disfavor the same hypothesis. This assumption can be relaxed. 
+So far we have assumed that the items of evidence favor or disfavor the same hypothesis. This assumption can be relaxed. 
 Suppose a DNA match links the defendant to the crime scene, while an email written by the defendant indicates 
-that he planned to killed the victim. Suppose we are able to assess, independently, the evidential value of the DNA match in favor 
-of the hypothesis that the defendant had contact with the victim, and the evidential value of defendant's email in favor of 
-the hypothesis that the defendant had a plan to kill the victim, that is:
+that he had a plan to kill the victim. Each of these item of evidence support an hypothesis. Now, for the sake of argument, suppose 
+$P( \textit{contact} | \textit{match})= 0.8$ and $P(\textit{plan} | \neg \textit{email})=0.8$. It is tempting 
+to say that if the two hypothesis are independent, by the product rule, the probability of both hypotheses taken 
+as a conjunction will be $0.8\times 0.8=0.64$, which is lower than the probability 
+of each hypothesis considered separately.
+%, as follows:
 %
-\[\frac{P(\textit{DNA match}| \textit{contact})}{P(\textit{DNA match} | \neg \textit{contact})}=n\]
+ %\[ \begin{array} {lcl } 
+%P( \textit{contact} \wedge \textit{plan} | \textit{match} \wedge \textit{email})
+ %& = & P( \textit{contact} | \textit{match}) \times 
+%P(\textit{plan} |  \textit{email}) \\ 
+ % & = & 0.9  \times  0.9\\
+   % & = & 0.81
+     % \end{array} \]
 %
-\[\frac{P(\textit{email}| \textit{plan to kill})}{P(\textit{email}| \neg \textit{plan to kill})}=m\]
+More generally, by increasing the number of conjuncts, 
+the probability of the hypothesis can be made arbitrarily low. 
+As a result, it would seem that even if each conjunct is 
+proven with a high probability, their conjunction has a very low probability. 
+This is known as the conjunction paradox.
+
+The reasoning behind the conjuction paradox is mistaken. First of all, observe that:
+ %
+\[ \frac{P(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{P(\neg (\textit{contact} \wedge \textit{plan}) |  \textit{match} \wedge \textit{email})} 
+=
+\frac{P(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}
+\times
+\frac{P(\textit{contact}\wedge \textit{plan})}{P(\neg (\textit{contact} \wedge \textit{plan}))}
+.\]
 %
-We are interested in the combined evidential value of the two items of evidence, \textit{DNA match} and \textit{emails}, 
-in favor of the overall hypothesis including \textit{contact} and \textit{plan to kill}, that is:
+ Assuming that the two items of evidence are independent, conditional on 
+ the hypothesis of interest, and assuming that the two hypotheses are also independent, we have:
+ %
+ \[ \begin{array} {lcccc } 
+ \frac{P(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}  
+ & = &  \frac{P(\textit{match} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} | \neg (\textit{contact} \wedge \textit{plan}))} & \times &
+ \frac{P( \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{email} | \neg (\textit{contact} \wedge \textit{plan}))} \\ 
+ &&&&\\
+ & = & \frac{P(\textit{match} | \textit{contact})}{P(\textit{match} | \neg \textit{contact})} & \times & 
+ \frac{P( \textit{email} | \textit{plan})}{P(\textit{email} | \neg \textit{plan})} 
+ \end{array} \]
+  %
+The mistake earlier was that the likelihood ratios, not the 
+probabilities of each hypothesis, should be multiplied.  
+Suppose, for the sake of argument, the evidential value of the DNA match in favor 
+of the hypothesis \textit{contact}, 
+and the evidential value of the defendant's email in favor of 
+the hypothesis \textit{plan}, are as follows:
 %
-\[\frac{P(\textit{DNA match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan to kill})}{P(\textit{DNA match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan to kill}))}=?\]
+\[\frac{P(\textit{match}| \textit{contact})}{P(\textit{match} | \neg \textit{contact})}=36 \text{ and } \frac{P(\textit{email}| \textit{plan})}{P(\textit{email}| \neg \textit{plan})}=36\]
 %
- How should we proceed?
+where the numbers are, as usual, illustrative. The combined evidential value of \textit{match} and \textit{email} 
+in favor of the overall hypothesis, including \textit{contact} and \textit{plan}, is $36\times 36 = 1296$, so that:
+ %
+ \[ \begin{array} {lcccc } 
+ \frac{P(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{P(\neg (\textit{contact} \wedge \textit{plan}) |  \textit{match} \wedge \textit{email})} 
+ & = & 1296 & \times &
+\frac{P(\textit{contact}\wedge \textit{plan})}{P(\neg (\textit{contact} \wedge \textit{plan}))} \\ 
+  \end{array} \]
+  %
+For the value of the ratio $\frac{P(\textit{contact}\wedge \textit{plan})}{P(\neg (\textit{contact} \wedge \textit{plan}))}$, assume that 
+%
+\[\frac{P(\textit{contact})}{P(\neg \textit{contact})}=0.1/0.9 \text{ and } \frac{P(\textit{plan})}{P(\neg \textit{plan})}=0.1/0.9,\footnote{These assumptions are coherent with our earlier ones, 
+so that%
+ \[ \begin{array} {ccccc } 
+ \frac{P(\textit{contact} | \textit{match})}{P(\neg \textit{contact} |  \textit{match})} 
+ & = &  \frac{P(\textit{match} | \textit{contact})}{P(\textit{match} | \neg \textit{contact})} & \times &
+ \frac{P(\textit{contact})}{P(\neg \textit{contact})} \\ 
+ &&&&\\
+ 0.8/0.2 & = &  36 & \times &  0.1/0.9
+   \end{array} \]
+   %
+and also
+%
+ \[ \begin{array} {ccccc } 
+ \frac{P(\textit{plan} | \textit{email})}{P(\neg \textit{plan} |  \textit{email})} 
+ & = &  \frac{P(\textit{email} | \textit{plan})}{P(\textit{email} | \neg \textit{plan})} & \times &
+ \frac{P(\textit{plan})}{P(\neg \textit{plan})} \\ 
+ &&&&\\
+ 0.8/0.2 & = &  36 & \times &  0.1/0.9
+   \end{array} \]
+%
+}\]
+%
+Now, putting everything together, we get
+ \[ \begin{array} {ccccc } 
+ \frac{P(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{P(\neg (\textit{contact} \wedge \textit{plan}) |  \textit{match} \wedge \textit{email})} 
+ & = & \frac{P(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))} & \times &
+\frac{P(\textit{contact}\wedge \textit{plan})}{P(\neg (\textit{contact} \wedge \textit{plan}))} \\ 
+ &&&&\\
+0.93/0.07 & = & 1296 & \times & \frac{0.1\times 0.1}{1-(0.1\times 0.1)}
+ \end{array} \]
+  %
+So, the $P(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})$ turns out to 
+be higher, albeit somewhat only slightly, than $P(\textit{contact}| \textit{match})$ or
+ $P(\textit{plan} | \textit{email})$. By combing different items of evidence and different hypotheses, the probability of the conjunction 
+need not be lower than the probability of each conjunct, \textit{contra} the conjunction of paradox. 
+
+
+
+
+
+
 
 
 
