@@ -16,24 +16,23 @@
 		% 45,-4.3);
 		% \draw[thick,dashed,rounded corners=1mm] (0.55,0.45) rectangle (1.45,-4.3);
 
-		\node[arg]     (conc) at (-0.5,0) {The suspect was at the crime scene};
+		\node[arg]     (conc) at (-1,0) {The suspect was at the crime scene};
 %		\node[arg]     (oppconc) at (0,0) {The suspect was not at the crime scene};
 		\node[arg,observed] (prem) at (-1,-2) {The witness reports that she saw the suspect at the crime scene};
 		\node[arg,observed] (prem2) at (0,-2) {The DNA profile found at the crime scene does not match the suspect's};
-%		\node[arg,observed] (prem3) at (-2,-2) {The witness is found to be a member of a rivalling gang};
+		\node[arg,observed] (prem3) at (-2,-2) {The witness is found to be a member of a rivalling gang};
 
-%		\node[arg] (att) at ($(prem.north)!0.5!(conc.south)-(1,0)$) {The witness is lying};
+		\node[arg] (att) at ($(prem.north)!0.5!(conc.south)-(1,0)$) {The witness is lying};
 
-%		\draw[arg] (prem3) -- (att);
-%		\draw[] (prem2) -- (0,0);
-%		\draw[attack] (0,0) -- (conc);
-		\draw[attack] (prem2) -- (conc);
+		\draw[arg] (prem3) -- (att);
+		\draw[] (prem2) -- (0,0);
+		\draw[attack] (0,0) -- (conc);
 		\draw[arg] (prem) -- (conc);
 %		\draw[arg] (prem2) -- (oppconc);
 %		\draw[attack] (prem2) -- (conc);
 %		\draw[attack] (conc) -- (oppconc);
 %		\draw[attack] (oppconc) -- (conc);
-%		\draw[attack] (att) -- ($(prem.north)!0.5!(conc.south)$);
+		\draw[attack] (att) -- ($(prem.north)!0.5!(conc.south)$);
 
 	\end{tikzpicture}
 \end{document}
