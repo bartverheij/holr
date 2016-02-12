@@ -1259,59 +1259,57 @@ The criterion in common law countries is
 
 \paragraph{Probability BLA BLA}
 
- On the probabilistic framework, the goal, at least in theory, is to reach an
-estimate of the probability $P(G| E)$ of guilt based on all the available evidence. This process begins with the lowest possible value 
-for $P(G)$, prior to considering any evidence. As more evidence is presented, the probability 
-of guilt moves upwards or downward depending on whether the evidence is incriminating or exculpatory. When all the available 
-evidence is considered---which means all the admissible evidence that was presented at trial---a guilt probability value, all things considered, is 
-reached. This forms the basis of the decision to convict or acquit.
+ On the probabilistic framework, the goal is to estimate the probability of the defendant's guilt based 
+ on all the available evidence. The estimation begins with the lowest possible value 
+for the guilt probability, prior to considering any evidence. As more evidence is presented, the guilt probability 
+moves upwards or downward depending on whether the evidence is incriminating or exculpatory. 
+When all the evidence is considered, a final guilt probability value $P(G|E)$ is 
+reached, all things considered. This forms the basis for 
+the decision to convict or acquit. 
 
-It is the view that establishing guilt 
-beyond a reasonable doubt means to establish 
-that the defendant's \textit{probability of guilt}, given the total evidence presented at trial, meets a 
-threshold, say, 0.99 or 0.999  \citep{Kaplan1968Decision, Kaye1999Clarifying-the-, Tillers2007}. Consequently, a 
-doubt would be reasonable or unreasonable depending on a measurable probability.  
+In probabilistic terms, proof of guilt beyond a reasonable doubt means 
+that the defendant's \textit{probability of guilt}, given the evidence presented at trial, meets a 
+threshold, say, $>$99\% or $>$99.9\%. 
+%Consequently, a 
+%doubt would be reasonable or unreasonable depending on a measurable probability.  
 %
 \begin{comment}
 This definition is simple, crisp and elegant, but a too literal interpretation of it is obviously problematic.  If a probabilistic threshold is understood as a criterion which the fact-finders should mechanically apply whenever they confront the decision to convict or acquit, two difficulties arise. The first difficulty is that assigning a probability value to guilt itself might not be feasible. This difficulty, however,  can be sidestepped if we understand legal probabilism less mechanistically.  The legal probabilists can defend their proposal by conceding that they are not offering a recipe that should be directly implementable in court. Assigning probabilities to propositions, they could say, is an idealized process, a regulative ideal which can improve trial proceedings. In this spirit, setting a probabilistic criterion for criminal convictions would only be a way to theorize about the meaning and function of the criminal standard of proof. REFERENCE HERE. 
 
-The second difficulty is that it is not clear where, exactly, the threshold should be placed: is it 0.99, 0.89, 0.899, 0.999, or what? The difficult here is not so much with identifying a precise numerical value. 
-After all, a range of acceptable values instead of a precise threshold could still be used. The problem here is rather, where to place the bar, whether the bar corresponds to a precise value or an interval of acceptable values?
+The second difficulty is that it is not clear where, exactly, the threshold should be placed: is it 0.99, 0.89, 0.899, 0.999, or what? 
+The difficult here is not so much with identifying a precise numerical value. 
+After all, a range of acceptable values instead of a precise threshold could still be used. The problem here is rather, 
+where to place the bar, whether the bar corresponds to a precise value or an interval of acceptable values?
 \end{comment}
 %
-Expected utility theory can be used to identify a precise numerical probability threshold. 
-David Kaplan used a relative assessment of the disutilities associated with convicting an innocent, $D_i$, and with acquitting a guilty defendant, $D_g$.  
-Suppose the probability of guilt and innocence equals $P_g$ and $P_i$ such that $P_g = 1 - P_i$. 
-To convict---Kaplan suggests---the jury must be believe that 
-
-\vspace{2mm}
-
-$P_g D_g > (1-P_g) D_i$.
-
-\vspace{2mm}
-\noindent
-The inequality represents a situation in which the expected disutility resulting from acquitting a guilty defendant is larger than the disutility resulting from 
-convicting an innocent defendant. So, given the inevitable possibility of error, such a situation would be one in which 
-convicting is less harmful than acquitting, so that conviction is justified. As one can see, this is an application of the more general statistical decision theory based on maximization of expected utility or the minimization of expected loss. REFERENCES HERE. 
-
-The inequality holds only if $P_g$ reaches a certain value. 
-From the inequality, by algebra, we have
-
-\vspace{2mm}
-$\frac{P_g}{1- P_g} > \frac{D_i}{D_g}$.
-
-\vspace{2mm}
-\noindent
-This formula gives a precise indication of how high the probability 
-of guilt must be to justify a guilty verdict, relative to the ratio between $D_i$ and $D_g$. 
+A numerical value for the threshold can be identified using expected utility theory. 
+Let $c(CI)$ be the cost of convicting an innocent and $c(AG)$ the cost 
+of acquitting a guilty defendant. For a conviction to be justified, the 
+expected cost of convicting an innocent must be lower than the expected 
+cost of acquitting an innocent, that is, 
+%
+\[ P(G|E) \times c(AG) >  [1-P(G|E)] \times c(CI) .\]
+%
+%The inequality represents a situation in which the expected cost resulting from convicting an innocent is lower than the expected cost
+%resulting from a cutting a guilty defendant. Given the inevitable possibility of error, such a situation would be one in which 
+%convicting is less costly than acquitting, so convicting is justified. Crucially, 
+The inequality holds just in case 
+%
+\[ \frac{P(G|E)}{1- P(G|E)} > \frac{c(CI)}{c(AG)}.\]
+%
+%This formula gives a precise indication of how high the probability 
+%of guilt must be to justify a guilty verdict, relative to the ratio between $D_i$ and $D_g$. 
 %If we consider thatthe disutility of convicting an innocent is as harmful as the disutility of acquitting an innocent, 
 %i.e., $D_g=D_i$---as it might be the case in a civil case---, the lower bound for $P_g$ must be at least $\frac{1} {2}$. 
-If $\frac{D_i}{D_g}=\frac{9}{1}$---as it might be more appropriate in a criminal 
-case---, the lower bound for $P_g$ must be at least $0.9$. More complicated models are also possible, 
-but the basic idea is that the probability required for a conviction will be a function of weighing certain social and 
-economic costs that would result from erroneous decisions. 
+Suppose $ \frac{c(CI)}{c(AG)}=\frac{99}{1}$, as might be more appropriate in a criminal 
+case in which the conviction of an innocent defendant is regarded as far worse than the acquittal of a guilty defendant.
+Then, the inequality hold only if $P(G)$ meets the threshold 99\%.
+More complicated models are also possible, but the basic idea is that the probability 
+required for a conviction is a function of weighing the 
+costs that would result from an erroneous decision. 
 
 %MENTION PROOF PARADOXES HERE. 
+
 
 \paragraph{Arguments BLA BLA}
 
@@ -1340,28 +1338,31 @@ Thomas Gordon and Douglas Walton develop an argumentation based framework to def
 Some scholars suggested that we should elaborate a 
 theory of legal reasoning which departs from the 
 probabilistc approach and which does not ignore trial procedures broadly construed
-\citep{cohen77, nesson79, Thomson86, Walton2002, Stein05, Pardo2008Judicial-Proof-, ho08, Haack2011Legal-Probabili}.
 The key notion here seems to be plausibility rather than probability.
-Ronald \cite{Allen2010No-Plausible-Al} recently suggested that that 
+Ronald Allen recently suggested that that 
 `[no] plausible alternative to a plausible story of guilt [should be] the rule of decision in criminal cases'
 and that `[i]n criminal cases, fact finders find guilt if there is a plausible story of guilt and 
 no plausible story of innocence; otherwise, they find innocence.'
 
-The plausibility-based approach is appealing, but the obvious problem is that the notion of a `plausible story' or of a `plausible alternative to a plausible story' is wholly under-defined. 
+The plausibility-based approach is appealing, but the obvious problem is that the notion of a `plausible story' or 
+of a `plausible alternative to a plausible story' is wholly under-defined. 
 SAY MORE HERE
-Still, if the notion of plausibility is hard to define precisely, it seems closer to how jurors actually reason in trial proceedings, whereas the notion of probability, despite its 
-mathematical underpinnings, is hard to relate to actual trial proceedings: jurors do not naturally quantify guilt, and it is difficult to quantify it 
+Still, if the notion of plausibility is hard to define precisely, it seems closer to how jurors actually 
+reason in trial proceedings, whereas the notion of probability, despite its 
+mathematical underpinnings, is hard to relate to actual trial proceedings: jurors do not 
+naturally quantify guilt, and it is difficult to quantify it 
 even if we wanted to. We face a trade-off: probability is a formally developed notion, but it is 
 removed from trial proceedings and common-sense reasoning; plausibility 
 lacks a well-established theory, but it is closer to trial practice. 
 
 
 \paragraph{Further readings}
-Law and economics
-Evidence law manuals  \citep{Fisher2008Evidence, Mendez2008}
-Character evidence and its exclusion \citep{redmayne02}
+Evidence law manuals  \citep{fisher2008,  mendez2008}. 
+Criminal Procedure manuals \citep{allenEtAl2011}.
+Character evidence and its exclusion \citep{redmayne2015}.
 Free proof, legal arithmetic and rules of weight
-Criminal procedure manuals 
+ 
+
 Attempts to definite of beyond a reasonable doubt 
 by courts in the US and elsewhere. Commonwealth v.\ Massachusetts Webster (1850) (proof beyond a reasonable doubt is equated to 
 `reasonable and moral certainty'). Holland v.\ United States (1954), 348 U.S. 121, 140 
@@ -1371,8 +1372,30 @@ doubt is inextricably intertwined with \dots
 the presumption of innocence', that it is connected with `the evidence or  
 absence of evidence', and also that `it does not involve proof to an absolute certainty' and so 
 `it is not proof beyond any doubt')
+
+
+Probabilistic accounts of the burden of proof
+\citep{kaplan1968, kaye1986, kaye1999, hamer2004, cheng2013}.
+Critique of probabilistic accounts \citep{cohen1977, nesson79, thomson86, stein05, ho08, pardoAllen2008, haack2011}.
+On the question whether the threshold should be variable \citep{kaplow2012, picinali2013}.
+The problem of priors \citep{finkelsteinFairley1970, friedman2000}.
+A critique of the proof beyond a reasonable doubt  
+as understood in the law \citep{laudan2006}.
 History of beyond a reasonable doubt standard 
-Epistemoligical critique of the law, Laudan
+\citep{shapiro1991, whitman2008}.
+
+Other measures, weight, resiliency and completeness 
+of the evidence \citep{kaye1999, stein05}.
+
+
+
+Narrative based account of proof beyond a reasonable doubt \citep{allen2010, allenStein2013}.
+
+Argumentation based accounts of proof beyond a reasonable doubt \citep{}.
+
+
+
+
 
 
 
