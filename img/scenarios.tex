@@ -11,33 +11,33 @@
 		\pgftransformxscale{3.5}
 		\pgftransformyscale{1.8}
 		
-		\node[scn] (H1) at (1,0) {H1: The victim's former partner and the victim have a relation};
-		\node[scn] (H2) at (2,0) {H2: They break up};
-		\node[scn] (H3) at (3,0) {H3: There is a fight};
+		\node[scn] (H1) at (1,0) {$H_1$: The victim's former partner and the victim have a relation};
+		\node[scn] (H2) at (2,0) {$H_2$: They break up};
+		\node[scn] (H3) at (3,0) {$H_3$: There is a fight};
 
-		\node[scn] (H4) at (4,0.6) {H4: The victim's former partner kills the victim};
+		\node[scn] (H4) at (4,0.6) {$H_4$: The victim's former partner kills the victim};
 
-		\node at (4.5,0.5) {S$_\text{1}$};
+		\node at (4.5,0.5) {$S_1$};
 
-		\node[scn] (H5) at (4,-0.6) {H5: The victim's former partner goes to the theater};
+		\node[scn] (H8) at (4,-0.6) {$H_8$: The victim's former partner goes to the theater};
 
-		\node at (4.5,-0.5) {S$_\text{2}$};
+		\node at (4.5,-0.5) {$S_3$};
 
-		\node[scn] (H6) at (1,-2) {H6: The drug-dealing robber enters the victim's house};
-		\node[scn] (H7) at (2,-2) {H7: The victim accidentally encounters the robber};
-		\node[scn] (H8) at (3,-2) {H8: The robber kills the victim};
+		\node[scn] (H5) at (1,-2) {$H_5$: The robber enters the victim's house};
+		\node[scn] (H6) at (2,-2) {$H_6$: The victim accidentally encounters the robber};
+		\node[scn] (H7) at (3,-2) {$H_7$: The robber kills the victim};
 
-		\node at (4.5,-2) {S$_\text{3}$};
+		\node at (4.5,-2) {$S_2$};
 
 		\draw[thick,dashed,rounded corners=1mm] (0.55,0.65) rectangle (3.45,-0.65);
-		\node at (3.35,-0.5) {S$_\text{4}$};
+		\node at (3.35,-0.5) {$S_4$};
 
 		\draw[arg] (H1) -- (H2);
 		\draw[arg] (H2) -- (H3);
 		\draw[arg] (H3) -- (H4);
-		\draw[arg] (H3) -- (H5);
+		\draw[arg] (H3) -- (H8);
+		\draw[arg] (H5) -- (H6);
 		\draw[arg] (H6) -- (H7);
-		\draw[arg] (H7) -- (H8);
 
 
 	\end{tikzpicture}

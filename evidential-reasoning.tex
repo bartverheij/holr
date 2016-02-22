@@ -86,7 +86,7 @@
 
 
 \usepackage{pgfplots}
-
+\pgfplotsset{compat=1.13}
  
 \usepackage[round]{natbib}
 \begin{document}
@@ -229,11 +229,11 @@ The third normative framework for the correct handling of the evidence centers a
 For instance, consider a murder case with two suspects: the victim's former partner and a robber. For each suspect, a scenario is considered that explains the murder:
 
 \begin{description}
-	\item S1: The victim's former partner killed the victim after a fight.
-	\item S2: The robber killed the victim when caught during a robbery.	
+	\item $S_1$: The victim's former partner killed the victim after a fight.
+	\item $S_2$: The robber killed the victim when caught during a robbery.	
 \end{description}
 
-\noindent When the robber confesses having killed the victim during a robbery, there is evidence contradicting scenario S1 and matching scenario S2.
+\noindent When the robber confesses having killed the victim during a robbery, there is evidence contradicting scenario $S_1$ and matching scenario $S_2$.
 
 Scenario analysis proves helpful when considering a complex case and its evidence. The coherent explanation of the evidence provided by a scenario can be regarded as a sense-making tool for handling cases with a large dossier. In particular, legal psychology has contributed to our knowledge about the role of scenarios in handling the evidence~\citep{bennettFeldman1981,penningtonHastie1993}. Scenarios were shown to be misleading, as experiments showed that a false scenario told in a sensible chronological order was more easily believed than a true scenario that was told in a random order. Still, the legal psychologists~\citet{wagenaarEtal1993} emphasised the usefulness of scenario analysis for the rational handling of the evidence, using the technique in their work on debunking dubious case decisions. Scenario analysis is connected with inference to the best explanation~\citep{pardoAllen2008}.
 
@@ -448,32 +448,51 @@ why, despite their clarity and precision, Wigmore's charts have
 
 \subsection{Scenarios}
 
-Also the scenario perspective sheds light on the treatment of conflicting evidence. We illustrate the use of conflicting evidence in a scenario perspective by going back to the example in Section~\ref{sec:introScen}. In the example, there were three main scenarios: the breakup murder scenario $S_1$, the innocent former partner scenario $S_2$, and the caught robber scenario $S_3$ (Figure~\ref{fig:scens}).
+In the scenarios normative framework, the handling of conflicting evidence is analyzed by considering different scenarios about what may have happened.
 
-
-
+\paragraph{Scenarios are clusters of events, ordered in time and connected by causal relations.} Consider again the murder example with two suspects: the victim's former partner, who killed the victim after a fight ($S_1$), and a robber who killed the victim when caught during a robbery ($S_2$) (used in Section~\ref{sec:introScen}). Scenario $S_1$ can be made explicit as a sequence of four hypothetical consecutive events (Figure~\ref{fig:scens}). First, the victim and his former partner have a relation ($H_1$); then they break up ($H_2$); subsequently, there is a fight ($H_3$); and finally, the victim is killed by his former partner ($H_4$). Scenario $S_2$ can be analyzed as consisting of three events. First, the robber enters the victim's house ($H_5$); then the victim accidentally encounters the robber ($H_6$); and finally, the robber kills the victim ($H_7$). Some of the events in these chronologically ordered scenarios are causally connected. For instance, in the first scenario, the killing is caused by the break up and the fight; and in the second scenario by the accidental encounter.
 
 \begin{figure}[bt]
 \centering
 \input{img/scenarios}
-\caption{Scenarios\label{fig:scens}}
+\caption{Scenarios and their structure\label{fig:scens}}
 \end{figure}
 
-\paragraph{Several scenarios and their relations}
+\paragraph{Scenarios can explain a piece of evidence or be contradicted by it.} The starting point of the murder investigation is the victim's body found at the crime scene (evidence $E_0$). There are two alternative scenarios that explain this evidence: Both the former partner murder scenario $S_1$ and the robbery murder scenario $S_2$ explain evidence $E_0$, in the sense that finding the body is expected assuming the scenario to be true. Assume now that a match is found between the DNA profile of a tissue trace found under the victim's finger nails and that of his former partner (evidence $E_1$). This evidence is explained by scenario $S_1$, but not by $S_2$, of which evidence $E_1$ is independent. 
 
-In the scenario framework, it is natural to consider several mutually inconsistent scenarios simultaneously. Scenarios can have different relations with one another. They can be mutually inconsistent, such as the two murder scenarios $S_1$ and $S_3$ that each assume a different killer. They can be compatible, such as the innocent former partner scenario $S_2$ and the caught robber scenario $S_3$ that both can be true. They can have subscenario relations, such as the break up fight scenario $S_4$ (in the figure consisting of the events $H_1$, $H_2$ and $H_3$) that is a subscenario of the two scenarios $S_1$ and $S_2$ involving the victim's former partner.
+When the former partner is confronted with the DNA evidence, she provides a different scenario that explains evidence $E_1$: Indeed there was a fight about the break up, but she did not kill the victim, and instead subsequently went to the theater (scenario $S_3$; Figure~\ref{fig:scens}). So we have two scenarios explaining the DNA profile match $E_1$: the former partner murder scenario $S_1$ and the former partner alibi scenario $S_3$. In fact, the two scenarios share a subscenario about the break up fight, that explains the finding of the match (scenario $S_4$ in Figure~\ref{fig:scens}).
+
+When checking the alibi scenario, it is found that the victim's former partner's bank card was used at the theater that night (evidence $E_2$), contradicting the former partner murder scenario $S_1$. Scenario $S_3$ explains both the DNA evidence $E_1$ and the use of the bank card $E_2$. 
+
+\paragraph{Scenarios considered may or may not solve a case, and show which evidence is legally relevant.} A criminal case is only solved when the legally relevant circumstances can be proven. For instance, in murder cases, it should be proven who killed the victim and why. Of the scenarios considered, the former partner murder scenario $S_1$ and the robbery murder scenario $S_2$ explain how and why the murder happened, but the alibi scenario $S_3$ does not. In a crime investigation, it can be hard to find evidence that proves a sufficiently detailed scenario about what has happened. For instance, in the example, it is initially clear that a murder had happened, but not by who. Because of the break up, a scenario that answers the why-question is considered: the former partner murder scenario $S_1$. That scenario is initially corroborated by the DNA match $E_1$, but then breaks down by the use of the bank card $E_2$ that proves the alibi scenario $S_3$. Only when the robber is caught and confesses having killed the victim (evidence $E_3$)---possibly much later, it becomes clear what has happened. The body found $E_0$ and the confession $E_3$ are relevant for answering the legally relevant questions who killed the victim and why. The other evidence considered, the DNA match $E_1$ and the use of the bank card $E_2$, have played a relevant role in the investigation, but do not support or contradict robbery murder scenario $S_2$. 
+
+			%E0			E1			E2			E3
+%S1		expl		expl		ind			ind
+%S2 		expl		ind			ind			expl
+%
+%S3		ind			expl		expl		ind
+%
+%S4		ind			expl		ind			ind
+%S2+S3	expl		expl		expl		expl
 
 
-\paragraph{Scenarios as alternative explanations of the evidence}
-
-Scenarios can be considered as alternative explanations of the evidence. Returning to the three pieces of evidence discussed in Section~\ref{sec:introScen}, we see that the breakup murder scenario $S1$ explains the skin trace $E1$, the innocent former partner scenario $S2$ explains the skin trace $E1$ and the bank card use $E2$, and the caught robber scenario explains the confession $E3$.
 
 
-
-\textbf{COPIED FROM THAT SECTION; REORGANIZE; my suggestion: that section even briefer.} the breakup murder scenario $S1$ explains the skin trace $E1$, but is contradicted by the use of the bank card $E2$, and again by the confession $E3$. The innocent former partner scenario $S2$ explains the skin trace $E1$ and the bank card use $E2$, and is independent from the confession $E3$. The caught robber scenario explains the confession $E3$, and is independent from the skin trace $E1$ and the bank card use $E2$. Considering these scenarios and this evidence, breakup murder scenario $S1$ is hard to believe, the innocent former partner and caught robber scenarios $S2$ and $S3$ seem to be true.
-
-\paragraph{Comparative adequacy of alternative scenarios/hypotheses in explaining the evidence}
-
+%\paragraph{Several scenarios and their relations}
+%
+%In the scenario framework, it is natural to consider several mutually inconsistent scenarios simultaneously. Scenarios can have different relations with one another. They can be mutually inconsistent, such as the two murder scenarios $S_1$ and $S_3$ that each assume a different killer. They can be compatible, such as the innocent former partner scenario $S_2$ and the caught robber scenario $S_3$ that both can be true. They can have subscenario relations, such as the break up fight scenario $S_4$ (in the figure consisting of the events $H_1$, $H_2$ and $H_3$) that is a subscenario of the two scenarios $S_1$ and $S_2$ involving the victim's former partner.
+%
+%
+%\paragraph{Scenarios as alternative explanations of the evidence}
+%
+%Scenarios can be considered as alternative explanations of the evidence. Returning to the three pieces of evidence discussed in Section~\ref{sec:introScen}, we see that the breakup murder scenario $S1$ explains the skin trace $E1$, the innocent former partner scenario $S2$ explains the skin trace $E1$ and the bank card use $E2$, and the caught robber scenario explains the confession $E3$.
+%
+%
+%
+%\textbf{COPIED FROM THAT SECTION; REORGANIZE; my suggestion: that section even briefer.} the breakup murder scenario $S1$ explains the skin trace $E1$, but is contradicted by the use of the bank card $E2$, and again by the confession $E3$. The innocent former partner scenario $S2$ explains the skin trace $E1$ and the bank card use $E2$, and is independent from the confession $E3$. The caught robber scenario explains the confession $E3$, and is independent from the skin trace $E1$ and the bank card use $E2$. Considering these scenarios and this evidence, breakup murder scenario $S1$ is hard to believe, the innocent former partner and caught robber scenarios $S2$ and $S3$ seem to be true.
+%
+%\paragraph{Comparative adequacy of alternative scenarios/hypotheses in explaining the evidence}
+%
 
 
 
@@ -567,7 +586,9 @@ while the lack of a DNA match decreases the probability of the same hypothesis
 \subsection{Further reading}
 
 Arguments: Wigmore, references Pollock 1995, Dung 1995; ?mention nonmonlog, Toulmin's anti-logicism, FvE/Walton
-
+Defeat by seq weakening, par strengthening
+Accrual
+Preferences, weighing
 
 \section{Evidential Value}
 \label{sec:str}
@@ -747,7 +768,7 @@ the evidential value of the DNA match in favor of guilt, in terms of a likelihoo
 is as follows % \citep{Dawid02, Balding2005Weight}:
 %
 \[
-{P(M | G) \over P(M | \neg G)} =   {1 \over RMP}.
+\frac{P(M | G)}{P(M | \neg G)} =   \frac{1}{RMP}.
 \]
 %
 If the RMP is 1 in 200 million, the likelihood ratio would be
@@ -977,6 +998,8 @@ An attack against the premises of an argument will succeed or fail depending on 
 
 
 \paragraph{	Good properties of scenarios: completeness, plausibility (here??), coverage (see Pennington and Hastie)}
+
+causal rules
 
 \paragraph{	Scenario schemes (Schank, Bex)}
 
