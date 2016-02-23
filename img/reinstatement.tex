@@ -1,0 +1,32 @@
+\documentclass[border=5mm,tikz]{standalone} 
+
+\usepackage{amsmath}
+\input{../styles.tex}
+
+\begin{document}
+	\begin{tikzpicture}[
+		scnnode/.append style={text width=3cm},
+		arg/.append style={text width=3.5cm},
+	]
+		\pgftransformxscale{5}
+		\pgftransformyscale{2}
+
+		\node[arg]     			(scene) at (0,-1) {The suspect was at the crime scene};
+		\node[arg,observed] (witn) at (0,-2) {Witness $A$: The suspect was at the crime scene};
+
+		\draw[arg] 					(witn) -- (scene);
+
+		\node[arg] 					(lying) at (1,-1) {Witness $A$ is lying};
+		\node[arg,observed] (witnB) at (1,-2) {Witness $B$: Witness $A$ is lying};
+
+		\draw[attack] 			(lying) -- (0, -1.5);
+		\draw[arg] 					(witnB) -- (lying);
+
+		\node[arg] 					(lying2) at (2,-1) {Witness $B$ is lying};
+		\node[arg,observed] (witnC) at (2,-2) {Witness $C$: Witness $B$ is lying};
+
+		\draw[attack] 			(lying2) -- (1, -1.5);
+		\draw[arg] 					(witnC) -- (lying2);
+
+	\end{tikzpicture}
+\end{document}

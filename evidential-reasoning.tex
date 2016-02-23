@@ -820,6 +820,7 @@ Comparison between DNA evidence and fingerprints  \citep{zabell2005}.
 Probabilistic analyses of eyewitness testimony \citep{friedman1987, schumStarace2001}. 
 
 \subsection{Arguments}
+\label{sec:valueArgs}
 
 The evidential value of arguments can be analyzed in terms of the reasons they are built from.
 
@@ -841,9 +842,9 @@ In the first kind of conflicts between reasons, there is a reason attacked by an
 \caption{Three kinds of conflicts and their resolution\label{fig:conflicts}}
 \end{figure}
 
-In the second kind of conflicts between reasons, there is one reason for a conclusion and another against the conclusion. For instance, there are two witnesses with opposite reports about whether the suspect was at the crime scene or not (see the middle of Figure~\ref{fig:conflicts}). The conflict of reasons is unresolved given only the reasons. Further information about the reasons is required to resolve the conflict. The resolution of such a conflict of reasons can be thought of as the preference of one over the other. A reason can be preferred over another, for instance when it is stronger. In the example, the preference (in the figure indicated by the $<$-sign) is argued for by the claim that one of the witnesses is more reliable than the other.
+In the second kind of conflicts between reasons, there is one reason for a conclusion and another against the conclusion. For instance, there are two witnesses with opposite reports about whether the suspect was at the crime scene or not (see the middle of Figure~\ref{fig:conflicts}). This is an example of a rebutting attack (Section~\ref{sec:confArg}). The conflict of reasons is unresolved given only the reasons. Further information about the reasons is required to resolve the conflict. The resolution of such a conflict of reasons can be thought of as the preference of one over the other. A reason can be preferred over another, for instance when it is stronger. In the example, the preference (in the figure indicated by the $<$-sign) is argued for by the claim that one of the witnesses is more reliable than the other. In this case, the conclusion follows that the suspect was not at the crime scene, given this conflict of reasons and its resolution. 
 
-The third kind of conflicts between reasons discussed here involves more than two reasons. For instance, there are more than two witnesses, with conflicting reports (Figure~\ref{fig:conflicts}, bottom). In the figure, both sides are supported by two witness reports. Resolving such a conflict can be thought of as a weighing of the reasons, generalizing the preference between two conflicting reasons. 
+The third kind of conflicts between reasons discussed here involves more than two reasons. For instance, there are more than two witnesses, with conflicting reports (Figure~\ref{fig:conflicts}, bottom). In the figure, both sides are supported by two witness reports. Resolving such a conflict can be thought of as a weighing of the reasons, generalizing the preference between two conflicting reasons. Again, it is concluded that the suspect was not at the crime scene, given this resolution of this conflict of reasons.
 
 \paragraph{Further readings} 
 deductive, inductive, abductive
@@ -1024,6 +1025,8 @@ An attack against the premises of an argument will succeed or fail depending on 
 \section{Coherently interpreting the evidence}
 \label{sec:cohint}
 
+The dossiers of criminal cases can be large, and the coherent interpretion of the evidence in such a dossier can be daunting, whichever normative framework is used. For each framework, we discuss how the coherent interpretation of the evidence can be addressed.
+
 \subsection{Scenarios}
 
 
@@ -1037,9 +1040,43 @@ causal rules
 
 \subsection{Arguments}
 
-\paragraph{Inference to the best explanation (Allen/Pardo?)}
 
-\paragraph{WORRY: Confused about this one; why is it under coherence?) [Answer BV: Otherwise nothing remains here. ]}
+\paragraph{An analysis of a case in terms of arguments can become very complex.} This was already noted by Wigmore, when he developed his charting method for analyzing the evidence in a criminal case~\citep{wigmore1913,wigmore1931}. Figure~\ref{fig:wigmore} provides an example of a Wigmore diagram (\citeyear{wigmore1931}). Here Wigmore has analyzed a murder case (Commonwealth v. Umilian, 1901). Jedrusik, the victim, was the author of a letter in which he falsely advised a priest that Umilian had a wife and children (back in the country from which they emigrated), conflicting with Umilian’s intention to marry. In the chart, Z stands for the charge that Umilian killed Jedrusik. The node at 8 represents a revengeful murderous emotion toward Jedrusik. At 18, it is represented that the marriage is in the end performed, reducing his feelings of revenge. This claim is supported by the (unspecified) evidence at 18.1. The diagram contains some two dozen nodes. Diagrams for more complex cases can contain many more nodes.
+
+\begin{figure}[bt]
+	\centering
+		\includegraphics[scale=0.7]{img/wigmore.jpg}
+\caption{A Wigmore chart\label{fig:wigmore}}
+\end{figure}
+
+\paragraph{The evaluation of an argument can depend on its subarguments.}Given an argumentative analysis of the case, one would like to know which conclusions follow, and which don't. We already discussed how arguments consisting of conflicts of reasons can be evaluated in this sense, when we discussed the role of exceptions, preferences and weighing (Section~\ref{sec:valueArgs}). More generally, the structure of a complex of arguments influences the evaluation of the arguments. In particular, the subarguments of a larger argument determine the evaluation of the whole. For an example, we go back to the argument in Figure~\ref{fig:arg2}. There the witness report supported the intermediate conclusion that the suspect was at the crime scene, which in turn supported the conclusion that the suspect committed the crime. So there is an argument consisting of two steps. In the example, the first of these steps is attacked by a counterargument involving the lying of the witness. As a result of this attack, the argument to the intermediate conclusion that the suspect was at the crime scene breaks down and its conclusion does not follow. As a result, also the larger two-step argument no longer supports its conclusion, which hence does not follow. Since the one-step subargument does not successfully support the intermediate conclusion, also the whole two-step argument for the final conclusion does not successfully support its conclusion.
+
+\paragraph{The evaluation of an argument can depend on chains of attacks.} When an argument is successfully attacked, it no longer successfully supports its conclusion. But attack can be chained, since the attack itself can be countered by a further attack. When an attack is successfully attacked, the original argument can become reinstated, in the sense that it again successfully supports its conclusion. Figure~\ref{fig:reinstatement} shows an example. A first witness, Witness $A$, reports that the suspect was at the crime scene. Given only this information, there is good reason to assume that the suspect was at the crime scene. However, there is a second witness, Witness $B$, who reports that Witness $A$ is lying. Given these two reasons, based on the witness reports by $A$ and $B$, it is no longer successfully supported that the suspect was at the crime scene. If now there is a third witness, Witness C, who reports that Witness B is lying, the attack is countered. Witness B is no longer believed, so there is no reason to conclude that Witness A is lying. As a result, A's report can again support its conclusion that the suspect was at the crime scene. The orignal argument based on A's report is reinstated. 
+
+\begin{figure}[bt]
+\centering
+\input{img/reinstatement}
+\caption{Reinstatement\label{fig:reinstatement}}
+\end{figure}
+
+
+\paragraph{Further reading}
+Pollock and his puzzles
+
+The field of formal arg
+
+Dung and his extensions
+
+Arg evaluation software
+
+
+
+
+%\paragraph{Inference to the best explanation (Allen/Pardo?)}
+
+%\paragraph{WORRY: Confused about this one; why is it under coherence?) [Answer BV: Otherwise nothing remains here. ]}
+
+
 
 \subsection{Probability}
 

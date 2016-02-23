@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=evidential-reasoning.tex
 
 [Frame0_View0,0]
-TopLine=830
-Cursor=38336
+TopLine=2031
+Cursor=96415
 
 [SessionInfo]
 FrameCount=1
