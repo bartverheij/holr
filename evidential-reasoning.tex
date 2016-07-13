@@ -330,7 +330,7 @@ Arguments have a dialogical counterpart, in which parties exchange reasons for a
 \noindent Models of argumentative dialogue involve specifications of the kinds of moves parties can make, the commitments these moves imply for parties, and the rules that determine the allowed sequences of dialogue moves.
 
 \paragraph{Further readings} 
-Argument structure and diagrams~\citep{wigmore1913,wigmore1931,toulmin1958,freeman1991}. Defeasible reasoning and nonmonotonic logic~\citep{pollock1997,gabbayEtal1994}. Rebutting and undercutting attack~\citep{pollock1987,pollock1995}. Undermining attack~\citep{bondarenkoEtal1997}. Formal evaluation of defeasible arguments~\citep{pollock1987,pollock1995,dung1995,prakken2010}. Argumentative dialogue~\citep{toulmin1958,waltonKrabbe1995,prakken1997,hage2000}. Accrual of reasons and weighing~\citep{pollock1995,hage1997,verheij1996diss,prakken2005}. Argument diagramming and evaluation software~\citep{pollock1995,reedRowe2004,kirschnerEtal2003,vanGelder2003,verheij2005,gordonEtal2007}.
+Argument structure and diagrams~\citep{wigmore1913,wigmore1931,toulmin1958,freeman1991}. Defeasible reasoning and nonmonotonic logic~\citep{pollock1987,gabbayEtal1994}. Rebutting and undercutting attack~\citep{pollock1987,pollock1995}. Undermining attack~\citep{bondarenkoEtal1997}. Formal evaluation of defeasible arguments~\citep{pollock1987,pollock1995,dung1995,prakken2010}. Argumentative dialogue~\citep{toulmin1958,waltonKrabbe1995,prakken1997,hage2000}. Accrual of reasons and weighing~\citep{pollock1995,hage1997,verheij1996diss,prakken2005}. Argument diagramming and evaluation software~\citep{pollock1995,reedRowe2004,kirschnerEtal2003,vanGelder2003,verheij2005,gordonEtal2007}.
 
 \subsection{Scenarios}
 
@@ -382,13 +382,16 @@ When checking the alibi scenario, it is found that the victim's former partner's
 
 \paragraph{Further readings} 
 
-
+\cite{bennettFeldman1981,penningtonHastie1993,penningtonHastie1993StoryModel,wagenaarEtal1993}
 
 \subsection{Probabilities}
 
 In the probabilistic normative framework, the handling of conflicting evidence is analyzed in terms of the conditional probabilities that connect the evidence and the hypotheses.
 
-\paragraph{Evidential favoring and disfavoring can be characterized as ``probability difference''} A piece of evidence $E$ favors an 
+\paragraph{Evidential favoring and disfavoring can be characterized as ``probability relevance''} 
+%BV:I changed difference to relevance, as 'prob diff' is used later for something else.
+%BV:I prefer replacing 'favoring and disfavoring' by 'suport ad attack', throughout.
+A piece of evidence $E$ favors an 
 hypothesis $H$ whenever $E$ raises the probability of $H$, or in symbols, 
 $P(H|E) > P(H)$. 
 For example, a witness 
@@ -415,19 +418,23 @@ For example, if a DNA test shows no match between the traces found at the crime
 There is another characterization of evidential favoring and disfavoring. 
 Instead of comparing the initial probability $P(H)$ and the probability $P(H|E)$ 
 of the hypothesis given the evidence, a so-called likelihood ratio of 
-the form $\frac{P(E| H)}{P(E |\neg H)}$ can also be used.
+the form ${P(E| H)}/{P(E |\neg H)}$ 
+%BV: I changed the vertical fraction to a horizontal one. Looks better inline. I prefer that everywhere.
+can also be used.
 On this account, $E$ favors $H$ whenever the likelihood ratio
 $\frac{P(E|H)}{P(E | \neg H)}$ is greater than one. Intuitively, this means that the presence of the 
-evidence is more likely if the hypothesis is true than if the hypothesis is false. 
+evidence is more probable %BV was 'likely'
+if the hypothesis is true than if the hypothesis is false. 
 By contrast, a piece of evidence $E$ disfavors an hypothesis $H$ whenever 
-the likelihood ratio is lower than one. This means that the presence of the evidence is less likely if the 
-hypothesis is true than if the hypothesis is false. In terms of the two examples considered earlier, we have:
+the likelihood ratio is lower than one. This means that the presence of the evidence is less likely %BV was 'likely'
+if the 
+hypothesis is true than if the hypothesis is false. For the two examples considered earlier, we have:
 %
  \[\frac{P(\textit{testimony}|\textit{guilt})}{P(\textit{testimony}|\neg \textit{guilt})} > 1, \text{ and }\]
  %
- \[\frac{P(\textit{no DBA match}|\textit{guilt})}{P(\textit{no DNA match}|\neg \textit{guilt})} < 1.\]
+ \[\frac{P(\textit{no DNA match}|\textit{guilt})}{P(\textit{no DNA match}|\neg \textit{guilt})} < 1.\]
 %
-Interestingly enough, the two characterizations of evidential favoring/disfavoring---in terms of probability 
+These two characterizations of evidential favoring/disfavoring---in terms of probability 
 increase/decrease, and in terms of a likelihood ratio greater/lower than one---are 
 in fact equivalent. 
 For the following statements hold:
@@ -437,6 +444,9 @@ For the following statements hold:
 %
 \[ \frac{P(H|E)}{P(\neg H | E)} = \frac{P(E | H)}{P(E| \neg H)}\times \frac{P(H)}{P(\neg H)},\]
 %
+%BV The LR formula should be in the main text somewhere
+%BV I like having this proof. (Source?)
+%BV I don't like a long, complex footnote. Let's discuss.
 which implies
 %
 \[\frac{P(E|H)}{P(E|\neg H)}>1 \text{ iff } \frac{P(H|E)}{P(\neg H | E)} > \frac{P(H)}{P(\neg H)}.\]
@@ -465,20 +475,24 @@ with the lack of a DNA match. Probabilistically, the testimony
 increases the probability of the defendant's guilt (or equivalently, the likelihood ratio is greater than one),
 while the lack of a DNA match decreases the probability of the same hypothesis 
 (or equivalently, the likelihood ratio is lower than one).
+%BV Nothing is said about conflict resolution. 
 
-
-
+\paragraph{Further readings} 
+.........................................................................................
 
 \section{Evidential value}
 \label{sec:str}
 
-\paragraph{The evidence found in a criminal investigation has different levels of evidential value: some evidence is very strong, other not so much.} How is evidential value handled in each of the three normative frameworks? That is the topic of this section.
+The evidence found in a criminal investigation has different levels of evidential value: some evidence is very strong, other not so much. How is evidential value handled in each of the three normative frameworks? That is the topic of this section.
 
 \subsection{Probability}
 
 
 
 \paragraph{Evidential value can be quantified as probability difference, likelihood ratio or overall probability}
+%BV Some reshaping is needed in this section, I'd say. 1. There is the evidential value of a piece of evidence; measured by probabilistic difference or LR (`incremental evidential value'). 2. There is the evidential value of all the evidence, in its totality; measured by the overall conditional prob (`total evidential value'). 3. DNA evidence is a good example, but there are complications.
+%BV Below the discussion of the drunk witness is (for me) a complicated way of saying that a drunk witness has (by itself) hardly incremental evidential value. What is the lesson to be taught?
+%BV In the part on DNA evidence I'd also reshape. For me the RMP connects a match (an actual match, M) probabilistically with the suspect being the source (S); we did that in the project paper verheijEtal2016. I'd first like to see that discussed, and then explained that there also are complications. Here the so-called hierarchy of propositions should be mentioned. cookEtAl1998, evettEtal2000 if I am correct.
 The value of the evidence for, or against, an hypothesis 
 can be quantified probabilistically in various ways. 
 %The probabilistic framework allows us to quantify the strength of the evidential favoring or support relation between evidence and hypothesis. 
@@ -652,6 +666,7 @@ is as follows % \citep{Dawid02, Balding2005Weight}:
 \frac{P(M | G)}{P(M | \neg G)} =   \frac{1}{RMP}.
 \]
 %
+%BV RMP is as yet undefined
 If the RMP is 1 in 200 million, the likelihood ratio would be
 %
 \[\frac{P(M |G)}{P( M | \neg G)}=\frac{1}{\frac{1}{\text{200 million}}}=\text{200 million}.\]
@@ -862,7 +877,7 @@ and left the traces by physical contact. Here the scenario exhibits the causal p
 by which the existence of the evidence 
 (traces) was brought about. 
 
-\paragraph{Scenarios can be evaluated against two directions of it}
+\paragraph{Scenarios can be evaluated against two directions of fit}
 
 Scenarios can be evaluated according to two directions of it: whether they adequately explain the evidence, so that the fit is from 
 the scenario to the evidence; and whether the evidence supports the scenario, so that the fit is from the evidence to the scenario.
@@ -930,7 +945,7 @@ not easily explain the testimony, while $S_1$ could. So, absent other evidence, 
 Other more openly holistic criteria such as a scenario's plausibility and completeness are also important. 
  We discuss them now.
   
-\paragraph{Scenarios can be more or less plausible, logically consistent , cohesive, normal}
+\paragraph{Scenarios can be more or less plausible, logically consistent, cohesive, normal}
 
 While consistency with the evidence, explanatory power and evidential support measure how well a 
 scenario matches up with the evidence, \textit{plausibility} measures how well a scenario matches up with 
@@ -1040,7 +1055,7 @@ Worries about scenarios in law \citep{velleman2003}.
 \end{figure}
 
 
-\paragraph{Further reading}
+\paragraph{Further readings}
 Pollock and his puzzles
 
 The field of formal arg
@@ -1062,6 +1077,7 @@ Arg evaluation software
 
 
 \paragraph{Independent items of evidence can be combined by multiplying the likelihood ratios}
+%BV As yet I am confused by this section. Notsure what to think. Let's discuss. Some bits are of my thoughts are as follows. First black sentence: Multiplication requires something else than independence, namely independence given H and given -H. Also the numeric examples aren't so helpful or so it seems as they are rather artificial. And: Is the point about two LRs canceling out when multiplied what we want to say? Second black point: This seems to be not so helpful. Third black point: This is an example far away from the range of examples we have been focusing on. Should this not be about combining two (or more) pieces of evidence and supporting two (or more) coherent events, aka scenarios?
 
 In a criminal case, there may more than one piece of evidence, for example, 
 there may be an eyewitness testimony and a DNA match. 
@@ -1572,6 +1588,16 @@ reasonable doubt \citep{allen2010, allenStein2013}.
 
 
 \section{Summary and conclusion}
+
+
+
+There is room for studying the further integration of the three normative frameworks.
+
+
+
+
+
+
 
 %\bibliographystyle{spbasic}
 \bibliographystyle{plainnat}	
