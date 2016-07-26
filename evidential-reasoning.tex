@@ -326,6 +326,17 @@ When it is now discovered that the witness is a member of a rivaling gang, there
 \caption{Arguments have structure\label{fig:arg2}}
 \end{figure}
 
+\paragraph{Three kinds of support can be distinguished: multiple, subordinated and coordinated support.}
+
+If we consider the argument thet the suspect was at the crime scene because the witness reports that she saw the suspect at the crime scene, each of the three parts of the argument can be supported: the conclusion, the premise and the connection between the premise and the conclusion. For instance, the conclusion can be supported by a second witness testimony. The premise can be supported by the police report that documents the witness testimony. The connection between the premise and the conclusion can be supported by the trustworthiness of the witness report. Additional support of the conclusion is referred to as multiple support. Additional support of the premise is called subordinating support. Additional support of the connection between the premise and the conclusion does not have a standard name, but is closely related to a third named kind of support: coordinated supported. In coordinated support, the support for the conclusion consists of more than one element that in their conjunctive combination provide support for the conclusion. Coordinated support is distinguished from multiple support since in the latter each element of the support for the conclusion provides support by itself. Figure~\ref{fig:support} shows the three named kinds of support. Note that multiple and subordinated support are graphically visualized with an arrow, whereas coordinated support is shown with a line. An arrow would indicate the unnamed kind of support of the connection between premise and conclusion.
+
+\begin{figure}[bt]
+\centering
+\input{img/support}
+\caption{Three kinds of support\label{fig:support}}
+\end{figure}
+
+
 
 \paragraph{Three kinds of attack can be distinguished: rebutting, undercutting, and undermining attack.}
 
@@ -338,28 +349,28 @@ Consider again the argument for the position that the suspect was at the crime s
 \caption{Three kinds of attack\label{fig:arg3}}
 \end{figure}
 
-\paragraph{In an argumentative dialogue, parties take positions supported by reasons that can be challenged by attacking reasons.}
-
-Arguments have a dialogical counterpart, in which parties exchange reasons for and against the positions they endorse. The arguments shown in Figure~\ref{fig:arg2} for instance form the backbone of the following argumentative dialogue---here presented as a fictitious, stylized discussion between judge, prosecution and defense:
-
-\begin{description}
-	\item \emph{Prosecution}: The suspect committed the crime.
-	\item \emph{Judge}: Why do you believe that?
-	\item \emph{Prosecution}: The suspect was at the crime scene.
-	\item \emph{Judge}: Do you have evidence supporting that position?
-	\item \emph{Prosecution}: There is a witness reporting that she saw the suspect at the crime scene.
-	\item \emph{Defense}: Objection, your honor! The witness is lying.
-	\item \emph{Judge}: Why do you believe that?
-	\item \emph{Defense}: The witness is a member of a rivalling gang.
-\end{description}
-
-
-
-[I LIKE VERY MUCH THE DESCRIPTION OF THE THREE KINDS OF ATTACKS AND THE GRAPHICAL ILLUSTRATION. BUT THIS PART ABOUT THE DIALOGUE IS STRANGE. 
-FIRST, THE DIALOGUE IS UNNATURAL. SECOND, I AM NOT SURE THIS IS ABOUT ARGUMENTS ANYMORE. ARGUMENTS CAN COME IN THE FORM OF A DIALOGUE 
-BUT  NEED NOT BE. PERHAPS WE NEED TO REDEFINE THE ARGUMENT FRAMEWORK AS DIALOGUE/ARGUMENT FRAMEWORK?]
-
-\noindent Models of argumentative dialogue involve specifications of the kinds of moves parties can make, the commitments these moves imply for parties, and the rules that determine the allowed sequences of dialogue moves.
+%\paragraph{In an argumentative dialogue, parties take positions supported by reasons that can be challenged by attacking reasons.}
+%
+%Arguments have a dialogical counterpart, in which parties exchange reasons for and against the positions they endorse. The arguments shown in Figure~\ref{fig:arg2} for instance form the backbone of the following argumentative dialogue---here presented as a fictitious, stylized discussion between judge, prosecution and defense:
+%
+%\begin{description}
+	%\item \emph{Prosecution}: The suspect committed the crime.
+	%\item \emph{Judge}: Why do you believe that?
+	%\item \emph{Prosecution}: The suspect was at the crime scene.
+	%\item \emph{Judge}: Do you have evidence supporting that position?
+	%\item \emph{Prosecution}: There is a witness reporting that she saw the suspect at the crime scene.
+	%\item \emph{Defense}: Objection, your honor! The witness is lying.
+	%\item \emph{Judge}: Why do you believe that?
+	%\item \emph{Defense}: The witness is a member of a rivalling gang.
+%\end{description}
+%
+%
+%
+%[I LIKE VERY MUCH THE DESCRIPTION OF THE THREE KINDS OF ATTACKS AND THE GRAPHICAL ILLUSTRATION. BUT THIS PART ABOUT THE DIALOGUE IS STRANGE. 
+%FIRST, THE DIALOGUE IS UNNATURAL. SECOND, I AM NOT SURE THIS IS ABOUT ARGUMENTS ANYMORE. ARGUMENTS CAN COME IN THE FORM OF A DIALOGUE 
+%BUT  NEED NOT BE. PERHAPS WE NEED TO REDEFINE THE ARGUMENT FRAMEWORK AS DIALOGUE/ARGUMENT FRAMEWORK?]
+%
+%\noindent Models of argumentative dialogue involve specifications of the kinds of moves parties can make, the commitments these moves imply for parties, and the rules that determine the allowed sequences of dialogue moves.
 
 \paragraph{Further readings} 
 Argument structure and diagrams~\citep{wigmore1913,wigmore1931,toulmin1958,freeman1991}. Defeasible reasoning and nonmonotonic logic~\citep{pollock1987,gabbayEtal1994}. Rebutting and undercutting attack~\citep{pollock1987,pollock1995}. Undermining attack~\citep{bondarenkoEtal1997}. Formal evaluation of defeasible arguments~\citep{pollock1987,pollock1995,dung1995,prakken2010}. Argumentative dialogue~\citep{toulmin1958,waltonKrabbe1995,prakken1997,hage2000}. Accrual of reasons and weighing~\citep{pollock1995,hage1997,verheij1996diss,prakken2005}. Argument diagramming and evaluation software~\citep{pollock1995,reedRowe2004,kirschnerEtal2003,vanGelder2003,verheij2005,gordonEtal2007}.
@@ -778,23 +789,6 @@ TO AN ARGUMENT. I THOUGHT REASON CORRESPONDED TO PREMISE.] Some other terms are 
 The occurrence of such defeating circumstances can be guided by asking critical questions. The answers to those critical questions provide insight into the evidential value of the reasons. Consider for instance one-step argument from the reason `The witness reports that she saw the suspect at the crime' to the conclusion `The suspect was at the crime scene'. [NOW YOU USE 'REASON' AS THE SAME AS 'PREMISE'.] 
 Critical questions that can be asked include `Are there reasons showing that the suspect was not at the crime scene, such as an alibi?', `Was the witness lying?' and `Are there reasons to think that the witness report is fraudulent?'. The first of these questions is directed at the argument's conclusion, the second at the argument step, and the third at the argument's reason. These different kinds of critical questions are connected to the kinds of argument attack discussed in Section~\ref{sec:confArg} (see in particular Figure~\ref{fig:arg3}).
 
-\paragraph{Conflicts between reasons can be addressed by exceptions, preferences and weighing.} The counterarguments to a reason that result from asking critical questions give rise to conflicts between reasons. Sometimes conflicts of reasons can be resolved in the sense that it can be determined which conclusions follow from the conflicting reasons. We distinguish three kinds of conflicts. 
-
-In the first kind of conflicts between reasons, there is a reason attacked by an exclusionary reason, i.e., an attack of the undercutting kind that goes against the connection between the reason and its conclusion (cf. Section~\ref{sec:confArg}). This situation is shown at the top of Figure~\ref{fig:conflicts}: There is a witness reporting that the suspect was at the crime scene, but the witness is lying. [ISN'T IT BETTER TO SAY THAT THERE IS EVIDENCE SUGGESTING THAT THE WITNESS IS LYING? ] In that case, the conclusion that the suspect was at the crime scene does not follow, since there is no supporting reason for it. The reason (the witness report itself) and the exception (the lying of the witness) both hold as they are assumptions. [DID YOU INTRODUCE THE IEDA OF ASSUMPTION ALREADY? IS IT NECESSARY?] In this situation of a reason with an undercutting attack by an exclusionary reason, the conflict of reasons is resolved by the exception expressed in the exclusionary reason. [NOT SURE I UNDERSTAND HOW THE CONFLICT IS RESOLVED HERE. THE UNDERCUTTING REASON WINS. OK. BUT HOW IS THIS A RESOLUTION OF THE CONFLICT?]
-
-\begin{figure}[bt]
-\centering
-\input{img/conflicts}
-\caption{Three kinds of conflicts and their resolution\label{fig:conflicts}}
-\end{figure}
-
-In the second kind of conflicts between reasons, there is one reason for a conclusion and another against the conclusion. For instance, there are two witnesses with opposite reports about whether the suspect was at the crime scene or not (see the middle of Figure~\ref{fig:conflicts}). This is an example of a rebutting attack (Section~\ref{sec:confArg}). The conflict of reasons is unresolved given only the reasons. Further information about the reasons is required to resolve the conflict. The resolution of such a conflict of reasons can be thought of as the preference of one over the other. A reason can be preferred over another, for instance when it is stronger. In the example, the preference (in the figure indicated by the $<$-sign) is argued for by the claim that one of the witnesses is more reliable than the other. In this case, the conclusion follows that the suspect was not at the crime scene, given this conflict of reasons and its resolution. 
-
-The third kind of conflicts between reasons discussed here involves more than two reasons. For instance, there are more than two witnesses, with conflicting reports (Figure~\ref{fig:conflicts}, bottom). In the figure, both sides are supported by two witness reports. Resolving such a conflict can be thought of as a weighing of the reasons, generalizing the preference between two conflicting reasons. Again, it is concluded that the suspect was not at the crime scene, given this resolution of this conflict of reasons.
-
-[I THOUGHT THE THREE TYPES OF CONFLICTS MIRRORED THE DISTINCTIONS BETWEEN UNDERCUTTING, REBUTTING AND UNDERMINING, 
-BUT THE THIRD CONFLICT YOU DISCUSS HERE IS DIFFERENT FROM UNDERMINING. IS THIS INTENDED?]
-
 \paragraph{Further readings} 
 deductive, inductive, abductive
 deductive, ampliative
@@ -1099,9 +1093,31 @@ Worries about scenarios in law \citep{velleman2003}.
 \caption{A Wigmore chart\label{fig:wigmore}}
 \end{figure}
 
-\paragraph{The evaluation of an argument can depend on its subarguments.}Given an argumentative analysis of the case, one would like to know which conclusions follow, and which don't. We already discussed how arguments consisting of conflicts of reasons can be evaluated in this sense, when we discussed the role of exceptions, preferences and weighing (Section~\ref{sec:valueArgs}). More generally, the structure of a complex of arguments influences the evaluation of the arguments. In particular, the subarguments of a larger argument determine the evaluation of the whole. For an example, we go back to the argument in Figure~\ref{fig:arg2}. There the witness report supported the intermediate conclusion that the suspect was at the crime scene, which in turn supported the conclusion that the suspect committed the crime. So there is an argument consisting of two steps. In the example, the first of these steps is attacked by a counterargument involving the lying of the witness. As a result of this attack, the argument to the intermediate conclusion that the suspect was at the crime scene breaks down and its conclusion does not follow. As a result, also the larger two-step argument no longer supports its conclusion, which hence does not follow. Since the one-step subargument does not successfully support the intermediate conclusion, also the whole two-step argument for the final conclusion does not successfully support its conclusion.
+\paragraph{The evaluation of an argument can depend on its subarguments.}Given an argumentative analysis of the case, one would like to know which conclusions follow, and which don't. We already discussed how arguments consisting of conflicts of reasons can be evaluated in this sense, when we discussed the role of exceptions, preferences and weighing (Section~\ref{sec:valueArgs}). More generally, the structure of a complex of arguments influences the evaluation of the arguments. In particular, the subarguments of a larger argument determine the evaluation of the whole. For an example, we go back to the argument in Figure~\ref{fig:arg2} (page~\pageref{fig:arg2}). There the witness report supported the intermediate conclusion that the suspect was at the crime scene, which in turn supported the conclusion that the suspect committed the crime. So there is an argument consisting of two steps. In the example, the first of these steps is attacked by a counterargument involving the lying of the witness. As a result of this attack, the argument to the intermediate conclusion that the suspect was at the crime scene breaks down and its conclusion does not follow. As a result, also the larger two-step argument no longer supports its conclusion, which hence does not follow. Since the one-step subargument does not successfully support the intermediate conclusion, also the whole two-step argument for the final conclusion does not successfully support its conclusion.
 
-\paragraph{The evaluation of an argument can depend on chains of attacks.} When an argument is successfully attacked, it no longer successfully supports its conclusion. But attack can be chained, since the attack itself can be countered by a further attack. When an attack is successfully attacked, the original argument can become reinstated, in the sense that it again successfully supports its conclusion. Figure~\ref{fig:reinstatement} shows an example. A first witness, Witness $A$, reports that the suspect was at the crime scene. Given only this information, there is good reason to assume that the suspect was at the crime scene. However, there is a second witness, Witness $B$, who reports that Witness $A$ is lying. Given these two reasons, based on the witness reports by $A$ and $B$, it is no longer successfully supported that the suspect was at the crime scene. If now there is a third witness, Witness C, who reports that Witness B is lying, the attack is countered. Witness B is no longer believed, so there is no reason to conclude that Witness A is lying. As a result, A's report can again support its conclusion that the suspect was at the crime scene. The orignal argument based on A's report is reinstated. 
+\paragraph{The evaluation of an argument can depend on chains of attacks.} When an argument is successfully attacked, it no longer successfully supports its conclusion. But attack can be chained, since the attack itself can be countered by a further attack. When an attack is successfully attacked, the original argument can become reinstated, in the sense that it again successfully supports its conclusion. Figure~\ref{fig:reinstatement} shows an example. A first witness, Witness $A$, reports that the suspect was at the crime scene. Given only this information, there is good reason to assume that the suspect was at the crime scene. However, there is a second witness, Witness $B$, who reports that Witness $A$ is lying. Given these two reasons, based on the witness reports by $A$ and $B$, it is no longer successfully supported that the suspect was at the crime scene. If now there is a third witness, Witness C, who reports that Witness B is lying, the attack is countered. Witness B is no longer believed, so there is no reason to conclude that Witness A is lying. As a result, A's report can again support its conclusion that the suspect was at the crime scene. The original argument based on A's report is reinstated. 
+
+\paragraph{Conflicts between reasons can be addressed by exceptions, preferences and weighing.} The counterarguments to a reason that result from asking critical questions give rise to conflicts between reasons. Sometimes conflicts of reasons can be resolved in the sense that it can be determined which conclusions follow from the conflicting reasons. We distinguish three kinds of conflicts. 
+
+In the first kind of conflicts between reasons, there is a reason attacked by an exclusionary reason, i.e., an attack of the undercutting kind that goes against the connection between the reason and its conclusion (cf. Section~\ref{sec:confArg}). This situation is shown at the top of Figure~\ref{fig:conflicts}: There is a witness reporting that the suspect was at the crime scene, but there is evidence that the witness is lying. 
+%BV Done [ISN'T IT BETTER TO SAY THAT THERE IS EVIDENCE SUGGESTING THAT THE WITNESS IS LYING? ] 
+In that case, the conclusion that the suspect was at the crime scene does not follow, since there is no supporting reason for it. The reason (the witness report itself) and the exception (the lying of the witness) both hold as they are assumptions. [DID YOU INTRODUCE THE IEDA OF ASSUMPTION ALREADY? IS IT NECESSARY?] In this situation of a reason with an undercutting attack by an exclusionary reason, the conflict of reasons is resolved by the exception expressed in the exclusionary reason. [NOT SURE I UNDERSTAND HOW THE CONFLICT IS RESOLVED HERE. THE UNDERCUTTING REASON WINS. OK. BUT HOW IS THIS A RESOLUTION OF THE CONFLICT?]
+
+\begin{figure}[bt]
+\centering
+\input{img/conflicts}
+\caption{Three kinds of conflicts and their resolution\label{fig:conflicts}}
+\end{figure}
+
+In the second kind of conflicts between reasons, there is one reason for a conclusion and another against the conclusion. For instance, there are two witnesses with opposite reports about whether the suspect was at the crime scene or not (see the middle of Figure~\ref{fig:conflicts}). This is an example of a rebutting attack (Section~\ref{sec:confArg}). The conflict of reasons is unresolved given only the reasons. Further information about the reasons is required to resolve the conflict. The resolution of such a conflict of reasons can be thought of as the preference of one over the other. A reason can be preferred over another, for instance when it is stronger. In the example, the preference (in the figure indicated by the $<$-sign) is argued for by the claim that one of the witnesses is more reliable than the other. In this case, the conclusion follows that the suspect was not at the crime scene, given this conflict of reasons and its resolution. 
+
+The third kind of conflicts between reasons discussed here involves more than two reasons. For instance, there are more than two witnesses, with conflicting reports (Figure~\ref{fig:conflicts}, bottom). In the figure, both sides are supported by two witness reports. Resolving such a conflict can be thought of as a weighing of the reasons, generalizing the preference between two conflicting reasons. Again, it is concluded that the suspect was not at the crime scene, given this resolution of this conflict of reasons.
+
+[I THOUGHT THE THREE TYPES OF CONFLICTS MIRRORED THE DISTINCTIONS BETWEEN UNDERCUTTING, REBUTTING AND UNDERMINING, 
+BUT THE THIRD CONFLICT YOU DISCUSS HERE IS DIFFERENT FROM UNDERMINING. IS THIS INTENDED?]
+
+
+
 
 \begin{figure}[bt]
 \centering

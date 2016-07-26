@@ -13,13 +13,13 @@
 
 		\node[arg]     			(comm) at (0,0) {The suspect committed the crime};
 		\node[arg]     			(scene) at (0,-0.8) {The suspect was at the crime scene};
-		\node[arg,observed] (witn) at (0,-2) {The witness reports that she saw the suspect at the crime scene};
+		\node[arg] (witn) at (0,-2) {The witness reports that she saw the suspect at the crime scene};
 
 		\draw[arg] 					(witn) -- (scene);
 		\draw[arg] 					(scene) -- (comm);
 
 		\node[arg] 					(lying) at (1,-1.3) {The witness is lying};
-		\node[arg,observed] (rival) at (1,-2) {The witness is a member of a rivalling gang};
+		\node[arg] (rival) at (1,-2) {The witness is a member of a rivalling gang};
 
 		\draw[attack] 			(lying) -- (0, -1.3);
 		\draw[arg] 					(rival) -- (lying);

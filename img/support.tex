@@ -1,0 +1,42 @@
+\documentclass[border=5mm,tikz]{standalone} 
+
+\usepackage{amsmath}
+\input{../styles.tex}
+
+\begin{document}
+	\begin{tikzpicture}[
+		scnnode/.append style={text width=3cm},
+		arg/.append style={text width=3.5cm},
+	]
+		\pgftransformxscale{5}
+		\pgftransformyscale{2}
+
+		\node[arg]     			(scene) at (0,-0.5) {The suspect was at the crime scene};
+		\node[arg] 					(witn) at (0,-2) {The witness reports that she saw the suspect at the crime scene};
+
+		\node[arg] 					(alibi) at (1,-0.5) {A second witness reports that he saw the suspect at the crime scene};
+		\node[arg] 					(lying) at (1,-1.3) {The witness report is trustworthy};
+		\node[arg] 					(fraud) at (1,-2) {The police report documents the witness testimony};
+
+		\draw[arg] 					(witn) -- (scene);
+
+		\draw[arg] 			(alibi) -- (scene);
+		\draw 					(lying) -- (0, -1.3);
+		\draw[arg] 			(fraud) -- (witn);
+
+%%%
+
+		%\node[arg]     			(scene) at (1.85,-0.5) {The suspect was at the crime scene};
+		%\node[arg] 					(witn) at (1.85,-2) {The witness reports that she saw the suspect at the crime scene};
+%
+		%\node[arg] 					(lying) at (2.35,-1.15) {The witness report is trustworthy};
+%
+		%\draw[arg] 					(witn) -- (scene);
+%
+		%\draw 					(lying) -- (1.85, -1.15);
+
+
+
+
+	\end{tikzpicture}
+\end{document}
