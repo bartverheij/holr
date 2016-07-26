@@ -88,7 +88,7 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.13}
  
-\usepackage[round]{natbib}
+\usepackage[round,sort]{natbib}
 \begin{document}
 
 \thispagestyle{empty}
@@ -439,7 +439,7 @@ THIS BELONGS TO LATER IN THE CHAPTER. ]
 
 In the probabilistic normative framework, the handling of conflicting evidence is analyzed in terms of the conditional probabilities that connect the evidence and the hypotheses.
 
-\paragraph{Evidential favoring and disfavoring can be characterized as ``probability relevance''} 
+\paragraph{Evidential favoring and disfavoring can be characterized as ``probability relevance''.} 
 %BV:I changed difference to relevance, as 'prob diff' is used later for something else.
 %BV:I prefer replacing 'favoring and disfavoring' by 'suport ad attack', throughout.
 A piece of evidence $E$ favors an 
@@ -464,7 +464,7 @@ For example, if a DNA test shows no match between the traces found at the crime
  %
  
 % \paragraph{Two characterizations of evidential favoring and disfavoring are equivalent} 
-\paragraph{Evidential favoring and disfavoring can be characterized as ``likelihood ratio''} 
+\paragraph{Evidential favoring and disfavoring can be characterized as ``likelihood ratio''.} 
 
 There is another characterization of evidential favoring and disfavoring. 
 Instead of comparing the initial probability $P(H)$ and the probability $P(H|E)$ 
@@ -514,7 +514,7 @@ This contradicts $\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$, and thus $
 \[ P(H|E) < P(H) \text{ iff}  \frac{P(E|H)}{P(E|\neg H)} < 1.\]
 %
 
-\paragraph{The conflict between two pieces of evidence can be described probabilistically}
+\paragraph{The conflict between two pieces of evidence can be described probabilistically.}
 Two pieces of evidence come into 
 conflict with one another insofar as one favors an hypothesis 
 and the other disfavors the same hypothesis. 
@@ -540,7 +540,7 @@ The evidence found in a criminal investigation has different levels of evidentia
 
 
 
-\paragraph{Evidential value can be quantified as probability difference, likelihood ratio or overall probability}
+\paragraph{Evidential value can be quantified as probability difference, likelihood ratio or overall probability.}
 %BV Some reshaping is needed in this section, I'd say. 1. There is the evidential value of a piece of evidence; measured by probabilistic difference or LR (`incremental evidential value'). 2. There is the evidential value of all the evidence, in its totality; measured by the overall conditional prob (`total evidential value'). 3. DNA evidence is a good example, but there are complications.
 %BV Below the discussion of the drunk witness is (for me) a complicated way of saying that a drunk witness has (by itself) hardly incremental evidential value. What is the lesson to be taught?
 %BV In the part on DNA evidence I'd also reshape. For me the RMP connects a match (an actual match, M) probabilistically with the suspect being the source (S); we did that in the project paper verheijEtal2016. I'd first like to see that discussed, and then explained that there also are complications. Here the so-called hierarchy of propositions should be mentioned. cookEtAl1998, evettEtal2000 if I am correct.
@@ -801,23 +801,22 @@ Some other terms are used in connection with the difference between conclusive a
 %The answers to those critical questions provide insight into the evidential value of the reasons. 
 Consider again the one-step argument from the reason `The witness reports that she saw the suspect at the crime' to the conclusion `The suspect was at the crime scene'. 
 %[NOW YOU USE 'REASON' AS THE SAME AS 'PREMISE'.] 
-Critical questions that can be asked about the argument include `Are there reasons showing that the suspect was not at the crime scene, such as an alibi?', `Does the witness testimony support the conclusion that the suspect was at the crime scene, for instance is the witness lying?' and `Are there reasons to doubt the witness report, such as fraudulence?'. The first of these questions is directed at the argument's conclusion, the second at the argument step from reason to conclusion, and the third at the argument's reason. These different kinds of critical questions are connected to the kinds of argument attack discussed in Section~\ref{sec:confArg} (see in particular Figure~\ref{fig:arg3}, page~\pageref{fig:arg3}). 
+Critical questions that can be asked about the argument include `Are there reasons to doubt the suspect was not at the crime scene, such as an alibi?', `Are there reasons to doubt that the witness testimony supports the conclusion that the suspect was at the crime scene, for instance is the witness lying?' and `Are there reasons to doubt the witness testimony, such as a fraudulent report?'. The first of these questions is directed at the argument's conclusion, the second at the argument step from reason to conclusion, and the third at the argument's reason. These different kinds of critical questions are connected to the three kinds of argument attack discussed in Section~\ref{sec:confArg} (see in particular Figure~\ref{fig:arg3}, page~\pageref{fig:arg3}). 
+Suppose that initially it is believed that the suspect was at the crime scene because of the witness testimony. A positive answer to any of the questions will weaken the support for the conclusion that the suspect was at the crime scene, perhaps up to the point of it no being believable.
 
-When the first question is answered positively, and there are reasons against the conclusion, there is a conflict of reasons concerning the argument's conclusion that needs to be resolved, for instance by considering the relative strength of the reasons. When the second question is answered positively,   
+\paragraph{It can be subject to debate whether a reason supports or attacks a conclusion.} The supporting or attacking relation between a reason and its conclusion can be supported or attacked. This gives rise to four different combinations: support of a supporting relation, support of an attacking relation, attack of a supporting relation, and attack of an attacking relation. In Figure~\ref{fig:nesting}, these situations are illustrated by two opposite witness testimonies. 
 
-\paragraph{It can be subject to debate whether a reason supports or attacks a conclusion.} 
+Whether a reason supports a conclusion is associated with an underlying general rule. For instance, the argument from a witness testimony (the reason) to the suspect's being at the crime scene (the conclusion) is connected to the general rule that what witnesses say can generally be believed. Following \cite{toulmin1958}'s terminology, such general rules making explicit how to get from the reason to the conclusion are referred to as warrants. Support for a warrant is called the backing of the warrant.
 
-\paragraph{Further readings} 
-deductive, inductive, abductive
-deductive, ampliative
+\begin{figure}[bt]
+\centering
+\input{img/nesting}
+\caption{Arguments about whether a reason is supporting or attacking\label{fig:nesting}}
+\end{figure}
 
-Mention ?Pollock's anti-probabilism
-
-Argument scheme collections
-
-Accrual
-
-Reason-Based Logic
+\paragraph{Further readings} Nonmonotonic reasoning~\citep{gabbayEtal1994}. Prima facie reasons, undercutting and rebutting defeaters~\citep{pollock1987, pollock1995}. Warrants and backings~\citep{toulmin1958}. Argument schemes and critical questions~\citep{waltonReedMacagno2008}. 
+%Accrual
+%Reason-Based Logic
 
 \begin{comment}
 
@@ -895,7 +894,7 @@ with the evidence; its power to explain the evidence;
 and its evidential support. Let us consider each in turn.
 
 
-\paragraph{Scenarios must be consistent with the evidence, taken at face value}
+\paragraph{Scenarios must be consistent with the evidence, taken at face value.}
 
 We can evaluate a scenario by checking whether it is consistent with the evidence presented in a case.
 If a witness testifies that the defendant was at home with his girlfriend 
@@ -915,7 +914,7 @@ with the evidence.
 
 
 
-\paragraph{Scenarios must explain the evidence}
+\paragraph{Scenarios must explain the evidence.}
 
 The fact that a scenario is consistent 
 with the evidence, is not by itself a good enough reason to believe the scenario. 
@@ -944,7 +943,7 @@ and left the traces by physical contact. Here the scenario exhibits the causal p
 by which the existence of the evidence 
 (traces) was brought about. 
 
-\paragraph{Scenarios can be evaluated against two directions of fit}
+\paragraph{Scenarios can be evaluated against two directions of fit.}
 
 Scenarios can be evaluated according to two directions of it: whether they adequately explain the evidence, so that the fit is from 
 the scenario to the evidence; and whether the evidence supports the scenario, so that the fit is from the evidence to the scenario.
@@ -991,7 +990,7 @@ interpretation of the evidence can be addressed.
 %In the previous section, we evaluated scenarios by how well they matched up with the evidence, in terms of consistency, explanatory power and evidential support.
 %These were atomistic criteria. 
 
-\paragraph{The more evidence a scenario can explain, the better}
+\paragraph{The more evidence a scenario can explain, the better.}
 
 When a case comprises several items of evidence, 
 %the interpretation of the evidence becomes holistic. 
@@ -1050,7 +1049,7 @@ it would happen given a set of circumstances.
 
 
 
-\paragraph{Scenarios can be more or less complete}
+\paragraph{Scenarios can be more or less complete.}
 
 Another criterion to evaluate scenarios is their \textit{completeness}. Since scenarios are discursive arrangement of events, ordered according to 
 temporal and causal relations, they may contain gaps in time, space and causality. A scenario may not describe the defendant's whereabouts between 4 and 6 PM, 
@@ -1101,7 +1100,7 @@ Worries about scenarios in law \citep{velleman2003}.
 
 
 \subsection{Arguments}
-
+\label{sec:coh-arg}
 
 An analysis of a case in terms of arguments can become very complex. This was already noted by Wigmore, when he developed his charting method for analyzing the evidence in a criminal case~\citep{wigmore1913,wigmore1931}. Figure~\ref{fig:wigmore} provides an example of a Wigmore diagram (\citeyear{wigmore1931}). Here Wigmore has analyzed a murder case (Commonwealth v. Umilian, 1901). Jedrusik, the victim, was the author of a letter in which he falsely advised a priest that Umilian had a wife and children (back in the country from which they emigrated), conflicting with Umilian’s intention to marry. In the chart, Z stands for the charge that Umilian killed Jedrusik. The node at 8 represents a revengeful murderous emotion toward Jedrusik. At 18, it is represented that the marriage is in the end performed, reducing his feelings of revenge. This claim is supported by the (unspecified) evidence at 18.1. The diagram contains some two dozen nodes. Diagrams for more complex cases can contain many more nodes.
 
@@ -1145,16 +1144,7 @@ BUT THE THIRD CONFLICT YOU DISCUSS HERE IS DIFFERENT FROM UNDERMINING. IS THIS I
 
 
 \paragraph{Further readings}
-Pollock and his puzzles
-
-The field of formal arg
-
-Dung and his extensions
-
-Arg evaluation software
-
-
-
+Argument structure and their evaluation~\citep{pollock1995}. Formalizing argumentation~\citep{prakkenVreeswijk2002}. Evaluating argument attack~\citep{dung1995}. Formal argumentation models~\citep{simariLoui1992, vreeswijk1997, prakken2010, verheij2003deflog, gordonEtal2007}. 
 
 %\paragraph{Inference to the best explanation (Allen/Pardo?)}
 
@@ -1165,7 +1155,7 @@ Arg evaluation software
 \subsection{Probability}
 
 
-\paragraph{Independent items of evidence can be combined by multiplying the likelihood ratios}
+\paragraph{Independent items of evidence can be combined by multiplying the likelihood ratios.}
 %BV As yet I am confused by this section. Notsure what to think. Let's discuss. Some bits are of my thoughts are as follows. First black sentence: Multiplication requires something else than independence, namely independence given H and given -H. Also the numeric examples aren't so helpful or so it seems as they are rather artificial. And: Is the point about two LRs canceling out when multiplied what we want to say? Second black point: This seems to be not so helpful. Third black point: This is an example far away from the range of examples we have been focusing on. Should this not be about combining two (or more) pieces of evidence and supporting two (or more) coherent events, aka scenarios?
 
 In a criminal case, there may more than one piece of evidence, for example, 
@@ -1251,8 +1241,7 @@ formula is as follows:
 %
 where $LR_i=\frac{P(E_i | H)}{P(E_i | \neg H)}$, for $i\in \{1, \dots, k\}$, and $H$ is the hypothesis of interest.
 
-\paragraph{Items of evidence can be combined 
-even if they are not independent}
+\paragraph{Items of evidence can be combined even if they are not independent.}
 
 So far we have assumed that the items of evidence to be combined are independent, 
 conditional on guilt or on whatever hypothesis of interest. 
@@ -1273,7 +1262,7 @@ and for more than two items of non independent evidence, the formula becomes:
 
 
 
-\paragraph{Different items of evidence for different hypotheses can also be combined}
+\paragraph{Different items of evidence for different hypotheses can also be combined.}
 
 Another assumption that can be dispensed with is that the items of evidence favor or disfavor the \textit{same} hypothesis. % This assumption can be relaxed. 
 Suppose a DNA match links the defendant to the crime scene, while an email written by the defendant indicates 
@@ -1399,7 +1388,7 @@ On the use of probability in law \citep{fenton2011}.
 
 
 %\section{When can we convict?}
-\section{Reasoning and Decision Making}
+\section{Reasoning and decision making}
 \label{sec:whenconv}
 \label{sec:intexc}
 
@@ -1471,7 +1460,7 @@ Free proof, legal arithmetic and rules of weight.
 \subsection{Probability}
 
 
-\paragraph{The guilt probability is estimated by weighing  the evidence through Bayes' theorem}
+\paragraph{The guilt probability is estimated by weighing  the evidence through Bayes' theorem.}
 
  On the probabilistic framework, the goal is to estimate the probability of the defendant's guilt based 
  on all the available evidence. The estimation begins with the lowest possible value 
@@ -1492,7 +1481,7 @@ of the presumption of innocent. Arguably, $P(G)$ should be relatively low, but h
 This remains  hotly debated. 
 
 
-\paragraph{The decision criterion is a guilt probability threshold}
+\paragraph{The decision criterion is a guilt probability threshold.}
 
 In probabilistic terms, proof of guilt beyond a reasonable doubt means 
 that the defendant's \textit{probability of guilt}, given the evidence presented at trial, meets a 
@@ -1528,7 +1517,7 @@ costs that would result from an erroneous decision.
 
 %MENTION PROOF PARADOXES HERE. 
 
-\paragraph{The probabilistic framework can be thought of as an idealization}
+\paragraph{The probabilistic framework can be thought of as an idealization.}
 
 The characterization is simple, crisp and elegant, but a too literal interpretation of it is problematic.  If a probabilistic threshold is understood as a criterion which the decision makers 
  should mechanically apply whenever they confront the decision to convict or acquit, two difficulties arise. The first difficulty is that assigning a probability value to guilt itself might not be feasible. As seen earlier, the starting probability $P(G)$ cannot be easily determined, 
@@ -1563,7 +1552,7 @@ of the evidence \citep{kaye1999, stein05}.
 \subsection{Arguments}
 
 
-\paragraph{Arguments and countearguments can be represent in argument graphs}
+\paragraph{Arguments and countearguments can be represented in argument graphs.}
 
 In a court of law, the prosecutor or plaintiff puts forward a claim and offers supporting arguments. The opposing parts responds by offering counterarguments. The dialectical process can be complex. There are different counterarguments: undermining,  undercutting and rebutting. The process is complex also because it can iterated. 
 An argument can be attacked by a counteargument, and the latter in turn can be attached by a further counterargument. And so on. 
@@ -1578,7 +1567,7 @@ compare the relative strength of the arguments in favor of one side of the case 
 forms the basis for the trial decision.
 
 
-\paragraph{Defeating all counterarguments is the criterion for meeting the standard of proof}
+\paragraph{Defeating all counterarguments is the criterion for meeting the standard of proof.}
 
 In order to establish the defendant's guilt beyond a reasonable doubt, all counterarguments 
 to the contrary must be responded, or in other words, all the attacks against the argument for guilt must be 
@@ -1614,14 +1603,14 @@ Justified argument model \citep{prakkenSartor2007, prakken2009}.
 \subsection{Scenarios}
 
 
-\paragraph{Competing scenarios must be compared and evaluated}
+\paragraph{Competing scenarios must be compared and evaluated.}
 
 On the narrative framework, the two parties will put forward competing scenarios, at least two or possibly more than two. This is partly problematic because in a criminal case, the defense does not have the burden of proof. So it might well be that the defense puts forward a scenario that weakens the prosecutor's scenario, but that is not 
 a scenario that proves innocence. Be that as it may, the various competing scenarios will be evaluated along the different criteria we identified, such as, consistency with the evidence, explanatory power, plausibility, cohesiveness, etc. The question arises, which scenario should be selected among the competitors?
 
 
 
-\paragraph{The best scenario is the rule of decision}
+\paragraph{The best scenario is the rule of decision.}
 
 We can picture the process of evaluation of the competing scenario as a process of elimination. 
 At the beginning, several scenarios are viable, but as more evidence is considered and the scrutiny of each scenario continues,
@@ -1678,14 +1667,81 @@ reasonable doubt \citep{allen2010, allenStein2013}.
 
 \section{Summary and conclusion}
 
+We have discussed evidential reasoning in the law. For this, we have distinguished three normative frameworks: one focusing on the arguments for and against the positions taken, the second using probabilities to assess the evidential value of the evidence, and the third considering the scenarios that best explain the evidence. 
 
+We discussed four main themes: conflicting evidence, evidential value, the coherent interpretation of the evidence, and reasoning and decision making. For each theme, we discussed how they can be addressed in each of the three frameworks. We summarize our discussions for each theme, using the highlighted phrases in the preceding sections.
 
-There is room for studying the further integration of the three normative frameworks.
+\subsection{Conflicting evidence}
 
+\paragraph{Arguments}
+	The arguments for and against different positions have structure, involving complexes of reasons supporting and attacking positions.
+	Three kinds of support can be distinguished: multiple, subordinated and coordinated support.
+	Three kinds of attack can be distinguished: rebutting, undercutting, and undermining attack.
 
+\paragraph{Scenarios}
+	Scenarios are clusters of events, ordered in time and connected by causal relations.
+	Scenarios can explain a piece of evidence or be contradicted by it.
+	Scenarios considered may or may not solve a case, and show which evidence is legally relevant.
 
+\paragraph{Probabilities}
+	Evidential favoring and disfavoring can be characterized as ``probability relevance''.
+	Evidential favoring and disfavoring can be characterized as ``likelihood ratio''.
+	The conflict between two pieces of evidence can be described probabilistically.
 
+\subsection{Evidential value}
 
+\paragraph{Probabilities}
+	Evidential value can be quantified as probability difference, likelihood ratio or overall probability.
+	Likelihood ratio can quantify the value of DNA evidence.
+	%BV A third black sentence is missing here
+	
+\paragraph{Arguments}
+	The reasons used in arguments have different evidential value. Some are conclusive, others defeasible.
+	An argument can be tested by asking critical questions and the evaluation of the argument depends on the answers given.
+	It can be subject to debate whether a reason supports or attacks a conclusion.
+	
+\paragraph{Scenarios}
+	Scenarios must be consistent with the evidence, taken at face value.
+	Scenarios must explain the evidence.
+	Scenarios can be evaluated against two directions of fit.
+	
+\subsection{Coherently interpreting the evidence}
+
+\paragraph{Scenarios}
+	The more evidence a scenario can explain, the better.
+	Scenarios can be more or less plausible, logically consistent, cohesive, normal.
+	Scenarios can be more or less complete.
+	
+\paragraph{Arguments}
+	The evaluation of an argument can depend on its subarguments.
+	The evaluation of an argument can depend on chains of attacks.
+	Conflicts between reasons can be addressed by exceptions, preferences and weighing.
+	
+\paragraph{Probabilities}
+	Independent items of evidence can be combined by multiplying the likelihood ratios.
+	Items of evidence can be combined even if they are not independent.
+	Different items of evidence for different hypotheses can also be combined.
+
+\subsection{Reasoning and decision making}
+
+\paragraph{Probabilities}
+	The guilt probability is estimated by weighing  the evidence through Bayes' theorem.
+	The decision criterion is a guilt probability threshold.
+	The probabilistic framework can be thought of as an idealization.
+	
+\paragraph{Arguments}
+	Arguments and countearguments can be represented in argument graphs.
+	Defeating all counterarguments is the criterion for meeting the standard of proof.
+	The argumentation framework is intuitive but lacks normative force.
+	
+\paragraph{Scenarios}
+	Competing scenarios must be compared and evaluated.
+	The best scenario is the rule of decision.
+	The process of scenario selection is underspecified.
+	
+\subsection{Concluding remarks}
+
+With the thematic discussion of the three normative frameworks, we have aimed to show how each framework contributes to the understanding of conflicting evidence, evidential value, the coherent interpretation of the evidence, and reasoning and decision making. In this way, we hope to contribute to the further development of the three frameworks. In our perspective, there is no need to choose	 between the frameworks, since each adds to the normative analysis of evidential reasoning. At the same time, there is room for further studies of how the three normative frameworks relate to each other, and how they can be integrated into an overall normative perspective on evidential reasoning.
 
 
 %\bibliographystyle{spbasic}
