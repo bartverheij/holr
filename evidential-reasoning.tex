@@ -332,6 +332,7 @@ The three normative frameworks~\citep{andersonEtal2005,kapteinEtal2009,dawidEtal
 %Arguments
 Wigmore charts~\citep{wigmore1913,wigmore1931}. The New Evidence Scholarship~\citep{andersonEtal2005}. Informal and formal argumentation theory~\citep{vanEemerenEtal2014}.
 %Probabilities
+Evidence and probabilities~\cite{schum1994,morteraDawid2007}
 Statistics in the law~\citep{fenton2011}. Miscarriages of justice involving statistics~\citep{dawidEtal2011,schnepsColmez2013}.
 %Scenarios
 Scenarios in evidential reasoning~\citep{bennettFeldman1981,penningtonHastie1993,penningtonHastie1993StoryModel}. Scenarios and miscarriages of justice~\citep{wagenaarEtal1993}. Inference to the best explanation~\citep{pardoAllen2008}. Hypothetical explanations of the evidence~\citep{thagard1989}. 
@@ -487,7 +488,7 @@ Scenarios in evidential reasoning~\citep{bennettFeldman1981,penningtonHastie1993
 
 In the probabilistic normative framework, the handling of conflicting evidence is analyzed in terms of the conditional probabilities that connect the evidence and the hypotheses.
 
-\paragraph{Evidential support and attack can be characterized as ``probability changes''.} 
+\paragraph{Evidential support and attack can be characterized as ``probability change''.} 
 %BV:I changed difference to relevance, as 'prob diff' is used later for something else.
 %BV:I prefer replacing 'favoring and disfavoring' by 'suport ad attack', throughout. MDB: DONE
 %MDB : used the expression "probability changes" because relevant is general and might apply also to a likelihood ratio greater than one. 
@@ -502,7 +503,7 @@ This can be described probabilistically, as follows:
  %
  \[ P(\textit{guilt}|\textit{testimony}) > P(\textit{guilt}).\] 
  %
-By contrast, a piece of evidence $E$ attacks an hypothesis $H$ whenever $E$ lowers 
+By contrast, a piece of evidence $E$ attacks a hypothesis $H$ whenever $E$ lowers 
 the probability of $H$, or in symbols, $P(H|E) < P(H)$.
 For example, if a DNA test shows no match between the traces found at the crime
  scene and the defendant, this evidence attacks the hypothesis that the defendant is guilty. 
@@ -525,7 +526,7 @@ On this account, $E$ supports $H$ whenever the likelihood ratio
 $\frac{P(E|H)}{P(E | \neg H)}$ is greater than one. Intuitively, this means that the presence of the 
 evidence is more probable %BV was 'likely'
 if the hypothesis is true than if the hypothesis is false. 
-By contrast, a piece of evidence $E$ attacks an hypothesis $H$ whenever 
+By contrast, a piece of evidence $E$ attacks a hypothesis $H$ whenever 
 the likelihood ratio is lower than one. This means that the presence of the evidence is less likely %BV was 'likely'
 if the 
 hypothesis is true than if the hypothesis is false. For the two examples considered earlier, we have:
@@ -565,7 +566,7 @@ This contradicts $\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$, and thus $
 
 \paragraph{The conflict between two pieces of evidence can be described probabilistically.}
 Two pieces of evidence come into 
-conflict with one another insofar as one supports an hypothesis 
+conflict with one another insofar as one supports a hypothesis 
 and the other attacks the same hypothesis. 
 The conflict can be described probabilistically, in that one piece of evidence increases 
 the probability of the hypothesis, while the other decreases it, or equivalently, the likelihood ratio is positive (for one piece 
@@ -588,13 +589,14 @@ The evidence found in a criminal investigation has different levels of evidentia
 
 \subsection{Probability}
 
+In the probabilistic framework, evidential value is measured using the numeric calculus of probability theory.
 
-
-\paragraph{Evidential value can be quantified as probability difference, likelihood ratio or overall probability.}
+	
+\paragraph{The evidential value of a piece of evidence is measured by probabilistic difference or likelihood ratio (`incremental evidential value').}
 %BV Some reshaping is needed in this section, I'd say. 1. There is the evidential value of a piece of evidence; measured by probabilistic difference or LR (`incremental evidential value'). 2. There is the evidential value of all the evidence, in its totality; measured by the overall conditional prob (`total evidential value'). 3. DNA evidence is a good example, but there are complications.
 %BV Below the discussion of the drunk witness is (for me) a complicated way of saying that a drunk witness has (by itself) hardly incremental evidential value. What is the lesson to be taught?
 %BV In the part on DNA evidence I'd also reshape. For me the RMP connects a match (an actual match, M) probabilistically with the suspect being the source (S); we did that in the project paper verheijEtal2016. I'd first like to see that discussed, and then explained that there also are complications. Here the so-called hierarchy of propositions should be mentioned. cookEtAl1998, evettEtal2000 if I am correct.
-The value of the evidence for, or against, an hypothesis 
+The incremental value of evidence for, or against, a hypothesis 
 can be quantified probabilistically in various ways. 
 %The probabilistic framework allows us to quantify the strength of the evidential favoring or support relation between evidence and hypothesis. 
 %The are different approaches in the literature. % (FITELSON REFERENCE HERE). 
@@ -606,7 +608,7 @@ the hypothesis with and without the evidence, that is, $P(H | E) - P(H)$.
 The larger the positive difference, the higher the value of the evidence 
 for the hypothesis. 
 %By contrast, the larger the negative difference, the higher the value of the evidence against the hypothesis. 
-An alternative approach is given by the likelihood ratio $\frac{P(E|H)}{P(E| \neg H)}$. 
+An alternative approach is given by the likelihood ratio $P(E|H)/P(E| \neg H)$. 
 %For the evidence to offer some support to the hypothesis, the likelihood ratio should be at least greater than one. 
 For any value greater than one, the higher the likelihood ratio, 
 the higher the value of the evidence for the hypothesis. %For simplicity, we shall speak of evidential strength 
@@ -647,14 +649,14 @@ $P(H)$ & Likelihood Ratio & $P(H | E)$ &  $P(H|E)-P(H)$ \\
 \noindent
 %Note that even if the likelihood ratio is high, the probability $P(G|E)$ can 
 %still be low if the initial probability $P(H)$ is itself low. 
-All in all, a positive difference $P(H|E) - P(H)$ and a likelihood ratio $\frac{P(E|H)}{P(E| \neg H)}$ greater than one
+All in all, a positive difference $P(H|E) - P(H)$ and a likelihood ratio ${P(E|H)}/{P(E| \neg H)}$ greater than one
 %tell us how much a piece of evidence $E$ can impact upwards the initial 
 %probability of a hypothesis $H$. They 
 quantify, albeit in different ways, the value of the evidence \textit{for} 
-an hypothesis. 
+a hypothesis. 
 \end{comment}
  By contrast, a negative difference $P(H | E) - P(H)$ and a likelihood ratio lower than one  
-quantify the value of the evidence \textit{against} an hypothesis.
+quantify the value of the evidence \textit{against} a hypothesis.
 The larger the negative difference and the lower the likelihood ratio (for any value below one), 
 the higher the value of the evidence against the hypothesis.
 
@@ -666,47 +668,62 @@ the higher the value of the evidence against the hypothesis.
 
 %\paragraph{The overall probability is not the same as probability difference and likelihood ratio}
 
-Intuitively, the value of a piece of evidence for or against an hypothesis can also be quantified by the probability 
+\paragraph{The evidential value of all the evidence, in its totality, is measured by the overall conditional probability (`overall evidential value'). }
+
+In contrast with the incremental evidential value of evidence that is measured by a probabilistic difference or likelihood ratio, the overall evidential value of the full body of evidence is measured by the conditional probability 
 of the hypothesis given the evidence. The higher, or lower, the probability $P(H|E)$, the higher 
-the value of the evidence for, or against, the hypothesis. The probability $P(H|E)$, however, should not be confused with the probability difference or the likelihood ratio. To illustrate, suppose a witness testifies that the defendant beat the victim to death, but as it turns out, the witness 
-was drunk at the time, so the evidential value of the testimony in favor of guilt is low. 
-If the testimony by the drunk witness is the only incriminating evidence, the probability 
-$P(\textit{guilt} | \textit{drunk witness})$ should also be low. Now, it follows that $P(\textit{innocence} | \textit{drunk witness})$ 
-should be high insofar as \textit{innocence} is the negation of \textit{guilt}. 
-But this seems problematic. A drunk witness, in fact, is of little help in establishing 
-innocence (just as it is of little help in establishing guilt).
+the overall value of the evidence for, or against, the hypothesis. If there is a series of pieces of evidence $E_1, \ldots, E_n$, the overall evidential value of the evidence is measured as $P(H|E_1, \ldots, E_n)$.
 
-It is instructive to quantify the value of the testimony in favor of guilt by means of 
-the probability difference and the likelihood ratio. Since the witness was drunk, the value of the evidence in favor of guilt is 
-low, that is:
-%
-\[\text{the positive difference $P(\textit{guilt} | \textit{drunk witness}) - P(\textit{guilt})$ is small, and}\]
-%
-%
-\[\text{the likelihood ratio $\frac{P(\textit{guilt} | \textit{drunk witness})}{P(\textit{guilt} | \neg\textit{drunk witness})}$ is only slightly above one}.\] 
-%
-Similarly, the value of the evidence in favor of innocence is also low, that is:
-%
-\[\text{the negative difference $P(\textit{innocence} | \textit{drunk witness}) - P(\textit{guilt})$ is small, and}\]
-%
-%
-\[\text{the likelihood ratio $\frac{P(\textit{innocence} | \textit{drunk witness})}{P(\textit{innocence} | \neg\textit{drunk witness})}$ is only slightly below one}.\] 
-%
-So, the value of the testimony in favor of guilt, and innocence, is low 
-in both cases. This means that $P(\textit{guilt} | \textit{drunk witness})$
-and $P(\textit{guilt})$ are roughly the same value, and so are $P(\textit{innocence} | \textit{drunk witness})$ 
-and $P(\textit{innocence})$. Consequently, if $P(\textit{innocence})$ is high, 
-and thus $P(\textit{guilt})$ low, $P(\textit{innocence} | \textit{drunk witness})$ will 
-be high, and thus $P(\textit{guilt} | \textit{drunk witness})$ low. %, given the little evidential value of the testimony. 
-We should thus not be surprised that $P(\textit{innocence} | \textit{drunk witness})$ is high. 
-This is because, by Bayes' theorem, $P(H|E)$ depends on $P(H)$.  
-Even if $E$ does not change significantly the probability of $H$, or the likelihood ratio (positive or negative) 
-$\frac{P(E|H)}{P(E| \neg H)}$ is small, $P(H|E)$ could still be high or low, insofar as $P(H)$ itself is high or low. 
-All in all, we should be careful in not confusing a high probability $P(H|E)$ with a high 
-evidential value in terms of a large probability difference or a high likelihood ratio.
+Overall and incremental evidential value should not be confused. To illustrate, suppose we have strong evidence $E_1$ for the hypothesis $H$ that a suspect was at the crime scene, for instance security camera footage in which the suspect is easily recognizable. In this case, the overall evidential value $P(H|E_1)$ of the evidence is high. If this is the only evidence, then also the incremental evidential value is high: before the evidence the hypothesis is not strongly supported, i.e., $P(H)$ is low, whereas after the evidence, the hypothesis is strongly supported, i.e., $P(H|E_1)$ is high. In this case, the overall and incremental evidential value of $E_1$ align. Now suppose that a witness testifies that the defendant was not at the crime scene (evidence $E_2$), but as it turns out, the witness is unreliable as a known accomplice of the suspect. Consider now the overall evidential value $P(H|E_1, E_2)$ of the two pieces of evidence together. This will not have changed much when compared to $P(H|E_1)$. As a result, the incremental evidential value of $E_2$ is low, while still the overall evidential value $P(H|E_1, E_2)$ is high, even though $E_2$ did not contribute much. 
+
+The difference between overall and incremental evidential value can be especially confusing when there is a single piece of evidence and there is a misalignment between the two values. Consider the hypothesis $\neg H$ that the suspect was not at the crime scene and the evidence $E_2$, the testimony of the unreliable witness. Then $P(\neg H)$ is high and also $P(\neg H | E_2)$ is high. Uncritically interpreted, the high value of $P(\neg H | E_2)$ suggests that the testimony of the unreliable witness has a high evidential value. But incrementally $E_2$ did not change much. The hypothesis $\neg H$ is in totality still strongly supported after the incrementally weak evidence $E_2$, since the hypothesis was already strongly supported before that evidence. 
 
 
-\paragraph{Likelihood ratio can quantify the value of DNA evidence}
+
+
+
+%In this case, the incremental evidential value of the testimony in favor of guilt can be regarded as slightly incriminating. Hence we expect the probabilistic difference $P(\textit{guilt} | \textit{drunk witness})$ to be a small positive value, and the likelihood ratio $P(\textit{guilt} | \textit{drunk witness})/P(\textit{guilt} | \neg\textit{drunk witness})$ to be slightly above one.
+%
+%Now assume that the testimony by the drunk witness is the only incriminating evidence. In this case, 
+%
+%
+%, the probability 
+%$P(\textit{guilt} | \textit{drunk witness})$ should also be low. Now, it follows that $P(\textit{innocence} | \textit{drunk witness})$ 
+%should be high insofar as \textit{innocence} is the negation of \textit{guilt}. 
+%But this seems problematic. A drunk witness, in fact, is of little help in establishing 
+%innocence (just as it is of little help in establishing guilt).
+%
+%It is instructive to quantify the value of the testimony in favor of guilt by means of 
+%the probability difference and the likelihood ratio. Since the witness was drunk, the value of the evidence in favor of guilt is 
+%low, that is:
+%%
+%\[\text{the positive difference $P(\textit{guilt} | \textit{drunk witness}) - P(\textit{guilt})$ is small, and}\]
+%%
+%%
+%\[\text{the likelihood ratio $\frac{P(\textit{guilt} | \textit{drunk witness})}{P(\textit{guilt} | \neg\textit{drunk witness})}$ is only slightly above one}.\] 
+%%
+%Similarly, the value of the evidence in favor of innocence is also low, that is:
+%%
+%\[\text{the negative difference $P(\textit{innocence} | \textit{drunk witness}) - P(\textit{guilt})$ is small, and}\]
+%%
+%%
+%\[\text{the likelihood ratio $\frac{P(\textit{innocence} | \textit{drunk witness})}{P(\textit{innocence} | \neg\textit{drunk witness})}$ is only slightly below one}.\] 
+%%
+%So, the value of the testimony in favor of guilt, and innocence, is low 
+%in both cases. This means that $P(\textit{guilt} | \textit{drunk witness})$
+%and $P(\textit{guilt})$ are roughly the same value, and so are $P(\textit{innocence} | \textit{drunk witness})$ 
+%and $P(\textit{innocence})$. Consequently, if $P(\textit{innocence})$ is high, 
+%and thus $P(\textit{guilt})$ low, $P(\textit{innocence} | \textit{drunk witness})$ will 
+%be high, and thus $P(\textit{guilt} | \textit{drunk witness})$ low. %, given the little evidential value of the testimony. 
+%We should thus not be surprised that $P(\textit{innocence} | \textit{drunk witness})$ is high. 
+%This is because, by Bayes' theorem, $P(H|E)$ depends on $P(H)$.  
+%Even if $E$ does not change significantly the probability of $H$, or the likelihood ratio (positive or negative) 
+%$\frac{P(E|H)}{P(E| \neg H)}$ is small, $P(H|E)$ could still be high or low, insofar as $P(H)$ itself is high or low. 
+%All in all, we should be careful in not confusing a high probability $P(H|E)$ with a high 
+%evidential value in terms of a large probability difference or a high likelihood ratio.
+
+
+\paragraph{Likelihood ratio can quantify the value of DNA evidence.}
 
 
 
@@ -754,7 +771,7 @@ the lower the RMP, the less likely a random person would match.
 
 
 \paragraph{The likelihood ratio might not capture every source 
-of uncertainty}
+of uncertainty.}
 
 It is, however, important to keep track of the simplifying assumptions that were made. 
 To see what they were, note that the hypothesis of guilt is not equivalent to 
@@ -815,7 +832,7 @@ that the evidential value of the DNA match in favor of guilt will be very high.
 
 
 \paragraph{Further readings} Introductions to using probability for weighing evidence 
- \citep{finkelsteinFairley1970, dawid2002, mortera2007}. Critique 
+ \citep{finkelsteinFairley1970, dawid2002, morteraDawid2007}. Critique 
 of the probabilistic approach \citep{tribe1971, cohen1977, allenPardo2007}.
 Prosecutor's fallacy \citep{thompsonSchuman1987}.
 Introduction to DNA evidence \citep{wasserman2008, kayeSensabaugh2000}.
@@ -827,7 +844,7 @@ Uniqueness of DNA profiles  \citep{kaye2013, weir2007}.
 How DNA evidence can be synthesized and implanted \citep{frumkinEtAl2009}. 
 Cold hit controversy in DNA evidence cases \citep{NRC1996, baldingDonnely1996}. 
 Comparison between DNA evidence and fingerprints  \citep{zabell2005}. 
-Probabilistic analyses of eyewitness testimony \citep{friedman1987, schumStarace2001}. 
+Probabilistic analyses of eyewitness testimony \citep{friedman1987, schum1994, schumStarace2001}. 
 
 \subsection{Arguments}
 \label{sec:valueArgs}
