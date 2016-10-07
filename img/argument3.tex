@@ -12,16 +12,18 @@
 		\pgftransformyscale{2}
 
 		\node[arg]     			(scene) at (0,-0.65) {The suspect was at the crime scene};
-		\node[arg] (witn) at (0,-2) {The witness reports that she saw the suspect at the crime scene};
+		\node[arg] (witn) at (0,-2) {The witness testified she saw the suspect at the crime scene};
 
-		\node[arg] 					(alibi) at (1,-0.65) {The suspect has an alibi};
-		\node[arg] 					(lying) at (1,-1.3) {The witness is lying};
-		\node[arg] 					(fraud) at (1,-2) {The witness report is fraudulent};
+		%\node[arg] 					(alibi) at (1,-0.65) {The suspect has an alibi}; 
+		\node[arg] 					(alibi) at (1,-0.65) {Crime scene DNA does not match suspect}; 
+		%\node[arg] 					(lying) at (1,-1.3) {The witness is lying};
+		\node[arg] 					(lying) at (1,-1.4) {There were bad lighting conditions};
+		\node[arg] 					(fraud) at (1,-2) {The testimony never took place};
 
 		\draw[arg] 					(witn) -- (scene);
 
 		\draw[attack] 			(alibi) -- (scene);
-		\draw[attack] 			(lying) -- (0, -1.3);
+		\draw[attack] 			(lying) -- (0, -1.4);
 		\draw[attack] 			(fraud) -- (witn);
 
 	\end{tikzpicture}
