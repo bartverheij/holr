@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=evidential-reasoning.tex
 
 [Frame0_View0,0]
-TopLine=1509
-Cursor=55572
+TopLine=1999
+Cursor=71309
 
 [Frame1]
 Flags=0

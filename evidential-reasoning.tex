@@ -921,112 +921,94 @@ The difference between overall and incremental evidential value can be especiall
 %evidential value in terms of a large probability difference or a high likelihood ratio.
 
 
-\paragraph{Likelihood ratio can quantify the value of DNA evidence.}
-
-
+\paragraph{DNA evidence can have a high incremental evidential value, but one should beware of complications.}
 
 %A widely used measure of evidential value 
 %is the likelihood ratio. 
 As an illustration, we discuss the likelihood ratio 
-of a DNA match in favor of guilt. %, where the match is between
+of a DNA match. %, where the match is between
 %the crime scene's genetic profile and the defendant's. 
 %Suppose the DNA test reports a match between the crime traces and the defendant.  %Given our simplifying assumptions, 
 When introduced in court, a DNA match comes with an 
 estimated Random Match Probability (RMP).  As explained earlier, this
 is the probability that a random person, who 
-had nothing to do with the crime, would match. The RMP can also be viewed 
-as the estimated frequency of the DNA profile across a sample population. 
+had nothing to do with the crime, would match. An RMP is derived from the estimated frequency of the DNA profile across a sample population. 
 %We should bear in mind that genetic profiles are not unique. 
 %Based on statistical and genetic modeling,  a profile is expected to occur 
 %with a  certainfrequency in a select population. 
 %
 Now, with some simplifications (on these later), 
 the evidential value of the DNA 
-match in favor of guilt, in terms of a likelihood ratio, 
+match $M$ in favor of the suspect being the source of the sample $S$, in terms of a likelihood ratio, 
 is as follows % \citep{Dawid02, Balding2005Weight}:
 %
 \[
-\frac{P(M | G)}{P(M | \neg G)} =   \frac{1}{RMP}.
+\frac{P(M | S)}{P(M | \neg S)} =   \frac{1}{RMP}.
 \]
 %
 %BV RMP is as yet undefined
-The numerator $P(M | G)$ equal 1 because %of our simplifying assumption that 'source' and guilt' are interchangeable 
+The numerator $P(M | S)$ equals 1 because we assume that %of our simplifying assumption that 'source' and guilt' are interchangeable 
 %and the laboratory test is infallible. If 
-if the defendant is guilty%and thus the source of the crime traces
+if the defendant is the source of the sample%and thus the source of the crime traces
 , the lab test will report a match. As for the denominator, 
 %keep in mind that $RMP$ is the probability that a random person, 
 %unrelated to the crime or the defendant, would be found to have a matching DNA. 
-putting $P(M | \neg G)=RMP$ is plausible because the probability that a match would be reported assuming that the defendant was \textit{not} 
+putting $P(M | \neg S)=RMP$ is plausible because the probability that a match would be reported assuming that the defendant was \textit{not} 
 the source is roughly the same as the chance that a random person---someone who had no contact with the victim---would match anyway. 
 %and because (2) 'source' and 'guilt' are, by assumption, equivalent.
 For example, if the RMP is 1 in 200 million, the likelihood ratio would be
 %
 \[\frac{P(M |G)}{P( M | \neg G)}=\frac{1}{\frac{1}{\text{200 million}}}=\text{200 million}.\]
 %
-Since the likelihood ratio in question is a high number, the DNA match in favor of guilt 
-has a high evidential value. More generally,  the lower the RMP, the higher the evidential value of the match. This is because 
-the lower the RMP, the less likely a random person would match. 
+Since the likelihood ratio in question is a high number, the DNA match in favor of the suspect being the source
+has a high evidential value. More generally, a low RMP corresponds to a match with a rare profile, hence has a high evidential value. 
 
+Still, even with a low RMP one should beware of the complications when using a DNA match to establish the guilt of a suspect. Consider the following, non-equivalent hypotheses: %which are progressively more removed from guilt: 
 
-\paragraph{The likelihood ratio might not capture every source 
-of uncertainty.}
+\begin{enumerate}
 
-It is, however, important to keep track of the simplifying assumptions that were made. 
-To see what they were, note that the hypothesis of guilt is not equivalent to 
-other hypotheses, such as the following: %which are progressively more removed from guilt: 
-
-- the \textit{lab reports} that the defendant's 
+	\item 
+The \textit{lab reports} that the defendant's 
 genetic profile matches with the crime traces;
 
-- the defendant's genetic profile \textit{truly matches} with the crime traces; 
+	\item 
+The defendant's genetic profile \textit{truly matches} with the crime traces; 
 
-- the defendant is the \textit{source} of the traces; and
+	\item 
+The defendant is the \textit{source} of the traces; and
 
 %the defendant \textit{left} the crime traces; 
 
-%the defendant \textit{visited} the crime scene; 
+	\item 
+The defendant \textit{visited} the crime scene; 
 
 %the defendant \textit{participated} in the crime; 
 
-- the defendant is \textit{guilty}.
+	\item 
+The defendant is \textit{guilty}.
+\end{enumerate}
 
 \noindent
-The inference from `reported match'  
-to `guilt', passing through the intermediate steps `true match' and 'source', is a complex one, 
-and many sources of error may undermine the inference along the way.  
-Above we have made three simplifying 
-assumptions. 
+The inferential path from `reported match'  
+to `guilt', passing through the intermediate steps `true match', `source' and `visit', is a long one, 
+and each step comes with sources of error that undermine the inference along the way.  
 
-First, we assumed that the inference from `reported match' to `true match' was unobjectionable, or in other words, we assumed
-the DNA test reporting a match (or a non-match) was infallible. This, of course, need be the case because laboratories make mistakes.
-A more sophisticated probabilistic analysis will show that a RMP as low as 1/1 billion----which in our simplistic analysis would give rise to a likelihood ratio as high as 1 billion---  
-reduces to about 100 likelihood ratio if the  laboratory error rate is 1\%.
+First, the inference from `reported match' to `true match' depends on the question whether the laboratory has made a mistake. A key source of lab mistakes originates in human error, much less rare than a good DNA profile.
+%A more sophisticated probabilistic analysis will show that a RMP as low as 1/1 billion----which in our simplistic analysis would give rise to a likelihood ratio as high as 1 billion---  reduces to about 100 likelihood ratio if the  laboratory error rate is 1\%.
+Second, the inference from `true match' to `source' can go wrong in several ways. Of course, even a rare match can be accidental, as measured by the RMP. But another cause of a match without the suspect being the source occurs in cases of close family relations. For instance, a suspect's genetically identical twin has identical DNA, and twins are much less rare than good DNA profiles. 
+%There is also the possibility that synthetic genetic material, perfectly matching one's DNA, was planted. 
+%In this background, the second simplifying assumption we made was that the inference from `true match' to `source' can be undermined by one source of error only, namely the possibility that another random individual could coincidentally match. This possibility of error is captured by the Random Match Probability. 
+%If RMP equal 1 in 200, we would expected 1 such profile every two hundred people or the RMP equals 0.5\%. Other sources of error, for example, a twin brother or an artificially synthesized matching DNA, were disregard. 
+Third, the inference from `source' to `visiting the crime scene' is not infallible. In particular, the traces can have been accidentally transferred to the crime scene or have been planted there. Fourth, the inference from `visiting the crime scene' to `guilt' can go wrong in many ways, because having visited a crime scene is not nearly the same as having committed the crime investigated.
 
-
-Second, consider the inference from `true match' to `source'.
-There are many ways this inference can go wrong. Even if one is a true match, one need not be the source. A genetically identical twin or someone else 
-who just so happens to have an identical DNA could be the source. It could also be that synthetic genetic material, perfectly matching one's DNA, was planted. 
-In this background, the second simplifying 
-assumption we made was that the inference from `true match' to `source' can be undermined by 
-one source of error only, namely the possibility that another random individual 
-could coincidentally match. This possibility of error is captured by the 
-Random Match Probability. 
-%If RMP equal 1 in 200, we would expected 1 such profile every two hundred people or the RMP equals 0.5\%. 
-Other sources of error, for example, a twin brother or an artificially synthesized matching DNA, were disregard. 
-
-The third assumption we made was that whoever is the source of the crime traces must be the perpetrator, 
-so `guilt' and `source' were treated as equivalent.  This, of course, need not be the case. One could be the source of the traces without participating in the crime because, for example, 
- one visited the crime scene before or after  the crime took place. Relaxing the identification of the two hypotheses 
-further weakens the value of a DNA match in favor of guilt.
-
-From a probabilistic point of view, laboratory errors can be quantified if the lab error rates are available, 
-but other sources of error are more difficult to quantify. How often does it happen that 
-synthesized matching DNA is implanted? Or what is the probability of error 
-in the inference from `source' to `guilt'?
-The moral is that, in weighting the value of DNA match with a high likelihood ratio, 
-one should always be wary of the sources of error that were, and were not, taken into account in the calculations. 
-Even if the RMP is very low, this does not mean 
-that the evidential value of the DNA match in favor of guilt will be very high. 
+%From a probabilistic point of view, laboratory errors can be quantified if the lab error rates are available, 
+%but other sources of error are more difficult to quantify. How often does it happen that 
+%synthesized matching DNA is implanted? Or what is the probability of error 
+%in the inference from `source' to `guilt'?
+%The moral is that, in weighting the value of DNA match with a high likelihood ratio, 
+%one should always be wary of the sources of error that were, and were not, taken into account in the calculations. 
+%All in all, even if the RMP is very low, this does not mean 
+%that the evidential value of the DNA match in favor of guilt will be very high. 
 
 
 \paragraph{Further readings} Introductions to using probability for weighing evidence 
