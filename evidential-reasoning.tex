@@ -189,17 +189,20 @@ Still, it remains a hypothesis. There are many reasons why the hypothetical even
 
 DNA profiling has become an important tool in courts. The evidential relevance of a DNA profile stems from the fact that, although most of the structure of DNA is shared among all human beings (more than 99\%), the variations that do exist are very specific for each individual. %DNA profiling has a strong scientific underpinning, and comes with precise statistical information.
 
-A \textit{DNA profile} is determined by analyzing a number of specific locations---the so-called \textit{loci}---of a DNA molecule. %, 
+A \textit{DNA profile} is determined by analyzing a number of specific locations, the so-called \textit{loci}, of a DNA molecule. %, 
 %and establish the type of structure found there. The type of structure found at a locus is called an \textit{allele}. 
-Each locus is associated with different \textit{alleles} 
-which can be found at that location, where an allele differs from another because 
-of the number of repetitions of a small DNA sequence. For instance, one locus used in the profiles stored in forensic DNA databases in the United States is CSF1PO. 
-This locus has up to 16 allele types, depending on how often the molecular sequence AGAT is repeated at that location.\footnote{See \url{www.cstl.nist.gov/strbase/str\_CSF1PO.htm}.} 
-%MDB: removed %alleles 5, 6, 7 and then up to 16, 
-Different countries use different sets of---what are called---\textit{core loci} for their DNA profiles. 
+Different countries use different sets of %what are called 
+\textit{core loci} for their DNA profiles. 
 %MDB [TERMINOLOGY IS NOT EXPLAINED HERE. WHAT ARE LOCI? WHAT ARE ALLELES? TABLE TO BE ADDED MIGHT HELP. THE BUSINESS OF REPETITIONS IS NOT FULLY CLEAR] 
 For instance, the CODIS system in the United States uses 13 core loci, to be expanded to 20 core loci in 2017.\footnote{See \url{www.fbi.gov/services/laboratory/biometric-analysis/codis}.} 
-A DNA profile, then, consists in a list allele types for a certain number of select core loci. 
+At each specific locus, a different \textit{allele} might occur. 
+%Each locus is associated with different \textit{alleles} 
+% which can be found at that location, where an allele differs from another because 
+%of the number of repetitions of a small DNA sequence. 
+For instance, one locus used in the profiles stored in forensic DNA databases in the United States is CSF1PO. 
+This locus has up to 16 allele types, depending on how often the molecular sequence AGAT is repeated at that location.\footnote{See \url{www.cstl.nist.gov/strbase/str\_CSF1PO.htm}.} 
+%MDB: removed %alleles 5, 6, 7 and then up to 16, 
+A DNA profile, then, consists in a list of allele types for a certain number of select core loci. 
 
 
 How is the statistical frequency of a DNA profile estimated?
@@ -225,20 +228,20 @@ Moreover, testing the independence assumption can be hard, and require the asses
 %MDB [BUT I THINK THERE IS LITERATURE THAT HAS TESTED THE INDEPENDENCE ASSUMPTION. DO WE MENTION IT? BUCKLETON BOOK?]
 
 With this background in place, suppose now that a trace of blood is found on the crime scene, and that the DNA profile created from the trace matches the DNA profile of the suspect. Using the match, 
-the fact finders can form the hypothesis that the suspect is the source of the blood trace. The Random Match Probability associated with the profile provides 
+the fact finders can form the hypothesis that the suspect is the source of the blood trace, and the Random Match Probability associated with the profile provides 
 a measure of the evidential strength of the match. %It is a common misunderstanding to equate this number with the probability that the suspect is not the source of the trace. 
 %This well-known misunderstanding is referred to as the prosecutor's fallacy. The probability that the suspect is not the source of the trace can only be determined from the Random Match Probability, after considering the prior odds that the suspect is the source. 
 %MDB [IS THIS THE RIGHT PLACE TO TALK ABOUT PROSECUTOR'S FALLACY? TOO EARLY? TOO MUCH INFORMATION?]
-Now, the hypothesis that can be formed on the basis of a DNA match is rather circumscribed. 
-It is limited to the suspect being the \textit{source} of the trace. 
-It should not be confused without the hypothesis that the suspect is \textit{guilty}, at least 
+Importantly, the hypothesis that can be formed on the basis of a DNA 
+match is rather circumscribed. It is limited to the suspect being the \textit{source} of the trace and 
+should not be confused with the hypothesis that the suspect is \textit{guilty}, at least 
 absent other information about how the trace got there. 
 Further, the hypothesis itself that the suspect is the source 
 need not be true. The suspect and the perpetrator, though different people, might share 
 the same DNA profile, either because they are identical twins or because, though unrelated, 
 they happen to share the same profile.\footnote{At a rate of a dozen or more twin births per 1000 live births, identical twins are not that rare. 
 Source \url{https://en.wikipedia.org/wiki/Twin\#Statistics}.} We should also be wary 
-of laboratory errors which give rise to false positive results. 
+of laboratory errors and false positive matches. 
 
 
 \subsection{Central questions}
@@ -318,10 +321,9 @@ on the evaluation of the evidence:
 
 In this section, we discuss three normative frameworks for the correct handling of the evidence: 
 arguments; probabilities; and scenarios. %  \citep{andersonEtal2005,kapteinEtal2009,dawidEtal2011}. 
-We shall only briefly sketch their distinctive theoretical strengths. Arguments can naturally 
+We shall only emphasize their distinctive theoretical strengths. Arguments can naturally 
 capture the dialogical dimension, by modeling relations of support and attack. 
-Probabilities are better suited to quantify the value of the evidence, and this 
-is useful when it comes to DNA evidence and its statistical underpinnings. Finally, scenarios are 
+Probabilities are better suited to quantify the value of the evidence. Finally, scenarios are 
 best in offering a coherent and holistic interpretation 
 of large bodies of evidence. 
 
@@ -338,7 +340,7 @@ contain reasons that \textit{support} or \textit{attack} a certain conclusion of
 she saw the suspect at the crime scene, this evidence constitutes a reason for the conclusion that 
 the suspect was, in fact, at the crime scene. But if the DNA profile found at the crime scene 
 does not match the suspect's DNA profile, this constitutes 
-a reason attacking the conclusion. A simple argument structure with a supporting and 
+a reason attacking the conclusion. An argument with a supporting and 
 an attacking reason is represented in Figure~\ref{fig:arg}.
 
 \begin{figure}[bt]
@@ -375,20 +377,28 @@ $\Pr(H|E) = P(H \land E)/P(E) = \Pr(E|H)\cdot P(H)/P(E)$, proving Bayes' theorem
 \end{quotation}
 
 %
+<<<<<<< HEAD
 %This formula---which can be easily proven from 
 %the probability axioms---shows how the 
 %conditional probability $\Pr(H|E)$ of hypothesis $H$ given evidence $E$ 
 %can be computed by the prior probability $\Pr(H)$ and the 
 %factor $\Pr(E|H)/\Pr(E)$. 
 \noindent One of the lessons of Bayes' theorem is that the more surprising 
+=======
+This formula---which can be easily proven from 
+the probability axioms---shows how the 
+conditional probability $\Pr(H|E)$ of hypothesis $H$ given evidence $E$ 
+can be computed by the prior probability $\Pr(H)$ and the 
+factor $\Pr(E|H)/\Pr(E)$.  One of the lessons of Bayes' theorem is that the more surprising 
+>>>>>>> origin/master
 the evidence---that is, the lower $\Pr(E)$---the higher the probability 
-of the hypothesis given the evidence (and the more pronounced the probability increase). 
-To illustrate, compare two DNA profiles, one with a Random Match Probability of 1 in 10 and the other with 
-a Random Match Probability of 1 in 1 million. It is more surprising---that is, less probable---to find a match 
-for the latter than the former profile. Suppose now a genetic match is found between 
-the crime traces and a suspect. The hypothesis that the suspect is the source 
-of the traces is more probable (or the probability increase more pronounced) 
-if the matching profile has a lower Random Match Probability.
+of the hypothesis given the evidence and the larger the probability increase. 
+%To illustrate, compare two DNA profiles, one with a Random Match Probability of 1 in 10 and the other with 
+%a Random Match Probability of 1 in 1 million. It is more surprising---that is, less probable---to find a match 
+%for the latter than the former profile. Suppose now a genetic match is found between 
+%the crime traces and a suspect. The hypothesis that the suspect is the source 
+%of the traces is more probable (or the probability increase more pronounced) 
+%if the matching profile has a lower Random Match Probability.
 
 %To illustrate, suppose a trace is found at the crime scene 
 %rare DNA profile of estimated frequency, or Random Match Probability, 1 in a billion. 
@@ -430,7 +440,7 @@ if the matching profile has a lower Random Match Probability.
 The interest in probabilistic calculations as a tool for the good handling of the evidence has recently been stimulated by the statistics related to DNA profiling, and by some infamous miscarriages of justice that involved statistics, in particular the Lucia de Berk and Sally Clark cases~\citep{dawidEtal2011,fenton2011,schnepsColmez2013}. The interest is not new~\citep{tillers2011}, and can in fact be traced back to early forensic science in the late nineteenth century~\citep{taroniEtal1998}. To what extent probabilistic calculations have a place in courts has always been, and remains, the subject of debate.\footnote{A recent instance of the debate concerns the R v T case, where the UK Court of Appeal restricted the use of Bayes' theorem in courts to cases with a solid statistical foundation such as DNA; see the 2012 special issue of Law, Probability and Risk; Vol. 4, No. 2. For a 1970s instance of the debate, see~\citet{finkelsteinFairley1970,tribe1971}.}
 \end{comment}
 
-\subsection{Scenarios}
+\subsection{Scenarios [NEEDS FIXING]}
 \label{sec:introScen}
 Finally, the third normative framework %for the correct handling of the evidence 
 centers around scenario analysis. In a scenario, a coherent account of what may have happened in a case is made explicit. Different scenarios are contrasted, and evaluated, by considering their plausibility and by checking to what extent they match and contradict the available evidence. 
@@ -523,10 +533,11 @@ at the crime scene.
 %
 Second, the reason itself can be attacked, although this is a bit more difficult to imagine.  
  For instance, %when the witness report is fraudulent, this is a reason for believing the witness did not report 
- if the witness never actually testified that she saw the suspect at the crime scene, this challenges the very 
+ if the witness never actually testified that she saw the suspect at the crime scene, this attacks the very 
  existence of the supporting reason itself. 
  %content of the witness testimony was misunderstood---for example, because the testimony was provided through a translation---this is a reason for 
- %doubting the witness actually testified she saw the suspect at the crime scene. This kind of attack is referred to as \textit{undermining attack}. 
+ %doubting the witness actually testified she saw the suspect at the crime scene. 
+ This kind of attack is referred to as \textit{undermining attack}. 
 %
 Third, the connection between the reason and the conclusion can be attacked.
  The fact that the lighting conditions were bad when the witness saw the crime, 
@@ -535,7 +546,7 @@ Third, the connection between the reason and the conclusion can be attacked.
  In contrast with a rebutting attack, an undercutting attack provides no support for the opposite conclusion. In the example, %when the witness is lying, 
  if the lighting conditions were bad, there is no reason explicitly 
  supporting that the suspect was not at the crime scene. The attacking reason, % statement, %here the lying of the witness, 
- here the existence of bad lighting conditions, is also referred to as an exclusionary reason. 
+ here the bad lighting conditions, is also referred to as an exclusionary reason. 
 %
 The three examples of the different kinds of attack are shown in Figure~\ref{fig:arg3}.
 
@@ -551,21 +562,20 @@ The three examples of the different kinds of attack are shown in Figure~\ref{fig
 
 Just as attacking reasons can target the conclusion of an argument, its supporting
 reason or the connection between the two, additional reasons 
-can provide further support for each of these parts. Having in mind a dialogical setting for analyzing the structure 
-of arguments, additional reasons can be understood 
-as responses to attacking reasons. 
+can provide further support for each of these parts. %Having in mind a dialogical setting for analyzing the structure of arguments, 
+Additional reasons can be seen as responses to attacking reasons or as reasons strengthening an existing argument. 
 
 Consider, once again, the argument that the suspect was at the crime scene because the witness reports that she saw the suspect at the crime scene. 
 First, the conclusion can be further supported, for example, by a second witness testimony. 
 If a conclusion is supported by more than one reason, this is referred 
 to as \textit{multiple support}. 
 %
-Second, the reason itself can be further supported, for example, 
+Second, the reason itself can be supported, for example, 
 by a video recording of the witness testimony itself. 
 Support of the reason itself is called \textit{subordinating support}. 
 %MDB isn't this subordinating support simply a case of "chaining"
 %
-Finally, the connection between the reason and the conclusion can be supported, for example, 
+Finally, the connection between the reason and the conclusion can be further supported, for example, 
 by another testimony that the witness has always been trustworthy and reliable. 
 Support for the connection between the reason and the conclusion does not have a standard name, but is closely related 
 to a third named kind of support: \textit{coordinated support}. In coordinated support, the support for the conclusion consists of at least 
@@ -585,9 +595,9 @@ Figure~\ref{fig:support} shows the three kinds of (further) support. (Multiple a
 %\paragraph{The arguments for and against different positions have structure, involving complexes of reasons supporting and attacking positions.}  MDB changed
 \paragraph{Arguments have structures, involving complexes of supporting and attacking reasons.} 
 
-So far we have looked at a simple argument, one consisting of a reason and a conclusion, along with three types 
-of attacking reasons and three types of symmetric supporting reasons. But an argument can also have 
-a more complex structure, for example, it can contain \textit{chains of reasons}, both supporting or attacking reasons. 
+So far we have looked at a simple argument,  consisting of a reason and a conclusion, along with three types 
+of attacking reasons and three types of symmetric supporting reasons. But an argument can also be more complex, 
+for example, it can contain \textit{chains of reasons}. 
 
 Consider, once again, the example of a witness who reports that she saw the suspect at the crime scene. The witness testimony constitutes a 
 reason supporting the conclusion that the suspect was at the crime scene, and this conclusion---in turn---functions as a reason 
@@ -634,7 +644,7 @@ between the witness testimony and the conclusion the suspect was at the crime sc
 \paragraph{Further readings} 
 Argument structure and diagrams~\citep{wigmore1913,wigmore1931,toulmin1958,freeman1991}. Defeasible reasoning and nonmonotonic logic~\citep{pollock1987,gabbayEtal1994}. Rebutting and undercutting attack~\citep{pollock1987,pollock1995}. Undermining attack~\citep{bondarenkoEtal1997}. Formal evaluation of defeasible arguments~\citep{pollock1987,pollock1995,dung1995,prakken2010}. Argumentative dialogue~\citep{toulmin1958,waltonKrabbe1995,prakken1997,hage2000}. Accrual of reasons and weighing~\citep{pollock1995,hage1997,verheij1996diss,prakken2005}. Argument diagramming and evaluation software~\citep{pollock1995,reedRowe2004,kirschnerEtal2003,vanGelder2003,verheij2005,gordonEtal2007}.
 
-\subsection{Scenarios}
+\subsection{Scenarios [NEEDS FIXING]}
 
 In the scenarios normative framework, the handling of conflicting evidence is analyzed by considering different scenarios about what may have happened.
 
@@ -797,7 +807,9 @@ The evidence found in a criminal investigation has different levels of evidentia
 In the probabilistic framework, evidential value is measured using the numeric calculus of probability theory.
 
 	
-\paragraph{The evidential value of a piece of evidence is measured by probabilistic difference or likelihood ratio (`incremental evidential value').}
+%\paragraph{The evidential value of a piece of evidence is measured by probabilistic difference or likelihood ratio (`incremental evidential value').}
+
+\paragraph{The incremental evidential value is measured by the probabilistic difference.}
 %BV Some reshaping is needed in this section, I'd say. 1. There is the evidential value of a piece of evidence; measured by probabilistic difference or LR (`incremental evidential value'). 2. There is the evidential value of all the evidence, in its totality; measured by the overall conditional prob (`total evidential value'). 3. DNA evidence is a good example, but there are complications.
 %BV Below the discussion of the drunk witness is (for me) a complicated way of saying that a drunk witness has (by itself) hardly incremental evidential value. What is the lesson to be taught?
 %BV In the part on DNA evidence I'd also reshape. For me the RMP connects a match (an actual match, M) probabilistically with the suspect being the source (S); we did that in the project paper verheijEtal2016. I'd first like to see that discussed, and then explained that there also are complications. Here the so-called hierarchy of propositions should be mentioned. cookEtAl1998, evettEtal2000 if I am correct.
@@ -873,15 +885,23 @@ the higher the value of the evidence against the hypothesis.
 
 %\paragraph{The overall probability is not the same as probability difference and likelihood ratio}
 
-\paragraph{The evidential value of all the evidence, in its totality, is measured by the overall conditional probability (`overall evidential value'). }
+%\paragraph{The evidential value of all the evidence, in its totality, is measured by the overall conditional probability (`overall evidential value'). }
+
+\paragraph{The overall evidential value is measured by the overall conditional probability. }
 
 In contrast with the incremental evidential value of evidence that is measured by a probabilistic difference or likelihood ratio, the overall evidential value of the full body of evidence is measured by the conditional probability 
 of the hypothesis given the evidence. The higher, or lower, the probability $P(H|E)$, the higher 
 the overall value of the evidence for, or against, the hypothesis. If there is a series of pieces of evidence $E_1, \ldots, E_n$, the overall evidential value of the evidence is measured as $P(H|E_1, \ldots, E_n)$.
 
-Overall and incremental evidential value should not be confused. To illustrate, suppose we have strong evidence $E_1$ for the hypothesis $H$ that a suspect was at the crime scene, for instance security camera footage in which the suspect is easily recognizable. In this case, the overall evidential value $P(H|E_1)$ of the evidence is high. If this is the only evidence, then also the incremental evidential value is high: before the evidence the hypothesis is not strongly supported, i.e., $P(H)$ is low, whereas after the evidence, the hypothesis is strongly supported, i.e., $P(H|E_1)$ is high. In this case, the overall and incremental evidential value of $E_1$ align. Now suppose that a witness testifies that the defendant was not at the crime scene (evidence $E_2$), but as it turns out, the witness is unreliable as a known accomplice of the suspect. Consider now the overall evidential value $P(H|E_1, E_2)$ of the two pieces of evidence together. This will not have changed much when compared to $P(H|E_1)$. As a result, the incremental evidential value of $E_2$ is low, while still the overall evidential value $P(H|E_1, E_2)$ is high, even though $E_2$ did not contribute much. 
+Overall and incremental evidential value should not be confused. To illustrate, suppose we have strong evidence $E_1$ for the hypothesis $H$ 
+that a suspect was at the crime scene, for instance, security camera footage in which the suspect is easily recognizable. 
+In this case, the overall evidential value $P(H|E_1)$ of the evidence is high. If this is the only evidence, then also the 
+incremental evidential value is high: before the evidence is considered, the hypothesis is not strongly supported, i.e.\ $P(H)$ is low, whereas after the evidence is considred, 
+the hypothesis is strongly supported, i.e.\ $P(H|E_1)$ is high. In this case, the overall and incremental evidential value of $E_1$ are both high. 
+But suppose a witness testifies that the defendant was not at the crime scene (evidence $E_2$), but as it turns out, the witness is unreliable 
+as a known accomplice of the suspect. Consider now the overall evidential value $P(H|E_1, E_2)$ of the two pieces of evidence together. This will not have changed much when compared to $P(H|E_1)$. As a result, the incremental evidential value of $E_2$ is low, while still the overall evidential value $P(H|E_1, E_2)$ is high, even though $E_2$ did not contribute much. 
 
-The difference between overall and incremental evidential value can be especially confusing when there is a single piece of evidence and there is a misalignment between the two values. Consider the hypothesis $\neg H$ that the suspect was not at the crime scene and the evidence $E_2$, the testimony of the unreliable witness. Then $P(\neg H)$ is high and also $P(\neg H | E_2)$ is high. Uncritically interpreted, the high value of $P(\neg H | E_2)$ suggests that the testimony of the unreliable witness has a high evidential value. But incrementally $E_2$ did not change much. The hypothesis $\neg H$ is in totality still strongly supported after the incrementally weak evidence $E_2$, since the hypothesis was already strongly supported before that evidence. 
+The difference between overall and incremental evidential value can be especially confusing when there is a single piece of evidence and there is a misalignment between the two values. Consider the hypothesis $\neg H$ that the suspect was not at the crime scene and the evidence $E_2$, the testimony of the unreliable witness. Then $P(\neg H)$ is high and also $P(\neg H | E_2)$ is high. Uncritically interpreted, the high value of $P(\neg H | E_2)$ suggests that the testimony of the unreliable witness has a high evidential value. But incrementally $E_2$ did not change much. The hypothesis $\neg H$ is, in totality, still strongly supported after the incrementally weak evidence $E_2$, since the hypothesis was already strongly supported before that evidence. 
 
 %In this case, the incremental evidential value of the testimony in favor of guilt can be regarded as slightly incriminating. Hence we expect the probabilistic difference $P(\textit{guilt} | \textit{drunk witness})$ to be a small positive value, and the likelihood ratio $P(\textit{guilt} | \textit{drunk witness})/P(\textit{guilt} | \neg\textit{drunk witness})$ to be slightly above one.
 %
@@ -924,7 +944,7 @@ The difference between overall and incremental evidential value can be especiall
 %evidential value in terms of a large probability difference or a high likelihood ratio.
 
 
-\paragraph{DNA evidence can have a high incremental evidential value, but one should beware of complications.}
+\paragraph{DNA evidence has high incremental evidential value, but there are complications.}
 
 %A widely used measure of evidential value 
 %is the likelihood ratio. 
@@ -933,9 +953,9 @@ of a DNA match. %, where the match is between
 %the crime scene's genetic profile and the defendant's. 
 %Suppose the DNA test reports a match between the crime traces and the defendant.  %Given our simplifying assumptions, 
 When introduced in court, a DNA match comes with an 
-estimated Random Match Probability (RMP).  As explained earlier, this
-is the probability that a random person, who 
-had nothing to do with the crime, would match. An RMP is derived from the estimated frequency of the DNA profile across a sample population. 
+estimated Random Match Probability (RMP).  One way to interpret this probability is 
+as the probability that a random person, who 
+had nothing to do with the crime, would match. %An RMP is derived from the estimated frequency of the DNA profile across a sample population. 
 %We should bear in mind that genetic profiles are not unique. 
 %Based on statistical and genetic modeling,  a profile is expected to occur 
 %with a  certainfrequency in a select population. 
@@ -1032,26 +1052,47 @@ Probabilistic analyses of eyewitness testimony \citep{friedman1987, schum1994, s
 \subsection{Arguments}
 \label{sec:valueArgs}
 
-The evidential value of arguments can be analyzed in terms of the reasons they are built from.
+The evidential value of arguments can be analyzed in terms of the strength 
+of the reasons they are built from, but also by asking critical questions 
+about the reasons of the argument, its conclusion and the connection 
+between reasons and conclusion. 
 
-\paragraph{The reasons used in arguments have different evidential value. Some are conclusive, others defeasible.} A reason is conclusive when, given  the reason, its conclusion is guaranteed. The main type of conclusive reasons correspond to deductive, logically valid reasoning. 
+\paragraph{The reasons used can be conclusive or 
+defeasible.} A reason is conclusive when, given  the reason, its conclusion is guaranteed. The main type of conclusive reasons correspond to 
+deductive, logically valid reasoning. 
 %BV adapted [WHAT DOES IT MEAN THAT A REASON CORRESPONDS TO AN ARGUMENT?] 
-An example of a conclusive reason occurs in the logically valid argument from the reason `The witness saw the suspect commit the crime and the suspect denies having been at the crime scene' to the conclusion `The suspect denies having been at the crime scene'. Its logical validity is connected to the underlying logical structure of the argument: From A AND B, conclude B. 
-
+An example of a conclusive reason occurs in the logically valid argument from the reasons `John is shot' and `If someone is shot, he dies', to 
+the conclusion `John dies'. 
+%`The witness saw the suspect commit the crime and the suspect denies having been at the crime scene' to the conclusion `The suspect denies having been at the crime scene'. 
+Its logical validity is connected to the underlying logical structure of the argument: 
+%From A AND B, conclude B. 
+from `A' and `A implies B', conclude `B'. 
 % BV I don't think so. :-) [IT IS ODD TO READ 'REASON' WHILE WHAT IT MEANS IS 'PREMISE'. SEEMS STANDARD TO TALK ABOUT PREMISES AND CONCLUSIONS, WHILE YOU SEEM TO PREFER CONCLUSIONS AND REASONS. IS THERE SOMETHING SPECIFIC ABOUT THIS? MAYBE SAY SOMEWHERE WE WIL USE 'REASON' TO MEAN 'PREMISE'?] 
 
-Many reasons are not conclusive, but defeasible: There are circumstances in which the conclusion does not follow, although the reason obtains. The reason `The witness reports to have seen the suspect at the crime scene' supports the conclusion `The suspect was at the crime scene', but does not guarantee that conclusion, as---for instance---the witness can have been lying or have made a mistake. A defeasible reason can provide prima facie justification for a conclusion, that is withdrawn in light of further information.
-
+Many reasons are not conclusive, but defeasible. There are circumstances in which the conclusion does not follow, although the reason obtains. The reason `The witness reports to have seen the suspect at the crime scene' supports the conclusion `The suspect was at the crime scene', but does not guarantee that conclusion, because---for instance---the witness could have made a mistake. A defeasible reason can provide \textit{prima facie} justification for a conclusion, which might later be withdrawn in light of  countervailing reasons.
+%
 % BV I don't think so. :-) [IT IS STRANGE TO READ THAT A REASON IS DEFEASIBLE OR CONCLUSIVE. AN ARGUMENT IS, NOT THE REASON ITSELF. IT DEPENDS WHAT IT IS A REAOSN OF. CONFUSED ABOUT THIS.]
-
+%
 %BV Removed this bit since not needed:
 %Conclusive and defeasible reasons correspond to one-step conclusive and defeasible arguments. [AGAIN, UNCLEAR TO ME IN WHAT SENSE A REASONS CORRESPONDS TO AN ARGUMENT. I THOUGHT REASON CORRESPONDED TO PREMISE.] 
-Some other terms are used in connection with the difference between conclusive and defeasible arguments. For instance, there is the triplet of deductive, abductive, and inductive arguments. Consider the rule `If someone is shot, he dies'. A deductive argument involving this rule applies the rule to an instance of its antecedent: From `John is shot' and `If someone is shot, he dies', conclude `John dies'. An abductive argument using this rule uses an instance of the rule's consequent as a starting point, to infer the antecedent: From `John dies' and  `If someone is shot, he dies', conclude `John is shot'. Abductive arguments can be thought of as providing an explanation. Abductive arguments are typically defeasible, since there often are alternative explanations. Inductive arguments generalize from an instance of the rule's antecedent and consequent (or several such instances) to the rule: From `John is shot' and `John dies', conclude: `If someone is shot, he dies'. Inductive arguments are also typically defeasible, as the inferred rule often does not hold, at least not in full generality. Deductive arguments are also contrasted with ampliative arguments. In that distinction, deductive arguments only lead to conclusions that were already implicit in their premises, whereas ampliative arguments go beyond their premises. Arguing from A AND B to B is deductive in this sense, and from A to B ampliative.
+%Some other terms are used in connection with the difference between conclusive and defeasible arguments. For instance, there is the triplet of deductive, abductive, and inductive arguments. Consider the rule `If someone is shot, he dies'. A deductive argument involving this rule applies the rule to an instance of its antecedent: From `John is shot' and `If someone is shot, he dies', conclude `John dies'. 
+%
+Reasons that occur in so-called \textit{adductive arguments} are also defeasible, where 
+abductive arguments can be thought of as providing an explanation. %, %. Abductive arguments 
+%An abductive argument using this rule uses an instance of the rule's consequent as a starting point, to infer the antecedent: 
+For example, from `John's DNA matches the crime trace' conclude `John left the trace'.
+%and  `If someone is shot, he dies', conclude `John is shot'. 
+%The fact that John was shot is put forward as an explanation for Johns's death. 
+The fact that John left the trace is put forward as an explanation for the fact that John's DNA matches the trace. 
+Abductive arguments are typically defeasible because there often are alternative explanations. %John's death might have been caused by natural causes. 
+Someone with the same genetic profile as John might have left the trace. 
+
+%Inductive arguments generalize from an instance of the rule's antecedent and consequent (or several such instances) to the rule: From `John is shot' and `John dies', conclude: `If someone is shot, he dies'. Inductive arguments are also typically defeasible, as the inferred rule often does not hold, at least not in full generality. Deductive arguments are also contrasted with ampliative arguments. In that distinction, deductive arguments only lead to conclusions that were already implicit in their premises, whereas ampliative arguments go beyond their premises. Arguing from A AND B to B is deductive in this sense, and from A to B ampliative.
 
 %MDB [NOT SURE WE NEED ALL THIS TERMINOLOGY. COMPLICATED. REALLY NEEDED?]
 
 
-\paragraph{An argument can be tested by asking critical questions and the evaluation of the argument depends on the answers given.} 
+\paragraph{Arguments can be evaluated by asking critical questions} % and the evaluation of the argument depends on the answers given.} 
 %Defeasible reasons are characterized by the possibility of circumstances that have the effect that the conclusion of the reason does not follow, given the reason. [YOU TALK ABOUT CONCLUSION OF THE REASON. LOOKS LIKE YOU ARE USING 'REASON' AS THE SAME AS 'ARGUMENT'. ISN'T THIS STRANGE?]The occurrence of such defeating circumstances can be guided by asking critical questions. 
 %The answers to those critical questions provide insight into the evidential value of the reasons. 
 Consider again the one-step argument from the reason `The witness reports that she saw the suspect at the crime' to the conclusion `The suspect was at the crime scene'. 
@@ -1059,9 +1100,11 @@ Consider again the one-step argument from the reason `The witness reports that s
 Critical questions that can be asked about the argument include `Are there reasons to doubt the suspect was not at the crime scene, such as an alibi?', `Are there reasons to doubt that the witness testimony supports the conclusion that the suspect was at the crime scene, for instance is the witness lying?' and `Are there reasons to doubt the witness testimony, such as a fraudulent report?'. The first of these questions is directed at the argument's conclusion, the second at the argument step from reason to conclusion, and the third at the argument's reason. These different kinds of critical questions are connected to the three kinds of argument attack discussed in Section~\ref{sec:confArg} (see in particular Figure~\ref{fig:arg3}, page~\pageref{fig:arg3}). 
 Suppose that initially it is believed that the suspect was at the crime scene because of the witness testimony. A positive answer to any of the questions will weaken the support for the conclusion that the suspect was at the crime scene, perhaps up to the point of it no being believable.
 
-\paragraph{It can be subject to debate whether a reason supports or attacks a conclusion.} The supporting or attacking relation between a reason and its conclusion can be supported or attacked. This gives rise to four different combinations: support of a supporting relation, support of an attacking relation, attack of a supporting relation, and attack of an attacking relation. In Figure~\ref{fig:nesting}, these situations are illustrated by two opposite witness testimonies. 
-
+\paragraph{It can be subject to debate whether a reason supports or attacks a conclusion.} 
 Whether a reason supports a conclusion is associated with an underlying general rule. For instance, the argument from a witness testimony (the reason) to the suspect's being at the crime scene (the conclusion) is connected to the general rule that what witnesses say can generally be believed. Following \cite{toulmin1958}'s terminology, such general rules making explicit how to get from the reason to the conclusion are referred to as warrants. Support for a warrant is called the backing of the warrant.
+
+More generally, the supporting or attacking relation between a reason and its conclusion can be supported or attacked. This gives rise to four different combinations: support of a supporting relation, support of an attacking relation, attack of a supporting relation, and attack of an attacking relation. In Figure~\ref{fig:nesting}, these situations are illustrated by two opposite witness testimonies. 
+
 
 \begin{figure}[bt]
 \centering
@@ -1365,11 +1408,14 @@ An analysis of a case in terms of arguments can become very complex. This was al
 \caption{A Wigmore chart\label{fig:wigmore}}
 \end{figure}
 
-\paragraph{The evaluation of an argument can depend on its subarguments.}Given an argumentative analysis of the case, one would like to know which conclusions follow, and which don't. We already discussed how arguments consisting of conflicts of reasons can be evaluated in this sense, when we discussed the role of exceptions, preferences and weighing (Section~\ref{sec:valueArgs}). More generally, the structure of a complex of arguments influences the evaluation of the arguments. In particular, the subarguments of a larger argument determine the evaluation of the whole. For an example, we go back to the argument in Figure~\ref{fig:arg2} (page~\pageref{fig:arg2}). There the witness report supported the intermediate conclusion that the suspect was at the crime scene, which in turn supported the conclusion that the suspect committed the crime. So there is an argument consisting of two steps. In the example, the first of these steps is attacked by a counterargument involving the lying of the witness. As a result of this attack, the argument to the intermediate conclusion that the suspect was at the crime scene breaks down and its conclusion does not follow. As a result, also the larger two-step argument no longer supports its conclusion, which hence does not follow. Since the one-step subargument does not successfully support the intermediate conclusion, also the whole two-step argument for the final conclusion does not successfully support its conclusion.
+\paragraph{The evaluation of an argument can depend on its subarguments.}Given an argumentative analysis of the case, one would like to know which conclusions follow, and which don't. 
+%We already discussed how arguments consisting of conflicts of reasons can be evaluated in this sense, when we discussed the role of exceptions, preferences and weighing (Section~\ref{sec:valueArgs}). 
+The structure of a complex of arguments influences the evaluation of the arguments, and in particular, the subarguments of a larger argument determine the evaluation of the whole. 
+For example, consider the argument in Figure~\ref{fig:arg2} (page~\pageref{fig:arg2}). There the witness testimony supported the intermediate conclusion that the suspect was at the crime scene, which in turn supported the conclusion that the suspect committed the crime. So there is an argument consisting of two steps. In the example, the first of these steps is attacked by a counterargument involving the lying of the witness. As a result of this attack, the argument to the intermediate conclusion that the suspect was at the crime scene breaks down and its conclusion does not follow. As a result, also the larger two-step argument no longer supports its conclusion, which hence does not follow. Since the one-step subargument does not successfully support the intermediate conclusion, also the whole two-step argument for the final conclusion does not successfully support its conclusion.
 
-\paragraph{The evaluation of an argument can depend on chains of attacks.} When an argument is successfully attacked, it no longer successfully supports its conclusion. But attack can be chained, since the attack itself can be countered by a further attack. When an attack is successfully attacked, the original argument can become reinstated, in the sense that it again successfully supports its conclusion. Figure~\ref{fig:reinstatement} shows an example. A first witness, Witness $A$, reports that the suspect was at the crime scene. Given only this information, there is good reason to assume that the suspect was at the crime scene. However, there is a second witness, Witness $B$, who reports that Witness $A$ is lying. Given these two reasons, based on the witness reports by $A$ and $B$, it is no longer successfully supported that the suspect was at the crime scene. If now there is a third witness, Witness C, who reports that Witness B is lying, the attack is countered. Witness B is no longer believed, so there is no reason to conclude that Witness A is lying. As a result, A's report can again support its conclusion that the suspect was at the crime scene. The original argument based on A's report is reinstated. 
+\paragraph{The evaluation of an argument can depend on chains of attacks.} When an argument is successfully attacked, it no longer successfully supports its conclusion. But attack can be chained, since the attack itself can be countered by a further attack. When an attack is successfully attacked, the original argument can be reinstated, in the sense that it again successfully supports its conclusion. Figure~\ref{fig:reinstatement} shows an example. A first witness, Witness $A$, reports that the suspect was at the crime scene. Given only this information, there is good reason to assume that the suspect was at the crime scene. However, there is a second witness, Witness $B$, who reports that Witness $A$ is lying. Given these two reasons, based on the witness reports by $A$ and $B$, it is no longer successfully supported that the suspect was at the crime scene. If now there is a third witness, Witness C, who reports that Witness B is lying, the attack is countered. Witness B is no longer believed, so there is no reason to conclude that Witness A is lying. As a result, A's report can again support its conclusion that the suspect was at the crime scene. The original argument based on A's report is reinstated. 
 
-\paragraph{Conflicts between reasons can be addressed by exceptions, preferences and weighing.} The counterarguments to a reason that result from asking critical questions give rise to conflicts between reasons. Sometimes conflicts of reasons can be resolved in the sense that it can be determined which conclusions follow from the conflicting reasons. We distinguish three kinds of conflicts. 
+\paragraph{Conflicts between reasons can be addressed by exceptions, preferences and weighing [NEEDS FIXING].} The counterarguments to a reason that result from asking critical questions give rise to conflicts between reasons. Sometimes conflicts of reasons can be resolved in the sense that it can be determined which conclusions follow from the conflicting reasons. We distinguish three kinds of conflicts. 
 
 In the first kind of conflicts between reasons, there is a reason attacked by an exclusionary reason, i.e., an attack of the undercutting kind that goes against the connection between the reason and its conclusion (cf. Section~\ref{sec:confArg}). This situation is shown at the top of Figure~\ref{fig:conflicts}: There is a witness reporting that the suspect was at the crime scene, but there is evidence that the witness is lying. 
 %BV Done [ISN'T IT BETTER TO SAY THAT THERE IS EVIDENCE SUGGESTING THAT THE WITNESS IS LYING? ] 
@@ -1413,7 +1459,95 @@ Formal argumentation models~\citep{simariLoui1992, vreeswijk1997, prakken2010, v
 
 The probability calculus provides formal rules for the coherent interpretation of the evidence.
 
+<<<<<<< HEAD
 \paragraph{The likelihood ratio formula shows how new evidence changes the odds of a hypothesis.} The odds of a hypothesis $H$ are defined as the ratio $P(H)/P(\neg H)$ of the probability of the hypothesis and the probability of its negation. Given new evidence $E$, the odds $P(H)/P(\neg H)$ of the hypothesis unconditioned on the evidence are called the \emph{prior odds} of the hypothesis, and the odds $P(H | E)/P(\neg H | E)$ of the hypothesis conditioned on the evidence the \emph{posterior odds}. It follows from Bayes' theorem (Section~\ref{sec:normfram:prob}) that the posterior odds can be found by multiplying the prior odds with the likelihood ratio: 
+=======
+\paragraph{Independent items of evidence can be combined by multiplying the likelihood ratios.}
+%BV As yet I am confused by this section. Notsure what to think. Let's discuss. Some bits are of my thoughts are as follows. First black sentence: Multiplication requires something else than independence, namely independence given H and given -H. Also the numeric examples aren't so helpful or so it seems as they are rather artificial. And: Is the point about two LRs canceling out when multiplied what we want to say? Second black point: This seems to be not so helpful. Third black point: This is an example far away from the range of examples we have been focusing on. Should this not be about combining two (or more) pieces of evidence and supporting two (or more) coherent events, aka scenarios?
+
+In a criminal case, there may be more than one piece of evidence, for example, 
+there may be an eyewitness testimony and a DNA match. 
+Suppose $P(\textit{guilt}| \textit{testimony})=0.7$
+and $P(\textit{guilt} | \textit{match})=0.7$. What is the probability 
+$P(\textit{guilt}| \textit{testimony} \wedge \textit{match})$ resulting 
+from combing the two pieces of evidence? It would be a mistake to say that, assuming that 
+the two items of evidence are independent, $P(\textit{guilt}| \textit{match} \wedge \textit{testimony})$ equals 
+$0.7\times 0.7=0.49$. %How can  $P(\textit{guilt}| \textit{match}, \textit{testimony})$ be lower than  
+%$P(\textit{guilt}| \textit{testimony})$ or $P(\textit{guilt}| \textit{match})$? 
+The combination of two pieces of evidence, each favoring guilt to some extent, should strengthen the case for guilt, 
+not weaken it. Observe that 
+ %
+\[\frac{P(\textit{guilt} | \textit{match}\wedge \textit{testimony})}{P(\neg \textit{guilt} | \textit{match}\wedge \textit{testimony})}=\frac{P(\textit{match}\wedge \textit{testimony} | \textit{guilt})}{P(\textit{match}\wedge \textit{testimony} | \neg \textit{guilt})}\times \frac{P(\textit{guilt})}{P(\neg \textit{guilt})},\]
+ %
+ and if \textit{match} and \textit{testimony} are independent, conditional on \textit{guilt}, then 
+  %
+\[\frac{P(\textit{match}\wedge \textit{testimony} | \textit{guilt})}{P(\textit{match}\wedge \textit{testimony} | \neg \textit{guilt})}=\frac{P(\textit{match}| \textit{guilt})}{P(\textit{match}|\neg \textit{guilt})}\times\frac{P(\textit{testimony} | \textit{guilt})}{P(\textit{testimony} | \neg \textit{guilt})}.\]
+%
+%or more succinctly,
+%
+%\[LR12 = LR1 \times LR2.\]
+ %
+%So, putting everything together,
+ %
+ %\[\frac{P(\textit{guilt} | \textit{match}, \textit{testimony})}{P(\neg \textit{guilt} | \textit{match}, \textit{testimony})}=LR1\times LR2\times \frac{P(\textit{guilt})}{P(\neg \textit{guilt})}.\]
+ %
+%
+The point is that the likelihood ratios should be multiplied, not the probabilities of each hypothesis given the evidence. 
+Suppose DNA evidence shows that the crime traces match with defendant, and 
+the match has a likelihood ratio $\frac{P(\textit{match} | \textit{guilt})}{P(\textit{match}| \neg \textit{guilt})}$ of 36. 
+Suppose the witness testimony favors the hypothesis of guilt and again has a likelihood ratio $\frac{P(\textit{testimony} | \textit{guilt})}{P(\textit{testimony}| \neg \textit{guilt})}$ of 36.
+These numbers are purely illustrative. The combined evidential value of the two pieces of evidence is $36\times 36=1296$. 
+This is a higher value than the two pieces of evidence considered separately, so 
+$P(\textit{guilt}| \textit{match} \wedge \textit{testimony})$ will be greater than $P(\textit{guilt}| \textit{match})$ 
+or $P(\textit{guilt}| \textit{testimony})$ considered separately, as expected. 
+ 
+Multiplying the likelihood ratios increases the evidential 
+value if the likelihood ratios are greater than one, and decreases the evidential value if the likelihood ratio 
+are lower than one. If one likelihood ratio is greater and the other lower than one, that is, 
+one item of evidence favors the hypothesis and the other disfavors it, 
+their combined evidential value will vary.  To illustrate, consider a case in which 
+%two items of evidence, 
+%intuitively, cancel one another out.  
+there are two conflicting testimonies. 
+One witness asserts that the defendant was around the scene of the 
+crime when the crime was committed. This incriminating testimony 
+favors the hypothesis of guilt, for example,
+%
+\[\frac{P(\textit{incriminating witness}| \textit{guilt})}{P(\textit{incriminating witness} | \neg \textit{guilt)}}=\frac{0.9}{0.1}=9,\]
+%
+where the numbers are purely illustrative. 
+The other witness offers an alibi for the defendant and asserts that she was with the defendant 
+during the time of the crime. The alibi disfavors the hypothesis of guilt, so that 
+%
+\[\frac{P(\textit{alibi}| \textit{guilt})}{P(\textit{alibi}| \neg \textit{guilt})}=\frac{0.1}{0.9}=1/9,\] 
+%
+where the numbers are, once again, purely illustrative. 
+ %Suppose $G$ has a probability of 0.5, regardless of the two testimonies.
+%Suppose, also, that the incriminating testimony brings the probability of $G$ to 0.9, whereas the alibi brings the probability of 
+%$G$ to 0.1 (and thus brings the probability of $\neg G$ to 0.9). Each testimony has the \textit{same yet divergent impact} on 
+%$P(G)$. The incriminating testimony raises the probability of $G$ while the alibi lowers the probability SC. 
+%They each do so to the same extent but in opposite directions. 
+Absent further information about the trustworthiness of the testimonies, 
+they should cancel one another. 
+%The evidential value of each testimony  
+%can be represented, in terms of likelihood ratios, 
+%as follows:
+%
+%\[LR1=\frac{P(W1| G)}{P(W1|\neg G)}=\frac{0.9}{0.1}=9 \text{ and } LR2=\frac{P(W2|G)}{P(W2|\neg G)}=\frac{0.1}{0.9}=\frac{1}{9}.\]
+%
+The combined evidential value of the two testimonies is null, as expected, for
+%
+\[\frac{P(\textit{alibi}|  \textit{guilt})}{P(\textit{alibi}  \neg \textit{guilt})}\times \frac{P(\textit{incriminating witness}| \textit{guilt} )}{P(\textit{incriminating witness}| \neg\textit{guilt})}=9\times \frac{1}{9}=1.\] 
+%
+The multiplication of the likelihood ratios as a procedure to combine items of evidence 
+can be used for more than two items of evidence. 
+Assuming independence, the general 
+formula is as follows:
+%
+\[LR_1\times \dots \times LR_k,\]
+%
+where $LR_i=\frac{P(E_i | H)}{P(E_i | \neg H)}$, for $i\in \{1, \dots, k\}$, and $H$ is the hypothesis of interest.
+>>>>>>> origin/master
 
 	\[ \frac{P(H|E)}{P(\neg H | E)} = \frac{P(E | H)}{P(E| \neg H)}\cdot \frac{P(H)}{P(\neg H)},\]
 
@@ -1516,8 +1650,8 @@ whether to convict or acquit the defendant.
 %Currently, there is no strict regulation of how the fact finders should reason or 
 %reach conclusions on the basis of the evidence. However, 
 The decision criterion is defined by law 
-and consists of a standard of proof, sometimes also called burden of persuasion. This is not to be confused with 
-the burden of proof, which includes the burden of persuasion as well as the burden of production.
+and consists of a standard of proof, sometimes also called burden of persuasion. 
+%This is not to be confused with the burden of proof, which includes the burden of persuasion as well as the burden of production.
 %The standard of proof identifies, in a somewhat verbally imprecise manner, 
 %how strong the evidence should be for warranting a finding of criminal liability. Failure to meet the standard of proof must 
 %result in an acquittal. 
@@ -1526,21 +1660,20 @@ The criterion for criminal cases in common law countries is
  If the decision makers are persuaded of the defendant's guilt beyond a reasonable doubt, 
  they should convict, or else they should acquit.  
 
-In Commonwealth v.\ Massachusetts Webster (1850), 
-proof beyond a reasonable doubt is equated to 
-`reasonable and moral certainty'. In R.\ v.\ Lifchus (1997),  the Supreme Court of Canada writes that 
-the `the standard of proof beyond a reasonable 
-doubt is inextricably intertwined with \dots 
-the presumption of innocence', that it is connected with `the evidence or  
-absence of evidence', and also that `it does not involve proof to an absolute certainty' and so 
-`it is not proof beyond any doubt' (335). 
-Explanations abound in the case law. And yet, it is unclear 
+%In Commonwealth v.\ Massachusetts Webster (1850), 
+%proof beyond a reasonable doubt is equated to 
+%`reasonable and moral certainty'. In R.\ v.\ Lifchus (1997),  the Supreme Court of Canada writes that 
+%the `the standard of proof beyond a reasonable 
+%doubt is inextricably intertwined with \dots 
+%the presumption of innocence', that it is connected with `the evidence or  
+%absence of evidence', and also that `it does not involve proof to an absolute certainty' and so 
+%`it is not proof beyond any doubt' (335). 
+Paraphrases of the formulation `proof beyond a reasonable doubt' 
+abound in the case law. And yet, it is unclear 
 whether they improve our understudying. The US Supreme Court might have been right when, in Holland v.\ United States (1954), 348 U.S. 121, 
 it wrote that that `attempts to explain the term ``reasonable doubt'' do not result in making it any clearer' (140).
- 
- 
 The three frameworks we considered---probability, arguments and narratives---can be used to characterize 
-more precisely the standard of proof, although they are not immune from shortcomings either, 
+more precisely the standard of proof, although they are not immune from shortcomings, 
 as we shall soon see.
 
 
@@ -1560,12 +1693,12 @@ Character evidence and its exclusion \citep{redmayne2015}.
 \subsection{Probability}
 
 
-\paragraph{The guilt probability is estimated by weighing  the evidence within the probability calculus.}
+\paragraph{The guilt probability is estimated by weighing  the evidence with the probability calculus.}
 
  On the probabilistic framework, the goal is to estimate the probability of the defendant's guilt based 
  on all the available evidence. The estimation begins with the lowest possible value 
 for the guilt probability, prior to considering any evidence. As more evidence is presented, the guilt probability 
-moves upwards or downward depending on whether the evidence is incriminating or exculpatory. 
+moves upwards or downwards depending on whether the evidence is incriminating or exculpatory. 
 When all the evidence is considered, a final guilt probability value is 
 reached, all things considered. This forms the basis for 
 the decision to convict or acquit. 
@@ -1624,8 +1757,8 @@ The characterization is simple, crisp and elegant, but a too literal interpretat
 and even if this value could be known, other probability values might remain unknown. One solution here is that instead 
  of aiming for a unique guilt probability, we can simply aim for an interval of admissible probabilities given the evidence. 
  More generally, the estimation of the probability of guilt can be viewed as an idealized process, a regulative ideal which can improve the precision of legal reasoning. 
-In this spirit, setting a probabilistic criterion for criminal convictions would only be a way 
-to theorize about the meaning and ideal of the criminal standard of proof. 
+%In this spirit, setting a probabilistic criterion for criminal convictions would only be a way 
+%to theorize about the meaning and ideal of the criminal standard of proof. 
 
 Another problem with the probabilistic characterization 
 is that it does not take into account the so-called weight of the evidence, that is, whether the evidential basis contains all the evidence 
@@ -1652,41 +1785,43 @@ of the evidence \citep{kaye1999, stein05}.
 \subsection{Arguments}
 
 
-\paragraph{Arguments and counterarguments are collected and weighed.}
+\paragraph{Suporting and attacking reasons are collected and weighed.}
 
-In a court of law, the prosecutor or plaintiff puts forward a claim and offers supporting arguments. The opposing parts responds by offering counterarguments. The dialectical process can be complex. There are different counterarguments: undermining,  undercutting and rebutting. The process is complex also because it can iterated. 
-An argument can be attacked by a counteargument, and the latter in turn can be attached by a further counterargument. And so on. 
+In a court of law, the prosecutor puts forward a conclusion and offers supporting reasons. The opposing parts responds by offering attacking reasons. 
+The dialectical process can be complex. As seen earlier, there are different attacking reasons: undermining,  undercutting and rebutting. The process is complex also because 
+it can be iterated. A conclusion can be attacked by an attacking reasons, and the latter in turn can be attacked. And so on. 
 When the dialectical process reaches an equilibrium point and the opposing parties have nothing more to contribute, 
-the status of a claim and its supporting argument can be assessed. 
+the status of a claim and its supporting reasons can be assessed. 
 
-On the argument based 
-framework, the goal is to consider all the available arguments, by representing them in a comprehensive argumentation graph that 
-keeps track of the relations of support and attack between arguments. The two competing theories of the cases, the prosecutor's and the defense's theory, will each
-be supported by a set of arguments. The argument framework, through the aid of argument graphs, allow us to 
-compare the relative strength of the arguments in favor of one side of the case or the other. This comparison of the argumentative strength of the two sides 
+On the argument based framework, the goal is to consider all the available reasons, by representing them in a comprehensive argumentation graph that 
+keeps track of the relations of support and attack. The two competing theories of the cases, the prosecutor's and the defense's theory, will each
+be supported by a set of reasons. The argument framework, through the aid of argument graphs, allow us to 
+compare the relative strength of the reasons in favor of one side of the case or the other. This comparison of the two sides 
 forms the basis for the trial decision.
 
 
-\paragraph{Defeating all counterarguments is the criterion for meeting the standard of proof.}
+\paragraph{Defeating all attacks is the criterion for meeting the standard of proof.}
 
-In order to establish the defendant's guilt beyond a reasonable doubt, all counterarguments 
-to the contrary must be responded, or in other words, all the attacks against the argument for guilt must be 
-defeated. Now, whether a counteargument or an attack is defeated 
+In order to establish the defendant's guilt beyond a reasonable doubt, 
+all the attacks against the conclusion that the defendant is guilty must be 
+defeated. Now, whether an attack is defeated 
 is not always an all or nothing affair. It is often a matter of degrees. 
-If the argument for guilt is slightly stronger than all its counterarguments, this would not be enough yet. 
-To meet the demands of the standard of proof beyond a reasonable doubt, an argument must be significantly 
-stronger than all its counterarguments. On the other hand, defeating all its counterarguments with absolute certainty would be too much to expect. 
-So, more realistically, all counterattacks must be defeated in an almost definitive way. Here, it seems, we need 
+If the reasons for guilt are slightly stronger than all their attacks, this would not be enough yet. 
+To meet the demands of the standard of proof beyond a reasonable doubt, the supporting reasons must be significantly 
+stronger than all their attacks. On the other hand, defeating all the attacks with absolute certainty would be too much to expect. 
+So, more realistically, all attacks must be defeated in an almost definitive way. Here, it seems, we need 
 to reintroduce some threshold, even though not in an explicitly probabilistic or numerical way. 
 
 
-\paragraph{It is not clear when to stop collecting arguments and counterarguments.}
+\paragraph{It is not clear when to stop collecting supporting and attacking reasons.}
 
 
-The argumentation framework is rather realistic. The dialectic between arguments and 
-counterarguments effectively takes place in court, and the idea that meeting the standard of proof requires to answer all 
-counterargument against guilt is natural enough. A problem is that if the opposing party puts forward no counterarguments, meeting the standard of proof would be effortless. A possible response here is that the counterarguments must be all the counterarguments which a reasonable objector could in principle put forward, not just 
-the counterarguments that in fact are put forward. %Here again we see we must recourse to some dose of idealization or abstraction. 
+The argumentation framework is rather realistic. The idea that meeting the standard of proof requires to answer all 
+attacks against the conclusion that the defendant is guilty 
+is natural enough. A problem is that if the opposing party puts forward no attacks, meeting the standard of proof would be effortless. 
+A possible response here is that the attacks must be all the attacks which a reasonable objector could in principle put forward, not just 
+the attacks that in fact are put forward. %Here again we see we must recourse to some dose of idealization or abstraction. 
+But who is this 'reasonable objector'?
 
 Another problem consists in identifying the threshold. While the probability based account can identify a specific probability threshold, 
 at least in theory, by applying the principle of expected utility theory, the argumentation based framework cannot. 
@@ -1712,7 +1847,7 @@ a scenario that proves innocence. Be that as it may, the various competing scena
 
 \paragraph{The best explanatory scenario is the rule of decision.}
 
-We can picture the process of evaluation of the competing scenario as a process of elimination. 
+We can picture the process of evaluation of the competing scenarios as a process of elimination. 
 At the beginning, several scenarios are viable, but as more evidence is considered and the scrutiny of each scenario continues,
 fewer scenarios will survive. The goal would be to select one scenario, or at least a limited set of scenarios, so that 
 the answer to the question `guilty or not?' would be univocal. On this picture, a scenario meets the demands of the standard 
