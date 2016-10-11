@@ -189,16 +189,19 @@ Still, it remains a hypothesis. There are many reasons why the hypothetical even
 
 DNA profiling has become an important tool in courts. The evidential relevance of a DNA profile stems from the fact that, although most of the structure of DNA is shared among all human beings (more than 99\%), the variations that do exist are very specific for each individual. %DNA profiling has a strong scientific underpinning, and comes with precise statistical information.
 
-A \textit{DNA profile} is determined by analyzing a number of specific locations---the so-called \textit{loci}---of a DNA molecule. %, 
+A \textit{DNA profile} is determined by analyzing a number of specific locations, the so-called \textit{loci}, of a DNA molecule. %, 
 %and establish the type of structure found there. The type of structure found at a locus is called an \textit{allele}. 
-Each locus is associated with different \textit{alleles} 
-which can be found at that location, where an allele differs from another because 
-of the number of repetitions of a small DNA sequence. For instance, one locus used in the profiles stored in forensic DNA databases in the United States is CSF1PO. 
-This locus has up to 16 allele types, depending on how often the molecular sequence AGAT is repeated at that location.\footnote{See \url{www.cstl.nist.gov/strbase/str\_CSF1PO.htm}.} 
-%MDB: removed %alleles 5, 6, 7 and then up to 16, 
-Different countries use different sets of---what are called---\textit{core loci} for their DNA profiles. 
+Different countries use different sets of %what are called 
+\textit{core loci} for their DNA profiles. 
 %MDB [TERMINOLOGY IS NOT EXPLAINED HERE. WHAT ARE LOCI? WHAT ARE ALLELES? TABLE TO BE ADDED MIGHT HELP. THE BUSINESS OF REPETITIONS IS NOT FULLY CLEAR] 
 For instance, the CODIS system in the United States uses 13 core loci, to be expanded to 20 core loci in 2017.\footnote{See \url{www.fbi.gov/services/laboratory/biometric-analysis/codis}.} 
+At each specific locus, a different \textit{allele} might occur. 
+%Each locus is associated with different \textit{alleles} 
+% which can be found at that location, where an allele differs from another because 
+%of the number of repetitions of a small DNA sequence. 
+For instance, one locus used in the profiles stored in forensic DNA databases in the United States is CSF1PO. 
+This locus has up to 16 allele types, depending on how often the molecular sequence AGAT is repeated at that location.\footnote{See \url{www.cstl.nist.gov/strbase/str\_CSF1PO.htm}.} 
+%MDB: removed %alleles 5, 6, 7 and then up to 16, 
 A DNA profile, then, consists in a list allele types for a certain number of select core loci. 
 
 
@@ -225,20 +228,20 @@ Moreover, testing the independence assumption can be hard, and require the asses
 %MDB [BUT I THINK THERE IS LITERATURE THAT HAS TESTED THE INDEPENDENCE ASSUMPTION. DO WE MENTION IT? BUCKLETON BOOK?]
 
 With this background in place, suppose now that a trace of blood is found on the crime scene, and that the DNA profile created from the trace matches the DNA profile of the suspect. Using the match, 
-the fact finders can form the hypothesis that the suspect is the source of the blood trace. The Random Match Probability associated with the profile provides 
+the fact finders can form the hypothesis that the suspect is the source of the blood trace, and the Random Match Probability associated with the profile provides 
 a measure of the evidential strength of the match. %It is a common misunderstanding to equate this number with the probability that the suspect is not the source of the trace. 
 %This well-known misunderstanding is referred to as the prosecutor's fallacy. The probability that the suspect is not the source of the trace can only be determined from the Random Match Probability, after considering the prior odds that the suspect is the source. 
 %MDB [IS THIS THE RIGHT PLACE TO TALK ABOUT PROSECUTOR'S FALLACY? TOO EARLY? TOO MUCH INFORMATION?]
-Now, the hypothesis that can be formed on the basis of a DNA match is rather circumscribed. 
-It is limited to the suspect being the \textit{source} of the trace. 
-It should not be confused without the hypothesis that the suspect is \textit{guilty}, at least 
+Importantly, the hypothesis that can be formed on the basis of a DNA 
+match is rather circumscribed. It is limited to the suspect being the \textit{source} of the trace and 
+should not be confused with the hypothesis that the suspect is \textit{guilty}, at least 
 absent other information about how the trace got there. 
 Further, the hypothesis itself that the suspect is the source 
 need not be true. The suspect and the perpetrator, though different people, might share 
 the same DNA profile, either because they are identical twins or because, though unrelated, 
 they happen to share the same profile.\footnote{At a rate of a dozen or more twin births per 1000 live births, identical twins are not that rare. 
 Source \url{https://en.wikipedia.org/wiki/Twin\#Statistics}.} We should also be wary 
-of laboratory errors which give rise to false positive results. 
+of laboratory errors and false positive matches. 
 
 
 \subsection{Central questions}
@@ -318,10 +321,9 @@ on the evaluation of the evidence:
 
 In this section, we discuss three normative frameworks for the correct handling of the evidence: 
 arguments; probabilities; and scenarios. %  \citep{andersonEtal2005,kapteinEtal2009,dawidEtal2011}. 
-We shall only briefly sketch their distinctive theoretical strengths. Arguments can naturally 
+We shall only emphasize their distinctive theoretical strengths. Arguments can naturally 
 capture the dialogical dimension, by modeling relations of support and attack. 
-Probabilities are better suited to quantify the value of the evidence, and this 
-is useful when it comes to DNA evidence and its statistical underpinnings. Finally, scenarios are 
+Probabilities are better suited to quantify the value of the evidence. Finally, scenarios are 
 best in offering a coherent and holistic interpretation 
 of large bodies of evidence. 
 
@@ -338,7 +340,7 @@ contain reasons that \textit{support} or \textit{attack} a certain conclusion of
 she saw the suspect at the crime scene, this evidence constitutes a reason for the conclusion that 
 the suspect was, in fact, at the crime scene. But if the DNA profile found at the crime scene 
 does not match the suspect's DNA profile, this constitutes 
-a reason attacking the conclusion. A simple argument structure with a supporting and 
+a reason attacking the conclusion. An argument with a supporting and 
 an attacking reason is represented in Figure~\ref{fig:arg}.
 
 \begin{figure}[bt]
@@ -368,20 +370,19 @@ the famous Bayes' theorem:
 	$\Pr(H|E) = \dfrac{\Pr(E|H)}{\Pr(E)}\cdot\Pr(H)$
 \end{quotation}
 %
-%This formula---which can be easily proven from 
-%the probability axioms---shows how the 
-%conditional probability $\Pr(H|E)$ of hypothesis $H$ given evidence $E$ 
-%can be computed by the prior probability $\Pr(H)$ and the 
-%factor $\Pr(E|H)/\Pr(E)$. 
-One of the lessons of Bayes' theorem is that the more surprising 
+This formula---which can be easily proven from 
+the probability axioms---shows how the 
+conditional probability $\Pr(H|E)$ of hypothesis $H$ given evidence $E$ 
+can be computed by the prior probability $\Pr(H)$ and the 
+factor $\Pr(E|H)/\Pr(E)$.  One of the lessons of Bayes' theorem is that the more surprising 
 the evidence---that is, the lower $\Pr(E)$---the higher the probability 
-of the hypothesis given the evidence (and the more pronounced the probability increase). 
-To illustrate, compare two DNA profiles, one with a Random Match Probability of 1 in 10 and the other with 
-a Random Match Probability of 1 in 1 million. It is more surprising---that is, less probable---to find a match 
-for the latter than the former profile. Suppose now a genetic match is found between 
-the crime traces and a suspect. The hypothesis that the suspect is the source 
-of the traces is more probable (or the probability increase more pronounced) 
-if the matching profile has a lower Random Match Probability.
+of the hypothesis given the evidence and the larger the probability increase. 
+%To illustrate, compare two DNA profiles, one with a Random Match Probability of 1 in 10 and the other with 
+%a Random Match Probability of 1 in 1 million. It is more surprising---that is, less probable---to find a match 
+%for the latter than the former profile. Suppose now a genetic match is found between 
+%the crime traces and a suspect. The hypothesis that the suspect is the source 
+%of the traces is more probable (or the probability increase more pronounced) 
+%if the matching profile has a lower Random Match Probability.
 
 %To illustrate, suppose a trace is found at the crime scene 
 %rare DNA profile of estimated frequency, or Random Match Probability, 1 in a billion. 
@@ -516,10 +517,11 @@ at the crime scene.
 %
 Second, the reason itself can be attacked, although this is a bit more difficult to imagine.  
  For instance, %when the witness report is fraudulent, this is a reason for believing the witness did not report 
- if the witness never actually testified that she saw the suspect at the crime scene, this challenges the very 
+ if the witness never actually testified that she saw the suspect at the crime scene, this attacks the very 
  existence of the supporting reason itself. 
  %content of the witness testimony was misunderstood---for example, because the testimony was provided through a translation---this is a reason for 
- %doubting the witness actually testified she saw the suspect at the crime scene. This kind of attack is referred to as \textit{undermining attack}. 
+ %doubting the witness actually testified she saw the suspect at the crime scene. 
+ This kind of attack is referred to as \textit{undermining attack}. 
 %
 Third, the connection between the reason and the conclusion can be attacked.
  The fact that the lighting conditions were bad when the witness saw the crime, 
@@ -528,7 +530,7 @@ Third, the connection between the reason and the conclusion can be attacked.
  In contrast with a rebutting attack, an undercutting attack provides no support for the opposite conclusion. In the example, %when the witness is lying, 
  if the lighting conditions were bad, there is no reason explicitly 
  supporting that the suspect was not at the crime scene. The attacking reason, % statement, %here the lying of the witness, 
- here the existence of bad lighting conditions, is also referred to as an exclusionary reason. 
+ here the bad lighting conditions, is also referred to as an exclusionary reason. 
 %
 The three examples of the different kinds of attack are shown in Figure~\ref{fig:arg3}.
 
@@ -544,21 +546,20 @@ The three examples of the different kinds of attack are shown in Figure~\ref{fig
 
 Just as attacking reasons can target the conclusion of an argument, its supporting
 reason or the connection between the two, additional reasons 
-can provide further support for each of these parts. Having in mind a dialogical setting for analyzing the structure 
-of arguments, additional reasons can be understood 
-as responses to attacking reasons. 
+can provide further support for each of these parts. %Having in mind a dialogical setting for analyzing the structure of arguments, 
+Additional reasons can be seen as responses to attacking reasons or as reasons strengthening an existing argument. 
 
 Consider, once again, the argument that the suspect was at the crime scene because the witness reports that she saw the suspect at the crime scene. 
 First, the conclusion can be further supported, for example, by a second witness testimony. 
 If a conclusion is supported by more than one reason, this is referred 
 to as \textit{multiple support}. 
 %
-Second, the reason itself can be further supported, for example, 
+Second, the reason itself can be supported, for example, 
 by a video recording of the witness testimony itself. 
 Support of the reason itself is called \textit{subordinating support}. 
 %MDB isn't this subordinating support simply a case of "chaining"
 %
-Finally, the connection between the reason and the conclusion can be supported, for example, 
+Finally, the connection between the reason and the conclusion can be further supported, for example, 
 by another testimony that the witness has always been trustworthy and reliable. 
 Support for the connection between the reason and the conclusion does not have a standard name, but is closely related 
 to a third named kind of support: \textit{coordinated support}. In coordinated support, the support for the conclusion consists of at least 
@@ -578,9 +579,9 @@ Figure~\ref{fig:support} shows the three kinds of (further) support. (Multiple a
 %\paragraph{The arguments for and against different positions have structure, involving complexes of reasons supporting and attacking positions.}  MDB changed
 \paragraph{Arguments have structures, involving complexes of supporting and attacking reasons.} 
 
-So far we have looked at a simple argument, one consisting of a reason and a conclusion, along with three types 
-of attacking reasons and three types of symmetric supporting reasons. But an argument can also have 
-a more complex structure, for example, it can contain \textit{chains of reasons}, both supporting or attacking reasons. 
+So far we have looked at a simple argument,  consisting of a reason and a conclusion, along with three types 
+of attacking reasons and three types of symmetric supporting reasons. But an argument can also be more complex, 
+for example, it can contain \textit{chains of reasons}. 
 
 Consider, once again, the example of a witness who reports that she saw the suspect at the crime scene. The witness testimony constitutes a 
 reason supporting the conclusion that the suspect was at the crime scene, and this conclusion---in turn---functions as a reason 
