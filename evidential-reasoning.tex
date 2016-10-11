@@ -352,6 +352,7 @@ The analysis of the structure of arguments goes back to the early twentieth cent
 \end{comment}
 
 \subsection{Probabilities}
+\label{sec:normfram:prob}
 The second normative framework %for the correct handling of the evidence 
 uses probabilities as the main tool. 
 In handling evidence in court, a crucial question from the probabilistic perspective is, 
@@ -362,18 +363,24 @@ change in light of evidence $E$? This \textit{probability change} is expressed b
 the difference between the conditional probability $P(H|E)$ and the so-called \textit{prior 
 probability} $P(H)$.
 Both questions can be addressed with 
-the famous Bayes' theorem:
+the famous Bayes' theorem:\footnote{
+Bayes' theorem follows quickly using the definition of conditional probability. 
+We have $\Pr(E|H) = P(H\land E)/P(H)$. Here we use logical conjunction $\land$ to write the combined event $H$ and $E$. Hence $P(H\land E)=\Pr(E|H)\cdot P(H)$. It follows that
+$\Pr(H|E) = P(H \land E)/P(E) = \Pr(E|H)\cdot P(H)/P(E)$, proving Bayes' theorem.
+}
+
 %
 \begin{quotation}
 	$\Pr(H|E) = \dfrac{\Pr(E|H)}{\Pr(E)}\cdot\Pr(H)$
 \end{quotation}
+
 %
 %This formula---which can be easily proven from 
 %the probability axioms---shows how the 
 %conditional probability $\Pr(H|E)$ of hypothesis $H$ given evidence $E$ 
 %can be computed by the prior probability $\Pr(H)$ and the 
 %factor $\Pr(E|H)/\Pr(E)$. 
-One of the lessons of Bayes' theorem is that the more surprising 
+\noindent One of the lessons of Bayes' theorem is that the more surprising 
 the evidence---that is, the lower $\Pr(E)$---the higher the probability 
 of the hypothesis given the evidence (and the more pronounced the probability increase). 
 To illustrate, compare two DNA profiles, one with a Random Match Probability of 1 in 10 and the other with 
@@ -741,7 +748,7 @@ For the following statements hold:
 %\[\textit{\text{$E$ favors (or supports) $H$} iff }   P(H|E)> P(H) \textit{ iff }\frac{P(E|H)}{P(E|\neg H)}>1.\]
 \[ P(H|E)> P(H) \text{ iff }\frac{P(E|H)}{P(E|\neg H)}>1.\footnote{To see why, recall that 
 %
-\[ \frac{P(H|E)}{P(\neg H | E)} = \frac{P(E | H)}{P(E| \neg H)}\times \frac{P(H)}{P(\neg H)},\]
+\[ \frac{P(H|E)}{P(\neg H | E)} = \frac{P(E | H)}{P(E| \neg H)}\cdot \frac{P(H)}{P(\neg H)},\]
 %
 %BV The LR formula should be in the main text somewhere
 %BV I like having this proof. (Source?)
@@ -875,10 +882,6 @@ the overall value of the evidence for, or against, the hypothesis. If there is a
 Overall and incremental evidential value should not be confused. To illustrate, suppose we have strong evidence $E_1$ for the hypothesis $H$ that a suspect was at the crime scene, for instance security camera footage in which the suspect is easily recognizable. In this case, the overall evidential value $P(H|E_1)$ of the evidence is high. If this is the only evidence, then also the incremental evidential value is high: before the evidence the hypothesis is not strongly supported, i.e., $P(H)$ is low, whereas after the evidence, the hypothesis is strongly supported, i.e., $P(H|E_1)$ is high. In this case, the overall and incremental evidential value of $E_1$ align. Now suppose that a witness testifies that the defendant was not at the crime scene (evidence $E_2$), but as it turns out, the witness is unreliable as a known accomplice of the suspect. Consider now the overall evidential value $P(H|E_1, E_2)$ of the two pieces of evidence together. This will not have changed much when compared to $P(H|E_1)$. As a result, the incremental evidential value of $E_2$ is low, while still the overall evidential value $P(H|E_1, E_2)$ is high, even though $E_2$ did not contribute much. 
 
 The difference between overall and incremental evidential value can be especially confusing when there is a single piece of evidence and there is a misalignment between the two values. Consider the hypothesis $\neg H$ that the suspect was not at the crime scene and the evidence $E_2$, the testimony of the unreliable witness. Then $P(\neg H)$ is high and also $P(\neg H | E_2)$ is high. Uncritically interpreted, the high value of $P(\neg H | E_2)$ suggests that the testimony of the unreliable witness has a high evidential value. But incrementally $E_2$ did not change much. The hypothesis $\neg H$ is in totality still strongly supported after the incrementally weak evidence $E_2$, since the hypothesis was already strongly supported before that evidence. 
-
-
-
-
 
 %In this case, the incremental evidential value of the testimony in favor of guilt can be regarded as slightly incriminating. Hence we expect the probabilistic difference $P(\textit{guilt} | \textit{drunk witness})$ to be a small positive value, and the likelihood ratio $P(\textit{guilt} | \textit{drunk witness})/P(\textit{guilt} | \neg\textit{drunk witness})$ to be slightly above one.
 %
@@ -1408,226 +1411,69 @@ Formal argumentation models~\citep{simariLoui1992, vreeswijk1997, prakken2010, v
 
 \subsection{Probability}
 
+The probability calculus provides formal rules for the coherent interpretation of the evidence.
 
-\paragraph{Independent items of evidence can be combined by multiplying the likelihood ratios.}
-%BV As yet I am confused by this section. Notsure what to think. Let's discuss. Some bits are of my thoughts are as follows. First black sentence: Multiplication requires something else than independence, namely independence given H and given -H. Also the numeric examples aren't so helpful or so it seems as they are rather artificial. And: Is the point about two LRs canceling out when multiplied what we want to say? Second black point: This seems to be not so helpful. Third black point: This is an example far away from the range of examples we have been focusing on. Should this not be about combining two (or more) pieces of evidence and supporting two (or more) coherent events, aka scenarios?
+\paragraph{The likelihood ratio formula shows how new evidence changes the odds of a hypothesis.} The odds of a hypothesis $H$ are defined as the ratio $P(H)/P(\neg H)$ of the probability of the hypothesis and the probability of its negation. Given new evidence $E$, the odds $P(H)/P(\neg H)$ of the hypothesis unconditioned on the evidence are called the \emph{prior odds} of the hypothesis, and the odds $P(H | E)/P(\neg H | E)$ of the hypothesis conditioned on the evidence the \emph{posterior odds}. It follows from Bayes' theorem (Section~\ref{sec:normfram:prob}) that the posterior odds can be found by multiplying the prior odds with the likelihood ratio: 
 
-In a criminal case, there may more than one piece of evidence, for example, 
-there may be an eyewitness testimony and a DNA match. 
-Suppose $P(\textit{guilt}| \textit{testimony})=0.7$
-and $P(\textit{guilt} | \textit{match})=0.7$. What is the probability 
-$P(\textit{guilt}| \textit{testimony} \wedge \textit{match})$ resulting 
-from combing the two pieces of evidence? It would be a mistake to say that, assuming that 
-the two items of evidence are independent, $P(\textit{guilt}| \textit{match} \wedge \textit{testimony})$ equals 
-$0.7\times 0.7=0.49$. %How can  $P(\textit{guilt}| \textit{match}, \textit{testimony})$ be lower than  
-%$P(\textit{guilt}| \textit{testimony})$ or $P(\textit{guilt}| \textit{match})$? 
-The combination of two pieces of evidence, each favoring guilt to some extent, should strengthen the case for guilt, 
-not weaken it. Observe that 
- %
-\[\frac{P(\textit{guilt} | \textit{match}\wedge \textit{testimony})}{P(\neg \textit{guilt} | \textit{match}\wedge \textit{testimony})}=\frac{P(\textit{match}\wedge \textit{testimony} | \textit{guilt})}{P(\textit{match}\wedge \textit{testimony} | \neg \textit{guilt})}\times \frac{P(\textit{guilt})}{P(\neg \textit{guilt})},\]
- %
- and if \textit{match} and \textit{testimony} are independent, conditional on \textit{guilt}, then 
-  %
-\[\frac{P(\textit{match}\wedge \textit{testimony} | \textit{guilt})}{P(\textit{match}\wedge \textit{testimony} | \neg \textit{guilt})}=\frac{P(\textit{match}| \textit{guilt})}{P(\textit{match}|\neg \textit{guilt})}\times\frac{P(\textit{testimony} | \textit{guilt})}{P(\textit{testimony} | \neg \textit{guilt})}.\]
-%
-%or more succinctly,
-%
-%\[LR12 = LR1 \times LR2.\]
- %
-%So, putting everything together,
- %
- %\[\frac{P(\textit{guilt} | \textit{match}, \textit{testimony})}{P(\neg \textit{guilt} | \textit{match}, \textit{testimony})}=LR1\times LR2\times \frac{P(\textit{guilt})}{P(\neg \textit{guilt})}.\]
- %
-%
-The point is that the likelihood ratios should be multiplied, not the probabilities of each hypothesis given the evidence. 
-Suppose DNA evidence shows that the crime traces match with defendant, and 
-the match has a likelihood ratio $\frac{P(\textit{match} | \textit{guilt})}{P(\textit{match}| \neg \textit{guilt})}$ of 36. 
-Suppose the witness testimony favors the hypothesis of guilt and again has a likelihood ratio $\frac{P(\textit{testimony} | \textit{guilt})}{P(\textit{testimony}| \neg \textit{guilt})}$ of 36.
-These numbers are purely illustrative. The combined evidential value of the two pieces of evidence is $36\times 36=1296$. 
-This is a higher value than the two pieces of evidence considered separately, so 
-$P(\textit{guilt}| \textit{match} \wedge \textit{testimony})$ will be greater than $P(\textit{guilt}| \textit{match})$ 
-or $P(\textit{guilt}| \textit{testimony})$ considered separately, as expected. 
- 
-Multiplying the likelihood ratios increases the evidential 
-value if the likelihood ratios are greater than one, and decreases the evidential value if the likelihood ratio 
-are lower than one. If one likelihood ratio is greater and the other lower than one, that is, 
-one item of evidence favors the hypothesis and the other disfavors it, 
-their combined evidential value will vary.  To illustrate, consider a case in which 
-%two items of evidence, 
-%intuitively, cancel one another out.  
-there are two conflicting testimonies. 
-One witness asserts that the defendant was around the scene of the 
-crime when the crime was committed. This incriminating testimony 
-favors the hypothesis of guilt, for example,
-%
-\[\frac{P(\textit{incriminating witness}| \textit{guilt})}{P(\textit{incriminating witness} | \neg \textit{guilt)}}=\frac{0.9}{0.1}=9,\]
-%
-where the numbers are purely illustrative. 
-The other witness offers an alibi for the defendant and asserts that she was with the defendant 
-during the time of the crime. The alibi disfavors the hypothesis of guilt, so that 
-%
-\[\frac{P(\textit{alibi}| \textit{guilt})}{P(\textit{alibi}| \neg \textit{guilt})}=\frac{0.1}{0.9}=1/9,\] 
-%
-where the numbers are, once again, purely illustrative. 
- %Suppose $G$ has a probability of 0.5, regardless of the two testimonies.
-%Suppose, also, that the incriminating testimony brings the probability of $G$ to 0.9, whereas the alibi brings the probability of 
-%$G$ to 0.1 (and thus brings the probability of $\neg G$ to 0.9). Each testimony has the \textit{same yet divergent impact} on 
-%$P(G)$. The incriminating testimony raises the probability of $G$ while the alibi lowers the probability SC. 
-%They each do so to the same extent but in opposite directions. 
-Absent further information about the trustworthiness of the testimonies, 
-they should cancel one another. 
-%The evidential value of each testimony  
-%can be represented, in terms of likelihood ratios, 
-%as follows:
-%
-%\[LR1=\frac{P(W1| G)}{P(W1|\neg G)}=\frac{0.9}{0.1}=9 \text{ and } LR2=\frac{P(W2|G)}{P(W2|\neg G)}=\frac{0.1}{0.9}=\frac{1}{9}.\]
-%
-The combined evidential value of the two testimonies is null, as expected, for
-%
-\[\frac{P(\textit{alibi}|  \textit{guilt})}{P(\textit{alibi}  \neg \textit{guilt})}\times \frac{P(\textit{incriminating witness}| \textit{guilt} )}{P(\textit{incriminating witness}| \neg\textit{guilt})}=9\times \frac{1}{9}=1.\] 
-%
-The multiplication of the likelihood ratios as a procedure to combine items of evidence 
-can be used for more than two items of evidence. 
-Assuming independence, the general 
-formula is as follows:
-%
-\[LR_1\times \dots \times LR_k,\]
-%
-where $LR_i=\frac{P(E_i | H)}{P(E_i | \neg H)}$, for $i\in \{1, \dots, k\}$, and $H$ is the hypothesis of interest.
+	\[ \frac{P(H|E)}{P(\neg H | E)} = \frac{P(E | H)}{P(E| \neg H)}\cdot \frac{P(H)}{P(\neg H)},\]
 
-\paragraph{Items of evidence can be combined even if they are not independent.}
+\noindent To derive the likelihood ratio, one first applies Bayes' theorem to both $H$ and $\neg H$. We get $\Pr(H|E) = \Pr(E|H)\cdot\Pr(H)/\Pr(E)$ and $\Pr(\neg H|E) = \Pr(E|\neg H)\cdot\Pr(\neg H)/\Pr(E)$. Using these, we find:
 
-So far we have assumed that the items of evidence to be combined are independent, 
-conditional on guilt or on whatever hypothesis of interest. 
-%More precisely, for the case of two items of evidence, 
-%
-%\[ \text{$E_1$ and $E_2$ are independent, conditional on $H$, iff $P(E_1 | H)= P(E_2 | E_1 \wedge H)$ }\]
-%
-If this assumption is dispensed with, the combined likelihood ratio is no longer the simple 
-multiplication of the individual likelihood ratios, 
-but rather, it becomes:
-%
-\[\frac{P(E_1\wedge E_2 | H)}{P(E_1\wedge E_2 | \neg H)}=\frac{P(E_1| H)}{P(E_1| \neg H)}\times \frac{P(E_2 | E_1\wedge H)}{P(E_2| E_1\wedge \neg H)},\]
-%
-and for more than two items of non independent evidence, the formula becomes:
-%
-\[\frac{P(E_1\wedge \dots \wedge E_k | H)}{P(E_1\wedge \dots \wedge E_k | \neg H)}=\frac{P(E_1| H)}{P(E_1| \neg H)} \times \dots \times \frac{P(E_k | E_1  \wedge \dots \wedge E_{k-1} \wedge H)}{P(E_k| E_1 \wedge \dots \wedge E_{k-1} \wedge \neg H)} .\]
-
-
-
-
-\paragraph{Different items of evidence for different hypotheses can also be combined.}
-
-Another assumption that can be dispensed with is that the items of evidence favor or disfavor the \textit{same} hypothesis. % This assumption can be relaxed. 
-Suppose a DNA match links the defendant to the crime scene, while an email written by the defendant indicates 
-that he had a plan to kill the victim. Each of these item of evidence support a different hypothesis, abbreviated
- \textit{contact} and (\textit{plan}.
-Suppose now $P( \textit{contact} | \textit{match})= 0.8$ and $P(\textit{plan} | \neg \textit{email})=0.8$. It is tempting 
-to say that if the two hypothesis are independent, by the product rule, the probability of both hypotheses taken 
-as a conjunction will be $0.8\times 0.8=0.64$, which is lower than the probability 
-of each hypothesis considered separately.
-%, as follows:
-%
- %\[ \begin{array} {lcl } 
-%P( \textit{contact} \wedge \textit{plan} | \textit{match} \wedge \textit{email})
- %& = & P( \textit{contact} | \textit{match}) \times 
-%P(\textit{plan} |  \textit{email}) \\ 
- % & = & 0.9  \times  0.9\\
-   % & = & 0.81
-     % \end{array} \]
-%
-In general, by increasing the number of conjuncts, 
-the probability of their conjunction can be made arbitrarily low. 
-Paradoxically, it would seem that even if each conjunct has 
-a high probability on the available evidence, their conjunction may have 
-a very low probability given the evidence combined. 
-This is known as the conjunction paradox. %But, the reasoning behind the conjunction paradox is mistaken. 
-
-To deflect the paradox, observe that:
- %
-\[ \frac{P(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{P(\neg (\textit{contact} \wedge \textit{plan}) |  \textit{match} \wedge \textit{email})} 
+\begin{equation*}
+\frac{\Pr(H|E)}{\Pr(\neg H|E)}
 =
-\frac{P(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}
-\times
-\frac{P(\textit{contact}\wedge \textit{plan})}{P(\neg (\textit{contact} \wedge \textit{plan}))}
-.\]
-%
- Assuming that the two items of evidence are independent, conditional on 
- the hypothesis of interest, and assuming that the two hypotheses are also independent, we have:
- %
- \begin{eqnarray*}
- \frac{P(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}  
- & = &  \frac{P(\textit{match} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} | \neg (\textit{contact} \wedge \textit{plan}))}  \times 
- \frac{P( \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}  \notag\\ 
- && \notag\\
- & = & \frac{P(\textit{match} | \textit{contact})}{P(\textit{match} | \neg \textit{contact})}  \times  
- \frac{P( \textit{email} | \textit{plan})}{P(\textit{email} | \neg \textit{plan})}  \notag\\
- \end{eqnarray*}
-%
-Once again, the likelihood ratios, not the 
-probabilities of each hypothesis, should be multiplied.  
-Suppose, for the sake of argument, the evidential value of the DNA match in favor 
-of the hypothesis \textit{contact}, 
-and the evidential value of the defendant's email in favor of 
-the hypothesis \textit{plan}, are as follows:
-%
-\[\frac{P(\textit{match}| \textit{contact})}{P(\textit{match} | \neg \textit{contact})}=36 \text{ and } \frac{P(\textit{email}| \textit{plan})}{P(\textit{email}| \neg \textit{plan})}=36\]
-%
-where the numbers are, as usual, illustrative. The combined evidential value of \textit{match} and \textit{email} 
-in favor of the overall hypothesis, including \textit{contact} and \textit{plan}, is $36\times 36 = 1296$, so 
- 
- %
- %\[
-  \begin{eqnarray*} % {lcccc } 
- \frac{P(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{P(\neg (\textit{contact} \wedge \textit{plan}) |  \textit{match} \wedge \textit{email})} 
- & = & 1296  \times 
-\frac{P(\textit{contact}\wedge \textit{plan})}{P(\neg (\textit{contact} \wedge \textit{plan}))} \\ 
-  \end{eqnarray*} 
-  %\]
-  %
-  
-  \noindent
-For the value of the ratio $\frac{P(\textit{contact}\wedge \textit{plan})}{P(\neg (\textit{contact} \wedge \textit{plan}))}$, assume that 
-%
-\[\frac{P(\textit{contact})}{P(\neg \textit{contact})}=0.1/0.9 \text{ and } \frac{P(\textit{plan})}{P(\neg \textit{plan})}=0.1/0.9.\footnote{These assumptions are coherent with our earlier ones, 
-so that%
- \[ \begin{array} {ccccc } 
- \frac{P(\textit{contact} | \textit{match})}{P(\neg \textit{contact} |  \textit{match})} 
- & = &  \frac{P(\textit{match} | \textit{contact})}{P(\textit{match} | \neg \textit{contact})} & \times &
- \frac{P(\textit{contact})}{P(\neg \textit{contact})} \\ 
- &&&&\\
- 0.8/0.2 & = &  36 & \times &  0.1/0.9
-   \end{array} \]
-   %
-and also
-%
- \[ \begin{array} {ccccc } 
- \frac{P(\textit{plan} | \textit{email})}{P(\neg \textit{plan} |  \textit{email})} 
- & = &  \frac{P(\textit{email} | \textit{plan})}{P(\textit{email} | \neg \textit{plan})} & \times &
- \frac{P(\textit{plan})}{P(\neg \textit{plan})} \\ 
- &&&&\\
- 0.8/0.2 & = &  36 & \times &  0.1/0.9
-   \end{array} \]
-%
-}\]
-%
-Now, putting everything together, we get
- 
- %\[ 
- \begin{eqnarray*} %{ccccc } 
- \frac{P(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{P(\neg (\textit{contact} \wedge \textit{plan}) |  \textit{match} \wedge \textit{email})} 
- & = & \frac{P(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}  \times 
-\frac{P(\textit{contact}\wedge \textit{plan})}{P(\neg (\textit{contact} \wedge \textit{plan}))} \\ 
- &&\\
-0.93/0.07 & = & 1296  \times  \frac{0.1\times 0.1}{1-(0.1\times 0.1)}
- \end{eqnarray*} %\]
-  %
+\frac{\Pr(E|H)\cdot\Pr(H)/\Pr(E)}
+{\Pr(E|\neg H)\cdot\Pr(\neg H)/\Pr(E)}
+=
+\frac{\Pr(E|H)\cdot\Pr(H)}
+{\Pr(E|\neg H)\cdot\Pr(\neg H)},
+\end{equation*}
 
-So, the $P(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})$ turns out to 
-be higher, albeit somewhat only slightly, than $P(\textit{contact}| \textit{match})$ or
- $P(\textit{plan} | \textit{email})$. By combing different items of evidence and different hypotheses, the probability of the conjunction 
-need not be lower than the probability of each conjunct, \textit{contra} the conjunction of paradox. 
+\noindent proving the likelihood ratio formula.
 
+The likelihood ratio formula shows that an estimate of the (incremental) evidential value of evidence for a hypothesis does not by itself give rise to an estimate of the posterior odds of a hypothesis. One needs an estimate of the prior odds too. As such, the likelihood ratio is a constraint that must be obeyed in a coherent interpretation of the evidence concerning a hypothesis.
+
+EXAMPLE
+
+\paragraph{A generalization of the likelihood ratio formula shows how to handle multiple pieces of evidence, but naively generalizing is not correct.} 
+In a naive generalization of the likelihood ratio formula to more than one piece of evidence, the posterior odds are found by the repeated multiplication of the likelihood ratios of the individual pieces of evidence. For two pieces of evidence we get the following naive generalization:
+
+	\[ \frac{P(H|E_1 \land E_2)}{P(\neg H | E_1 \land E_2)} = 
+	\frac{P(E_2 | H)}{P(E_2| \neg H)}
+	\cdot 
+	\frac{P(E_1 | H)}{P(E_1| \neg H)}
+	\cdot 
+	\frac{P(H)}{P(\neg H)},\]
+
+\noindent Appealing as it is, this naive generalization is false in general and does not hold in the probability calculus. 
+
+The correct generalization of the likelihood ratio formula for two pieces of evidence is as follows:
+
+
+	\[ \frac{P(H|E_1 \land E_2)}{P(\neg H | E_1 \land E_2)} = 
+	\frac{P(E_2 | H \land E_1)}{P(E_2| \neg H \land E_1)}
+	\cdot 
+	\frac{P(E_1 | H)}{P(E_1| \neg H)}
+	\cdot 
+	\frac{P(H)}{P(\neg H)}\]
+
+\noindent Note how the factor 
+$P(E_2 | H)/P(E_2| \neg H)$ in the naive, incorrect generalization has been replaced by the factor $P(E_2 | H \land E_1)/P(E_2| \neg H \land E_1)$ in the correct generalization.
+
+An informal explanation why the naive generalization of the likelihood ratio is false is that the evidential value of a piece of evidence (as measured by the likelihood ratio) can change in the face of other evidence. Formally, $P(E_2 | H)/P(E_2| \neg H)$ is in general different from $P(E_2 | H \land E_1)/P(E_2| \neg H \land E_1)$. Evidence can for instance be mutually strengthening. 
+
+% For instance H  E1 E2
+%              -  -  -   81
+%              -  -  +    9
+%              -  +  -    9
+%              +  +  +    1
+%              Total    100
+% E1 and E2 are independent, but mutually strengthening as evidence for H. In fact, LR(E2, H) = 11, LR(E2, H |E1) = infinite. 
+
+EXAMPLE
+
+
+\paragraph{The probability of a composite hypothesis cannot in general be calculated from the probability of its components.} Consider a scenario that consists of several elements, for instance an accidental encounter with a robber ($H_1$) followed by the robber killing the victim ($H_2$). When the two events are independent, the probability of the composite hypothesis $H_1 \land H_2$ is (by definition of probabilistic independence) the product of the probabilities of the individual elements. But in general the elements of a scenario are not independent. In the example, it seems reasonable to assume that an accidental encounter with a robber increases the probability of being killed, albeit slightly. Using formal notation, $P(H_2) < P(H_2 | H_1)$. Hence also $P(H_1) \cdot P(H_2) < P(H_1 \land H_2)$ and $H_1$ and $H_2$ are not independent. This point also holds when considering the probability of a composite hypothesis conditioned on evidence $E$. It does not in general hold that $P(H_1 | E) \cdot P(H_2 | E) = P(H_1 \land H_2 | E)$, only when the elements of the composite hypothesis are independent given the evidence.
 
 \paragraph{Further readings}
 The conjunction paradox \citep{cohen1977} and a response \citep{dawid1987}. 
@@ -1749,7 +1595,7 @@ of acquitting a guilty defendant. For a conviction to be justified, the
 expected cost of convicting an innocent must be lower than the expected 
 cost of acquitting an innocent, that is, 
 %
-\[ P(G|E) \times c(AG) >  [1-P(G|E)] \times c(CI) .\]
+\[ P(G|E) \cdot c(AG) >  [1-P(G|E)] \cdot c(CI) .\]
 %
 %The inequality represents a situation in which the expected cost resulting from convicting an innocent is lower than the expected cost
 %resulting from a cutting a guilty defendant. Given the inevitable possibility of error, such a situation would be one in which 
@@ -1945,10 +1791,9 @@ We discussed four main themes: conflicting evidence, evidential value, the coher
 \subsection*{Evidential value}
 
 \paragraph{Probabilities}
-	Evidential value can be quantified as probability difference, likelihood ratio or overall probability.
-	Likelihood ratio can quantify the value of DNA evidence.
-	Likelihood ratio might not capture every source of uncertainty. 
-	%BV A third black sentence is missing here
+The evidential value of a piece of evidence is measured by probabilistic difference or likelihood ratio (`incremental evidential value').
+	The evidential value of all the evidence, in its totality, is measured by the overall conditional probability (`overall evidential value'). 
+	DNA evidence can have a high incremental evidential value, but one should beware of complications.
 	
 \paragraph{Arguments}
 	The reasons used in arguments have different evidential value. Some are conclusive, others defeasible.
