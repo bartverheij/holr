@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
-NormalPos.right=664
-NormalPos.bottom=644
+NormalPos.right=1626
+NormalPos.bottom=654
 Class=LaTeXView
 Document=evidential-reasoning.tex
 
 [Frame0_View0,0]
-TopLine=3202
-Cursor=118538
+TopLine=2352
+Cursor=115263
 
 [SessionInfo]
 FrameCount=1
