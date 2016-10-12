@@ -1602,20 +1602,106 @@ is much more difficult to apply.
 
 
 
-\paragraph{The probability of a composite hypothesis cannot in general be calculated from the probability of its components.} 
+\paragraph{The formula can be generalized to calculate the probability of a composite hypothesis, although one should we wary 
+of the independence assumptions used.} 
 Consider now two hypotheses, $H_1$ and $H_2$, each supported by an item of 
 evidence, $E_1$ and $E_2$, respectively.  Can the likelihood ratio formula be generalized to cases with 
-two items of evidence and two hypotheses combined?
+two items of evidence and two hypotheses combined? Assuming that the two pieces of evidence are independent, conditional on the hypotheses, 
+and the two hypotheses are also independent, 
+it is enough to simply multiply the two likelihood ratios, as follows:
+%
+\[ \frac{P(H_1\wedge H_2|E_1 \land E_2)}{P(\neg H | E_1 \land E_2)} = 
+	\frac{P(E_2 | H_2)}{P(E_2| \neg H_2)}
+	\cdot 
+	\frac{P(E_1 | H_1)}{P(E_1| \neg H_1)}
+	\cdot 
+	\frac{P(H_1)}{P(\neg H_1)}\cdot \frac{P(H_2)}{P(\neg H_2)}.\endnote{}\]
+%
 
+To illustrate, suppose a DNA match links the defendant to the crime scene, while an email written by the defendant indicates 
+he had a plan to kill the victim. Each of these item of evidence support a different hypothesis, abbreviated
+ \textit{contact} and \textit{plan}.
+ %
+\begin{comment}
+Observe that:
+ %
+\[ \frac{P(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{P(\neg (\textit{contact} \wedge \textit{plan}) |  \textit{match} \wedge \textit{email})} 
+=
+\frac{P(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}
+\times
+\frac{P(\textit{contact}\wedge \textit{plan})}{P(\neg (\textit{contact} \wedge \textit{plan}))}
+.\]
+%
+\end{comment}
+%
+ Assuming that the two items of evidence are independent, conditional on 
+ the hypotheses of interest, and assuming that the two hypotheses 
+ are also independent, we have:
+ %
+ \begin{comment}
+ \begin{eqnarray*}
+ \frac{P(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}  
+ & = &  \frac{P(\textit{match} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} | \neg (\textit{contact} \wedge \textit{plan}))}  \times 
+ \frac{P( \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}  \notag\\ 
+ && \notag\\
+ & = & \frac{P(\textit{match} | \textit{contact})}{P(\textit{match} | \neg \textit{contact})}  \times  
+ \frac{P( \textit{email} | \textit{plan})}{P(\textit{email} | \neg \textit{plan})}  \notag\\
+ \end{eqnarray*}
+ \end{comment}
+ %
+ \[
+ \frac{P(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}  
+ = \frac{P(\textit{match} | \textit{contact})}{P(\textit{match} | \neg \textit{contact})}  \times  
+ \frac{P( \textit{email} | \textit{plan})}{P(\textit{email} | \neg \textit{plan})} 
+ \]
+ %
+Suppose, for the sake of argument, the (incremental) 
+evidential value of the DNA match in favor 
+of the hypothesis \textit{contact}, 
+and the (incremental) evidential value of the defendant's email in favor of 
+the hypothesis \textit{plan}, are as follows:
+%
+\[\frac{P(\textit{match}| \textit{contact})}{P(\textit{match} | \neg \textit{contact})}=36 \text{ and } \frac{P(\textit{email}| \textit{plan})}{P(\textit{email}| \neg \textit{plan})}=36\]
+%
+where the numbers are, as usual, illustrative. The combined (incremental) evidential value of \textit{match} and \textit{email} 
+in favor of the hypothesis consisting of \textit{contact} and \textit{plan}, is $36\times 36 = 1296$.
+%
+\begin{comment}
+ so 
+  %
+ %\[
+  \begin{eqnarray*} % {lcccc } 
+ \frac{P(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{P(\neg (\textit{contact} \wedge \textit{plan}) |  \textit{match} \wedge \textit{email})} 
+ & = & 1296  \times 
+\frac{P(\textit{contact}\wedge \textit{plan})}{P(\neg (\textit{contact} \wedge \textit{plan}))} \\ 
+  \end{eqnarray*} 
+  %\]
+  %
+ \end{comment} 
+  \noindent
+For the value of the prior odds $\frac{P(\textit{contact}\wedge \textit{plan})}{P(\neg (\textit{contact} \wedge \textit{plan}))}$, assume that 
+%
+\[\frac{P(\textit{contact})}{P(\neg \textit{contact})}=0.1/0.9 \text{ and } \frac{P(\textit{plan})}{P(\neg \textit{plan})}=0.1/0.9.\]
+%
+Now, putting everything together, we get
+  %\[ 
+ \begin{eqnarray*} %{ccccc } 
+ \frac{P(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{P(\neg (\textit{contact} \wedge \textit{plan}) |  \textit{match} \wedge \textit{email})} 
+ & = & \frac{P(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}  \times 
+\frac{P(\textit{contact}\wedge \textit{plan})}{P(\neg (\textit{contact} \wedge \textit{plan}))} \\ 
+ &&\\
+0.93/0.07 & = & 1296  \times  \frac{0.1\times 0.1}{1-(0.1\times 0.1).}
+ \end{eqnarray*} %\]
+  %
 
+So, not only does the probability calculus offers us an elegant way to combine different pieces of evidence, but also to combine 
+different hypotheses in larger scenarios.
+These combinations, however, rests on assumptions about the independence of the hypotheses and of the pities of evidence. 
+One should be wary that these assumptions do not always hold. Consider a scenario that consists of several elements, for instance an accidental 
+encounter with a robber ($H_1$) followed by the robber killing the victim ($H_2$). When the two events are independent, the probability of the composite hypothesis $H_1 \land H_2$ is, by definition of probabilistic independence, 
+the product of the probabilities of the individual elements. But the elements of a scenario need not be 
+independent. In the example, it seems reasonable to assume that an accidental encounter with a robber increases the probability of being killed, albeit slightly. Using formal notation, $P(H_2) < P(H_2 | H_1)$. Hence also $P(H_1) \cdot P(H_2) < P(H_1 \land H_2)$ and $H_1$ and $H_2$ are not independent. This point also holds when considering the probability of a composite hypothesis conditioned on evidence $E$. It does not in general hold that $P(H_1 | E) \cdot P(H_2 | E) = P(H_1 \land H_2 | E)$, only when the elements of the composite hypothesis are independent given the evidence.
 
-
-
-
-
-
-
-Consider a scenario that consists of several elements, for instance an accidental encounter with a robber ($H_1$) followed by the robber killing the victim ($H_2$). When the two events are independent, the probability of the composite hypothesis $H_1 \land H_2$ is (by definition of probabilistic independence) the product of the probabilities of the individual elements. But in general the elements of a scenario are not independent. In the example, it seems reasonable to assume that an accidental encounter with a robber increases the probability of being killed, albeit slightly. Using formal notation, $P(H_2) < P(H_2 | H_1)$. Hence also $P(H_1) \cdot P(H_2) < P(H_1 \land H_2)$ and $H_1$ and $H_2$ are not independent. This point also holds when considering the probability of a composite hypothesis conditioned on evidence $E$. It does not in general hold that $P(H_1 | E) \cdot P(H_2 | E) = P(H_1 \land H_2 | E)$, only when the elements of the composite hypothesis are independent given the evidence.
 
 \paragraph{Further readings}
 The conjunction paradox \citep{cohen1977} and a response \citep{dawid1987}. 
