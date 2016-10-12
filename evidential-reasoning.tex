@@ -349,9 +349,9 @@ an attacking reason is represented in Figure~\ref{fig:arg}.
 \caption{Arguments with supporting and attacking reasons\label{fig:arg}}
 \end{figure}
 
-\begin{comment}
+
 The analysis of the structure of arguments goes back to the early twentieth century when John Henry Wigmore developed his famous evidence charts~\citep{wigmore1913,wigmore1931}. The work by the New Evidence Scholarship~\citep{andersonEtal2005} continued from Wigmore's insights. Independently, and not focusing on evidence in criminal cases, the structure of arguments for and against conclusions was formalized and computationally studied by the philosopher John~\citet{pollock1987,pollock1995}. The work by Pollock stimulated an extensive literature on the formal and computational study of arguments for and against conclusions~\citep{vanEemerenEtal2014Ch11}.
-\end{comment}
+
 
 \subsection{Probabilities}
 \label{sec:normfram:prob}
@@ -365,34 +365,33 @@ change in light of evidence $E$? This \textit{probability change} is expressed b
 the difference between the conditional probability $P(H|E)$ and the so-called \textit{prior 
 probability} $P(H)$.
 Both questions can be addressed with 
-the famous Bayes' theorem:\footnote{
-Bayes' theorem follows quickly using the definition of conditional probability. 
-We have $\Pr(E|H) = P(H\land E)/P(H)$. Here we use logical conjunction $\land$ to write the combined event $H$ and $E$. Hence $P(H\land E)=\Pr(E|H)\cdot P(H)$. It follows that
-$\Pr(H|E) = P(H \land E)/P(E) = \Pr(E|H)\cdot P(H)/P(E)$, proving Bayes' theorem.
-}
-
+the famous Bayes' theorem:
 %
 \begin{quotation}
 	$\Pr(H|E) = \dfrac{\Pr(E|H)}{\Pr(E)}\cdot\Pr(H)$
 \end{quotation}
-
 %
-<<<<<<< HEAD
+%<<<<<<< HEAD
 %This formula---which can be easily proven from 
 %the probability axioms---shows how the 
 %conditional probability $\Pr(H|E)$ of hypothesis $H$ given evidence $E$ 
 %can be computed by the prior probability $\Pr(H)$ and the 
 %factor $\Pr(E|H)/\Pr(E)$. 
-\noindent One of the lessons of Bayes' theorem is that the more surprising 
-=======
+%\noindent One of the lessons of Bayes' theorem is that the more surprising 
+%=======
 This formula---which can be easily proven from 
-the probability axioms---shows how the 
+the probability axioms\footnote{Bayes' theorem follows quickly using the definition of conditional probability. 
+We have $\Pr(E|H) = \Pr(H\land E)/\Pr(H)$. Here we use logical conjunction $\land$ to write the combined event $H$ and $E$. 
+Hence, $\Pr(H\land E)=\Pr(E|H)\cdot \Pr(H)$. It follows that
+$\Pr(H|E) = \Pr(H \land E)/\Pr(E) = \Pr(E|H)\cdot \Pr(H)/\Pr(E)$, proving Bayes' theorem.
+}---shows how the 
 conditional probability $\Pr(H|E)$ of hypothesis $H$ given evidence $E$ 
 can be computed by the prior probability $\Pr(H)$ and the 
-factor $\Pr(E|H)/\Pr(E)$.  One of the lessons of Bayes' theorem is that the more surprising 
->>>>>>> origin/master
-the evidence---that is, the lower $\Pr(E)$---the higher the probability 
-of the hypothesis given the evidence and the larger the probability increase. 
+factor $\Pr(E|H)/\Pr(E)$.  
+%One of the lessons of Bayes' theorem is that the more surprising 
+%>>>>>>> origin/master
+%the evidence---that is, the lower $\Pr(E)$---the higher the probability 
+%of the hypothesis given the evidence and the larger the probability increase. 
 %To illustrate, compare two DNA profiles, one with a Random Match Probability of 1 in 10 and the other with 
 %a Random Match Probability of 1 in 1 million. It is more surprising---that is, less probable---to find a match 
 %for the latter than the former profile. Suppose now a genetic match is found between 
@@ -436,9 +435,8 @@ of the hypothesis given the evidence and the larger the probability increase.
 %noindent 
 %MDB [THE TREATMENT OF BAYES THEOREM IS BRIEF AND IT'S UNCLEAR HOW IT IS CONNECTED WITH THE RANDOM MATCH PROBABILITY.]
 
-\begin{comment}
+
 The interest in probabilistic calculations as a tool for the good handling of the evidence has recently been stimulated by the statistics related to DNA profiling, and by some infamous miscarriages of justice that involved statistics, in particular the Lucia de Berk and Sally Clark cases~\citep{dawidEtal2011,fenton2011,schnepsColmez2013}. The interest is not new~\citep{tillers2011}, and can in fact be traced back to early forensic science in the late nineteenth century~\citep{taroniEtal1998}. To what extent probabilistic calculations have a place in courts has always been, and remains, the subject of debate.\footnote{A recent instance of the debate concerns the R v T case, where the UK Court of Appeal restricted the use of Bayes' theorem in courts to cases with a solid statistical foundation such as DNA; see the 2012 special issue of Law, Probability and Risk; Vol. 4, No. 2. For a 1970s instance of the debate, see~\citet{finkelsteinFairley1970,tribe1971}.}
-\end{comment}
 
 \subsection{Scenarios [NEEDS FIXING]}
 \label{sec:introScen}
@@ -459,9 +457,9 @@ For instance, consider a murder case with two suspects: the victim's former part
 \noindent When the robber confesses having killed the victim during a robbery, there is evidence contradicting scenario $S_1$ and matching scenario $S_2$.
 \end{comment}
 
-\begin{comment}
+
 In particular, legal psychology has contributed to our knowledge about the role of scenarios in handling the evidence~\citep{bennettFeldman1981,penningtonHastie1993}. Scenarios were shown to be misleading, as experiments showed that a false scenario told in a sensible chronological order was more easily believed than a true scenario that was told in a random order. Still, the legal psychologists~\citet{wagenaarEtal1993} emphasised the usefulness of scenario analysis for the rational handling of the evidence, using the technique in their work on debunking dubious case decisions. Scenario analysis is connected with inference to the best explanation~\citep{pardoAllen2008}.
-\end{comment}
+
 %MDB [I THINK WE SHOUD MAKE CLEAR THAT EACH FRAMEWORK WILL BE DEVELOPED MORE IN DEPTH LATER IN THE PAPER AND THAT IN THIS FIRST SECTION WE ARE  BEING GENERAL AND IMPRESSIONISTIC. THIS SECTIONS LOOKS LIKE A SUMMARY FO WHAT'S TO COME.]
 
 \paragraph{Further readings} 
@@ -981,7 +979,7 @@ the source is roughly the same as the chance that a random person---someone who 
 %and because (2) 'source' and 'guilt' are, by assumption, equivalent.
 For example, if the RMP is 1 in 200 million, the likelihood ratio would be
 %
-\[\frac{P(M |G)}{P( M | \neg G)}=\frac{1}{\frac{1}{\text{200 million}}}=\text{200 million}.\]
+\[\frac{P(M |S)}{P( M | \neg S)}=\frac{1}{\frac{1}{\text{200 million}}}=\text{200 million}.\]
 %
 Since the likelihood ratio in question is a high number, the DNA match in favor of the suspect being the source
 has a high evidential value. More generally, a low RMP corresponds to a match with a rare profile, hence has a high evidential value. 
@@ -1459,11 +1457,16 @@ Formal argumentation models~\citep{simariLoui1992, vreeswijk1997, prakken2010, v
 
 The probability calculus provides formal rules for the coherent interpretation of the evidence.
 
-\paragraph{The likelihood ratio formula shows how new evidence changes the odds of a hypothesis.} The odds of a hypothesis $H$ are defined as the ratio $P(H)/P(\neg H)$ of the probability of the hypothesis and the probability of its negation. Given new evidence $E$, the odds $P(H)/P(\neg H)$ of the hypothesis unconditioned on the evidence are called the \emph{prior odds} of the hypothesis, and the odds $P(H | E)/P(\neg H | E)$ of the hypothesis conditioned on the evidence the \emph{posterior odds}. It follows from Bayes' theorem (Section~\ref{sec:normfram:prob}) that the posterior odds can be found by multiplying the prior odds with the likelihood ratio: 
+%\paragraph{The likelihood ratio formula shows how new evidence changes the odds of a hypothesis.} 
 
-	\[ \frac{P(H|E)}{P(\neg H | E)} = \frac{P(E | H)}{P(E| \neg H)}\cdot \frac{P(H)}{P(\neg H)},\]
+\paragraph{The likelihood ratio formula shows how to find the posterior odds given the evidence.} 
+The odds of a hypothesis $H$ are defined as the ratio $P(H)/P(\neg H)$ of the probability of the hypothesis and the probability of its negation. Given new evidence $E$, the odds $P(H)/P(\neg H)$ 
+of the hypothesis unconditioned on the evidence are called the \emph{prior odds} of the hypothesis, and the odds $P(H | E)/P(\neg H | E)$ of the hypothesis 
+conditioned on the evidence the \emph{posterior odds}. It follows from Bayes' theorem (Section~\ref{sec:normfram:prob}) that the posterior odds can 
+be found by multiplying the prior odds with the likelihood ratio: 
 
-\noindent To derive the likelihood ratio, one first applies Bayes' theorem to both $H$ and $\neg H$. We get $\Pr(H|E) = \Pr(E|H)\cdot\Pr(H)/\Pr(E)$ and $\Pr(\neg H|E) = \Pr(E|\neg H)\cdot\Pr(\neg H)/\Pr(E)$. Using these, we find:
+	\[ \frac{P(H|E)}{P(\neg H | E)} = \frac{P(E | H)}{P(E| \neg H)}\cdot \frac{P(H)}{P(\neg H)}.\footnote{To derive the likelihood ratio, 
+	one first applies Bayes' theorem to both $H$ and $\neg H$. We get $\Pr(H|E) = \Pr(E|H)\cdot\Pr(H)/\Pr(E)$ and $\Pr(\neg H|E) = \Pr(E|\neg H)\cdot\Pr(\neg H)/\Pr(E)$. Using these, we find:
 
 \begin{equation*}
 \frac{\Pr(H|E)}{\Pr(\neg H|E)}
@@ -1475,14 +1478,47 @@ The probability calculus provides formal rules for the coherent interpretation o
 {\Pr(E|\neg H)\cdot\Pr(\neg H)},
 \end{equation*}
 
-\noindent proving the likelihood ratio formula.
+\noindent proving the likelihood ratio formula.}\]
 
-The likelihood ratio formula shows that an estimate of the (incremental) evidential value of evidence for a hypothesis does not by itself give rise to an estimate of the posterior odds of a hypothesis. One needs an estimate of the prior odds too. As such, the likelihood ratio is a constraint that must be obeyed in a coherent interpretation of the evidence concerning a hypothesis.
+\noindent 
+This formula shows that an estimate of the (incremental) evidential value of the evidence for a hypothesis, expressed by the likelihood ratio $\frac{P(E | H)}{P(E| \neg H)}$, 
+does not by itself give an estimate of the posterior odds of a hypothesis. One needs an estimate of the prior odds too. 
+%As such, the likelihood ratio is a constraint that must be obeyed in a coherent interpretation of the evidence concerning a hypothesis.
 
-EXAMPLE
+To arrive at the posterior probability $P(H|E)$ of a hypothesis conditional 
+on the evidence, from the posterior odds $\frac{P(E|H)}{P(E|\neg H)}$
+of the hypothesis given the evidence, the following formula applies:
+%
+\[P(H|E) = \frac{\frac{P(E|H)}{P(E|\neg H)}}{1+ \frac{P(E|H)}{P(E|\neg H)}}. \]
+%
 
-\paragraph{A generalization of the likelihood ratio formula shows how to handle multiple pieces of evidence, but naively generalizing is not correct.} 
-In a naive generalization of the likelihood ratio formula to more than one piece of evidence, the posterior odds are found by the repeated multiplication of the likelihood ratios of the individual pieces of evidence. For two pieces of evidence we get the following naive generalization:
+Consider an example. The incremental evidential value of a DNA match, relative to the hypothesis 
+that the defendant is the source of the crime traces, is given by the the likelihood ratio $\frac{P(M |S)}{P( M | \neg S)}$. 
+Suppose this ratio is assigned a numerical value, 
+as follows:
+%
+\[\frac{P(M |S)}{P( M | \neg S)}=\frac{1}{\frac{1}{200,000,000}}=200,000,000.\]
+% 
+Suppose, also, that the prior odds are as follows:
+%
+\[\frac{P(S)}{P(\neg S)}=\frac{\frac{1}{\text{20,000,000}}}{\frac{19,999,999}{20,000,000}}\approx \frac{1}{20,000,000}.\]
+% 
+The posterior odds of the hypothesis given the match $\frac{P(S|M)}{P(\neg S|M)}$ are therefore as follows:
+%
+\[\frac{P(S|M)}{P(\neg S|M)}= \frac{P(M |S)}{P( M | \neg S)}\cdot \frac{P(S)}{P(\neg S)} \approx 200,000,000 \cdot \frac{1}{20,000,000}\approx \frac{20}{1}.\]
+% 
+So the poster probability of the hypothesis is as follows:
+%
+\[P(S|M)= \frac{\frac{P(M|S)}{P(M|\neg S)}}{1+ \frac{P(M|S)}{P(M|\neg S)}} \approx \frac{20}{1+20}\approx 0.95.\]
+%
+ 
+
+
+\paragraph{A generalization of the formula shows how to handle more pieces of evidence.} 
+So far we have considered only one piece of evidence. 
+%The likelihood ratio formula to more than one piece of evidence, the posterior odds are found by the repeated multiplication of the likelihood ratios of the individual pieces of evidence. 
+For two pieces of evidence $E_1$ and $E_2$, the formula can be generalized 
+by multiplying the likelihood ratios of the individual pieces of evidence, as follows:
 
 	\[ \frac{P(H|E_1 \land E_2)}{P(\neg H | E_1 \land E_2)} = 
 	\frac{P(E_2 | H)}{P(E_2| \neg H)}
@@ -1491,22 +1527,85 @@ In a naive generalization of the likelihood ratio formula to more than one piece
 	\cdot 
 	\frac{P(H)}{P(\neg H)},\]
 
-\noindent Appealing as it is, this naive generalization is false in general and does not hold in the probability calculus. 
-
-The correct generalization of the likelihood ratio formula for two pieces of evidence is as follows:
-
+%\noindent Appealing as it is, this naive generalization is false in general and does not hold in the probability calculus. 
+Note, however, that this simple generalization only holds provided that two pieces of evidence are 
+independent conditional on the hypothesis, that is, $P(E_2| H)=P(E_2| H \wedge E_1)$. If this is not the case, 
+the likelihood ratio formula for two pieces of evidence 
+takes the following, more general 
+form:
 
 	\[ \frac{P(H|E_1 \land E_2)}{P(\neg H | E_1 \land E_2)} = 
 	\frac{P(E_2 | H \land E_1)}{P(E_2| \neg H \land E_1)}
 	\cdot 
 	\frac{P(E_1 | H)}{P(E_1| \neg H)}
 	\cdot 
-	\frac{P(H)}{P(\neg H)}\]
+	\frac{P(H)}{P(\neg H)}.\]
 
-\noindent Note how the factor 
-$P(E_2 | H)/P(E_2| \neg H)$ in the naive, incorrect generalization has been replaced by the factor $P(E_2 | H \land E_1)/P(E_2| \neg H \land E_1)$ in the correct generalization.
+\noindent It is easy to see the first generalization follows from the second, assuming 
+independence between the two pieces of evidence conditional on the hypothesis of interest. 
+The first generalization, however, does not hold in general because 
+the evidential value of a piece of evidence, as measured by the likelihood ratio, 
+can change in the face of other evidence. 
 
-An informal explanation why the naive generalization of the likelihood ratio is false is that the evidential value of a piece of evidence (as measured by the likelihood ratio) can change in the face of other evidence. Formally, $P(E_2 | H)/P(E_2| \neg H)$ is in general different from $P(E_2 | H \land E_1)/P(E_2| \neg H \land E_1)$. Evidence can for instance be mutually strengthening. 
+Consider now two pieces of evidence: a witness testimony, call it $W$, that defendant was at the crime scene; and 
+a DNA match, call it $M$, between the crime traces and the defendant. Assume the two pieces are independent  
+conditional, say, on the hypothesis $S$ that the defendant is source of the crime traces, that is, 
+$P(W|S)=P(W| S\wedge M)$.  Suppose, also, a likelihood ratio $\frac{P(M | S)}{P( M | \neg S)}$ of 200 million, as before, 
+and a likelihood ratio of $\frac{P(W | S)}{P( W | \neg S)}$ of 10,000. The combined evidential value of the two pieces of evidence is given by multiplying the two likelihood 
+ratio, that is, $200,000,000\times 10,000=2,000,000,000,000$, which is a higher value than the two pieces independently. 
+
+ 
+
+
+
+
+
+In a criminal case, there may more than one piece of evidence, for example, 
+there may be an eyewitness testimony and a DNA match. 
+Suppose $P(\textit{guilt}| \textit{testimony})=0.7$
+and $P(\textit{guilt} | \textit{match})=0.7$. What is the probability 
+$P(\textit{guilt}| \textit{testimony} \wedge \textit{match})$ resulting 
+from combing the two pieces of evidence? It would be a mistake to say that, assuming that 
+the two items of evidence are independent, $P(\textit{guilt}| \textit{match} \wedge \textit{testimony})$ equals 
+$0.7\times 0.7=0.49$. %How can  $P(\textit{guilt}| \textit{match}, \textit{testimony})$ be lower than  
+%$P(\textit{guilt}| \textit{testimony})$ or $P(\textit{guilt}| \textit{match})$? 
+The combination of two pieces of evidence, each favoring guilt to some extent, should strengthen the case for guilt, 
+not weaken it. Observe that 
+ %
+\[\frac{P(\textit{guilt} | \textit{match}\wedge \textit{testimony})}{P(\neg \textit{guilt} | \textit{match}\wedge \textit{testimony})}=\frac{P(\textit{match}\wedge \textit{testimony} | \textit{guilt})}{P(\textit{match}\wedge \textit{testimony} | \neg \textit{guilt})}\times \frac{P(\textit{guilt})}{P(\neg \textit{guilt})},\]
+ %
+ and if \textit{match} and \textit{testimony} are independent, conditional on \textit{guilt}, then 
+  %
+\[\frac{P(\textit{match}\wedge \textit{testimony} | \textit{guilt})}{P(\textit{match}\wedge \textit{testimony} | \neg \textit{guilt})}=\frac{P(\textit{match}| \textit{guilt})}{P(\textit{match}|\neg \textit{guilt})}\times\frac{P(\textit{testimony} | \textit{guilt})}{P(\textit{testimony} | \neg \textit{guilt})}.\]
+%
+%or more succinctly,
+%
+%\[LR12 = LR1 \times LR2.\]
+ %
+%So, putting everything together,
+ %
+ %\[\frac{P(\textit{guilt} | \textit{match}, \textit{testimony})}{P(\neg \textit{guilt} | \textit{match}, \textit{testimony})}=LR1\times LR2\times \frac{P(\textit{guilt})}{P(\neg \textit{guilt})}.\]
+ %
+%
+The point is that the likelihood ratios should be multiplied, not the probabilities of each hypothesis given the evidence. 
+Suppose DNA evidence shows that the crime traces match with defendant, and 
+the match has a likelihood ratio 
+
+
+
+This is a higher value than the two pieces of evidence considered separately, so 
+$P(\textit{guilt}| \textit{match} \wedge \textit{testimony})$ will be greater than $P(\textit{guilt}| \textit{match})$ 
+or $P(\textit{guilt}| \textit{testimony})$ considered separately, as expected. 
+
+
+
+
+
+
+
+%Note how the factor $P(E_2 | H)/P(E_2| \neg H)$ in the naive, incorrect generalization has been replaced by the factor $P(E_2 | H \land E_1)/P(E_2| \neg H \land E_1)$ in the correct generalization.
+
+ %Formally, $P(E_2 | H)/P(E_2| \neg H)$ is in general different from $P(E_2 | H \land E_1)/P(E_2| \neg H \land E_1)$. Evidence can for instance be mutually strengthening. 
 
 % For instance H  E1 E2
 %              -  -  -   81
@@ -1516,7 +1615,7 @@ An informal explanation why the naive generalization of the likelihood ratio is 
 %              Total    100
 % E1 and E2 are independent, but mutually strengthening as evidence for H. In fact, LR(E2, H) = 11, LR(E2, H |E1) = infinite. 
 
-EXAMPLE
+
 
 
 \paragraph{The probability of a composite hypothesis cannot in general be calculated from the probability of its components.} Consider a scenario that consists of several elements, for instance an accidental encounter with a robber ($H_1$) followed by the robber killing the victim ($H_2$). When the two events are independent, the probability of the composite hypothesis $H_1 \land H_2$ is (by definition of probabilistic independence) the product of the probabilities of the individual elements. But in general the elements of a scenario are not independent. In the example, it seems reasonable to assume that an accidental encounter with a robber increases the probability of being killed, albeit slightly. Using formal notation, $P(H_2) < P(H_2 | H_1)$. Hence also $P(H_1) \cdot P(H_2) < P(H_1 \land H_2)$ and $H_1$ and $H_2$ are not independent. This point also holds when considering the probability of a composite hypothesis conditioned on evidence $E$. It does not in general hold that $P(H_1 | E) \cdot P(H_2 | E) = P(H_1 \land H_2 | E)$, only when the elements of the composite hypothesis are independent given the evidence.
