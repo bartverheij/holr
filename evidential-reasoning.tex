@@ -1460,9 +1460,13 @@ The probability calculus provides formal rules for the coherent interpretation o
 %\paragraph{The likelihood ratio formula shows how new evidence changes the odds of a hypothesis.} 
 
 \paragraph{The likelihood ratio formula shows how to find the posterior odds given the evidence.} 
-The odds of a hypothesis $H$ are defined as the ratio $P(H)/P(\neg H)$ of the probability of the hypothesis and the probability of its negation. Given new evidence $E$, the odds $P(H)/P(\neg H)$ 
+The odds of a hypothesis $H$ are defined as the ratio $P(H)/P(\neg H)$ of the probability of the hypothesis and the probability of its negation. Given evidence $E$, the odds $P(H)/P(\neg H)$ 
 of the hypothesis unconditioned on the evidence are called the \emph{prior odds} of the hypothesis, and the odds $P(H | E)/P(\neg H | E)$ of the hypothesis 
-conditioned on the evidence the \emph{posterior odds}. It follows from Bayes' theorem (Section~\ref{sec:normfram:prob}) that the posterior odds can 
+conditioned on the evidence the \emph{posterior odds}.\footnote{The language of 'priors' and 'posteriors' is standard and suggests 
+an temporal ordering.  However, these probabilities are all assigned at the same time; they are not temporally ordered. Contrast this with 
+\textit{Bayesian updating} which is the controversial epistemological thesis 
+that the probability of $H$ \textit{after} considering evidence $E$ at time $t_2$ must be equivalent to the condition probability 
+$P(H|E)$ earlier at time $t_1$.} It follows from Bayes' theorem (Section~\ref{sec:normfram:prob}) that the posterior odds can 
 be found by multiplying the prior odds with the likelihood ratio: 
 
 	\[ \frac{P(H|E)}{P(\neg H | E)} = \frac{P(E | H)}{P(E| \neg H)}\cdot \frac{P(H)}{P(\neg H)}.\footnote{To derive the likelihood ratio, 
@@ -1485,7 +1489,7 @@ This formula shows that an estimate of the (incremental) evidential value of the
 does not by itself give an estimate of the posterior odds of a hypothesis. One needs an estimate of the prior odds too. 
 %As such, the likelihood ratio is a constraint that must be obeyed in a coherent interpretation of the evidence concerning a hypothesis.
 
-To arrive at the posterior probability $P(H|E)$ of a hypothesis conditional 
+To arrive at the \textit{posterior probability} $P(H|E)$ of a hypothesis conditional 
 on the evidence, from the posterior odds $\frac{P(E|H)}{P(E|\neg H)}$
 of the hypothesis given the evidence, the following formula applies:
 %
@@ -1493,23 +1497,22 @@ of the hypothesis given the evidence, the following formula applies:
 %
 
 Consider an example. The incremental evidential value of a DNA match, relative to the hypothesis 
-that the defendant is the source of the crime traces, is given by the the likelihood ratio $\frac{P(M |S)}{P( M | \neg S)}$. 
-Suppose this ratio is assigned a numerical value, 
-as follows:
+that the defendant is guilty, is given by the the likelihood ratio $\frac{P(M |G)}{P( M | \neg G)}$. 
+Suppose this ratio is assigned a numerical value,  as follows:
 %
-\[\frac{P(M |S)}{P( M | \neg S)}=\frac{1}{\frac{1}{200,000,000}}=200,000,000.\]
+\[\frac{P(M |G)}{P( M | \neg G)}=\frac{1}{\frac{1}{2,000,000}}=2, 000,000.\]
 % 
 Suppose, also, that the prior odds are as follows:
 %
-\[\frac{P(S)}{P(\neg S)}=\frac{\frac{1}{\text{20,000,000}}}{\frac{19,999,999}{20,000,000}}\approx \frac{1}{20,000,000}.\]
+\[\frac{P(G)}{P(\neg G)}=\frac{\frac{1}{\text{200,000}}}{\frac{199,999}{200,000}}\approx \frac{1}{200,000}.\]
 % 
-The posterior odds of the hypothesis given the match $\frac{P(S|M)}{P(\neg S|M)}$ are therefore as follows:
+The posterior odds of the hypothesis given the match $\frac{P(G|M)}{P(\neg G|M)}$ are therefore as follows:
 %
-\[\frac{P(S|M)}{P(\neg S|M)}= \frac{P(M |S)}{P( M | \neg S)}\cdot \frac{P(S)}{P(\neg S)} \approx 200,000,000 \cdot \frac{1}{20,000,000}\approx \frac{20}{1}.\]
+\[\frac{P(G|M)}{P(\neg G|M)}= \frac{P(M |G)}{P( M | \neg G)}\cdot \frac{P(G)}{P(\neg G)} \approx 2,000,000 \cdot \frac{1}{200,000}=\frac{20}{1}.\]
 % 
 So the poster probability of the hypothesis is as follows:
 %
-\[P(S|M)= \frac{\frac{P(M|S)}{P(M|\neg S)}}{1+ \frac{P(M|S)}{P(M|\neg S)}} \approx \frac{20}{1+20}\approx 0.95.\]
+\[P(G|M)= \frac{\frac{P(M|G)}{P(M|\neg G)}}{1+ \frac{P(M|S)}{P(M|\neg G)}} \approx \frac{20}{1+20}\approx 0.95.\]
 %
  
 
@@ -1519,17 +1522,49 @@ So far we have considered only one piece of evidence.
 %The likelihood ratio formula to more than one piece of evidence, the posterior odds are found by the repeated multiplication of the likelihood ratios of the individual pieces of evidence. 
 For two pieces of evidence $E_1$ and $E_2$, the formula can be generalized 
 by multiplying the likelihood ratios of the individual pieces of evidence, as follows:
-
 	\[ \frac{P(H|E_1 \land E_2)}{P(\neg H | E_1 \land E_2)} = 
 	\frac{P(E_2 | H)}{P(E_2| \neg H)}
 	\cdot 
 	\frac{P(E_1 | H)}{P(E_1| \neg H)}
 	\cdot 
-	\frac{P(H)}{P(\neg H)},\]
-
+	\frac{P(H)}{P(\neg H)}.\]
 %\noindent Appealing as it is, this naive generalization is false in general and does not hold in the probability calculus. 
-Note, however, that this simple generalization only holds provided that two pieces of evidence are 
-independent conditional on the hypothesis, that is, $P(E_2| H)=P(E_2| H \wedge E_1)$. If this is not the case, 
+This simple generalization holds provided that the two pieces of evidence are 
+independent conditional on the hypothesis, that is, $P(E_2| H)=P(E_2| H \wedge E_1)$. 
+(More on this below.) 
+
+To illustrate, consider now two pieces of evidence: a DNA match and a witness testimony.
+The DNA match, call it $M$, holds between the crime traces and the defendant, and 
+the witness, call it $W$, in her testimony asserts that the defendant was 
+seen at the crime scene.  
+Both pieces of evidence, intuitively, support the hypothesis $G$ that the defendant 
+is guilty. To assign an explicit numerical value, assume
+ the DNA match has a likelihood ratio $\frac{P(M | G)}{P( M | \neg S)}$ of 2 million, 
+and the witness testimony a likelihood ratio $\frac{P(W | G)}{P( W | \neg G)}$ of 1,000. 
+These numbers are purely illustrative, but are needed to perform the probabilistic calculations.\footnote{Of course, there remains the 
+question of how the numbers can obtained and whether the numbers 
+needed to carry out the calculations are always available in the first place. 
+This is a topic of debate.}  Finally, assume the two pieces are independent conditional on the hypothesis $G$, that is, 
+$P(W|G)=P(W| G\wedge M)$. 
+
+The combined (incremental) evidential value of the two pieces of evidence is given by multiplying the two likelihood 
+ratios, that is, $2,000,000\times 1,000=2,000,000,000$, which is a higher value 
+than the two pieces considered independently. 
+If the prior odds $\frac{P(G)}{P(\neg G)}$ are roughly $\frac{1}{200,000}$
+as before, the posterior odds are therefore as follows:
+%
+\[\frac{P(G|M|\wedge W)}{P(\neg S|M\wedge W)}= \frac{P(M |G)}{P( M | \neg S)}\cdot  \frac{P(W |G)}{P( W | \neg G)}\cdot \frac{P(G)}{P(\neg G)} \approx 2,000,000 \cdot  1,000 \cdot \frac{1}{200,000}= \frac{20,000}{1}.\]
+% 
+So the poster probability of the hypothesis given the two pieces of evidence is as follows:
+%
+\[P(G|M\wedge W) \approx \frac{20,000}{1+20,000}\approx 0.99.\]
+%
+Compare this probability with $P(G|M)$, which 
+was 0.95, a lower value. The probability calculus can offer a numerical 
+representation of the intuitive fact that two pieces of evidence, taken together, 
+have a higher (overall) evidential value than one piece of evidence alone. 
+
+ If the two pieces of evidence are no independent, 
 the likelihood ratio formula for two pieces of evidence 
 takes the following, more general 
 form:
@@ -1541,63 +1576,12 @@ form:
 	\cdot 
 	\frac{P(H)}{P(\neg H)}.\]
 
-\noindent It is easy to see the first generalization follows from the second, assuming 
+\noindent It is easy to see the first, simple generalization follows from the second, assuming 
 independence between the two pieces of evidence conditional on the hypothesis of interest. 
-The first generalization, however, does not hold in general because 
+The first generalization does not always hold because 
 the evidential value of a piece of evidence, as measured by the likelihood ratio, 
-can change in the face of other evidence. 
-
-Consider now two pieces of evidence: a witness testimony, call it $W$, that defendant was at the crime scene; and 
-a DNA match, call it $M$, between the crime traces and the defendant. Assume the two pieces are independent  
-conditional, say, on the hypothesis $S$ that the defendant is source of the crime traces, that is, 
-$P(W|S)=P(W| S\wedge M)$.  Suppose, also, a likelihood ratio $\frac{P(M | S)}{P( M | \neg S)}$ of 200 million, as before, 
-and a likelihood ratio of $\frac{P(W | S)}{P( W | \neg S)}$ of 10,000. The combined evidential value of the two pieces of evidence is given by multiplying the two likelihood 
-ratio, that is, $200,000,000\times 10,000=2,000,000,000,000$, which is a higher value than the two pieces independently. 
-
- 
-
-
-
-
-
-In a criminal case, there may more than one piece of evidence, for example, 
-there may be an eyewitness testimony and a DNA match. 
-Suppose $P(\textit{guilt}| \textit{testimony})=0.7$
-and $P(\textit{guilt} | \textit{match})=0.7$. What is the probability 
-$P(\textit{guilt}| \textit{testimony} \wedge \textit{match})$ resulting 
-from combing the two pieces of evidence? It would be a mistake to say that, assuming that 
-the two items of evidence are independent, $P(\textit{guilt}| \textit{match} \wedge \textit{testimony})$ equals 
-$0.7\times 0.7=0.49$. %How can  $P(\textit{guilt}| \textit{match}, \textit{testimony})$ be lower than  
-%$P(\textit{guilt}| \textit{testimony})$ or $P(\textit{guilt}| \textit{match})$? 
-The combination of two pieces of evidence, each favoring guilt to some extent, should strengthen the case for guilt, 
-not weaken it. Observe that 
- %
-\[\frac{P(\textit{guilt} | \textit{match}\wedge \textit{testimony})}{P(\neg \textit{guilt} | \textit{match}\wedge \textit{testimony})}=\frac{P(\textit{match}\wedge \textit{testimony} | \textit{guilt})}{P(\textit{match}\wedge \textit{testimony} | \neg \textit{guilt})}\times \frac{P(\textit{guilt})}{P(\neg \textit{guilt})},\]
- %
- and if \textit{match} and \textit{testimony} are independent, conditional on \textit{guilt}, then 
-  %
-\[\frac{P(\textit{match}\wedge \textit{testimony} | \textit{guilt})}{P(\textit{match}\wedge \textit{testimony} | \neg \textit{guilt})}=\frac{P(\textit{match}| \textit{guilt})}{P(\textit{match}|\neg \textit{guilt})}\times\frac{P(\textit{testimony} | \textit{guilt})}{P(\textit{testimony} | \neg \textit{guilt})}.\]
-%
-%or more succinctly,
-%
-%\[LR12 = LR1 \times LR2.\]
- %
-%So, putting everything together,
- %
- %\[\frac{P(\textit{guilt} | \textit{match}, \textit{testimony})}{P(\neg \textit{guilt} | \textit{match}, \textit{testimony})}=LR1\times LR2\times \frac{P(\textit{guilt})}{P(\neg \textit{guilt})}.\]
- %
-%
-The point is that the likelihood ratios should be multiplied, not the probabilities of each hypothesis given the evidence. 
-Suppose DNA evidence shows that the crime traces match with defendant, and 
-the match has a likelihood ratio 
-
-
-
-This is a higher value than the two pieces of evidence considered separately, so 
-$P(\textit{guilt}| \textit{match} \wedge \textit{testimony})$ will be greater than $P(\textit{guilt}| \textit{match})$ 
-or $P(\textit{guilt}| \textit{testimony})$ considered separately, as expected. 
-
-
+can change in the face of other evidence. The problem with the second formula, however, is that it 
+is much more difficult to apply.
 
 
 
@@ -1618,7 +1602,20 @@ or $P(\textit{guilt}| \textit{testimony})$ considered separately, as expected.
 
 
 
-\paragraph{The probability of a composite hypothesis cannot in general be calculated from the probability of its components.} Consider a scenario that consists of several elements, for instance an accidental encounter with a robber ($H_1$) followed by the robber killing the victim ($H_2$). When the two events are independent, the probability of the composite hypothesis $H_1 \land H_2$ is (by definition of probabilistic independence) the product of the probabilities of the individual elements. But in general the elements of a scenario are not independent. In the example, it seems reasonable to assume that an accidental encounter with a robber increases the probability of being killed, albeit slightly. Using formal notation, $P(H_2) < P(H_2 | H_1)$. Hence also $P(H_1) \cdot P(H_2) < P(H_1 \land H_2)$ and $H_1$ and $H_2$ are not independent. This point also holds when considering the probability of a composite hypothesis conditioned on evidence $E$. It does not in general hold that $P(H_1 | E) \cdot P(H_2 | E) = P(H_1 \land H_2 | E)$, only when the elements of the composite hypothesis are independent given the evidence.
+\paragraph{The probability of a composite hypothesis cannot in general be calculated from the probability of its components.} 
+Consider now two hypotheses, $H_1$ and $H_2$, each supported by an item of 
+evidence, $E_1$ and $E_2$, respectively.  Can the likelihood ratio formula be generalized to cases with 
+two items of evidence and two hypotheses?
+
+
+
+
+
+
+
+
+
+Consider a scenario that consists of several elements, for instance an accidental encounter with a robber ($H_1$) followed by the robber killing the victim ($H_2$). When the two events are independent, the probability of the composite hypothesis $H_1 \land H_2$ is (by definition of probabilistic independence) the product of the probabilities of the individual elements. But in general the elements of a scenario are not independent. In the example, it seems reasonable to assume that an accidental encounter with a robber increases the probability of being killed, albeit slightly. Using formal notation, $P(H_2) < P(H_2 | H_1)$. Hence also $P(H_1) \cdot P(H_2) < P(H_1 \land H_2)$ and $H_1$ and $H_2$ are not independent. This point also holds when considering the probability of a composite hypothesis conditioned on evidence $E$. It does not in general hold that $P(H_1 | E) \cdot P(H_2 | E) = P(H_1 \land H_2 | E)$, only when the elements of the composite hypothesis are independent given the evidence.
 
 \paragraph{Further readings}
 The conjunction paradox \citep{cohen1977} and a response \citep{dawid1987}. 
