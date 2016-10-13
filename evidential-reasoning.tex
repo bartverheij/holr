@@ -438,24 +438,30 @@ factor $\Pr(E|H)/\Pr(E)$.
 
 The interest in probabilistic calculations as a tool for the good handling of the evidence has recently been stimulated by the statistics related to DNA profiling, and by some infamous miscarriages of justice that involved statistics, in particular the Lucia de Berk and Sally Clark cases~\citep{dawidEtal2011,fenton2011,schnepsColmez2013}. The interest is not new~\citep{tillers2011}, and can in fact be traced back to early forensic science in the late nineteenth century~\citep{taroniEtal1998}. To what extent probabilistic calculations have a place in courts has always been, and remains, the subject of debate.\endnote{A recent instance of the debate concerns the R v T case, where the UK Court of Appeal restricted the use of Bayes' theorem in courts to cases with a solid statistical foundation such as DNA; see the 2012 special issue of Law, Probability and Risk; Vol. 4, No. 2. For a 1970s instance of the debate, see~\citet{finkelsteinFairley1970,tribe1971}.}
 
-\subsection{Scenarios [NEEDS FIXING]}
+\subsection{Scenarios}
 \label{sec:introScen}
 Finally, the third normative framework %for the correct handling of the evidence 
-centers around scenario analysis. In a scenario, a coherent account of what may have happened in a case is made explicit. Different scenarios are contrasted, and evaluated, by considering their plausibility and by checking to what extent they match and contradict the available evidence. 
-Scenario analysis proves helpful when considering a complex case and its evidence. The coherent explanation of the evidence provided by 
-a scenario can be regarded as a sense-making tool for handling cases with a large dossier. 
-
-
-\begin{comment}
-For instance, consider a murder case with two suspects: the victim's former partner and a robber. For each suspect, a scenario is considered that explains the murder:
+centers around scenario analysis. In a scenario, a coherent account of what may have happened in a case is made explicit. %Different scenarios are contrasted, and evaluated, by considering their plausibility and by checking to what extent they match and contradict the available evidence. 
+Scenario analysis proves helpful when considering a complex case and its evidence. For instance, the following brief scenario can help to make sense of a murder case:
 
 \begin{description}
-	\item $S_1$: The victim's former partner killed the victim after a fight.
-	\item $S_2$: The robber killed the victim when caught during a robbery.	
+	\item The robber killed the victim when caught during a robbery.	
 \end{description}
 
-\noindent When the robber confesses having killed the victim during a robbery, there is evidence contradicting scenario $S_1$ and matching scenario $S_2$.
-\end{comment}
+\noindent Such a coherent explanation of the evidence in the form of
+a scenario can be regarded as a sense-making tool for handling cases with a large dossier. 
+%
+%\begin{comment}
+%For instance, consider a murder case in which a . An interpretation of what happened: 
+%%with two suspects: the victim's former partner and a robber. For each suspect, a scenario is considered that explains the murder:
+%
+%\begin{description}
+	%\item $S_1$: The victim's former partner killed the victim after a fight.
+	%\item $S_2$: The robber killed the victim when caught during a robbery.	
+%\end{description}
+
+%When the robber confesses having killed the victim during a robbery, there is evidence contradicting scenario $S_1$ and matching scenario $S_2$.
+%\end{comment}
 
 
 In particular, legal psychology has contributed to our knowledge about the role of scenarios in handling the evidence~\citep{bennettFeldman1981,penningtonHastie1993}. Scenarios were shown to be misleading, as experiments showed that a false scenario told in a sensible chronological order was more easily believed than a true scenario that was told in a random order. Still, the legal psychologists~\citet{wagenaarEtal1993} emphasised the usefulness of scenario analysis for the rational handling of the evidence, using the technique in their work on debunking dubious case decisions. Scenario analysis is connected with inference to the best explanation~\citep{pardoAllen2008}.
@@ -642,57 +648,31 @@ between the witness testimony and the conclusion the suspect was at the crime sc
 \paragraph{Further readings} 
 Argument structure and diagrams~\citep{wigmore1913,wigmore1931,toulmin1958,freeman1991}. Defeasible reasoning and nonmonotonic logic~\citep{pollock1987,gabbayEtal1994}. Rebutting and undercutting attack~\citep{pollock1987,pollock1995}. Undermining attack~\citep{bondarenkoEtal1997}. Formal evaluation of defeasible arguments~\citep{pollock1987,pollock1995,dung1995,prakken2010}. Argumentative dialogue~\citep{toulmin1958,waltonKrabbe1995,prakken1997,hage2000}. Accrual of reasons and weighing~\citep{pollock1995,hage1997,verheij1996diss,prakken2005}. Argument diagramming and evaluation software~\citep{pollock1995,reedRowe2004,kirschnerEtal2003,vanGelder2003,verheij2005,gordonEtal2007}.
 
-\subsection{Scenarios [NEEDS FIXING]}
+\subsection{Scenarios}
 
 In the scenarios normative framework, the handling of conflicting evidence is analyzed by considering different scenarios about what may have happened.
 
-\paragraph{Scenarios are clusters of events, ordered in time and connected by causal relations.} Consider again the murder example with two suspects: the victim's former partner, who killed the victim after a fight ($S_1$), and a robber who killed the victim when caught during a robbery ($S_2$) (used in Section~\ref{sec:introScen}). Scenario $S_1$ can be made explicit as a sequence of four hypothetical consecutive events (Figure~\ref{fig:scens}). First, the victim and his former partner have a relation ($H_1$); then they break up ($H_2$); subsequently, there is a fight ($H_3$); and finally, the victim is killed by his former partner ($H_4$). Scenario $S_2$ can be analyzed as consisting of three events. First, the robber enters the victim's house ($H_5$); then the victim accidentally encounters the robber ($H_6$); and finally, the robber kills the victim ($H_7$). Some of the events in these chronologically ordered scenarios are causally connected. For instance, in the first scenario, the killing is caused by the break up and the fight; and in the second scenario by the accidental encounter.
+\paragraph{Typically there are different, conflicting scenarios about what has happened.} 
+This happens when the prosecution and the defence present different scenarios about a murder case, as follows:
 
-\begin{figure}[bt]
-\centering
-\input{img/scenarios}
-\caption{Alternative scenarios and their structure\label{fig:scens}}
-\end{figure}
+\begin{description}
+	\item $S_1$: The suspect killed the victim when caught during a robbery.
+	\item $S_2$: The suspect was at home with his wife.	
+\end{description}
 
-\paragraph{Scenarios can explain a piece of evidence or be contradicted by it.} The starting point of the murder investigation is the victim's body found at the crime scene (evidence $E_0$). There are two alternative scenarios that explain this evidence: Both the former partner murder scenario $S_1$ and the robbery murder scenario $S_2$ explain evidence $E_0$, in the sense that finding the body is expected assuming the scenario to be true. Assume now that a match is found between the DNA profile of a tissue trace found under the victim's finger nails and that of his former partner (evidence $E_1$). This evidence is explained by scenario $S_1$, but not by $S_2$, of which evidence $E_1$ is independent. 
+\noindent The former is a guilty suspect scenario, and the latter an alibi scenario. They are conflicting since only one of them can be true.
+Here the conflict is connected to the different sides, prosecution and defence. But there can also be conflicting scenarios on the same side, for instance when there are multiple suspects: 
 
-When the former partner is confronted with the DNA evidence, she provides a different scenario that explains evidence $E_1$: Indeed there was a fight about the break up, but she did not kill the victim, and instead subsequently went to the theater (scenario $S_3$; Figure~\ref{fig:scens}). So we have two scenarios explaining the DNA profile match $E_1$: the former partner murder scenario $S_1$ and the former partner alibi scenario $S_3$. In fact, the two scenarios share a subscenario about the break up fight, that explains the finding of the match (scenario $S_4$ in Figure~\ref{fig:scens}).
+\begin{description}
+	\item $S_1$: Suspect 1 killed the victim when caught during a robbery.
+	\item $S_2$: Suspect 2 killed the victim when caught during a robbery.
+\end{description}
 
-When checking the alibi scenario, it is found that the victim's former partner's bank card was used at the theater that night (evidence $E_2$), contradicting the former partner murder scenario $S_1$. Scenario $S_3$ explains both the DNA evidence $E_1$ and the use of the bank card $E_2$. 
+\paragraph{Scenarios can be contradicted by evidence.} Let's consider a murder case with two alternative scenarios: a former partner murder scenario $S_1$ where the victim's former partner murders the victim, and a robbery murder scenario $S_2$ where a robber murders the victim when caught during a robbery. 
+If the robber's partner presents an alibi (evidence $E_1$), this evidence contradicts scenario $S_2$. This evidence is independent from scenario $S_1$.
 
-\paragraph{Scenarios considered may or may not solve a case, and show which evidence is legally relevant.} A criminal case is only solved when the legally relevant circumstances can be proven. For instance, in murder cases, it should be proven who killed the victim and why. Of the scenarios considered, the former partner murder scenario $S_1$ and the robbery murder scenario $S_2$ explain how and why the murder happened, but the alibi scenario $S_3$ does not. In a crime investigation, it can be hard to find evidence that proves a sufficiently detailed scenario about what has happened. For instance, in the example, it is initially clear that a murder had happened, but not by who. Because of the break up, a scenario that answers the why-question is considered: the former partner murder scenario $S_1$. That scenario is initially corroborated by the DNA match $E_1$, but then breaks down by the use of the bank card $E_2$ that proves the alibi scenario $S_3$. Only when the robber is caught and confesses having killed the victim (evidence $E_3$)---possibly much later, it becomes clear what has happened. The body found $E_0$ and the confession $E_3$ are relevant for answering the legally relevant questions who killed the victim and why. The other evidence considered, the DNA match $E_1$ and the use of the bank card $E_2$, have played a relevant role in the investigation, but do not support or contradict robbery murder scenario $S_2$. 
-
-			%E0			E1			E2			E3
-%S1		expl		expl		ind			ind
-%S2 		expl		ind			ind			expl
-%
-%S3		ind			expl		expl		ind
-%
-%S4		ind			expl		ind			ind
-%S2+S3	expl		expl		expl		expl
-
-
-
-
-%\paragraph{Several scenarios and their relations}
-%
-%In the scenario framework, it is natural to consider several mutually inconsistent scenarios simultaneously. Scenarios can have different relations with one another. They can be mutually inconsistent, such as the two murder scenarios $S_1$ and $S_3$ that each assume a different killer. They can be compatible, such as the innocent former partner scenario $S_2$ and the caught robber scenario $S_3$ that both can be true. They can have subscenario relations, such as the break up fight scenario $S_4$ (in the figure consisting of the events $H_1$, $H_2$ and $H_3$) that is a subscenario of the two scenarios $S_1$ and $S_2$ involving the victim's former partner.
-%
-%
-%\paragraph{Scenarios as alternative explanations of the evidence}
-%
-%Scenarios can be considered as alternative explanations of the evidence. Returning to the three pieces of evidence discussed in Section~\ref{sec:introScen}, we see that the breakup murder scenario $S1$ explains the skin trace $E1$, the innocent former partner scenario $S2$ explains the skin trace $E1$ and the bank card use $E2$, and the caught robber scenario explains the confession $E3$.
-%
-%
-%
-%\textbf{COPIED FROM THAT SECTION; REORGANIZE; my suggestion: that section even briefer.} the breakup murder scenario $S1$ explains the skin trace $E1$, but is contradicted by the use of the bank card $E2$, and again by the confession $E3$. The innocent former partner scenario $S2$ explains the skin trace $E1$ and the bank card use $E2$, and is independent from the confession $E3$. The caught robber scenario explains the confession $E3$, and is independent from the skin trace $E1$ and the bank card use $E2$. Considering these scenarios and this evidence, breakup murder scenario $S1$ is hard to believe, the innocent former partner and caught robber scenarios $S2$ and $S3$ seem to be true.
-%
-%\paragraph{Comparative adequacy of alternative scenarios/hypotheses in explaining the evidence}
-%
-
-
-%MDB [THIS SECTION IS VERY INTERESTED, BUT PERHAPS TOO SOPHISTICATED. I WONDER IF IT CAN BE MADE SIMPLER. IT SEEMS TO ME THAT THE ARGUMENT SECTION WAS SIMPLY ABOUT HOW ARGUMENTS CAN CONFLICT,  BUT THIS SECTION DOES MORE WITH SCENARIOS. IT SHOWS NOT ONLY HOW SCENARIOS CAN CONFLICT BUT ALSO HOW THEY CAN BE COMPARED. IT  SHOWS WHICH SCENARIO IS THE BEST AND ADDRESSES -- TO A CERTAIN EXTENT, AT LEAST -- THE QUESTION HOW CASES CAN BE SOLVED. THIS BELONGS TO LATER IN THE CHAPTER. ]
-
+\paragraph{Scenarios can explain evidence.} 
+Both scenarios explain the starting point of the murder investigation: the victim's body found at the crime scene (evidence $E_2$), in the sense that finding the body is expected assuming either scenario to be true. Assume now that a match is found between the DNA profile of a tissue trace found under the victim's finger nails and that of his former partner (evidence $E_3$). This evidence is explained by scenario $S_1$, but not by $S_2$, of which evidence $E_3$ is independent. 
 
 \paragraph{Further readings} 
 Scenarios in evidential reasoning~\citep{bennettFeldman1981,penningtonHastie1993,penningtonHastie1993StoryModel}. Scenarios and miscarriages of justice~\citep{wagenaarEtal1993}. Inference to the best explanation~\citep{pardoAllen2008}. Hypothetical explanations of the evidence~\citep{thagard1989}. 
@@ -1190,7 +1170,7 @@ with the evidence; its power to explain the evidence;
 and its evidential support. Let us consider each in turn.
 
 
-\paragraph{Scenarios must be consistent with the evidence, taken at face value.}
+\paragraph{Scenarios must be consistent with the evidence.}
 
 We can evaluate a scenario by checking whether it is consistent with the evidence presented in a case.
 If a witness testifies that the defendant was at home with his girlfriend 
@@ -1210,103 +1190,6 @@ with the evidence.
 
 
 
-\paragraph{Scenarios must explain the evidence.}
-
-The fact that a scenario is consistent 
-with the evidence, is not by itself a good enough reason to believe the scenario. 
-Scenarios should also \textit{explain} the evidence. 
-Two senses of `explanation' are relevant here. First, 
-a scenario explains the evidence in the sense that it \textit{predicts} the evidence. 
-%By assuming the truth of the scenario, the presence of the evidence can be derived more or less deductively. 
-This can expressed by the statement \textit{if} $S$, \textit{then} $e$, 
-where $S$ is a scenario and $e$ the evidence, in the sense that $e$ 
-follows deductively from $S$. The relation of prediction can also be probabilistic, in the sense that given the truth of the scenario, 
-the truth of the evidence is highly probable. 
-%In the language of probability, the conditional probability $P(E|H)$ of $e$ given $S$ can also be used, where the higher the probability, the better 
-%the scenario's predictive power relative to the evidence. 
-For example, let $V$ be a scenario that comprises the event that the defendant visited the crime scene, and let $M$ be 
-evidence that certain genetic material matching the defendant 
-was found at the crime scene. Clear $V$ predicts $M$, in the sense that from the truth of $V$
- the match $M$ follows almost deductively or at least with a high probability.  
-%If a scenario can predict the evidence, this fact favors the scenario, and if it cannot, this weakens the credibility of the scenario.
-
-There is another sense of explanation that deserves mentioning here. 
-A scenario explains the evidence in the sense it exhibits the \textit{causal process} by which the evidence 
-was brought about. This applies most naturally to physical and testimonial evidence. 
-In a case in which traces were found at the crime scene, 
-it is more plausible that an individual visited the crime scene 
-and left the traces by physical contact. Here the scenario exhibits the causal process (physical contact) 
-by which the existence of the evidence 
-(traces) was brought about. 
-
-\paragraph{Scenarios can be evaluated against two directions of fit.}
-
-Scenarios can be evaluated according to two directions of it: whether they adequately explain the evidence, so that the fit is from 
-the scenario to the evidence; and whether the evidence supports the scenario, so that the fit is from the evidence to the scenario.
-We have already discussed the first direction of fit. The other direction---from the evidence to the scenario---is equally important in 
-evaluating the credibility of a scenario. In the language of probability, besides the conditional probability $P(e|S)$ of the evidence 
-given the scenario (which is closer to explanatory power), we should also consider the conditional probability of the 
-scenario given the evidence, $P(S|e)$ (which is closer to evidential support).
-
-The two directions of fit are not unrelated. Setting aside wildly implausible 
-scenarios such as `God did it', if a scenario explains or predicts the evidence, it will also be well supported 
-by the evidence. Conversely, if a scenario is supported by the evidence, it will also explain it. This is not always true but often so. 
-Suppose a witness asserts that she saw the defendant around the crime scene during the time of the crime. This evidence supports a scenario that contains the event 
-`the defendant was around the crime scene at the time of the crime'. Conversely, this scenario would also explain why 
-the witness testified the way she did, that is, it was because the witness saw what the defendant was doing. However, suppose that the defendant was alone with the 
-victim on a island during a time when it was impossible for anyone else to reach the island. During this time the victim dies of causes that cannot be natural. 
-The fact that the defendant was alone on the island with the victim is evidence that the defendant killed the victim, but this scenario does 
-not explain the evidence. It does not explain, in terms of prediction or causality, why or how the defendant 
-found himself alone with the victim on the island. 
-
-
-
-
-
-
-\paragraph{Further readings}
-
-Explanation in the deductive nomological model \citep{hempelOppenhaim1948}. 
-Explanation and causality \citep{salmon1984}. 
-Abduction and inference to the best explanation \citep{lipton1991}.
-More the philosophical literature on 
-scientific explanation \citep{woodward2014}. 
-Two directions of fit \citep{wells1992}.
-
-
-\section{Coherently interpreting the evidence}
-\label{sec:cohint}
-
-The dossiers of criminal cases can be large, and the coherent interpretation of the evidence in such a dossier can 
-be daunting, whichever normative framework is used. For each framework, we discuss how the coherent 
-interpretation of the evidence can be addressed.
-
-\subsection{Scenarios}
-
-%In the previous section, we evaluated scenarios by how well they matched up with the evidence, in terms of consistency, explanatory power and evidential support.
-%These were atomistic criteria. 
-
-\paragraph{The more evidence a scenario can explain, the better.}
-
-When a case comprises several items of evidence, 
-%the interpretation of the evidence becomes holistic. 
-a scenarios's credibility depends on how it can account for the whole mass of evidence.  
- The more items of evidence a scenario can account for, preferably from both the prosecutor and the defense, 
- the better the scenario. This depends on the scenario's consistency with the evidence, 
- explanatory power and evidential support. These criteria were already discussed earlier. 
- The difference now is that consistency, explanatory power and evidential support should 
- be measured relative to the totality of the evidence.  
- 
- Suppose two items of evidence must be explained: first, the presence of fingerprints at the crime scene; 
-and second the fact that those fingerprints match with the defendant.  Suppose scenario $S_1$ comprises the event that the 
-defendant visited the crime scene, while $S_2$ compromises the event that some other individual visited the crime scene. Both scenarios 
-explain the presence of fingerprint traces, but only $S_1$ can explain the fact that the traces match with the defendant. Now, a third scenario $S_3$ in which another individual visited the crime and  implanted fingerprints that match the defendant can explain both items of evidence. As far as explanatory power goes, scenarios $S_1$ and $S_3$ are equal, although further evidence may distinguish them. For example, if a witness testified that she saw the defendant walk towards the location of the crime when the crime was committed, scenario $S_3$ could 
-not easily explain the testimony, while $S_1$ could. So, absent other evidence, scenario $S_1$ explains more evidence than the other competing scenarios. 
- 
- 
-Other more openly holistic criteria such as a scenario's plausibility and completeness are also important. 
- We discuss them now.
-  
 \paragraph{Scenarios can be more or less plausible, logically consistent, cohesive, normal}
 
 While consistency with the evidence, explanatory power and evidential support measure how well a 
@@ -1342,6 +1225,59 @@ are also indicators of plausibility.
 
 
 
+\paragraph{The more evidence a scenario can explain, the better.}
+
+When a case comprises several items of evidence, 
+%the interpretation of the evidence becomes holistic. 
+a scenarios's credibility depends on how it can account for the whole mass of evidence.  
+ The more items of evidence a scenario can account for, preferably from both the prosecutor and the defense, 
+ the better the scenario. This depends on the scenario's consistency with the evidence, 
+ explanatory power and evidential support. These criteria were already discussed earlier. 
+ The difference now is that consistency, explanatory power and evidential support should 
+ be measured relative to the totality of the evidence.  
+ 
+ Suppose two items of evidence must be explained: first, the presence of fingerprints at the crime scene; 
+and second the fact that those fingerprints match with the defendant.  Suppose scenario $S_1$ comprises the event that the 
+defendant visited the crime scene, while $S_2$ compromises the event that some other individual visited the crime scene. Both scenarios 
+explain the presence of fingerprint traces, but only $S_1$ can explain the fact that the traces match with the defendant. Now, a third scenario $S_3$ in which another individual visited the crime and  implanted fingerprints that match the defendant can explain both items of evidence. As far as explanatory power goes, scenarios $S_1$ and $S_3$ are equal, although further evidence may distinguish them. For example, if a witness testified that she saw the defendant walk towards the location of the crime when the crime was committed, scenario $S_3$ could 
+not easily explain the testimony, while $S_1$ could. So, absent other evidence, scenario $S_1$ explains more evidence than the other competing scenarios. 
+ 
+
+
+
+
+
+\paragraph{Further readings}
+
+Explanation in the deductive nomological model \citep{hempelOppenhaim1948}. 
+Explanation and causality \citep{salmon1984}. 
+Abduction and inference to the best explanation \citep{lipton1991}.
+More the philosophical literature on 
+scientific explanation \citep{woodward2014}. 
+Two directions of fit \citep{wells1992}.
+
+
+\section{Coherently interpreting the evidence}
+\label{sec:cohint}
+
+The dossiers of criminal cases can be large, and the coherent interpretation of the evidence in such a dossier can 
+be daunting, whichever normative framework is used. For each framework, we discuss how the coherent 
+interpretation of the evidence can be addressed.
+
+\subsection{Scenarios}
+
+%In the previous section, we evaluated scenarios by how well they matched up with the evidence, in terms of consistency, explanatory power and evidential support.
+%These were atomistic criteria. 
+
+Scenarios can provide coherent interpretations that make sense of the evidence.
+  
+\paragraph{Scenarios are clusters of events, ordered in time and connected by causal relations.} Consider again a murder example with two suspects: the victim's former partner, who killed the victim after a fight ($S_1$), and a robber who killed the victim when caught during a robbery ($S_2$). Scenario $S_1$ can be made explicit as a sequence of four hypothetical consecutive events (Figure~\ref{fig:scens}). First, the victim and his former partner have a relation ($H_1$); then they break up ($H_2$); subsequently, there is a fight ($H_3$); and finally, the victim is killed by his former partner ($H_4$). Scenario $S_2$ can be analyzed as consisting of three events. First, the robber enters the victim's house ($H_5$); then the victim accidentally encounters the robber ($H_6$); and finally, the robber kills the victim ($H_7$). Some of the events in these chronologically ordered scenarios are causally connected. For instance, in the first scenario, the killing is caused by the break up and the fight; and in the second scenario by the accidental encounter.
+
+\begin{figure}[bt]
+\centering
+\input{img/scenarios}
+\caption{Alternative scenarios and their structure\label{fig:scens}}
+\end{figure}
 
 
 
@@ -1374,6 +1310,19 @@ All in all, evaluating a scenario required different levels of analysis: consist
 explanatory power (predictive power and causal fit); evidential support; plausibility 
 (and also, cohesiveness, internal consistency and normality); completeness.
 
+
+
+
+\paragraph{Scenarios considered may or may not solve a case, and show which evidence is legally relevant.} A criminal case is only solved when the legally relevant circumstances can be proven. For instance, in murder cases, it should be proven who killed the victim and why. Of the scenarios considered, the former partner murder scenario $S_1$ and the robbery murder scenario $S_2$ explain how and why the murder happened, but the alibi scenario $S_3$ does not. In a crime investigation, it can be hard to find evidence that proves a sufficiently detailed scenario about what has happened. For instance, in the example, it is initially clear that a murder had happened, but not by who. Because of the break up, a scenario that answers the why-question is considered: the former partner murder scenario $S_1$. That scenario is initially corroborated by the DNA match $E_1$, but then breaks down by the use of the bank card $E_2$ that proves the alibi scenario $S_3$. Only when the robber is caught and confesses having killed the victim (evidence $E_3$)---possibly much later, it becomes clear what has happened. The body found $E_0$ and the confession $E_3$ are relevant for answering the legally relevant questions who killed the victim and why. The other evidence considered, the DNA match $E_1$ and the use of the bank card $E_2$, have played a relevant role in the investigation, but do not support or contradict robbery murder scenario $S_2$. 
+
+			%E0			E1			E2			E3
+%S1		expl		expl		ind			ind
+%S2 		expl		ind			ind			expl
+%
+%S3		ind			expl		expl		ind
+%
+%S4		ind			expl		ind			ind
+%S2+S3	expl		expl		expl		expl
 
 
 
@@ -1864,7 +1813,7 @@ of evidence that is complete, or at least as complete as reasonably possible. An
 
 Probabilistic accounts of the burden of proof
 \citep{kaplan1968, kaye1986, kaye1999, hamer2004, cheng2013}.
-Critique of probabilistic accounts \citep{cohen1977, nesson79, thomson86, stein05, ho08, pardoAllen2008, haack2011}.
+Critique of probabilistic accounts \citep{cohen1977, nesson79, thomson86, stein05, ho08, pardoAllen2008, haack2014}.
 On the question whether the threshold should be variable \citep{kaplow2012, picinali2013}.
 The problem of priors \citep{finkelsteinFairley1970, friedman2000}.
 A critique of the proof beyond a reasonable doubt  
