@@ -1,0 +1,44 @@
+\documentclass[border=5mm,tikz]{standalone} 
+
+\usepackage{amsmath}
+\input{../styles.tex}
+
+\begin{document}
+	\begin{tikzpicture}[
+		scn/.append style={text width=2.5cm},
+		arg/.append style={text width=3cm},
+	]
+		\pgftransformxscale{3.5}
+		\pgftransformyscale{1.8}
+		
+		\node[scn] (H1) at (1.6,0) {$H_1$: The robber enters the victim's house};
+		\node[scn] (H2) at (2.6,0) {$H_2$: The victim accidentally encounters the robber};
+		\node[scn] (H3) at (3.6,0) {$H_3$: The robber kills the victim};
+
+		%\node[scn] (H4) at (4,0.6) {$H_4$: The victim's former partner kills the victim};
+
+		\node at (4.5,0.5) {$S_1$};
+
+		%\node[scn] (H8) at (4,-0.6) {$H_8$: The victim's former partner goes to the theater};
+
+		%\node at (4.5,-0.5) {$S_3$};
+
+		\node[scn] (H5) at (1.6,-2) {$H_4$: The victim's friend enters the victim's house};
+		\node[scn] (H6) at (2.6,-2) {$H_5$: They watch TV and eat Chinese};
+		\node[scn] (H7) at (3.6,-2) {$H_6$: The friend kills the victim};
+
+		\node at (4.5,-2) {$S_2$};
+
+		%\draw[thick,dashed,rounded corners=1mm] (0.55,0.65) rectangle (3.45,-0.65);
+		%\node at (3.35,-0.5) {$S_4$};
+
+		\draw[arg] (H1) -- (H2);
+		\draw[arg] (H2) -- (H3);
+		%\draw[arg] (H3) -- (H4);
+		%\draw[arg] (H3) -- (H8);
+		\draw[arg] (H5) -- (H6);
+		\draw[arg] (H6) -- (H7);
+
+
+	\end{tikzpicture}
+\end{document}
