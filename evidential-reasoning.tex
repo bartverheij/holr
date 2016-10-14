@@ -368,7 +368,7 @@ Both questions can be addressed with
 the famous Bayes' theorem:
 %
 \begin{quotation}
-	$\Pr(H|E) = \dfrac{\Pr(E|H)}{\Pr(E)}\cdot\Pr(H)$
+	$\Pr(H|E) = \dfrac{\Pr(E|H)}{\Pr(E)}\cdot\Pr(H)$.
 \end{quotation}
 %
 %<<<<<<< HEAD
@@ -446,11 +446,15 @@ Scenario analysis proves helpful when considering a complex case and its evidenc
 For instance, the following brief scenario can help to make sense of a murder case:
 %
 \begin{description}
-	\item The robber killed the victim when caught during a robbery.	
+	\item The robber killed the victim when caught during a robbery but lost a handkerchief. 	
 \end{description}
 %
-\noindent Such a coherent explanation of the evidence in the form of
-a scenario can be regarded as a sense-making tool for handling cases with a large dossier. 
+\noindent This scenario can make sense of number of facts, for example, that no one in the close circle of acquaintances 
+of the victim is a suspect, that there are signs someone broke into the victim's apartment, and that a handkerchief 
+was found on the floor although it did not belong the victim. 
+Such a unifying explanation in the form of
+a scenario can be regarded as a sense-making tool for handling 
+cases with a large dossier. 
 %
 %\begin{comment}
 %For instance, consider a murder case in which a . An interpretation of what happened: 
@@ -465,7 +469,11 @@ a scenario can be regarded as a sense-making tool for handling cases with a larg
 %\end{comment}
 
 
-Legal psychology has contributed to our knowledge about the role of scenarios in handling the evidence~\citep{bennettFeldman1981,penningtonHastie1993}. Scenarios were shown to be misleading, as experiments showed that a false scenario told in a sensible chronological order was more easily believed than a true scenario that was told in a random order. Still, the legal psychologists~\citet{wagenaarEtal1993} emphasised the usefulness of scenario analysis for the rational handling of the evidence, using the technique in their work on debunking dubious case decisions. Scenario analysis is connected with inference to the best explanation~\citep{pardoAllen2008}.
+Legal psychology has contributed to our knowledge about the role of scenarios in handling the evidence~\citep{bennettFeldman1981,penningtonHastie1993}. Scenarios, however, 
+can be misleading. Experiments have shown that a false scenario told in a sensible chronological order can be more persuasive 
+than a true scenario whose events are told in a random order. Still, the legal psychologists~\citet{wagenaarEtal1993} have
+emphasized the usefulness of scenario analysis for the rational handling of the evidence. In their work, they use scenario analysis for 
+debunking dubious case decisions. Scenario analysis is also connected with inference to the best explanation~\citep{pardoAllen2008}.
 
 %MDB [I THINK WE SHOUD MAKE CLEAR THAT EACH FRAMEWORK WILL BE DEVELOPED MORE IN DEPTH LATER IN THE PAPER AND THAT IN THIS FIRST SECTION WE ARE  BEING GENERAL AND IMPRESSIONISTIC. THIS SECTIONS LOOKS LIKE A SUMMARY FO WHAT'S TO COME.]
 
@@ -651,9 +659,13 @@ Argument structure and diagrams~\citep{wigmore1913,wigmore1931,toulmin1958,freem
 
 \subsection{Scenarios}
 
-In the scenarios normative framework, the handling of conflicting evidence is analyzed by considering different scenarios about what may have happened.
+In the scenario-based framework, the handling of conflicts 
+is analyzed by considering different scenarios about what may have happened. While in the previous framework, conflicts were 
+modeled as conflicts between attacking and supporting reasons within arguments, 
+here the perspective is more holistic, and conflicts 
+are modeled as conflicts between scenarios.
 
-\paragraph{There may be conflicting scenarios about what has happened.} 
+ \paragraph{There may be conflicting scenarios about what has happened.} 
 The prosecution and the defense often 
 present different scenarios about what happened. For example, 
 in a murder case, the parties may put forward two scenarios, as follows:
@@ -664,7 +676,9 @@ in a murder case, the parties may put forward two scenarios, as follows:
 \end{description}
 
 \noindent The former is a robbery scenario, and the latter an \textit{alibi} scenario. They are conflicting since 
-only one of them can be true. Note that the second scenario does not say who killed the victim or how the crime occurred. 
+only one of them can be true. 
+
+Note that the second scenario does not say who killed the victim or how the crime occurred. 
 It only asserts that the defendant did not do it.
 %Here the conflict is connected to the different sides, prosecution and defence. 
 But there can also be conflicting scenarios, each pointing to a different perpetrator:
@@ -674,8 +688,8 @@ But there can also be conflicting scenarios, each pointing to a different perpet
 	\item $S_3$: The victim's former partner killed the victim after a violent fight between the two.
 \end{description}
 %
-The two scenarios offer incompatible reconstructions of how the killing 
-occurred and who did it, because they cannot be both true. 
+The two scenarios offer incompatible reconstructions of the killing 
+and of who did it. 
 
 \paragraph{Evidence can be explained by one scenario, but not by another.} 
 Conflicts between scenarios can also exist in relation to the evidence, for example, when one scenario 
@@ -708,7 +722,7 @@ inconsistent with one other because
 they cannot be both true, but also scenarios that diverge in terms of 
 the evidence they can or cannot explain. There is another type of conflict worth discussing. This takes the form of 
 a quasi-inconsistency between scenarios and  evidence. The quasi-inconsistency occurs when the evidence, 
-typically testimonial, not physical or trace evidence, asserts that such-and-such occurred, while the scenario 
+typically testimonial, not physical evidence, asserts that such-and-such event occurred, while the scenario 
 denies it. 
 
 %Just as there can be conflict between scenarios considered \textit{per se}, 
@@ -756,9 +770,11 @@ Scenarios in evidential reasoning~\citep{bennettFeldman1981,penningtonHastie1993
 
 \subsection{Probabilities}
 
-In the probabilistic normative framework, the handling of conflicting evidence is analyzed in terms of the conditional probabilities that connect the evidence and the hypotheses.
+In the probability-based framework, conflicts are modeled as conflicts between pieces 
+of evidence which support or attack a certain hypothesis, where `support' 
+and `attack' are described in probabilistic terms. 
 
-\paragraph{Evidential support and attack can be characterized as ``probability change''.} 
+\paragraph{Support can be characterized as ``probability increase'' or ``positive likelihood ratio''.} 
 %BV:I changed difference to relevance, as 'prob diff' is used later for something else.
 %BV:I prefer replacing 'favoring and disfavoring' by 'suport ad attack', throughout. MDB: DONE
 %MDB : used the expression "probability changes" because relevant is general and might apply also to a likelihood ratio greater than one. 
@@ -773,42 +789,24 @@ This can be described probabilistically, as follows:
  %
  \[ P(\textit{guilt}|\textit{testimony}) > P(\textit{guilt}).\] 
  %
-By contrast, a piece of evidence $E$ attacks a hypothesis $H$ whenever $E$ lowers 
-the probability of $H$, or in symbols, $P(H|E) < P(H)$.
-For example, if a DNA test shows no match between the traces found at the crime
- scene and the defendant, this evidence attacks the hypothesis that the defendant is guilty. 
- Probabilistically, 
-%
-\[ P(\textit{guilt}|\textit{no DNA match}) < P(\textit{guilt}).\]  
-%
- %
- 
-% \paragraph{Two characterizations of evidential favoring and disfavoring are equivalent} 
-\paragraph{Evidential support and attack can be characterized as ``likelihood ratio''.} 
 
-There is another characterization of evidential support and attack. 
+There is another characterization of evidential support. 
 Instead of comparing the initial probability $P(H)$ and the probability $P(H|E)$ 
 of the hypothesis given the evidence, a so-called likelihood ratio of 
 the form ${P(E| H)}/{P(E |\neg H)}$ 
 %BV: I changed the vertical fraction to a horizontal one. Looks better inline. I prefer that everywhere.
 can also be used.
-On this account, $E$ supports $H$ whenever the likelihood ratio
-$\frac{P(E|H)}{P(E | \neg H)}$ is greater than one. Intuitively, this means that the presence of the 
+On this account, $E$ supports $H$ whenever the likelihood ratio  ${P(E| H)}/{P(E |\neg H)}$
+%$\frac{P(E|H)}{P(E | \neg H)}$ 
+is greater than one. Intuitively, this means that the presence of the 
 evidence is more probable %BV was 'likely'
-if the hypothesis is true than if the hypothesis is false. 
-By contrast, a piece of evidence $E$ attacks a hypothesis $H$ whenever 
-the likelihood ratio is lower than one. This means that the presence of the evidence is less likely %BV was 'likely'
-if the 
-hypothesis is true than if the hypothesis is false. For the two examples considered earlier, we have:
+if the hypothesis is true than if the hypothesis is false. For the example considered earlier, we have:
 %
- \[\frac{P(\textit{testimony}|\textit{guilt})}{P(\textit{testimony}|\neg \textit{guilt})} > 1, \text{ and }\]
- %
- \[\frac{P(\textit{no DNA match}|\textit{guilt})}{P(\textit{no DNA match}|\neg \textit{guilt})} < 1.\]
+ \[\frac{P(\textit{testimony}|\textit{guilt})}{P(\textit{testimony}|\neg \textit{guilt})} > 1.\]
 %
-These two characterizations of evidential support/attack---in terms of probability 
-increase/decrease, and in terms of a likelihood ratio greater/lower than one---are 
-in fact equivalent. 
-For the following statements hold:
+These two characterizations of evidential support---in terms of probability 
+increase and positive likelihood ratio---are 
+in fact equivalent.  For the following statements hold:
 %
 %\[\textit{\text{$E$ favors (or supports) $H$} iff }   P(H|E)> P(H) \textit{ iff }\frac{P(E|H)}{P(E|\neg H)}>1.\]
 \[ P(H|E)> P(H) \text{ iff }\frac{P(E|H)}{P(E|\neg H)}>1.\endnote{To see why, recall that 
@@ -830,6 +828,30 @@ by the equivalence above.
 The latter is the same as $\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$. To establish $P(H|E)> P(H)$, suppose for contradiction that
 $P(H|E) \leq P(H)$, which implies $1- P(H|E) \geq 1- P(H)$. This means that $\frac{P(H|E)}{1- P(H | E)} \leq \frac{P(H)}{1- P(H)}$. 
 This contradicts $\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$, and thus $P(H|E)> P(H)$.}\]
+
+ 
+% \paragraph{Two characterizations of evidential favoring and disfavoring are equivalent} 
+\paragraph{Attack can be characterized as ``probability decrease'' or ``negative likelihood ratio''.} 
+
+By contrast, a piece of evidence $E$ attacks a hypothesis $H$ whenever $E$ lowers 
+the probability of $H$, or in symbols, $P(H|E) < P(H)$.
+For example, if a DNA test shows no match between the traces found at the crime
+ scene and the defendant, this evidence attacks the hypothesis that the defendant is guilty. 
+ Probabilistically, 
+%
+\[ P(\textit{guilt}|\textit{no DNA match}) < P(\textit{guilt}).\]  
+%
+
+Similarly, a piece of evidence $E$ attacks a hypothesis $H$ whenever 
+the likelihood ratio is lower than one. This means that the presence of the evidence is less likely %BV was 'likely'
+if the hypothesis is true than if the hypothesis is false. For the the example 
+considered earlier, we have:
+ %
+ \[\frac{P(\textit{no DNA match}|\textit{guilt})}{P(\textit{no DNA match}|\neg \textit{guilt})} < 1.\]
+%
+Just as the two characterizations 
+of evidential support are equivalent, so are the two characterizations of evidential attack, 
+that is:
  %
 \[ P(H|E) < P(H) \text{ iff}  \frac{P(E|H)}{P(E|\neg H)} < 1.\]
 %
@@ -841,6 +863,7 @@ and the other attacks the same hypothesis.
 The conflict can be described probabilistically, in that one piece of evidence increases 
 the probability of the hypothesis, while the other decreases it, or equivalently, the likelihood ratio is positive (for one piece 
 of evidence) and negative (for the other). 
+
 For example, the testimony that the defendant was around the crime scene conflicts 
 with the lack of a DNA match. Probabilistically, the testimony 
 increases the probability of the defendant's guilt (or equivalently, the likelihood ratio is greater than one),
@@ -883,7 +906,8 @@ for the hypothesis.
 An alternative approach is given by the likelihood ratio $P(E|H)/P(E| \neg H)$. 
 %For the evidence to offer some support to the hypothesis, the likelihood ratio should be at least greater than one. 
 For any value greater than one, the higher the likelihood ratio, 
-the higher the value of the evidence for the hypothesis. %For simplicity, we shall speak of evidential strength 
+the higher the value of the evidence for the hypothesis. 
+%For simplicity, we shall speak of evidential strength 
 %in terms of likelihood ratios, as follows:
 %
 %\begin{quote}
@@ -893,6 +917,16 @@ the higher the value of the evidence for the hypothesis. %For simplicity, we sha
 %
 %By contrast, for any value lower than one, the lower the likelihood ratio 
 %the higher value of the evidence against the hypothesis. 
+By contrast, a negative difference $P(H | E) - P(H)$ and a likelihood ratio lower than one  
+quantify the value of the evidence \textit{against} a hypothesis.
+The larger the negative difference and the lower the likelihood ratio (for any value below one), 
+the higher the value of the evidence against the hypothesis.
+
+Note that these two approaches parallel the two characterizations of evidential support and attack in the previous 
+action, as probability increase/decrease and positive/negative likelihood ratio. While these notions were only qualitative, 
+probability increases/decreases and likelihood ratios, as measures of evidential value, express quantities.  
+
+
 \begin{comment} 
 The following table %, whose calculations are approximations based on Bayes' theorem, offers 
 offers some illustrations:
@@ -927,11 +961,8 @@ All in all, a positive difference $P(H|E) - P(H)$ and a likelihood ratio ${P(E|H
 quantify, albeit in different ways, the value of the evidence \textit{for} 
 a hypothesis. 
 \end{comment}
- By contrast, a negative difference $P(H | E) - P(H)$ and a likelihood ratio lower than one  
-quantify the value of the evidence \textit{against} a hypothesis.
-The larger the negative difference and the lower the likelihood ratio (for any value below one), 
-the higher the value of the evidence against the hypothesis.
-
+ 
+ 
 %As one can see from the table, there are quantitive 
 %differences between the two approaches, but these should 
 %not concern us here. Since the most widely used approach to quantify evidential value relies on 
