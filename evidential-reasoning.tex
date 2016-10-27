@@ -126,11 +126,16 @@ Marcello Di Bello \& Bart Verheij --  \today \\
 
 \newpage
 
-\noindent When a suspect appears in front of a criminal court, there is a very high probability that he will be found guilty. In the Netherlands, for instance, the conviction rate of suspects that appear in criminal courts is reported to be around 95\% year after year.\endnote{Source: CBS, the Dutch central bureau of statistics, publishing its data at www.cbs.nl.} 
+\noindent When a suspect appears in front of a criminal court, there is a very high probability that he will be found guilty. 
 %MDB [NOT SURE ABOUT THE DUTCH FIGURE BEING FIRST]
-In the United States, the conviction rate in federal courts has been roughly 75\% and in Japan has reached as high a rate as 99\%.\endnote{\textbf{SOURCE TO BE ADDED}} This does not mean that the fact-finders deciding about the facts of a  case have an easy job. Whether laypeople, such as jury members selected from the general public, or professionals, often experienced judges having completed postgraduate education, all face the difficulties associated with handling the evidence that is presented in court. What to do with conflicting testimonies? Does an established DNA match outweigh the testimony that the suspect was not on the crime scene? How to coherently interpret a large body of evidence? 
+In the United States, the conviction rate in federal courts has been roughly 90\% and in Japan reaches as high a rate as 99\%.\endnote{On the conviction rate in US federal courts, see the statistical reports of the Offices of the United States Attorneys, available at \url{www.justice.gov/usao/resources/annual-statistical-reports}. Most of these convictions are guilty pleas, not convictions after trial. On Japan's conviction rate, see \textit{White Paper on Crime 2014}, Part 2, Chapter 3, Section 1, available at \url{hakusyo1.moj.go.jp/en/63/nfm/mokuji.html}.} 
+In the United Kingdom, the numbers are slightly lower, with a conviction rate of roughly 80\%, while in the Netherlands 
+the conviction rate is around 95\%.\endnote{On the UK conviction rate, see \url{Criminal Justice Statistics--March 2014}, available at 
+\url{www.gov.uk/government/statistics}. As in the US case, the rate include mostly guilty pleas. 
+For the Netherlands, see CBS, the Dutch central bureau of statistics, publishing its data at \url{www.cbs.nl}.} 
+This does not mean that the fact-finders deciding about the facts of a  case have an easy job. Whether laypeople, such as jury members selected from the general public, or professionals, often experienced judges having completed postgraduate education, all face the difficulties associated with handling the evidence that is presented in court. What to do with conflicting testimonies? Does an established DNA match outweigh the testimony that the suspect was not on the crime scene? How to coherently interpret a large body of evidence? 
 %What to do with illegally obtained evidence? %MDB [WE DO NOT ADDRESS THIS QUESTION IN THE TEXT, SO REMOVE?] 
-When is there enough evidence to convict `beyond a reasonable doubt'? 
+When is there enough evidence to convict? % `beyond a reasonable doubt'? 
 
 The primary aim of this chapter is to explain the nature of evidential reasoning, the characteristic difficulties encountered, and the tools to address these difficulties. 
 Our focus is on evidential reasoning in criminal cases. There is an extensive scholarly literature on these topics, 
@@ -283,38 +288,6 @@ the role of the three normative frameworks (Sections~\ref{sec:conf},~\ref{sec:st
 
 
 
-\begin{comment}
-
-
-
-The three normative frameworks for the handling of evidence, arguments, scenarios, and probabilities, are connected to the first three of the central questions that we have discussed:
-
-\begin{description}
-	\item Question 1: How should we handle conflicting evidence?
-	\item Question 2: How should we handle the strength of the evidence?
-	\item Question 3: How should we coherently interpret the available evidence? 
-\end{description}
-
-\noindent Although---as we shall see---each of the three normative frameworks provides relevant insights for answering each of these three questions, the first question about conflicting evidence is especially closely related to the arguments framework, the second question about strength of the evidence in particular to the probabilities framework, and the third question about coherently interpreting the evidence most strongly to the scenarios framework.
-
-[UNSURE ABOUT THIS PART. IT IS PARTLY A REPETITION OF THE QUESTIONS WE ALREADY FORMULATED EARLIER. ALSO, REGARDING THE FACT THAT EACH 
-FRAMEWORK IS MORE CLOSELY CONNECTED TO A SPECIFIC TYPE OF QUESTION, THE READER MIGHT NOT CARE TOO MUCH ABOUT IT. WE COULD SAY THAT AT THE END.]
-
-In the following sections, these three questions will be discussed, consecutively, while emphasizing 
-the role of the three normative frameworks (Sections~\ref{sec:conf},~\ref{sec:str} and~\ref{sec:cohint}). 
-The final question (Section ~\ref{sec:whenconv}) ties together the previous ones 
-and concerns the decision to convict or acquit based 
-on the evaluation of the evidence:
-
-%The remaining two questions are less strongly connected to the normative frameworks, and are discussed in Sections~\ref{sec:intexc} and~\ref{sec:whenconv}:
-
-\begin{description}
-	%\item Question 4: How should we collect, include, exclude evidence?
-	\item Question 4: How should we decide about the facts given the evidence? When are we done?
-\end{description}
-
-
-\end{comment}
 
 \section{Three normative frameworks}
 \label{sec:frameworks}
@@ -359,11 +332,16 @@ The second normative framework %for the correct handling of the evidence
 uses probabilities as the primary tool. 
 In handling evidence in court, a crucial question from the probabilistic perspective is, 
 how probable is a certain hypothesis $H$ given a body of evidence $E$? This is 
-the \textit{conditional probability} of $H$ given $E$, or in symbols, $P(H|E)$. 
+the \textit{conditional probability} of $H$ given $E$, or in symbols, $\Pr(H|E)$. 
 Another crucial question is, how does the probability of $H$ 
 change in light of evidence $E$? This \textit{probability change} is expressed by 
-the difference between the conditional probability $P(H|E)$ and the so-called \textit{prior 
-probability} $P(H)$.
+the difference between the so-called posterior probability $\Pr(H|E)$ and \textit{prior 
+probability} $\Pr(H)$.\endnote{ \label{footnote:prior} The language of `priors' and `posteriors' probabilities 
+is standard. It suggests a temporal ordering, although these probabilities are all assigned at the same time; 
+they are not temporally ordered. Contrast this with \textit{Bayesian updating} which is the controversial epistemological thesis 
+that the probability $\Pr(H)$ of $H$ \textit{after} considering evidence $E$ at a certain 
+time $t_2$ must be equivalent to the conditional 
+probability $\Pr(H|E)$ assigned at an earlier time $t_1$.} 
 Both questions can be addressed with 
 the famous Bayes' theorem:
 %
@@ -405,7 +383,7 @@ factor $\Pr(E|H)/\Pr(E)$.
 %that the suspect's DNA profile matches the crime trace. 
 %Let $M$ be the match and $S$ the hypothesis that the suspect 
 %is the source of the crime trace. The crucial questions, from a probabilistic standpoint, are: 
-%How probable is the hypothesis $S$ given evidence $M$, that is, $P(S|M)$? And, 
+%How probable is the hypothesis $S$ given evidence $M$, that is, $\Pr(S|M)$? And, 
 %how does the evidence $M$ change the prior probability of $S$?
 %In the sections that follow, we shall see to what extent these questions 
 %can be addressed with the tools of probability. In particular, 
@@ -421,7 +399,7 @@ factor $\Pr(E|H)/\Pr(E)$.
 %
 %We cannot easily assign a number to the priopr probability 
 %$\Pr(S)$ or Bayes' factor $\Pr(M|S)/\Pr(M)$ probabilities. Thus, 
-%the value of $P(H|M)$ cannot be determined straightforwardly.  
+%the value of $\Pr(H|M)$ cannot be determined straightforwardly.  
 %Still, we know the matching profile is rare; item Random Match 
 %Probability is 1in a billion, so 
 %
@@ -759,7 +737,7 @@ This can expressed by the statement \textit{if} $S$, \textit{then} $e$,
 where $S$ is a scenario and $e$ the evidence, in the sense that $e$ 
 follows deductively from $S$. The relation of prediction can also be probabilistic, in the sense that given the truth of the scenario, 
 the truth of the evidence is highly probable. 
-%In the language of probability, the conditional probability $P(E|H)$ of $e$ given $S$ can also be used, where the higher the probability, the better 
+%In the language of probability, the conditional probability $\Pr(E|H)$ of $e$ given $S$ can also be used, where the higher the probability, the better 
 %the scenario's predictive power relative to the evidence. 
 For example, let $V$ be a scenario that comprises the event that the defendant visited the crime scene, and let $M$ be 
 evidence that certain genetic material matching the defendant 
@@ -792,7 +770,7 @@ and `attack' are described in probabilistic terms.
 %MDB : used the expression "probability changes" because relevant is general and might apply also to a likelihood ratio greater than one. 
 A piece of evidence $E$ supports an 
 hypothesis $H$ whenever $E$ raises the probability of $H$, or in symbols, 
-$P(H|E) > P(H)$. 
+$\Pr(H|E) > P(H)$. 
 For example, a witness 
 testifies that she saw the defendant around the crime scene
  at the time of the crime. The testimony supports the hypothesis 
@@ -803,50 +781,50 @@ This can be described probabilistically, as follows:
  %
 
 There is another characterization of evidential support. 
-Instead of comparing the initial probability $P(H)$ and the probability $P(H|E)$ 
+Instead of comparing the initial probability $\Pr(H)$ and the probability $\Pr(H|E)$ 
 of the hypothesis given the evidence, a so-called likelihood ratio of 
-the form ${P(E| H)}/{P(E |\neg H)}$ 
+the form ${\Pr(E| H)}/{\Pr(E |\neg H)}$ 
 %BV: I changed the vertical fraction to a horizontal one. Looks better inline. I prefer that everywhere.
 can also be used.
-On this account, $E$ supports $H$ whenever the likelihood ratio  ${P(E| H)}/{P(E |\neg H)}$
-%$\frac{P(E|H)}{P(E | \neg H)}$ 
+On this account, $E$ supports $H$ whenever the likelihood ratio  ${\Pr(E| H)}/{\Pr(E |\neg H)}$
+%$\frac{\Pr(E|H)}{\Pr(E | \neg H)}$ 
 is greater than one. Intuitively, this means that the presence of the 
 evidence is more probable %BV was 'likely'
 if the hypothesis is true than if the hypothesis is false. For the example considered earlier, we have:
 %
- \[\frac{P(\textit{testimony}|\textit{guilt})}{P(\textit{testimony}|\neg \textit{guilt})} > 1.\]
+ \[\frac{\Pr(\textit{testimony}|\textit{guilt})}{\Pr(\textit{testimony}|\neg \textit{guilt})} > 1.\]
 %
 These two characterizations of evidential support---in terms of probability 
 increase and positive likelihood ratio---are 
 in fact equivalent.  For the following statements hold:
 %
-%\[\textit{\text{$E$ favors (or supports) $H$} iff }   P(H|E)> P(H) \textit{ iff }\frac{P(E|H)}{P(E|\neg H)}>1.\]
-\[ P(H|E)> P(H) \text{ iff }\frac{P(E|H)}{P(E|\neg H)}>1.\endnote{To see why, recall that 
+%\[\textit{\text{$E$ favors (or supports) $H$} iff }   P(H|E)> P(H) \textit{ iff }\frac{\Pr(E|H)}{\Pr(E|\neg H)}>1.\]
+\[ P(H|E)> P(H) \text{ iff }\frac{\Pr(E|H)}{\Pr(E|\neg H)}>1.\endnote{To see why, recall that 
 %
-\[ \frac{P(H|E)}{P(\neg H | E)} = \frac{P(E | H)}{P(E| \neg H)}\cdot \frac{P(H)}{P(\neg H)},\]
+\[ \frac{\Pr(H|E)}{\Pr(\neg H | E)} = \frac{\Pr(E | H)}{\Pr(E| \neg H)}\cdot \frac{\Pr(H)}{\Pr(\neg H)},\]
 %
 %BV The LR formula should be in the main text somewhere
 %BV I like having this proof. (Source?)
 %BV I don't like a long, complex footnote. Let's discuss.
 which implies
 %
-\[\frac{P(E|H)}{P(E|\neg H)}>1 \text{ iff } \frac{P(H|E)}{P(\neg H | E)} > \frac{P(H)}{P(\neg H)}.\]
+\[\frac{\Pr(E|H)}{\Pr(E|\neg H)}>1 \text{ iff } \frac{\Pr(H|E)}{\Pr(\neg H | E)} > \frac{\Pr(H)}{\Pr(\neg H)}.\]
 %
-For one direction, if $P(H|E)> P(H)$, then $1- P(H|E)< 1- P(H)$. This means that 
-$\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$, and thus
-$\frac{P(H|E)}{P(\neg H | E)} > \frac{P(H)}{P(\neg H)}$. So, by the equivalence above, $\frac{P(E|H)}{P(E|\neg H)}>1$.
-For the other direction, if $\frac{P(E|H)}{P(E|\neg H)}>1$, then $\frac{P(H|E)}{P(\neg H | E)} > \frac{P(H)}{P(\neg H)}$, again 
+For one direction, if $\Pr(H|E)> P(H)$, then $1- P(H|E)< 1- P(H)$. This means that 
+$\frac{\Pr(H|E)}{1- P(H | E)} > \frac{\Pr(H)}{1- P(H)}$, and thus
+$\frac{\Pr(H|E)}{\Pr(\neg H | E)} > \frac{\Pr(H)}{\Pr(\neg H)}$. So, by the equivalence above, $\frac{\Pr(E|H)}{\Pr(E|\neg H)}>1$.
+For the other direction, if $\frac{\Pr(E|H)}{\Pr(E|\neg H)}>1$, then $\frac{\Pr(H|E)}{\Pr(\neg H | E)} > \frac{\Pr(H)}{\Pr(\neg H)}$, again 
 by the equivalence above. 
-The latter is the same as $\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$. To establish $P(H|E)> P(H)$, suppose for contradiction that
-$P(H|E) \leq P(H)$, which implies $1- P(H|E) \geq 1- P(H)$. This means that $\frac{P(H|E)}{1- P(H | E)} \leq \frac{P(H)}{1- P(H)}$. 
-This contradicts $\frac{P(H|E)}{1- P(H | E)} > \frac{P(H)}{1- P(H)}$, and thus $P(H|E)> P(H)$.}\]
+The latter is the same as $\frac{\Pr(H|E)}{1- P(H | E)} > \frac{\Pr(H)}{1- P(H)}$. To establish $\Pr(H|E)> P(H)$, suppose for contradiction that
+$\Pr(H|E) \leq P(H)$, which implies $1- P(H|E) \geq 1- P(H)$. This means that $\frac{\Pr(H|E)}{1- P(H | E)} \leq \frac{\Pr(H)}{1- P(H)}$. 
+This contradicts $\frac{\Pr(H|E)}{1- P(H | E)} > \frac{\Pr(H)}{1- P(H)}$, and thus $\Pr(H|E)> P(H)$.}\]
 
  
 % \paragraph{Two characterizations of evidential favoring and disfavoring are equivalent} 
 \paragraph{Attack can be characterized as ``probability decrease'' or ``negative likelihood ratio''.} 
 
 By contrast, a piece of evidence $E$ attacks a hypothesis $H$ whenever $E$ lowers 
-the probability of $H$, or in symbols, $P(H|E) < P(H)$.
+the probability of $H$, or in symbols, $\Pr(H|E) < P(H)$.
 For example, if a DNA test shows no match between the traces found at the crime
  scene and the defendant, this evidence attacks the hypothesis that the defendant is guilty. 
  Probabilistically, 
@@ -859,13 +837,13 @@ the likelihood ratio is lower than one. This means that the presence of the evid
 if the hypothesis is true than if the hypothesis is false. For the the example 
 considered earlier, we have:
  %
- \[\frac{P(\textit{no DNA match}|\textit{guilt})}{P(\textit{no DNA match}|\neg \textit{guilt})} < 1.\]
+ \[\frac{\Pr(\textit{no DNA match}|\textit{guilt})}{\Pr(\textit{no DNA match}|\neg \textit{guilt})} < 1.\]
 %
 Just as the two characterizations 
 of evidential support are equivalent, so are the two characterizations of evidential attack, 
 that is:
  %
-\[ P(H|E) < P(H) \text{ iff}  \frac{P(E|H)}{P(E|\neg H)} < 1.\]
+\[ P(H|E) < P(H) \text{ iff}  \frac{\Pr(E|H)}{\Pr(E|\neg H)} < 1.\]
 %
 
 \paragraph{The conflict between two pieces of evidence can be described probabilistically.}
@@ -911,13 +889,13 @@ can be quantified probabilistically in various ways.
 %The are different approaches in the literature. % (FITELSON REFERENCE HERE). 
 %Let us begin with quantifying the value of the evidence \textit{for} an hypothesis. 
 One approach considers the difference between the probability of 
-the hypothesis with and without the evidence, that is, $P(H | E) - P(H)$.
-%If $P(H | E)$ is higher than $P(H)$, this means that the evidence lends some support to
+the hypothesis with and without the evidence, that is, $\Pr(H | E) - P(H)$.
+%If $\Pr(H | E)$ is higher than $\Pr(H)$, this means that the evidence lends some support to
 %the hypothesis. 
 The larger the positive difference, the higher the value of the evidence 
 for the hypothesis. 
 %By contrast, the larger the negative difference, the higher the value of the evidence against the hypothesis. 
-An alternative approach is given by the likelihood ratio $P(E|H)/P(E| \neg H)$. 
+An alternative approach is given by the likelihood ratio $\Pr(E|H)/P(E| \neg H)$. 
 %For the evidence to offer some support to the hypothesis, the likelihood ratio should be at least greater than one. 
 For any value greater than one, the higher the likelihood ratio, 
 the higher the value of the evidence for the hypothesis. 
@@ -926,12 +904,12 @@ the higher the value of the evidence for the hypothesis.
 %
 %\begin{quote}
 %\textsc{Evidential strength:} The evidential strength of $E$ relative to $H$ is proportional to 
-%the likelihood ratio $\frac{P(H|E)}{P(H|\neg E)}$. 
+%the likelihood ratio $\frac{\Pr(H|E)}{\Pr(H|\neg E)}$. 
 %\end{quote}
 %
 %By contrast, for any value lower than one, the lower the likelihood ratio 
 %the higher value of the evidence against the hypothesis. 
-By contrast, a negative difference $P(H | E) - P(H)$ and a likelihood ratio lower than one  
+By contrast, a negative difference $\Pr(H | E) - P(H)$ and a likelihood ratio lower than one  
 quantify the value of the evidence \textit{against} a hypothesis.
 The larger the negative difference and the lower the likelihood ratio (for any value below one), 
 the higher the value of the evidence against the hypothesis.
@@ -950,7 +928,7 @@ offers some illustrations:
 \begin{centering}
 \begin{tabular}{lccccc}
 \hline
-$P(H)$ & Likelihood Ratio & $P(H | E)$ &  $P(H|E)-P(H)$ \\
+$\Pr(H)$ & Likelihood Ratio & $\Pr(H | E)$ &  $\Pr(H|E)-P(H)$ \\
 \hline
 0.0001 & 1,000 & 0.09 &  0.0899   \\
 %0.001 & 1,000 & 0.049 & 0.5  \\
@@ -967,9 +945,9 @@ $P(H)$ & Likelihood Ratio & $P(H | E)$ &  $P(H|E)-P(H)$ \\
 \vspace{2mm}
 
 \noindent
-%Note that even if the likelihood ratio is high, the probability $P(G|E)$ can 
-%still be low if the initial probability $P(H)$ is itself low. 
-All in all, a positive difference $P(H|E) - P(H)$ and a likelihood ratio ${P(E|H)}/{P(E| \neg H)}$ greater than one
+%Note that even if the likelihood ratio is high, the probability $\Pr(G|E)$ can 
+%still be low if the initial probability $\Pr(H)$ is itself low. 
+All in all, a positive difference $\Pr(H|E) - P(H)$ and a likelihood ratio ${\Pr(E|H)}/{\Pr(E| \neg H)}$ greater than one
 %tell us how much a piece of evidence $E$ can impact upwards the initial 
 %probability of a hypothesis $H$. They 
 quantify, albeit in different ways, the value of the evidence \textit{for} 
@@ -989,26 +967,26 @@ a hypothesis.
 
 \paragraph{The overall evidential value is measured by the overall conditional probability. }
 
-In contrast with the incremental evidential value of evidence that is measured by a probabilistic difference or likelihood ratio, the overall evidential value of the full body of evidence is measured by the conditional probability of the hypothesis given the evidence. The higher, or lower, the probability $P(H|E)$, the higher 
-the overall value of the evidence for, or against, the hypothesis. If there are different pieces of evidence $E_1, \ldots, E_n$, the overall evidential value of the evidence is measured as $P(H|E_1, \ldots, E_n)$.
+In contrast with the incremental evidential value of evidence that is measured by a probabilistic difference or likelihood ratio, the overall evidential value of the full body of evidence is measured by the conditional probability of the hypothesis given the evidence. The higher, or lower, the probability $\Pr(H|E)$, the higher 
+the overall value of the evidence for, or against, the hypothesis. If there are different pieces of evidence $E_1, \ldots, E_n$, the overall evidential value of the evidence is measured as $\Pr(H|E_1, \ldots, E_n)$.
 
 Overall and incremental evidential value should not be confused. To illustrate, suppose we have strong evidence $E_1$ for the hypothesis $H$ 
 that a suspect was at the crime scene, for instance, security camera footage in which the suspect is easily recognizable. 
-In this case, the overall evidential value $P(H|E_1)$ of the evidence is high. If this is the only evidence, then also the 
-incremental evidential value is high: before the evidence is considered, the hypothesis is not strongly supported, i.e.\ $P(H)$ is low, whereas after the evidence is considred, 
-the hypothesis is strongly supported, i.e.\ $P(H|E_1)$ is high. In this case, the overall and incremental evidential value of $E_1$ are both high. 
+In this case, the overall evidential value $\Pr(H|E_1)$ of the evidence is high. If this is the only evidence, then also the 
+incremental evidential value is high: before the evidence is considered, the hypothesis is not strongly supported, i.e.\ $\Pr(H)$ is low, whereas after the evidence is considred, 
+the hypothesis is strongly supported, i.e.\ $\Pr(H|E_1)$ is high. In this case, the overall and incremental evidential value of $E_1$ are both high. 
 But suppose a witness testifies that the defendant was not at the crime scene (evidence $E_2$), but as it turns out, the witness is unreliable 
-as a known accomplice of the suspect. Consider now the overall evidential value $P(H|E_1, E_2)$ of the two pieces of evidence together. This will not have changed much when compared to $P(H|E_1)$. As a result, the incremental evidential value of $E_2$ is low, while still the overall evidential value $P(H|E_1, E_2)$ is high, even though $E_2$ did not contribute much. 
+as a known accomplice of the suspect. Consider now the overall evidential value $\Pr(H|E_1, E_2)$ of the two pieces of evidence together. This will not have changed much when compared to $\Pr(H|E_1)$. As a result, the incremental evidential value of $E_2$ is low, while still the overall evidential value $\Pr(H|E_1, E_2)$ is high, even though $E_2$ did not contribute much. 
 
-The difference between overall and incremental evidential value can be especially confusing when there is a single piece of evidence and there is a misalignment between the two values. Consider the hypothesis $\neg H$ that the suspect was not at the crime scene and the evidence $E_2$, the testimony of the unreliable witness. Then $P(\neg H)$ is high and also $P(\neg H | E_2)$ is high. Uncritically interpreted, the high value of $P(\neg H | E_2)$ suggests that the testimony of the unreliable witness has a high evidential value. But incrementally $E_2$ did not change much. The hypothesis $\neg H$ is, in totality, still strongly supported after the incrementally weak evidence $E_2$, since the hypothesis was already strongly supported before that evidence. 
+The difference between overall and incremental evidential value can be especially confusing when there is a single piece of evidence and there is a misalignment between the two values. Consider the hypothesis $\neg H$ that the suspect was not at the crime scene and the evidence $E_2$, the testimony of the unreliable witness. Then $\Pr(\neg H)$ is high and also $\Pr(\neg H | E_2)$ is high. Uncritically interpreted, the high value of $\Pr(\neg H | E_2)$ suggests that the testimony of the unreliable witness has a high evidential value. But incrementally $E_2$ did not change much. The hypothesis $\neg H$ is, in totality, still strongly supported after the incrementally weak evidence $E_2$, since the hypothesis was already strongly supported before that evidence. 
 
-%In this case, the incremental evidential value of the testimony in favor of guilt can be regarded as slightly incriminating. Hence we expect the probabilistic difference $P(\textit{guilt} | \textit{drunk witness})$ to be a small positive value, and the likelihood ratio $P(\textit{guilt} | \textit{drunk witness})/P(\textit{guilt} | \neg\textit{drunk witness})$ to be slightly above one.
+%In this case, the incremental evidential value of the testimony in favor of guilt can be regarded as slightly incriminating. Hence we expect the probabilistic difference $\Pr(\textit{guilt} | \textit{drunk witness})$ to be a small positive value, and the likelihood ratio $\Pr(\textit{guilt} | \textit{drunk witness})/P(\textit{guilt} | \neg\textit{drunk witness})$ to be slightly above one.
 %
 %Now assume that the testimony by the drunk witness is the only incriminating evidence. In this case, 
 %
 %
 %, the probability 
-%$P(\textit{guilt} | \textit{drunk witness})$ should also be low. Now, it follows that $P(\textit{innocence} | \textit{drunk witness})$ 
+%$\Pr(\textit{guilt} | \textit{drunk witness})$ should also be low. Now, it follows that $\Pr(\textit{innocence} | \textit{drunk witness})$ 
 %should be high insofar as \textit{innocence} is the negation of \textit{guilt}. 
 %But this seems problematic. A drunk witness, in fact, is of little help in establishing 
 %innocence (just as it is of little help in establishing guilt).
@@ -1017,29 +995,29 @@ The difference between overall and incremental evidential value can be especiall
 %the probability difference and the likelihood ratio. Since the witness was drunk, the value of the evidence in favor of guilt is 
 %low, that is:
 %%
-%\[\text{the positive difference $P(\textit{guilt} | \textit{drunk witness}) - P(\textit{guilt})$ is small, and}\]
+%\[\text{the positive difference $\Pr(\textit{guilt} | \textit{drunk witness}) - P(\textit{guilt})$ is small, and}\]
 %%
 %%
-%\[\text{the likelihood ratio $\frac{P(\textit{guilt} | \textit{drunk witness})}{P(\textit{guilt} | \neg\textit{drunk witness})}$ is only slightly above one}.\] 
+%\[\text{the likelihood ratio $\frac{\Pr(\textit{guilt} | \textit{drunk witness})}{\Pr(\textit{guilt} | \neg\textit{drunk witness})}$ is only slightly above one}.\] 
 %%
 %Similarly, the value of the evidence in favor of innocence is also low, that is:
 %%
-%\[\text{the negative difference $P(\textit{innocence} | \textit{drunk witness}) - P(\textit{guilt})$ is small, and}\]
+%\[\text{the negative difference $\Pr(\textit{innocence} | \textit{drunk witness}) - P(\textit{guilt})$ is small, and}\]
 %%
 %%
-%\[\text{the likelihood ratio $\frac{P(\textit{innocence} | \textit{drunk witness})}{P(\textit{innocence} | \neg\textit{drunk witness})}$ is only slightly below one}.\] 
+%\[\text{the likelihood ratio $\frac{\Pr(\textit{innocence} | \textit{drunk witness})}{\Pr(\textit{innocence} | \neg\textit{drunk witness})}$ is only slightly below one}.\] 
 %%
 %So, the value of the testimony in favor of guilt, and innocence, is low 
-%in both cases. This means that $P(\textit{guilt} | \textit{drunk witness})$
-%and $P(\textit{guilt})$ are roughly the same value, and so are $P(\textit{innocence} | \textit{drunk witness})$ 
-%and $P(\textit{innocence})$. Consequently, if $P(\textit{innocence})$ is high, 
-%and thus $P(\textit{guilt})$ low, $P(\textit{innocence} | \textit{drunk witness})$ will 
-%be high, and thus $P(\textit{guilt} | \textit{drunk witness})$ low. %, given the little evidential value of the testimony. 
-%We should thus not be surprised that $P(\textit{innocence} | \textit{drunk witness})$ is high. 
-%This is because, by Bayes' theorem, $P(H|E)$ depends on $P(H)$.  
+%in both cases. This means that $\Pr(\textit{guilt} | \textit{drunk witness})$
+%and $\Pr(\textit{guilt})$ are roughly the same value, and so are $\Pr(\textit{innocence} | \textit{drunk witness})$ 
+%and $\Pr(\textit{innocence})$. Consequently, if $\Pr(\textit{innocence})$ is high, 
+%and thus $\Pr(\textit{guilt})$ low, $\Pr(\textit{innocence} | \textit{drunk witness})$ will 
+%be high, and thus $\Pr(\textit{guilt} | \textit{drunk witness})$ low. %, given the little evidential value of the testimony. 
+%We should thus not be surprised that $\Pr(\textit{innocence} | \textit{drunk witness})$ is high. 
+%This is because, by Bayes' theorem, $\Pr(H|E)$ depends on $\Pr(H)$.  
 %Even if $E$ does not change significantly the probability of $H$, or the likelihood ratio (positive or negative) 
-%$\frac{P(E|H)}{P(E| \neg H)}$ is small, $P(H|E)$ could still be high or low, insofar as $P(H)$ itself is high or low. 
-%All in all, we should be careful in not confusing a high probability $P(H|E)$ with a high 
+%$\frac{\Pr(E|H)}{\Pr(E| \neg H)}$ is small, $\Pr(H|E)$ could still be high or low, insofar as $\Pr(H)$ itself is high or low. 
+%All in all, we should be careful in not confusing a high probability $\Pr(H|E)$ with a high 
 %evidential value in terms of a large probability difference or a high likelihood ratio.
 
 
@@ -1065,22 +1043,22 @@ match $M$ in favor of the suspect being the source of the sample $S$, in terms o
 is as follows % \citep{Dawid02, Balding2005Weight}:
 %
 \[
-\frac{P(M | S)}{P(M | \neg S)} =   \frac{1}{RMP}.
+\frac{\Pr(M | S)}{\Pr(M | \neg S)} =   \frac{1}{RMP}.
 \]
 %
 %BV RMP is as yet undefined
-The numerator $P(M | S)$ equals 1 because we assume that %of our simplifying assumption that 'source' and guilt' are interchangeable 
+The numerator $\Pr(M | S)$ equals 1 because we assume that %of our simplifying assumption that 'source' and guilt' are interchangeable 
 %and the laboratory test is infallible. If 
 if the defendant is the source of the sample%and thus the source of the crime traces
 , the lab test will report a match. As for the denominator, 
 %keep in mind that $RMP$ is the probability that a random person, 
 %unrelated to the crime or the defendant, would be found to have a matching DNA. 
-putting $P(M | \neg S)=RMP$ is plausible because the probability that a match would be reported assuming that the defendant was \textit{not} 
+putting $\Pr(M | \neg S)=RMP$ is plausible because the probability that a match would be reported assuming that the defendant was \textit{not} 
 the source is roughly the same as the chance that a random person---someone who had no contact with the victim---would match anyway. 
 %and because (2) 'source' and 'guilt' are, by assumption, equivalent.
 For example, if the RMP is 1 in 200 million, the likelihood ratio would be
 %
-\[\frac{P(M |S)}{P( M | \neg S)}=\frac{1}{\frac{1}{\text{200 million}}}=\text{200 million}.\]
+\[\frac{\Pr(M |S)}{\Pr( M | \neg S)}=\frac{1}{\frac{1}{\text{200 million}}}=\text{200 million}.\]
 %
 Since the likelihood ratio in question is a high number, the DNA match in favor of the suspect being the source
 has a high evidential value. More generally, a low RMP corresponds to a match with a rare profile, hence has a high evidential value. 
@@ -1669,16 +1647,13 @@ The probability calculus provides formal rules for the coherent interpretation o
 %\paragraph{The likelihood ratio formula shows how new evidence changes the odds of a hypothesis.} 
 
 \paragraph{The likelihood ratio formula shows how to find the posterior odds given the evidence.} 
-The odds of a hypothesis $H$ are defined as the ratio $P(H)/P(\neg H)$ of the probability of the hypothesis and the probability of its negation. Given evidence $E$, the odds $P(H)/P(\neg H)$ 
-of the hypothesis unconditioned on the evidence are called the \emph{prior odds} of the hypothesis, and the odds $P(H | E)/P(\neg H | E)$ of the hypothesis 
-conditioned on the evidence the \emph{posterior odds}.\endnote{The language of 'priors' and 'posteriors' is standard and suggests 
-an temporal ordering.  However, these probabilities are all assigned at the same time; they are not temporally ordered. Contrast this with 
-\textit{Bayesian updating} which is the controversial epistemological thesis 
-that the probability of $H$ \textit{after} considering evidence $E$ at time $t_2$ must be equivalent to the condition probability 
-$P(H|E)$ earlier at time $t_1$.} It follows from Bayes' theorem (Section~\ref{sec:normfram:prob}) that the posterior odds can 
+The odds of a hypothesis $H$ are defined as the ratio $\Pr(H)/P(\neg H)$ of the probability of the hypothesis and the probability of its negation. Given evidence $E$, the odds $\Pr(H)/P(\neg H)$ 
+of the hypothesis unconditioned on the evidence are called the \emph{prior odds} of the hypothesis, and the odds $\Pr(H | E)/P(\neg H | E)$ of the hypothesis 
+conditioned on the evidence the \emph{posterior odds}.\endnote{See footnote \ref{footnote:prior}.} 
+It follows from Bayes' theorem (Section~\ref{sec:normfram:prob}) that the posterior odds can 
 be found by multiplying the prior odds with the likelihood ratio: 
 
-	\[ \frac{P(H|E)}{P(\neg H | E)} = \frac{P(E | H)}{P(E| \neg H)}\cdot \frac{P(H)}{P(\neg H)}.\endnote{To derive the likelihood ratio, 
+	\[ \frac{\Pr(H|E)}{\Pr(\neg H | E)} = \frac{\Pr(E | H)}{\Pr(E| \neg H)}\cdot \frac{\Pr(H)}{\Pr(\neg H)}.\endnote{To derive the likelihood ratio, 
 	one first applies Bayes' theorem to both $H$ and $\neg H$. We get $\Pr(H|E) = \Pr(E|H)\cdot\Pr(H)/\Pr(E)$ and $\Pr(\neg H|E) = \Pr(E|\neg H)\cdot\Pr(\neg H)/\Pr(E)$. Using these, we find:
 
 \begin{equation*}
@@ -1694,34 +1669,35 @@ be found by multiplying the prior odds with the likelihood ratio:
 \noindent proving the likelihood ratio formula.}\]
 
 \noindent 
-This formula shows that an estimate of the (incremental) evidential value of the evidence for a hypothesis, expressed by the likelihood ratio $\frac{P(E | H)}{P(E| \neg H)}$, 
+This formula shows that an estimate of the (incremental) evidential value of the evidence for a hypothesis, expressed by the likelihood ratio $\frac{\Pr(E | H)}{\Pr(E| \neg H)}$, 
 does not by itself give an estimate of the posterior odds of a hypothesis. One needs an estimate of the prior odds too. 
 %As such, the likelihood ratio is a constraint that must be obeyed in a coherent interpretation of the evidence concerning a hypothesis.
 
-To arrive at the \textit{posterior probability} $P(H|E)$ of a hypothesis conditional 
-on the evidence, from the posterior odds $\frac{P(E|H)}{P(E|\neg H)}$
+To arrive at the \textit{posterior probability} $\Pr(H|E)$ of a hypothesis conditional 
+on the evidence, from the posterior odds $\frac{\Pr(E|H)}{\Pr(E|\neg H)}$
 of the hypothesis given the evidence, the following formula applies:
 %
-\[P(H|E) = \frac{\frac{P(E|H)}{P(E|\neg H)}}{1+ \frac{P(E|H)}{P(E|\neg H)}}. \]
+\[\Pr(H|E) = \frac{\frac{\Pr(H|E)}{\Pr(\neg H|E)}}{1+ \frac{\Pr(H|E)}{\Pr(\neg H|E)}}.\endnote{$\Pr(H|E)=\frac{\Pr(H|E)}{\Pr(H|E)+\Pr(\neg H|E)}=\frac{\frac{\Pr(H|E)}{\Pr(\neg H|E)}}{\frac{\Pr(H|E)+\Pr(\neg H|E)}{\Pr(\neg H|E)}}=\frac{\frac{\Pr(H|E)}{\Pr(\neg H|E)}}{\frac{\Pr(H|E)}{\Pr(\neg H|E)}+1}$.}
+\]
 %
 
 Consider an example. The incremental evidential value of a DNA match, relative to the hypothesis 
-that the defendant is guilty, is given by the the likelihood ratio $\frac{P(M |G)}{P( M | \neg G)}$. 
+that the defendant is guilty, is given by the the likelihood ratio $\frac{\Pr(M |G)}{\Pr( M | \neg G)}$. 
 Suppose this ratio is assigned a numerical value,  as follows:
 %
-\[\frac{P(M |G)}{P( M | \neg G)}=\frac{1}{\frac{1}{2,000,000}}=2, 000,000.\]
+\[\frac{\Pr(M |G)}{\Pr( M | \neg G)}=\frac{1}{\frac{1}{2,000,000}}=2, 000,000.\]
 % 
 Suppose, also, that the prior odds are as follows:
 %
-\[\frac{P(G)}{P(\neg G)}=\frac{\frac{1}{\text{200,000}}}{\frac{199,999}{200,000}}\approx \frac{1}{200,000}.\]
+\[\frac{\Pr(G)}{\Pr(\neg G)}=\frac{\frac{1}{\text{200,000}}}{\frac{199,999}{200,000}}\approx \frac{1}{200,000}.\]
 % 
-The posterior odds of the hypothesis given the match $\frac{P(G|M)}{P(\neg G|M)}$ are therefore as follows:
+The posterior odds of the hypothesis given the match $\frac{\Pr(G|M)}{\Pr(\neg G|M)}$ are therefore as follows:
 %
-\[\frac{P(G|M)}{P(\neg G|M)}= \frac{P(M |G)}{P( M | \neg G)}\cdot \frac{P(G)}{P(\neg G)} \approx 2,000,000 \cdot \frac{1}{200,000}=\frac{20}{1}.\]
+\[\frac{\Pr(G|M)}{\Pr(\neg G|M)}= \frac{\Pr(M |G)}{\Pr( M | \neg G)}\cdot \frac{\Pr(G)}{\Pr(\neg G)} \approx 2,000,000 \cdot \frac{1}{200,000}=\frac{20}{1}.\]
 % 
 So the poster probability of the hypothesis is as follows:
 %
-\[P(G|M)= \frac{\frac{P(M|G)}{P(M|\neg G)}}{1+ \frac{P(M|S)}{P(M|\neg G)}} \approx \frac{20}{1+20}\approx 0.95.\]
+\[\Pr(G|M)= \frac{\frac{\Pr(G|M)}{\Pr(\neg G|M)}}{1+ \frac{\Pr(G|M)}{\Pr(\neg G|M)}} \approx \frac{20}{1+20}\approx 0.95.\]
 %
  
 
@@ -1731,15 +1707,15 @@ So far we have considered only one piece of evidence.
 %The likelihood ratio formula to more than one piece of evidence, the posterior odds are found by the repeated multiplication of the likelihood ratios of the individual pieces of evidence. 
 For two pieces of evidence $E_1$ and $E_2$, the formula can be generalized 
 by multiplying the likelihood ratios of the individual pieces of evidence, as follows:
-	\[ \frac{P(H|E_1 \land E_2)}{P(\neg H | E_1 \land E_2)} = 
-	\frac{P(E_2 | H)}{P(E_2| \neg H)}
+	\[ \frac{\Pr(H|E_1 \land E_2)}{\Pr(\neg H | E_1 \land E_2)} = 
+	\frac{\Pr(E_2 | H)}{\Pr(E_2| \neg H)}
 	\cdot 
-	\frac{P(E_1 | H)}{P(E_1| \neg H)}
+	\frac{\Pr(E_1 | H)}{\Pr(E_1| \neg H)}
 	\cdot 
-	\frac{P(H)}{P(\neg H)}.\]
+	\frac{\Pr(H)}{\Pr(\neg H)}.\]
 %\noindent Appealing as it is, this naive generalization is false in general and does not hold in the probability calculus. 
 This simple generalization holds provided that the two pieces of evidence are 
-independent conditional on the hypothesis, that is, $P(E_2| H)=P(E_2| H \wedge E_1)$. 
+independent conditional on the hypothesis, that is, $\Pr(E_2| H)=P(E_2| H \wedge E_1)$. 
 (More on this below.) 
 
 To illustrate, consider now two pieces of evidence: a DNA match and a witness testimony.
@@ -1748,27 +1724,26 @@ the witness, call it $W$, in her testimony asserts that the defendant was
 seen at the crime scene.  
 Both pieces of evidence, intuitively, support the hypothesis $G$ that the defendant 
 is guilty. To assign an explicit numerical value, assume
- the DNA match has a likelihood ratio $\frac{P(M | G)}{P( M | \neg S)}$ of 2 million, 
-and the witness testimony a likelihood ratio $\frac{P(W | G)}{P( W | \neg G)}$ of 1,000. 
-These numbers are purely illustrative, but are needed to perform the probabilistic calculations.\endnote{Of course, there remains the 
-question of how the numbers can obtained and whether the numbers 
-needed to carry out the calculations are always available in the first place. 
-This is a topic of debate.}  Finally, assume the two pieces are independent conditional on the hypothesis $G$, that is, 
-$P(W|G)=P(W| G\wedge M)$. 
+ the DNA match has a likelihood ratio $\frac{\Pr(M | G)}{\Pr( M | \neg S)}$ of 2 million, 
+and the witness testimony a likelihood ratio $\frac{\Pr(W | G)}{\Pr( W | \neg G)}$ of 1,000. 
+These numbers are purely illustrative, but are needed to perform the probabilistic calculations. (Of course, there remains the 
+question of how the numbers can be obtained and whether the numbers 
+needed to carry out the calculations are available in the first place. This is a topic of debate.)  Finally, assume the two pieces are independent conditional on the hypothesis $G$, that is, 
+$\Pr(W|G)=P(W| G\wedge M)$. 
 
 The combined (incremental) evidential value of the two pieces of evidence is given by multiplying the two likelihood 
 ratios, that is, $2,000,000\times 1,000=2,000,000,000$, which is a higher value 
 than the two pieces considered independently. 
-If the prior odds $\frac{P(G)}{P(\neg G)}$ are roughly $\frac{1}{200,000}$
+If the prior odds $\frac{\Pr(G)}{\Pr(\neg G)}$ are roughly $\frac{1}{200,000}$
 as before, the posterior odds are therefore as follows:
 %
-\[\frac{P(G|M|\wedge W)}{P(\neg S|M\wedge W)}= \frac{P(M |G)}{P( M | \neg S)}\cdot  \frac{P(W |G)}{P( W | \neg G)}\cdot \frac{P(G)}{P(\neg G)} \approx 2,000,000 \cdot  1,000 \cdot \frac{1}{200,000}= \frac{20,000}{1}.\]
+\[\frac{\Pr(G|M|\wedge W)}{\Pr(\neg S|M\wedge W)}= \frac{\Pr(M |G)}{\Pr( M | \neg S)}\cdot  \frac{\Pr(W |G)}{\Pr( W | \neg G)}\cdot \frac{\Pr(G)}{\Pr(\neg G)} \approx 2,000,000 \cdot  1,000 \cdot \frac{1}{200,000}= \frac{20,000}{1}.\]
 % 
 So the poster probability of the hypothesis given the two pieces of evidence is as follows:
 %
-\[P(G|M\wedge W) \approx \frac{20,000}{1+20,000}\approx 0.99.\]
+\[\Pr(G|M\wedge W) \approx \frac{20,000}{1+20,000}\approx 0.99.\]
 %
-Compare this probability with $P(G|M)$, which 
+Compare this probability with $\Pr(G|M)$, which 
 was 0.95, a lower value. The probability calculus can offer a numerical 
 representation of the intuitive fact that two pieces of evidence, taken together, 
 have a higher (overall) evidential value than one piece of evidence alone. 
@@ -1778,12 +1753,12 @@ the likelihood ratio formula for two pieces of evidence
 takes the following, more general 
 form:
 
-	\[ \frac{P(H|E_1 \land E_2)}{P(\neg H | E_1 \land E_2)} = 
-	\frac{P(E_2 | H \land E_1)}{P(E_2| \neg H \land E_1)}
+	\[ \frac{\Pr(H|E_1 \land E_2)}{\Pr(\neg H | E_1 \land E_2)} = 
+	\frac{\Pr(E_2 | H \land E_1)}{\Pr(E_2| \neg H \land E_1)}
 	\cdot 
-	\frac{P(E_1 | H)}{P(E_1| \neg H)}
+	\frac{\Pr(E_1 | H)}{\Pr(E_1| \neg H)}
 	\cdot 
-	\frac{P(H)}{P(\neg H)}.\]
+	\frac{\Pr(H)}{\Pr(\neg H)}.\]
 
 \noindent It is easy to see the first, simple generalization follows from the second, assuming 
 independence between the two pieces of evidence conditional on the hypothesis of interest. 
@@ -1796,9 +1771,9 @@ can change in the face of other evidence.
 
 
 
-%Note how the factor $P(E_2 | H)/P(E_2| \neg H)$ in the naive, incorrect generalization has been replaced by the factor $P(E_2 | H \land E_1)/P(E_2| \neg H \land E_1)$ in the correct generalization.
+%Note how the factor $\Pr(E_2 | H)/P(E_2| \neg H)$ in the naive, incorrect generalization has been replaced by the factor $\Pr(E_2 | H \land E_1)/P(E_2| \neg H \land E_1)$ in the correct generalization.
 
- %Formally, $P(E_2 | H)/P(E_2| \neg H)$ is in general different from $P(E_2 | H \land E_1)/P(E_2| \neg H \land E_1)$. Evidence can for instance be mutually strengthening. 
+ %Formally, $\Pr(E_2 | H)/P(E_2| \neg H)$ is in general different from $\Pr(E_2 | H \land E_1)/P(E_2| \neg H \land E_1)$. Evidence can for instance be mutually strengthening. 
 
 % For instance H  E1 E2
 %              -  -  -   81
@@ -1812,19 +1787,19 @@ can change in the face of other evidence.
 
 
 \paragraph{The formula can be generalized to calculate the probability of a composite hypothesis, although one should we wary 
-of the independence assumptions used.} 
+of the independence assumptions used. [NEEDS FIXING]} 
 Consider now two hypotheses, $H_1$ and $H_2$, each supported by an item of 
 evidence, $E_1$ and $E_2$, respectively.  Can the likelihood ratio formula be generalized to cases with 
 two items of evidence and two hypotheses combined? Assuming that the two pieces of evidence are independent, conditional on the hypotheses, 
 and the two hypotheses are also independent, 
 it is enough to simply multiply the two likelihood ratios, as follows:
 %
-\[ \frac{P(H_1\wedge H_2|E_1 \land E_2)}{P(\neg H | E_1 \land E_2)} = 
-	\frac{P(E_2 | H_2)}{P(E_2| \neg H_2)}
+\[ \frac{\Pr(H_1\wedge H_2|E_1 \land E_2)}{\Pr(\neg H | E_1 \land E_2)} = 
+	\frac{\Pr(E_2 | H_2)}{\Pr(E_2| \neg H_2)}
 	\cdot 
-	\frac{P(E_1 | H_1)}{P(E_1| \neg H_1)}
+	\frac{\Pr(E_1 | H_1)}{\Pr(E_1| \neg H_1)}
 	\cdot 
-	\frac{P(H_1)}{P(\neg H_1)}\cdot \frac{P(H_2)}{P(\neg H_2)}.\endnote{}\]
+	\frac{\Pr(H_1)}{\Pr(\neg H_1)}\cdot \frac{\Pr(H_2)}{\Pr(\neg H_2)}.\endnote{}\]
 %
 
 To illustrate, suppose a DNA match links the defendant to the crime scene, while an email written by the defendant indicates 
@@ -1834,11 +1809,11 @@ he had a plan to kill the victim. Each of these item of evidence support a diffe
 \begin{comment}
 Observe that:
  %
-\[ \frac{P(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{P(\neg (\textit{contact} \wedge \textit{plan}) |  \textit{match} \wedge \textit{email})} 
+\[ \frac{\Pr(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{\Pr(\neg (\textit{contact} \wedge \textit{plan}) |  \textit{match} \wedge \textit{email})} 
 =
-\frac{P(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}
+\frac{\Pr(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{\Pr(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}
 \times
-\frac{P(\textit{contact}\wedge \textit{plan})}{P(\neg (\textit{contact} \wedge \textit{plan}))}
+\frac{\Pr(\textit{contact}\wedge \textit{plan})}{\Pr(\neg (\textit{contact} \wedge \textit{plan}))}
 .\]
 %
 \end{comment}
@@ -1849,19 +1824,19 @@ Observe that:
  %
  \begin{comment}
  \begin{eqnarray*}
- \frac{P(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}  
- & = &  \frac{P(\textit{match} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} | \neg (\textit{contact} \wedge \textit{plan}))}  \times 
- \frac{P( \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}  \notag\\ 
+ \frac{\Pr(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{\Pr(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}  
+ & = &  \frac{\Pr(\textit{match} | \textit{contact}\wedge \textit{plan})}{\Pr(\textit{match} | \neg (\textit{contact} \wedge \textit{plan}))}  \times 
+ \frac{\Pr( \textit{email} | \textit{contact}\wedge \textit{plan})}{\Pr(\textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}  \notag\\ 
  && \notag\\
- & = & \frac{P(\textit{match} | \textit{contact})}{P(\textit{match} | \neg \textit{contact})}  \times  
- \frac{P( \textit{email} | \textit{plan})}{P(\textit{email} | \neg \textit{plan})}  \notag\\
+ & = & \frac{\Pr(\textit{match} | \textit{contact})}{\Pr(\textit{match} | \neg \textit{contact})}  \times  
+ \frac{\Pr( \textit{email} | \textit{plan})}{\Pr(\textit{email} | \neg \textit{plan})}  \notag\\
  \end{eqnarray*}
  \end{comment}
  %
  \[
- \frac{P(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}  
- = \frac{P(\textit{match} | \textit{contact})}{P(\textit{match} | \neg \textit{contact})}  \times  
- \frac{P( \textit{email} | \textit{plan})}{P(\textit{email} | \neg \textit{plan})} 
+ \frac{\Pr(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{\Pr(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}  
+ = \frac{\Pr(\textit{match} | \textit{contact})}{\Pr(\textit{match} | \neg \textit{contact})}  \times  
+ \frac{\Pr( \textit{email} | \textit{plan})}{\Pr(\textit{email} | \neg \textit{plan})} 
  \]
  %
 Suppose, for the sake of argument, the (incremental) 
@@ -1870,7 +1845,7 @@ of the hypothesis \textit{contact},
 and the (incremental) evidential value of the defendant's email in favor of 
 the hypothesis \textit{plan}, are as follows:
 %
-\[\frac{P(\textit{match}| \textit{contact})}{P(\textit{match} | \neg \textit{contact})}=36 \text{ and } \frac{P(\textit{email}| \textit{plan})}{P(\textit{email}| \neg \textit{plan})}=36\]
+\[\frac{\Pr(\textit{match}| \textit{contact})}{\Pr(\textit{match} | \neg \textit{contact})}=36 \text{ and } \frac{\Pr(\textit{email}| \textit{plan})}{\Pr(\textit{email}| \neg \textit{plan})}=36\]
 %
 where the numbers are, as usual, illustrative. The combined (incremental) evidential value of \textit{match} and \textit{email} 
 in favor of the hypothesis consisting of \textit{contact} and \textit{plan}, is $36\times 36 = 1296$.
@@ -1880,24 +1855,24 @@ in favor of the hypothesis consisting of \textit{contact} and \textit{plan}, is 
   %
  %\[
   \begin{eqnarray*} % {lcccc } 
- \frac{P(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{P(\neg (\textit{contact} \wedge \textit{plan}) |  \textit{match} \wedge \textit{email})} 
+ \frac{\Pr(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{\Pr(\neg (\textit{contact} \wedge \textit{plan}) |  \textit{match} \wedge \textit{email})} 
  & = & 1296  \times 
-\frac{P(\textit{contact}\wedge \textit{plan})}{P(\neg (\textit{contact} \wedge \textit{plan}))} \\ 
+\frac{\Pr(\textit{contact}\wedge \textit{plan})}{\Pr(\neg (\textit{contact} \wedge \textit{plan}))} \\ 
   \end{eqnarray*} 
   %\]
   %
  \end{comment} 
   \noindent
-For the value of the prior odds $\frac{P(\textit{contact}\wedge \textit{plan})}{P(\neg (\textit{contact} \wedge \textit{plan}))}$, assume that 
+For the value of the prior odds $\frac{\Pr(\textit{contact}\wedge \textit{plan})}{\Pr(\neg (\textit{contact} \wedge \textit{plan}))}$, assume that 
 %
-\[\frac{P(\textit{contact})}{P(\neg \textit{contact})}=0.1/0.9 \text{ and } \frac{P(\textit{plan})}{P(\neg \textit{plan})}=0.1/0.9.\]
+\[\frac{\Pr(\textit{contact})}{\Pr(\neg \textit{contact})}=0.1/0.9 \text{ and } \frac{\Pr(\textit{plan})}{\Pr(\neg \textit{plan})}=0.1/0.9.\]
 %
 Now, putting everything together, we get
   %\[ 
  \begin{eqnarray*} %{ccccc } 
- \frac{P(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{P(\neg (\textit{contact} \wedge \textit{plan}) |  \textit{match} \wedge \textit{email})} 
- & = & \frac{P(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{P(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}  \times 
-\frac{P(\textit{contact}\wedge \textit{plan})}{P(\neg (\textit{contact} \wedge \textit{plan}))} \\ 
+ \frac{\Pr(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{\Pr(\neg (\textit{contact} \wedge \textit{plan}) |  \textit{match} \wedge \textit{email})} 
+ & = & \frac{\Pr(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{\Pr(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}  \times 
+\frac{\Pr(\textit{contact}\wedge \textit{plan})}{\Pr(\neg (\textit{contact} \wedge \textit{plan}))} \\ 
  &&\\
 0.93/0.07 & = & 1296  \times  \frac{0.1\times 0.1}{1-(0.1\times 0.1).}
  \end{eqnarray*} %\]
@@ -1909,7 +1884,7 @@ These combinations, however, rests on assumptions about the independence of the 
 One should be wary that these assumptions do not always hold. Consider a scenario that consists of several elements, for instance an accidental 
 encounter with a robber ($H_1$) followed by the robber killing the victim ($H_2$). When the two events are independent, the probability of the composite hypothesis $H_1 \land H_2$ is, by definition of probabilistic independence, 
 the product of the probabilities of the individual elements. But the elements of a scenario need not be 
-independent. In the example, it seems reasonable to assume that an accidental encounter with a robber increases the probability of being killed, albeit slightly. Using formal notation, $P(H_2) < P(H_2 | H_1)$. Hence also $P(H_1) \cdot P(H_2) < P(H_1 \land H_2)$ and $H_1$ and $H_2$ are not independent. This point also holds when considering the probability of a composite hypothesis conditioned on evidence $E$. It does not in general hold that $P(H_1 | E) \cdot P(H_2 | E) = P(H_1 \land H_2 | E)$, only when the elements of the composite hypothesis are independent given the evidence.
+independent. In the example, it seems reasonable to assume that an accidental encounter with a robber increases the probability of being killed, albeit slightly. Using formal notation, $\Pr(H_2) < P(H_2 | H_1)$. Hence also $\Pr(H_1) \cdot P(H_2) < P(H_1 \land H_2)$ and $H_1$ and $H_2$ are not independent. This point also holds when considering the probability of a composite hypothesis conditioned on evidence $E$. It does not in general hold that $\Pr(H_1 | E) \cdot P(H_2 | E) = P(H_1 \land H_2 | E)$, only when the elements of the composite hypothesis are independent given the evidence.
 
 
 \paragraph{Further readings}
@@ -2009,11 +1984,11 @@ the decision to convict or acquit.
 The value of the guilt probability is arrived at by applying Bayes' theorem a 
 repeated number of times and by plugging the values of the probabilities that are needed. 
 Sometimes these probabilities are known because they are based on estimated frequencies, but sometimes 
-they are not. For example, $P(G)$ is required to calculate $P(G|E)$. 
+they are not. For example, $\Pr(G)$ is required to calculate $\Pr(G|E)$. 
 This is the probability of the defendant's guilt regardless of the evidence 
-presented at trial. What should $P(G)$ be?
+presented at trial. What should $\Pr(G)$ be?
 For technical reasons, it cannot be zero, but it also cannot be 50\% because 
-of the presumption of innocent. Arguably, $P(G)$ should be relatively low, but how low?
+of the presumption of innocent. Arguably, $\Pr(G)$ should be relatively low, but how low?
 This remains  hotly debated. 
 
 
@@ -2038,7 +2013,7 @@ cost of acquitting an innocent, that is,
 %convicting is less costly than acquitting, so convicting is justified. Crucially, 
 The inequality holds just in case 
 %
-\[ \frac{P(G|E)}{1- P(G|E)} > \frac{c(CI)}{c(AG)}.\]
+\[ \frac{\Pr(G|E)}{1- P(G|E)} > \frac{c(CI)}{c(AG)}.\]
 %
 %This formula gives a precise indication of how high the probability 
 %of guilt must be to justify a guilty verdict, relative to the ratio between $D_i$ and $D_g$. 
@@ -2046,7 +2021,7 @@ The inequality holds just in case
 %i.e., $D_g=D_i$---as it might be the case in a civil case---, the lower bound for $P_g$ must be at least $\frac{1} {2}$. 
 Suppose $ \frac{c(CI)}{c(AG)}=\frac{99}{1}$, as might be more appropriate in a criminal 
 case in which the conviction of an innocent defendant is regarded as far worse than the acquittal of a guilty defendant.
-Then, the inequality hold only if $P(G)$ meets the threshold 99\%.
+Then, the inequality hold only if $\Pr(G)$ meets the threshold 99\%.
 More complicated models are also possible, but the basic idea is that the probability 
 required for a conviction is a function of weighing the 
 costs that would result from an erroneous decision. 
@@ -2056,7 +2031,7 @@ costs that would result from an erroneous decision.
 \paragraph{It is not clear how to estimate all the required probabilities.}
 
 The characterization is simple, crisp and elegant, but a too literal interpretation of it is problematic.  If a probabilistic threshold is understood as a criterion which the decision makers 
- should mechanically apply whenever they confront the decision to convict or acquit, two difficulties arise. The first difficulty is that assigning a probability value to guilt itself might not be feasible. As seen earlier, the starting probability $P(G)$ cannot be easily determined, 
+ should mechanically apply whenever they confront the decision to convict or acquit, two difficulties arise. The first difficulty is that assigning a probability value to guilt itself might not be feasible. As seen earlier, the starting probability $\Pr(G)$ cannot be easily determined, 
 and even if this value could be known, other probability values might remain unknown. One solution here is that instead 
  of aiming for a unique guilt probability, we can simply aim for an interval of admissible probabilities given the evidence. 
  More generally, the estimation of the probability of guilt can be viewed as an idealized process, a regulative ideal which can improve the precision of legal reasoning. 
