@@ -14,9 +14,9 @@
 
 
 		\node[arg]     			(scene) at (0,0) {The suspect was at the crime scene};
-		\node[arg,observed] (witn) at (0,-1.1) {Witness: The suspect was at the crime scene};
+		\node[arg] (witn) at (0,-1.1) {Witness: The suspect was at the crime scene};
 
-		\node[arg, observed] 					(lying) at (1,-0.5) {The witness is lying};
+		\node[arg] 					(lying) at (1,-0.5) {The witness is lying};
 
 		\draw[arg] 					(witn) -- (scene);
 		\draw[attack] 			(lying) -- (0, -0.5);
@@ -24,24 +24,24 @@
 %*********
 
 		\node[arg]     			(scene) at (0,-2) {The suspect was at the crime scene};
-		\node[arg,observed] (witn) at (-1,-3) {Witness $A$: The suspect was at the crime scene};
-		\node[arg,observed] (witn2) at (1,-3) {Witness $B$: The suspect was not at the crime scene};
+		\node[arg] (witn) at (-1,-3) {Witness $A$: The suspect was at the crime scene};
+		\node[arg] (witn2) at (1,-3) {Witness $B$: The suspect was not at the crime scene};
 
 		\draw[arg] 					(witn) -- (scene);
 		\draw[attack] 			(witn2) -- (scene);
 
 		\node[pref] 				(pref) at (0,-2.6) 	{\huge $<$};
-		\node[arg, observed] 					(rel) at (0,-3.3) 		{$B$ is more reliable than $A$};
+		\node[arg] 					(rel) at (0,-3.3) 		{$B$ is more reliable than $A$};
 
 		\draw[arg] 					(rel) -- (pref);
 
 %*********
 
 		\node[arg]     			(scene) at (0,-4) {The suspect was at the crime scene};
-		\node[arg,observed] (witn) at (-1.25,-5.15) {Witness $A_1$: The suspect was at the crime scene};
-		\node[arg,observed] (witn2) at (-0.45,-5.15) {Witness $A_2$: The suspect was at the crime scene};
-		\node[arg,observed] (witn3) at (0.45,-5.15) {Witness $B_1$: The suspect was not at the crime scene};
-		\node[arg,observed] (witn4) at (1.25,-5.15) {Witness $B_2$: The suspect was not at the crime scene};
+		\node[arg] (witn) at (-1.25,-5.15) {Witness $A_1$: The suspect was at the crime scene};
+		\node[arg] (witn2) at (-0.45,-5.15) {Witness $A_2$: The suspect was at the crime scene};
+		\node[arg] (witn3) at (0.45,-5.15) {Witness $B_1$: The suspect was not at the crime scene};
+		\node[arg] (witn4) at (1.25,-5.15) {Witness $B_2$: The suspect was not at the crime scene};
 
 		\draw[arg] 					(witn) -- (scene);
 		\draw[arg] 					(witn2) -- (scene);
@@ -49,7 +49,7 @@
 		\draw[attack] 			(witn4) -- (scene);
 
 		\node[pref] 				(pref2) at (0,-4.55) 	{\huge $<$};
-		\node[arg, observed] 					(outweigh) at (0,-6) 		{$B_1$ and $B_2$ are more reliable than $A_1$ and $A_2$};
+		\node[arg] 					(outweigh) at (0,-6) 		{$B_1$ and $B_2$ are more reliable than $A_1$ and $A_2$};
 
 		\draw[arg] 					(outweigh) -- (pref2);
 
