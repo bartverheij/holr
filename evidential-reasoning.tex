@@ -130,7 +130,7 @@ Marcello Di Bello \& Bart Verheij -- \today \\
 %MDB [NOT SURE ABOUT THE DUTCH FIGURE BEING FIRST]
 In the United States, the conviction rate in federal courts has been roughly 90\% and in Japan reaches as high a rate as 99\%.\endnote{On the conviction rate in US federal courts, see the statistical reports of the Offices of the United States Attorneys, available at \url{www.justice.gov/usao/resources/annual-statistical-reports}. Most of these convictions are guilty pleas, not convictions after trial. On Japan's conviction rate, see \textit{White Paper on Crime 2014}, Part 2, Chapter 3, Section 1, available at \url{hakusyo1.moj.go.jp/en/63/nfm/mokuji.html}.} 
 In the United Kingdom, the numbers are slightly lower, with a conviction rate of roughly 80\%, while in the Netherlands 
-the conviction rate is around 90\%.\endnote{On the UK conviction rate, see \url{Criminal Justice Statistics--March 2014}, available at 
+the conviction rate is around 90\%.\endnote{On the UK conviction rate, see \textit{Criminal Justice Statistics--March 2014}, available at 
 \url{www.gov.uk/government/statistics}. As in the US case, the rate include mostly guilty pleas. 
 For the Netherlands, see CBS, the Dutch central bureau of statistics, publishing its data at \url{www.cbs.nl}.} 
 This does not mean that the fact-finders deciding about the facts of a case have an easy job. Whether laypeople, such as jury members selected from the general public, or professionals, often experienced judges having completed postgraduate education, all face the difficulties associated with handling the evidence that is presented in court. What to do with conflicting testimonies? Does an established DNA match outweigh the testimony that the suspect was not on the crime scene? How to coherently interpret a large body of evidence? 
@@ -362,7 +362,13 @@ $\Pr(H|E) = \Pr(H \land E)/\Pr(E) = \Pr(E|H)\cdot \Pr(H)/\Pr(E)$, proving Bayes'
 }---shows how the 
 conditional probability $\Pr(H|E)$ of hypothesis $H$ given evidence $E$ 
 can be computed by the prior probability $\Pr(H)$ and the 
-factor $\Pr(E|H)/\Pr(E)$. 
+factor $\Pr(E|H)/\Pr(E)$.\endnote{The language of prior and posterior probability is standard 
+in the legal literature, but is misleading. The prior and posterior probabilities are not temporally ordered. The former is $\Pr(H)$  and the latter is
+$\Pr(H | E)$. Such probability assignments exist \textit{at the same time} and their values 
+are determined by Bayes' theorem. The language of prior and posterior probabilities make sense in the context of \textit{Bayesian conditioning}, that is, the claim 
+that if one begins with prior probability assignment $\Pr_0$ about $H$, $\Pr_0(H)$, and one acquires new evidence $E$  about $H$, 
+then rationality requires that one transform one's prior to generate posterior probability assignment $P_1$ about $H$ by conditionalizing on $E$, 
+that is, $\Pr_1(H) = \Pr_0(H | E)$, where $\Pr_0(H | E )$ is determined using Bayes' theorem. \label{conditioning} See \cite{bovensEtAl2003}.} 
 %One of the lessons of Bayes' theorem is that the more surprising 
 %>>>>>>> origin/master
 %the evidence---that is, the lower $\Pr(E)$---the higher the probability 
@@ -466,13 +472,16 @@ Informal and formal argumentation theory~\citep{vanEemerenEtal2014}.
 \textit{Probabilities:}
 Evidence and probabilities~\citep{schum1994,morteraDawid2007}
 Statistics in the law~\citep{fenton2011}. Miscarriages of justice involving statistics~\citep{dawidEtal2011,schnepsColmez2013}.
-Debate on whether probabilistic calculations have a place in courts~\citet{finkelsteinFairley1970,tribe1971}, and more recently, the 2012 special issue of \textit{Law, Probability and Risk}; Vol. 4, No. 2. 
+Debate on whether probabilistic calculations have a place in courts~\citet{finkelsteinFairley1970,tribe1971}, and more recently, 
+the 2012 special issue of \textit{Law, Probability and Risk}; Vol. 4, No. 2. 
 %
 \textit{Scenarios:}
 Scenarios in evidential reasoning~\citep{bennettFeldman1981,penningtonHastie1993,penningtonHastie1993StoryModel}. Scenarios and miscarriages of justice~\citep{wagenaarEtal1993}. Inference to the best explanation~\citep{pardoAllen2008}. Hypothetical explanations of the evidence~\citep{thagard1989}. 
 %
 \textit{Combined approaches:}
-Combining arguments and scenarios~\citep{bexEtal2010,bex2011}. Bayesian networks for evidential reasoning~\citep{heplerEtal2007,fentonNeilLagnado2013}. Combining arguments, scenarios and probabilities~\citep{vlekEtal2016,timmerEtAl2017, verheijEtal2016,verheij2014,verheij2017}. 
+Combining arguments and scenarios~\citep{bexEtal2010,bex2011}. 
+Bayesian networks for evidential reasoning~\citep{heplerEtal2007,fentonNeilLagnado2013}. 
+Combining arguments, scenarios and probabilities~\citep{vlekEtal2016,timmerEtAl2017, verheijEtal2016,verheij2014,verheij2017}. 
 
 \section{Conflicting evidence}
 \label{sec:conf}
@@ -861,7 +870,12 @@ while the lack of a DNA match decreases the probability of the same hypothesis
 
 \paragraph{Further readings} 
 %.........................................................................................
-On confirmation theory and accounts of evidential support~\citep{carnap1950, fitelson1999, crupi2015}.
+On confirmation theory and accounts of 
+evidential support~\citep{carnap1950, fitelson1999, skyrms1999, hacking2001, bovensEtAl2003, crupi2015}.
+Probabilistic accounts of evidential 
+support in the law~\citep{lempert1977}.
+
+
 
 \section{Evidential value}
 \label{sec:str}
@@ -1592,7 +1606,7 @@ In the first kind of conflicts between reasons, there is a reason attacked by an
 %BV Done [ISN'T IT BETTER TO SAY THAT THERE IS EVIDENCE SUGGESTING THAT THE WITNESS IS LYING? ] 
 In that case, the conclusion that the suspect was at the crime scene does not follow, since there is no supporting reason for it. The reason (the witness report itself) and the exclusionary reason (the lying of the witness) both hold as they are assumptions. %MDB [DID YOU INTRODUCE THE IEDA OF ASSUMPTION ALREADY? IS IT NECESSARY?]
 In this situation, % of a reason with an undercutting attack by an exclusionary reason, 
-the conflict of reasons is resolved in favor of the exclusionary reason insofar as the latter is not further attacked.
+the conflict of reasons is resolved in favor of the exclusionary reason (also called an exception in this context) insofar as the latter is not further attacked.
 
 %by the exception expressed in the exclusionary reason. 
 %MDB [NOT SURE I UNDERSTAND HOW THE CONFLICT IS RESOLVED HERE. THE UNDERCUTTING REASON WINS. OK. BUT HOW IS THIS A RESOLUTION OF THE CONFLICT?]
@@ -1641,12 +1655,12 @@ The probability calculus provides formal rules for the coherent interpretation o
 \paragraph{The likelihood ratio formula shows how to find the posterior odds given the evidence.} 
 The odds of a hypothesis $H$ are defined as the ratio $\Pr(H)/P(\neg H)$ of the probability of the hypothesis and the probability of its negation. Given evidence $E$, the odds $\Pr(H)/P(\neg H)$ 
 of the hypothesis unconditioned on the evidence are called the \emph{prior odds} of the hypothesis, and the odds $\Pr(H | E)/P(\neg H | E)$ of the hypothesis 
-conditioned on the evidence the \emph{posterior odds}.
+conditioned on the evidence the \emph{posterior odds}.\endnote{On the distinction between priors and posteriors, see note \ref{conditioning}.}
 %\endnote{See footnote \ref{footnote:prior}.} 
 It follows from Bayes' theorem (Section~\ref{sec:normfram:prob}) that the posterior odds can 
 be found by multiplying the prior odds with the likelihood ratio: 
 
-	\[ \frac{\Pr(H|E)}{\Pr(\neg H | E)} = \frac{\Pr(E | H)}{\Pr(E| \neg H)}\cdot \frac{\Pr(H)}{\Pr(\neg H)}.\endnote{To derive the likelihood ratio, 
+	\[ \frac{\Pr(H|E)}{\Pr(\neg H | E)} = \frac{\Pr(E | H)}{\Pr(E| \neg H)}\cdot \frac{\Pr(H)}{\Pr(\neg H)}.\endnote{To derive the likelihood ratio formula, 
 	one first applies Bayes' theorem to both $H$ and $\neg H$. We get $\Pr(H|E) = \Pr(E|H)\cdot\Pr(H)/\Pr(E)$ and $\Pr(\neg H|E) = \Pr(E|\neg H)\cdot\Pr(\neg H)/\Pr(E)$. Using these, we find:
 
 \begin{equation*}
@@ -1717,7 +1731,7 @@ the witness, call it $W$, in her testimony asserts that the defendant was
 seen at the crime scene. 
 Both pieces of evidence, intuitively, support the hypothesis $G$ that the defendant 
 is guilty. To assign an explicit numerical value, assume
- the DNA match has a likelihood ratio $\frac{\Pr(M | G)}{\Pr( M | \neg S)}$ of 2 million, 
+ the DNA match has a likelihood ratio $\frac{\Pr(M | G)}{\Pr( M | \neg G)}$ of 2 million, 
 and the witness testimony a likelihood ratio $\frac{\Pr(W | G)}{\Pr( W | \neg G)}$ of 1,000. 
 These numbers are purely illustrative, but are needed to perform the probabilistic calculations. (Of course, there remains the 
 question of how the numbers can be obtained and whether the numbers 
@@ -1730,16 +1744,16 @@ than the two pieces considered independently.
 If the prior odds $\frac{\Pr(G)}{\Pr(\neg G)}$ are roughly $\frac{1}{200,000}$
 as before, the posterior odds are therefore as follows:
 %
-\[\frac{\Pr(G|M|\wedge W)}{\Pr(\neg S|M\wedge W)}= \frac{\Pr(M |G)}{\Pr( M | \neg S)}\cdot \frac{\Pr(W |G)}{\Pr( W | \neg G)}\cdot \frac{\Pr(G)}{\Pr(\neg G)} \approx 2,000,000 \cdot 1,000 \cdot \frac{1}{200,000}= \frac{20,000}{1}.\]
+\[\frac{\Pr(G|M\wedge W)}{\Pr(\neg G|M\wedge W)}= \frac{\Pr(M |G)}{\Pr( M | \neg G)}\cdot \frac{\Pr(W |G)}{\Pr( W | \neg G)}\cdot \frac{\Pr(G)}{\Pr(\neg G)} \approx 2,000,000 \cdot 1,000 \cdot \frac{1}{200,000}= \frac{20,000}{1}.\]
 % 
-So the poster probability of the hypothesis given the two pieces of evidence is as follows:
+So the posterior probability of the hypothesis given the two pieces of evidence is as follows:
 %
 \[\Pr(G|M\wedge W) \approx \frac{20,000}{1+20,000}\approx 0.99.\]
 %
 Compare this probability with $\Pr(G|M)$, which 
 was 0.95, a lower value. The probability calculus can offer a numerical 
 representation of the intuitive fact that two pieces of evidence, taken together, 
-have a higher (overall) evidential value than one piece of evidence alone. 
+have a higher (overall) evidential value than one piece alone. 
 
  If the two pieces of evidence are not independent, 
 the likelihood ratio formula for two pieces of evidence 
@@ -1963,7 +1977,7 @@ Character evidence and its exclusion~\citep{redmayne2015}.
 
 \subsection{Probability}
 
-In a probabilistic treatment, reasoning and decision making are analyzed using the numeric probability calculus.
+In a probabilistic treatment, reasoning and decision making are analyzed using the probability calculus combined with elements of decision theory.
 \paragraph{The guilt probability is estimated by weighing the evidence with the probability calculus.}
 
  On the probabilistic framework, the goal is to estimate the probability of the defendant's guilt based 
@@ -1981,7 +1995,7 @@ they are not. For example, $\Pr(G)$ is required to calculate $\Pr(G|E)$.
 This is the probability of the defendant's guilt regardless of the evidence 
 presented at trial. What should $\Pr(G)$ be?
 For technical reasons, it cannot be zero, but it also cannot be 50\% because 
-of the presumption of innocent. Arguably, $\Pr(G)$ should be relatively low, but how low?
+of the presumption of innocence. Arguably, $\Pr(G)$ should be relatively low, but how low?
 This remains hotly debated. 
 
 
@@ -2032,10 +2046,11 @@ and even if this value could be known, other probability values might remain unk
 %to theorize about the meaning and ideal of the criminal standard of proof. 
 
 Another problem with the probabilistic characterization 
-is that it does not take into account the so-called weight of the evidence, that is, whether the evidential basis contains all the evidence 
+is that it does not take into account the so-called weight of the evidence, that is, whether the evidence presented at trial contains all the evidence 
 in the case or just a partial subset of the evidence. The guilt probability will vary dramatically 
 depending on the evidence that is used to estimate it. It is tempting to suggest that the guilt probability must be based on a body 
 of evidence that is complete, or at least as complete as reasonably possible. And yet, it is unclear how to characterize this notion.
+No body of evidence is, strictly speaking, complete because new evidence could always be discovered and added. 
 
 \paragraph{Further readings}
 
@@ -2048,7 +2063,7 @@ A critique of the proof beyond a reasonable doubt
 as understood in the law~\citep{laudan2006}.
 History of beyond a reasonable doubt standard 
 \citep{shapiro1991, whitman2008}. Other measures, weight, resiliency and completeness 
-of the evidence~\citep{kaye1999, stein05}.
+of the evidence~\citep{kaye1999, stein05, nance2016}.
 
 
 
@@ -2059,7 +2074,7 @@ In an argumentative treatment, reasoning and decision making are analyzed in ter
 
 \paragraph{Supporting and attacking reasons are collected and weighed.}
 
-In a court of law, the prosecutor puts forward a conclusion and offers supporting reasons. The opposing parts responds by offering attacking reasons. 
+In a court of law, the prosecutor puts forward a conclusion and offers supporting reasons. The opposing side responds by offering attacking reasons. 
 The dialectical process can be complex. As seen earlier, there are different attacking reasons: undermining, undercutting and rebutting. The process is complex also because 
 it can be iterated. A conclusion can be attacked by an attacking reasons, and the latter in turn can be attacked. And so on. 
 When the dialectical process reaches an equilibrium point and the opposing parties have nothing more to contribute, 
@@ -2131,23 +2146,25 @@ with two or more competing scenarios, the best explanation must be chosen. The n
 consistency with the evidence, explanatory power (predictive power and causal fit), plausibility, completeness, coherence (temporal and causal structure). 
 Other criteria might also play a role, such the simplicity of the scenario. So, the best explanation is the scenario that fares 
 better on some combination of these criteria. This is a matter of degrees. The scenarios get higher 
-or lower scores relative to the applicable evaluation criteria. The scenario that gets the best score, and that 
-meets a suitable threshold level, should be selected. 
+or lower scores relative to the applicable evaluation criteria. Arguably, the scenario that gets the best score %, and that 
+%meets a suitable threshold level, 
+should be selected. 
 
 
 
 
 
-\paragraph{It is not obvious how to find the scenarios.}
+\paragraph{It is not obvious how to identify the best scenario.}
 
-The process of scenario selection resembles how jurors reason in trial proceedings, whereas despite its 
-clear mathematical underpinnings, it is hard to relate probability to judicial proceedings: jurors do not 
+The process of scenario selection resembles how jurors reason in trial proceedings, whereas %despite its 
+%clear mathematical underpinnings, 
+it is hard to relate probability to judicial proceedings: jurors do not 
 naturally quantify guilt, and it is difficult to quantify it even if we wanted to. Still, a problem with the scenario approach is that 
 the method by which a scenario is selected is not entirely transparent. The different criteria, such as consistency, explanatory power, coherence etc.\ 
 can pull the decision makers in opposite directions. For example, a scenario might be better in terms of explanatory power, while another might 
 be more plausible. What to do, then? One might wonder whether the criterion for the best scenario should simply be this:
 the most probable scenario which meets a sufficiently high probability threshold. If so, this would not be very 
-different from the probability based account of the standard of proof. 
+different from the probability-based account of the standard of proof. 
 
 \paragraph{Further readings}
 
@@ -2174,9 +2191,9 @@ reasonable doubt~\citep{allen2010, allenStein2013}.
 
 \section{Summary and conclusion}
 
-We have discussed evidential reasoning in the law. For this, we have distinguished three normative frameworks: one focusing on the arguments for and against the positions taken, the second using probabilities to assess the evidential value of the evidence, and the third considering the scenarios that best explain the evidence. 
+We have discussed evidential reasoning in the law. For this, we have distinguished three normative frameworks: one focusing on the arguments for and against the positions taken; the second using probabilities to assess the evidential value of the evidence; and the third considering the scenarios that best explain the evidence. 
 
-We discussed four main themes: conflicting evidence, evidential value, the coherent interpretation of the evidence, and reasoning and decision making. For each theme, we discussed how they can be addressed in each of the three frameworks. We summarize our discussions for each theme, using the highlighted phrases in the preceding sections.
+We discussed four main themes: conflicting evidence; evidential value; the coherent interpretation of the evidence; and reasoning and decision making. For each theme, we discussed how they can be addressed in each of the three frameworks. We now summarize our discussion for each theme, using the highlighted phrases in the preceding sections.
 
 \subsection*{Conflicting evidence}
 
@@ -2257,16 +2274,17 @@ It is not obvious when to stop collecting supporting and attacking reasons.
 
 Competing scenarios are collected and compared.
 The best scenario is the rule of decision.
-It is not obvious how to find the scenarios.
+It is not obvious how to identify the best scenario.
 	
 %\subsection*{Concluding remarks}
 
 \vspace{1em}
-\noindent With the thematic discussion of the three normative frameworks, we have aimed to show how each framework contributes to the understanding of conflicting evidence, evidential value, the coherent interpretation of the evidence, and reasoning and decision making. In this way, we hope to contribute to the further development of the three frameworks. In our perspective, there is no need to choose	 between the frameworks, since each adds to the normative analysis of evidential reasoning. At the same time, there is room for further studies of how the three normative frameworks relate to each other, and how they can be integrated into an overall normative perspective on evidential reasoning.
+\noindent With the thematic discussion of the three normative frameworks, we have aimed to show how each framework contributes to the understanding of conflicting evidence, evidential value, the coherent interpretation of the evidence, and reasoning and decision making. %In this way, we hope to contribute to the further development of the three frameworks. 
+In our perspective, there is no need to choose	 between the frameworks, since each adds to the normative analysis of evidential reasoning. At the same time, there is room for further studies of how the three normative frameworks relate to one another, and how they can be integrated into a unified normative perspective on evidential reasoning.
 
 \section*{Acknowledgment}
 This chapter has been developed in the context of the project `Designing and Understanding Forensic Bayesian Networks with Arguments and Scenarios', funded in the NWO Forensic Science program (\url{http://www.ai.rug.nl/~verheij/nwofs/}). The first author would like to thank Infosys 
-Limited which made possible his residence at the Institute for Advanced Study, Princeton. The second author would like to thank the Isaac Newton Institute for Mathematical Sciences (University of Cambridge) for its hospitality during the programme `Probability and Statistics in Forensic Science' which was supported by EPSRC Grant Number EP/K032208/1. 
+Limited which made possible his stay at the Institute for Advanced Study in Princeton for the academic year 2016-17 during which parts of this chapter were written. The second author would like to thank the Isaac Newton Institute for Mathematical Sciences at the University of Cambridge for its hospitality during the programme `Probability and Statistics in Forensic Science' which was supported by EPSRC Grant Number EP/K032208/1. 
 
 
 \newpage
