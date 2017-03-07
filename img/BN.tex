@@ -1,0 +1,24 @@
+\documentclass[border=5mm,tikz]{standalone} 
+
+\usepackage{amsmath}
+\input{../styles.tex}
+
+\begin{document}
+	\begin{tikzpicture}[
+		arg/.append style={text width=3.5cm},
+		bn/.append style={text width=2.5cm},
+	]
+		\pgftransformxscale{5}
+		\pgftransformyscale{2}
+
+		\node[bn] (guilty) at (0,0) {The suspect is guilty.};
+		\node[bn] (alibi) at (1,0) {The suspect has an alibi.};
+		\node[bn] (camera) at (0,-1.5) {The suspect is identified in security camera footage.};
+		\node[bn] (partner) at (1,-1.5) {The suspect's partner provides an alibi.};
+
+		\draw[bn] (guilty) -- (alibi);
+		\draw[bn] (guilty) -- (camera);
+		\draw[bn] (alibi) -- (partner);
+
+	\end{tikzpicture}
+\end{document}

@@ -358,17 +358,20 @@ This formula---which can be easily proven from
 the probability axioms\endnote{Bayes' theorem can be derived using the definition of conditional probability. 
 We have $\Pr(E|H) = \Pr(H\land E)/\Pr(H)$. Here we use logical conjunction $\land$ to write the combined event $H$ and $E$. 
 Hence, $\Pr(H\land E)=\Pr(E|H)\cdot \Pr(H)$. It follows that
-$\Pr(H|E) = \Pr(H \land E)/\Pr(E) = \Pr(E|H)\cdot \Pr(H)/\Pr(E)$, proving Bayes' theorem.
+$\Pr(H|E) = \Pr(H \land E)/\Pr(E) = \Pr(E|H)\cdot \Pr(H)/\Pr(E)$, proving Bayes' theorem. Note that the theorem holds generally for probability functions and does not assume a temporal ordering of taking evidence into account, as suggested by the terminology of prior and posterior probability. The terminology is standard usage in approaches of Bayesian updating.
 }---shows how the 
 conditional probability $\Pr(H|E)$ of hypothesis $H$ given evidence $E$ 
 can be computed by the prior probability $\Pr(H)$ and the 
-factor $\Pr(E|H)/\Pr(E)$.\endnote{The language of prior and posterior probability is standard 
-in the legal literature, but is misleading. The prior and posterior probabilities are not temporally ordered. The former is $\Pr(H)$  and the latter is
-$\Pr(H | E)$. Such probability assignments exist \textit{at the same time} and their values 
-are determined by Bayes' theorem. The language of prior and posterior probabilities make sense in the context of \textit{Bayesian conditioning}, that is, the claim 
-that if one begins with prior probability assignment $\Pr_0$ about $H$, $\Pr_0(H)$, and one acquires new evidence $E$  about $H$, 
-then rationality requires that one transform one's prior to generate posterior probability assignment $P_1$ about $H$ by conditionalizing on $E$, 
-that is, $\Pr_1(H) = \Pr_0(H | E)$, where $\Pr_0(H | E )$ is determined using Bayes' theorem. \label{conditioning} See \cite{bovensEtAl2003}.} 
+factor $\Pr(E|H)/\Pr(E)$. 
+
+%\endnote{The language of prior and posterior probability is standard 
+%in the legal literature, but is misleading. The prior and posterior probabilities are not temporally ordered. The former is $\Pr(H)$  and the latter is
+%$\Pr(H | E)$. Such probability assignments exist \textit{at the same time} and their values 
+%are determined by Bayes' theorem. The language of prior and posterior probabilities make sense in the context of \textit{Bayesian conditioning}, that is, the claim 
+%that if one begins with prior probability assignment $\Pr_0$ about $H$, $\Pr_0(H)$, and one acquires new evidence $E$  about $H$, 
+%then rationality requires that one transform one's prior to generate posterior probability assignment $P_1$ about $H$ by conditionalizing on $E$, 
+%that is, $\Pr_1(H) = \Pr_0(H | E)$, where $\Pr_0(H | E )$ is determined using Bayes' theorem. \label{conditioning} See \cite{bovensEtAl2003}.} 
+
 %One of the lessons of Bayes' theorem is that the more surprising 
 %>>>>>>> origin/master
 %the evidence---that is, the lower $\Pr(E)$---the higher the probability 
@@ -549,8 +552,9 @@ Third, the connection between the reason and the conclusion can be attacked.
  % The lying of a witness is an example of such an attack, referred to as an \textit{undercutting attack}. 
  In contrast with a rebutting attack, an undercutting attack provides no support for the opposite conclusion. In the example, %when the witness is lying, 
  if the lighting conditions were bad, there would be no reason explicitly 
- supporting that the suspect was not at the crime scene. The attacking reason, % statement, %here the lying of the witness, 
- here the bad lighting conditions, is also referred to as an exclusionary reason. 
+ supporting that the suspect was not at the crime scene. 
+%The attacking reason, % statement, %here the lying of the witness, 
+ %here the bad lighting conditions, is also referred to as an exclusionary reason. 
 %
 The three examples of the different kinds of attack are shown in Figure~\ref{fig:arg3}.
 
@@ -1602,11 +1606,14 @@ For example, consider the argument in Figure~\ref{fig:arg2} (page~\pageref{fig:a
 
 \paragraph{Conflicts between reasons can be addressed by exceptions, preferences and weighing.} The counterarguments to a reason that result from asking critical questions give rise to conflicts between reasons. Sometimes conflicts of reasons can be resolved in the sense that it can be determined which conclusions follow from the conflicting reasons. We distinguish three kinds of conflicts. 
 
-In the first kind of conflicts between reasons, there is a reason attacked by an exclusionary reason, i.e. an attack of the undercutting kind that goes against the connection between the reason and its conclusion (cf. Section~\ref{sec:confArg}). This situation is shown at the top of Figure~\ref{fig:conflicts}. There is a witness reporting that the suspect was at the crime scene, but there is evidence that the witness is lying. 
+In the first kind of conflicts between reasons, there is a reason attacked by an undercutting reason, i.e. an attack that goes against the connection between the reason and its conclusion (cf. Section~\ref{sec:confArg}). This situation is shown at the top of Figure~\ref{fig:conflicts}. There is a witness reporting that the suspect was at the crime scene, but there is evidence that the witness is lying. 
 %BV Done [ISN'T IT BETTER TO SAY THAT THERE IS EVIDENCE SUGGESTING THAT THE WITNESS IS LYING? ] 
-In that case, the conclusion that the suspect was at the crime scene does not follow, since there is no supporting reason for it. The reason (the witness report itself) and the exclusionary reason (the lying of the witness) both hold as they are assumptions. %MDB [DID YOU INTRODUCE THE IEDA OF ASSUMPTION ALREADY? IS IT NECESSARY?]
+In that case, the conclusion that the suspect was at the crime scene does not follow, since there is no supporting reason for it. 
+%The reason (the witness report itself) and the undercutting reason (the lying of the witness) both hold as they are assumptions. %MDB [DID YOU INTRODUCE THE IEDA OF ASSUMPTION ALREADY? IS IT NECESSARY?]
 In this situation, % of a reason with an undercutting attack by an exclusionary reason, 
-the conflict of reasons is resolved in favor of the exclusionary reason (also called an exception in this context) insofar as the latter is not further attacked.
+the conflict %of reasons 
+is resolved in favor of the undercutting reason %(also called an exception in this context) 
+insofar as the latter is not further attacked.
 
 %by the exception expressed in the exclusionary reason. 
 %MDB [NOT SURE I UNDERSTAND HOW THE CONFLICT IS RESOLVED HERE. THE UNDERCUTTING REASON WINS. OK. BUT HOW IS THIS A RESOLUTION OF THE CONFLICT?]
@@ -1619,7 +1626,7 @@ the conflict of reasons is resolved in favor of the exclusionary reason (also ca
 
 In the second kind of conflicts between reasons, there is one reason for a conclusion and another against the conclusion. For instance, there are two witnesses with opposite reports about whether the suspect was at the crime scene or not (see the middle of Figure~\ref{fig:conflicts}). This is an example of a rebutting attack (Section~\ref{sec:confArg}). The conflict of reasons is unresolved given only the two reasons involved. Further information about the reasons is required to resolve the conflict. The resolution of such a conflict of reasons can be thought of as the preference of one over the other. A reason can be preferred over another, for instance when it is stronger. In the example, a preference (in the figure indicated by the $<$-sign) can be justified if one witnesses is shown to be more reliable than the other. In this case, the conclusion that follows from the testimony of the more reliable witness will be drawn, thereby resolving the conflict. 
 
-The third kind of conflicts between reasons discussed here involves more than two reasons. For instance, there are more than two witnesses, with conflicting reports (Figure~\ref{fig:conflicts}, bottom). %In the figure, 
+The third kind of conflicts between reasons discussed here involves more than two reasons. For instance, there can be more than two witnesses, with conflicting reports (Figure~\ref{fig:conflicts}, bottom). %In the figure, 
 %For example, both sides are supported by two witness reports. 
 Resolving such conflicts can be thought of as a weighing of reasons, generalizing the preference between two conflicting reasons. 
 %Again, it is concluded that the suspect was not at the crime scene, given this resolution of this conflict of reasons.
@@ -1655,7 +1662,7 @@ The probability calculus provides formal rules for the coherent interpretation o
 \paragraph{The likelihood ratio formula shows how to find the posterior odds given the evidence.} 
 The odds of a hypothesis $H$ are defined as the ratio $\Pr(H)/P(\neg H)$ of the probability of the hypothesis and the probability of its negation. Given evidence $E$, the odds $\Pr(H)/P(\neg H)$ 
 of the hypothesis unconditioned on the evidence are called the \emph{prior odds} of the hypothesis, and the odds $\Pr(H | E)/P(\neg H | E)$ of the hypothesis 
-conditioned on the evidence the \emph{posterior odds}.\endnote{On the distinction between priors and posteriors, see note \ref{conditioning}.}
+conditioned on the evidence the \emph{posterior odds}.%\endnote{On the distinction between priors and posteriors, see note \ref{conditioning}.}
 %\endnote{See footnote \ref{footnote:prior}.} 
 It follows from Bayes' theorem (Section~\ref{sec:normfram:prob}) that the posterior odds can 
 be found by multiplying the prior odds with the likelihood ratio: 
@@ -1791,107 +1798,73 @@ can change in the face of other evidence.
 % E1 and E2 are independent, but mutually strengthening as evidence for H. In fact, LR(E2, H) = 11, LR(E2, H |E1) = infinite. 
 
 
+\paragraph{For the combination of multiple pieces of evidence and multiple hypotheses, more complex analytic tools can be used, in particular Bayesian networks.} Probabilistic analyses as above become more and more complex when more elements are involved. Since many realistic crime cases involve many pieces of evidence and several hypotheses, probabilistic calculations quickly become unmanageable without appropriate modeling tools. A prominent example of a modeling tool that allows for complex probabilistic representations and calculations, we discuss Bayesian networks. Bayesian networks have been proposed in computer science and artificial intelligence and exploit probabilistic independencies to simplify representations and calculations.
 
+A Bayesian network has a graphical and a numeric part. The graphical part is a directed, acyclic graph of the relevant probabilistic variables. The numeric part consists of conditional probability tables. In these tables, the conditional probabilities of a variable are specified, conditioned on the different instantiations of its parent variables. Consider for instance the Bayesian network shown in Figure~\ref{fig:BN}. At the top, two hypotheses are shown, one expressing the suspect's guilt, the other that the suspect has an alibi. The arrow between them expresses the dependence between the hypotheses: when one is true, the other is false, and vice versa. At the bottom, two pieces of evidence are shown: security camera footage that shows the suspect, and the testimony of the suspect's partner who provides an alibi. They depend on the hypotheses. Table~\ref{tab:BN} contain the conditional probability tables of the Bayesian network. The prior probability of guilt has been set to 1 in a 1000. The two hypotheses logically exclude one another. Given that the suspect is not guilty, there is a 1\% chance that the suspect is identified in security camera footage. Given that the suspect is guilty, there is a 30\5 chance that the suspect is not recognizable. Given that the alibi is false, there is a 10\% chance that the suspect's partner still testifies for the alibi. Given that the alibi is true, the partner certainly testifies for the alibi.
 
-\paragraph{The formula can be generalized to calculate the probability of a composite hypothesis, although one should we wary 
-of the independence assumptions used.} 
-Consider now two hypotheses, $H_1$ and $H_2$, each supported by an item of 
-evidence, $E_1$ and $E_2$, respectively. Can the likelihood ratio formula be generalized to cases with 
-two items of evidence and two hypotheses combined? Assuming that the two pieces of evidence are independent, conditional on the hypotheses, 
-and the two hypotheses are also independent, 
-it is enough to simply multiply the two likelihood ratios, as follows:
-%
-\[ \frac{\Pr(H_1\wedge H_2|E_1 \land E_2)}{\Pr(\neg H | E_1 \land E_2)} = 
-	\frac{\Pr(E_2 | H_2)}{\Pr(E_2| \neg H_2)}
-	\cdot 
-	\frac{\Pr(E_1 | H_1)}{\Pr(E_1| \neg H_1)}
-	\cdot 
-	\frac{\Pr(H_1)}{\Pr(\neg H_1)}\cdot \frac{\Pr(H_2)}{\Pr(\neg H_2)}.\]
-%
+\begin{figure}[t]
+\centering
+\input{img/BN}
+\caption{An example Bayesian network: directed acyclic graph\label{fig:BN}}
+\end{figure}
 
-To illustrate, suppose a DNA match links the defendant to the crime scene, while an email written by the defendant indicates 
-he had a plan to kill the victim. Each of these item of evidence support a different hypothesis, abbreviated
- \textit{contact} and \textit{plan}.
- %
-\begin{comment}
-Observe that:
- %
-\[ \frac{\Pr(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{\Pr(\neg (\textit{contact} \wedge \textit{plan}) | \textit{match} \wedge \textit{email})} 
-=
-\frac{\Pr(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{\Pr(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))}
-\times
-\frac{\Pr(\textit{contact}\wedge \textit{plan})}{\Pr(\neg (\textit{contact} \wedge \textit{plan}))}
-.\]
-%
-\end{comment}
-%
- Assuming that the two items of evidence are independent, conditional on 
- the hypotheses of interest, and assuming that the two hypotheses 
- are also independent, we have:
- %
- \begin{comment}
- \begin{eqnarray*}
- \frac{\Pr(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{\Pr(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))} 
- & = & \frac{\Pr(\textit{match} | \textit{contact}\wedge \textit{plan})}{\Pr(\textit{match} | \neg (\textit{contact} \wedge \textit{plan}))} \times 
- \frac{\Pr( \textit{email} | \textit{contact}\wedge \textit{plan})}{\Pr(\textit{email} | \neg (\textit{contact} \wedge \textit{plan}))} \notag\\ 
- && \notag\\
- & = & \frac{\Pr(\textit{match} | \textit{contact})}{\Pr(\textit{match} | \neg \textit{contact})} \times 
- \frac{\Pr( \textit{email} | \textit{plan})}{\Pr(\textit{email} | \neg \textit{plan})} \notag\\
- \end{eqnarray*}
- \end{comment}
- %
- \[
- \frac{\Pr(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{\Pr(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))} 
- = \frac{\Pr(\textit{match} | \textit{contact})}{\Pr(\textit{match} | \neg \textit{contact})} \times 
- \frac{\Pr( \textit{email} | \textit{plan})}{\Pr(\textit{email} | \neg \textit{plan})} 
- \]
- %
-Suppose, for the sake of argument, the (incremental) 
-evidential value of the DNA match in favor 
-of the hypothesis \textit{contact}, 
-and the (incremental) evidential value of the defendant's email in favor of 
-the hypothesis \textit{plan}, are as follows:
-%
-\[\frac{\Pr(\textit{match}| \textit{contact})}{\Pr(\textit{match} | \neg \textit{contact})}=36 \text{ and } \frac{\Pr(\textit{email}| \textit{plan})}{\Pr(\textit{email}| \neg \textit{plan})}=36\]
-%
-where the numbers are, as usual, illustrative. The combined (incremental) evidential value of \textit{match} and \textit{email} 
-in favor of the hypothesis consisting of \textit{contact} and \textit{plan}, is $36\times 36 = 1296$.
-%
-\begin{comment}
- so 
- %
- %\[
- \begin{eqnarray*} % {lcccc } 
- \frac{\Pr(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{\Pr(\neg (\textit{contact} \wedge \textit{plan}) | \textit{match} \wedge \textit{email})} 
- & = & 1296 \times 
-\frac{\Pr(\textit{contact}\wedge \textit{plan})}{\Pr(\neg (\textit{contact} \wedge \textit{plan}))} \\ 
- \end{eqnarray*} 
- %\]
- %
- \end{comment} 
- \noindent
-For the value of the prior odds $\frac{\Pr(\textit{contact}\wedge \textit{plan})}{\Pr(\neg (\textit{contact} \wedge \textit{plan}))}$, assume that 
-%
-\[\frac{\Pr(\textit{contact})}{\Pr(\neg \textit{contact})}=0.1/0.9 \text{ and } \frac{\Pr(\textit{plan})}{\Pr(\neg \textit{plan})}=0.1/0.9.\]
-%
-Now, putting everything together, we get
- %\[ 
- \begin{eqnarray*} %{ccccc } 
- \frac{\Pr(\textit{contact}\wedge \textit{plan} | \textit{match} \wedge \textit{email})}{\Pr(\neg (\textit{contact} \wedge \textit{plan}) | \textit{match} \wedge \textit{email})} 
- & = & \frac{\Pr(\textit{match} \wedge \textit{email} | \textit{contact}\wedge \textit{plan})}{\Pr(\textit{match} \wedge \textit{email} | \neg (\textit{contact} \wedge \textit{plan}))} \times 
-\frac{\Pr(\textit{contact}\wedge \textit{plan})}{\Pr(\neg (\textit{contact} \wedge \textit{plan}))} \\ 
- &&\\
-0.93/0.07 & = & 1296 \times \frac{0.1\times 0.1}{1-(0.1\times 0.1).}
- \end{eqnarray*} %\]
- %
+\begin{table*}
+	\centering
+		\begin{tabular}{lc}
+			Guilt & $\Pr$(Guilt)\\
+			\hline
+			False & 0.999\\
+			True & 0.001\\
+		\end{tabular}
+		\begin{tabular}{llc}
+			Guilt &Alibi& $\Pr$(Alibi$|$Guilt)\\
+			\hline
+			False & False & 0\\
+			False & True & 1\\
+			True & False & 1\\
+			True & True & 0\\
+		\end{tabular}
+		\begin{tabular}{llc}
+			Guilt &Camera& $\Pr$(Camera$|$Guilt)\\
+			\hline
+			False & False & 0.99\\
+			False & True & 0.01\\
+			True & False & 0.3\\
+			True & True & 0.7\\
+		\end{tabular}
+		\begin{tabular}{llc}
+			Alibi &Partner& $\Pr$(Partner$|$Alibi)\\
+			\hline
+			False & False & 0.9\\
+			False & True & 0.1\\
+			True & False & 0\\
+			True & True & 1\\
+		\end{tabular}
+\caption{An example Bayesian network: conditional probability tables\label{tab:BN}}
+\end{table*}
 
-\noindent So, not only does the probability calculus offers us an elegant way to combine different pieces of evidence, but also to combine 
-different hypotheses in larger scenarios.
-These combinations, however, rests on assumptions about the independence of the hypotheses and of the pities of evidence. 
-One should be wary that these assumptions do not always hold. Consider a scenario that consists of several elements, for instance an accidental 
-encounter with a robber ($H_1$) followed by the robber killing the victim ($H_2$). When the two events are independent, the probability of the composite hypothesis $H_1 \land H_2$ is, by definition of probabilistic independence, 
-the product of the probabilities of the individual elements. But the elements of a scenario need not be 
-independent. In the example, it seems reasonable to assume that an accidental encounter with a robber increases the probability of being killed, albeit slightly. Using formal notation, $\Pr(H_2) < P(H_2 | H_1)$. Hence also $\Pr(H_1) \cdot P(H_2) < P(H_1 \land H_2)$ and $H_1$ and $H_2$ are not independent. This point also holds when considering the probability of a composite hypothesis conditioned on evidence $E$. It does not in general hold that $\Pr(H_1 | E) \cdot P(H_2 | E) = P(H_1 \land H_2 | E)$, only when the elements of the composite hypothesis are independent given the evidence.
+A Bayesian network provides a representation of a full probability distribution over the variables, by chaining conditional probabilities and using the dependencies and independencies represented in the graph. For instance, we have the following:
+
+\begin{description}
+	\item $\Pr$(Partner$ \land $Camera$ \land $Alibi$ \land \neg$Guilt)\\
+	= $\Pr$(Partner$ | $Camera$ \land $Alibi$ \land \neg$Guilt) $\Pr$(Camera$ | $Alibi$ \land \neg$Guilt) $\Pr$(Alibi$ | \neg$Guilt) $\Pr$($\neg$Guilt)\\
+	= $\Pr$(Partner$ | $Alibi) $\Pr$(Camera$ | \neg$Guilt) $\Pr$(Alibi$ | \neg$Guilt) $\Pr$($\neg$Guilt) \\
+	= 1*0.01*1*0.999 = 0.00999 $\sim$ 1\%
+\end{description}
+\begin{description}
+	\item $\Pr$(Partner$ \land \neg$Camera$ \land \neg$Alibi$ \land $Guilt)\\
+	= $\Pr$(Partner$ | \neg$Camera$ \land \neg$Alibi$ \land $Guilt) $\Pr$($\neg$Camera$ | \neg$Alibi$ \land $Guilt) $\Pr$($\neg$Alibi$ | $Guilt) $\Pr$($\neg$Guilt)\\
+	= $\Pr$(Partner$ | \neg$Alibi) $\Pr$($\neg$Camera$ | $Guilt) $\Pr$($\neg$Alibi$ | $Guilt) $\Pr$(Guilt) \\
+	= 0.1*0.3*1*0.001 = 0.00003
+\end{description}
+\begin{description}
+	\item $\Pr$(Partner$ \land $Camera$ \land $Alibi$ \land $Guilt)\\
+	= $\Pr$(Partner$ | $Camera$ \land $Alibi$ \land $Guilt) $\Pr$(Camera$ | $Alibi$ \land $Guilt) $\Pr$(Alibi$ | $Guilt) $\Pr$(Guilt)\\
+	= $\Pr$(Partner$ | $Alibi) $\Pr$(Camera$ | $Guilt) $\Pr$(Alibi$ | $Guilt) $\Pr$(Guilt) \\
+	= 1*0.7*0*0.001 = 0
+\end{description}
+
+\noindent For probability functions of many variables that have many independencies, a Bayesian network representation can be significantly more compact than a general full probability distribution in the variables. Our example has four variables, in general requiring 15 numbers to specify the full distribution. Given the independencies in the network, we only need 7 (note that half of the 14 numbers in Table~\ref{tab:BN} are superfluous as they can be computed from the other half).  
 
 
 \paragraph{Further readings}
@@ -1990,13 +1963,14 @@ the decision to convict or acquit.
 
 The value of the guilt probability is arrived at by applying Bayes' theorem a 
 repeated number of times and by plugging the values of the probabilities that are needed. 
-Sometimes these probabilities are known because they are based on estimated frequencies, but sometimes 
-they are not. For example, $\Pr(G)$ is required to calculate $\Pr(G|E)$. 
-This is the probability of the defendant's guilt regardless of the evidence 
-presented at trial. What should $\Pr(G)$ be?
-For technical reasons, it cannot be zero, but it also cannot be 50\% because 
-of the presumption of innocence. Arguably, $\Pr(G)$ should be relatively low, but how low?
-This remains hotly debated. 
+Sometimes these probabilities can be %are known because they are 
+based on estimated frequencies, but often %sometimes 
+they are not. For example, $\Pr(G)$ is required to calculate $\Pr(G|E)$ using Bayes' theorem. 
+$\Pr(G)$ is the probability of the defendant's guilt regardless of the evidence 
+presented at trial. What should $\Pr(G)$ be? 
+%For technical reasons, it cannot be zero, but it also cannot be 50\% because 
+%of the presumption of innocence. Arguably, $\Pr(G)$ should be relatively low, but how low?
+It is subject to debate how to estimate that number, and even whether it makes sense to estimate it.
 
 
 \paragraph{The decision criterion is a guilt probability threshold.}
@@ -2132,7 +2106,7 @@ a scenario that proves innocence. Be that as it may, the various competing scena
 
 
 
-\paragraph{The best scenario is the rule of decision.}
+\paragraph{The best explanatory scenario is the rule of decision.}
 
 We can picture the process of evaluation of the competing scenarios as a process of elimination. 
 At the beginning, several scenarios are viable, but as more evidence is considered and the scrutiny of each scenario continues,
@@ -2140,31 +2114,26 @@ fewer scenarios will survive. The goal would be to select one scenario, or at le
 the answer to the question `guilty or not?' would be univocal. On this picture, a scenario meets the demands of the standard 
 of proof whenever it is the \textit{only} scenario left.
 
-But, once again, we confront a recurrent problem. The selection of one scenario is not always an all or nothing affair.
+But, once again, we confront a recurrent problem. The selection of a scenario is not always an all or nothing affair.
 The term `abduction' or the expression `inference to the best explanation' is sometimes used in this context. The basic idea is that, when confronted 
 with two or more competing scenarios, the best explanation must be chosen. The notion of `best explanation' here is wide ranging. It includes criteria such as 
 consistency with the evidence, explanatory power (predictive power and causal fit), plausibility, completeness, coherence (temporal and causal structure). 
-Other criteria might also play a role, such the simplicity of the scenario. So, the best explanation is the scenario that fares 
-better on some combination of these criteria. This is a matter of degrees. The scenarios get higher 
-or lower scores relative to the applicable evaluation criteria. Arguably, the scenario that gets the best score %, and that 
+Other criteria might also play a role, such as the simplicity of the scenario. The best explanation is the scenario that fares 
+best on some combination of these criteria. %This is a matter of degrees. The scenarios get higher or lower scores relative to the applicable evaluation criteria. 
+A decision rule could stipulate that the best explanatory scenario %that gets the best score %, and that 
 %meets a suitable threshold level, 
-should be selected. 
+is selected. 
 
 
+\paragraph{It is not obvious how to identify the scenarios and how to compare them.}
 
-
-
-\paragraph{It is not obvious how to identify the best scenario.}
-
-The process of scenario selection resembles how jurors reason in trial proceedings, whereas %despite its 
+The process of scenario analysis and selection resembles how jurors reason in trial proceedings, whereas---in contrast---%despite its 
 %clear mathematical underpinnings, 
 it is hard to relate probability to judicial proceedings: jurors do not 
-naturally quantify guilt, and it is difficult to quantify it even if we wanted to. Still, a problem with the scenario approach is that 
-the method by which a scenario is selected is not entirely transparent. The different criteria, such as consistency, explanatory power, coherence etc.\ 
+naturally quantify guilt, and it can be difficult to quantify it even if we wanted to. Still, a problem with the scenario approach is that 
+the method by which scenarios are identified and selected is not entirely transparent. When are all relevant scenarios identified? Should all scenarios mentioned in trial be taken into account, even when they seem far-fetched? Also the different criteria, such as consistency, explanatory power, coherence etc.\ 
 can pull the decision makers in opposite directions. For example, a scenario might be better in terms of explanatory power, while another might 
-be more plausible. What to do, then? One might wonder whether the criterion for the best scenario should simply be this:
-the most probable scenario which meets a sufficiently high probability threshold. If so, this would not be very 
-different from the probability-based account of the standard of proof. 
+be more plausible. What to do, then? Perhaps a criterion for selecting the best scenario would ultimately be a qualitative version of selecting the most probable scenario, connecting a scenario-based approach with a probabilistic perspective. 
 
 \paragraph{Further readings}
 
@@ -2273,8 +2242,8 @@ It is not obvious when to stop collecting supporting and attacking reasons.
 \paragraph{Scenarios}
 
 Competing scenarios are collected and compared.
-The best scenario is the rule of decision.
-It is not obvious how to identify the best scenario.
+The best explanatory scenario is the rule of decision.
+It is not obvious how to identify the scenarios and how to compare them.
 	
 %\subsection*{Concluding remarks}
 
