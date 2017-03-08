@@ -12,7 +12,6 @@
 		\pgftransformxscale{5}
 		\pgftransformyscale{2}
 
-
 		\node[arg]     			(scene) at (0,0) {The suspect was at the crime scene};
 		\node[arg] (witn) at (-0.7,-1.1) {Witness $A$: The suspect was at the crime scene};
 		\node[arg] (witn2) at (0.7,-1.1) {Witness $B$: The suspect was not at the crime scene};
@@ -22,7 +21,7 @@
 		\node[arg] 					(lying) at (1,-0.5) {The witness is lying};
 
 		\draw[arg] 					(witn) -- (scene);
-		\draw[arg] 					(witn2) -- (scene);
+		\draw[attack] 					(witn2) -- (scene);
 		\draw[attack] 			(lying) -- (0.32, -0.5);
 
 %*********
