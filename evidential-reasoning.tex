@@ -1858,7 +1858,17 @@ A Bayesian network has a graphical and a numeric part. The graphical part is a d
 Table~\ref{tab:BN} contains the numeric part of the Bayesian network, and contains four tables of conditional probabilities, one per variable. The prior probability of guilt has been set to 1 in a 1000 (top left table). The two hypotheses logically exclude one another (top right table). 
 The two tables at the bottom specify how the occurrence of the evidence depends on the truth of the hypotheses. At the bottom left, it is shown how the camera identification depends on the guilt of the suspect. Given that the suspect is not guilty, there is a 1\% chance that the suspect is identified in security camera footage. Given that the suspect is guilty, there is a 30\% chance that the suspect is not identified, e.g., because he is not recognizable. At the bottom left, it is shown how the partner's testimony depends on the truth of the suspect's alibi. Given that the alibi is false, there is a 10\% chance that the suspect's partner still testifies for the alibi. Given that the alibi is true, the partner certainly testifies for the alibi.
 
-A Bayesian network provides a representation of a full probability distribution over the variables, by chaining conditional probabilities and using the dependencies and independencies represented in the graph. For instance, we have the following:
+We illustrate how to calculate the probability $\Pr$(Guilt$|$Partner$ \land $Camera) of guilt given the partner's alibi testimony and the camera identification from the Bayesian network. We use this equality:
+
+\begin{equation*}
+\begin{aligned}
+\Pr(\text{Guilt}~|~\text{Partner} \land \text{Camera})
+=\Pr(\text{Guilt}\land\neg\text{Alibi}~|~\text{Partner} \land \text{Camera})\\
+=\frac{\Pr(\text{Partner} \land \text{Camera} \land \text{Alibi} \land \neg \text{Guilt})}{\Pr(\text{Partner} \land \text{Camera} \land \text{Alibi} \land \neg \text{Guilt})~+~\Pr(\text{Partner} \land \text{Camera} \land \neg\text{Alibi} \land \text{Guilt})}
+\end{aligned}
+\end{equation*}
+
+\noindent A Bayesian network provides a representation of a full probability distribution over the variables, by chaining conditional probabilities and using the dependencies and independencies represented in the graph. For instance, we have the following:
 
 \begin{description}
 	\item $\Pr$(Partner$ \land $Camera$ \land $Alibi$ \land \neg$Guilt)\\
@@ -1875,6 +1885,10 @@ A Bayesian network provides a representation of a full probability distribution 
 \end{description}
 
 \noindent These independencies follow from the graph of the Bayesian network as the node representing the partner's testimony has only the alibi variable node as a parent, and the camera node only the guilt node.
+
+
+
+
 
 The following example calculation shows the probability that the suspect is guilty, while the partner testifies for the alibi and he is not identified.
 
