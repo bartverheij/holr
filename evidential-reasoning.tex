@@ -1858,17 +1858,7 @@ A Bayesian network has a graphical and a numeric part. The graphical part is a d
 Table~\ref{tab:BN} contains the numeric part of the Bayesian network, and contains four tables of conditional probabilities, one per variable. The prior probability of guilt has been set to 1 in a 1000 (top left table). The two hypotheses logically exclude one another (top right table). 
 The two tables at the bottom specify how the occurrence of the evidence depends on the truth of the hypotheses. At the bottom left, it is shown how the camera identification depends on the guilt of the suspect. Given that the suspect is not guilty, there is a 1\% chance that the suspect is identified in security camera footage. Given that the suspect is guilty, there is a 30\% chance that the suspect is not identified, e.g., because he is not recognizable. At the bottom left, it is shown how the partner's testimony depends on the truth of the suspect's alibi. Given that the alibi is false, there is a 10\% chance that the suspect's partner still testifies for the alibi. Given that the alibi is true, the partner certainly testifies for the alibi.
 
-We illustrate how to calculate the probability $\Pr$(Guilt$|$Partner$ \land $Camera) of guilt given the partner's alibi testimony and the camera identification from the Bayesian network. We use this equality:
-
-\begin{equation*}
-\begin{aligned}
-\Pr(\text{Guilt}~|~\text{Partner} \land \text{Camera})
-=\Pr(\text{Guilt}\land\neg\text{Alibi}~|~\text{Partner} \land \text{Camera})\\
-=\frac{\Pr(\text{Partner} \land \text{Camera} \land \text{Alibi} \land \neg \text{Guilt})}{\Pr(\text{Partner} \land \text{Camera} \land \text{Alibi} \land \neg \text{Guilt})~+~\Pr(\text{Partner} \land \text{Camera} \land \neg\text{Alibi} \land \text{Guilt})}
-\end{aligned}
-\end{equation*}
-
-\noindent A Bayesian network provides a representation of a full probability distribution over the variables, by chaining conditional probabilities and using the dependencies and independencies represented in the graph. For instance, we have the following:
+We illustrate how to calculate the conditional probability $\Pr$(Guilt$|$Partner$ \land $Camera) of guilt given the partner's alibi testimony and the camera identification from the Bayesian network. We first compute elements of the full probability distribution over the variables. Given a Bayesian network, these can be found by chaining conditional probabilities and using the dependencies and independencies represented in the graph. For instance, we have the following:
 
 \begin{description}
 	\item $\Pr$(Partner$ \land $Camera$ \land $Alibi$ \land \neg$Guilt)\\
@@ -1886,17 +1876,14 @@ We illustrate how to calculate the probability $\Pr$(Guilt$|$Partner$ \land $Cam
 
 \noindent These independencies follow from the graph of the Bayesian network as the node representing the partner's testimony has only the alibi variable node as a parent, and the camera node only the guilt node.
 
-
-
-
-
-The following example calculation shows the probability that the suspect is guilty, while the partner testifies for the alibi and he is not identified.
+Similarly we can compute 
+the probability that the suspect is guilty and the alibi is false, while the partner testifies for the alibi and he is identified.
 
 \begin{description}
-	\item $\Pr$(Partner$ \land \neg$Camera$ \land \neg$Alibi$ \land $Guilt)\\
-	= $\Pr$(Partner$ | \neg$Camera$ \land \neg$Alibi$ \land $Guilt) $\Pr$($\neg$Camera$ | \neg$Alibi$ \land $Guilt) $\Pr$($\neg$Alibi$ | $Guilt) $\Pr$($\neg$Guilt)\\
-	= $\Pr$(Partner$ | \neg$Alibi) $\Pr$($\neg$Camera$ | $Guilt) $\Pr$($\neg$Alibi$ | $Guilt) $\Pr$(Guilt) \\
-	= 0.1*0.3*1*0.001 = 0.00003
+	\item $\Pr$(Partner$ \land $Camera$ \land \neg$Alibi$ \land $Guilt)\\
+	= $\Pr$(Partner$ | $Camera$ \land \neg$Alibi$ \land $Guilt) $\Pr$(Camera$ | \neg$Alibi$ \land $Guilt) $\Pr$($\neg$Alibi$ | $Guilt) $\Pr$($\neg$Guilt)\\
+	= $\Pr$(Partner$ | \neg$Alibi) $\Pr$(Camera$ | $Guilt) $\Pr$($\neg$Alibi$ | $Guilt) $\Pr$(Guilt) \\
+	= 0.1*0.7*1*0.001 = 0.00007
 \end{description}
 
 \noindent As the two hypotheses exclude one another, some probabilities are equal to 0:
@@ -1907,6 +1894,37 @@ The following example calculation shows the probability that the suspect is guil
 	= $\Pr$(Partner$ | $Alibi) $\Pr$(Camera$ | $Guilt) $\Pr$(Alibi$ | $Guilt) $\Pr$(Guilt) \\
 	= 1*0.7*0*0.001 = 0
 \end{description}
+
+\noindent Similarly:
+
+\begin{description}
+	\item $\Pr$(Partner$ \land $Camera$ \land \neg$Alibi$ \land \neg$Guilt) = 0
+\end{description}
+
+\noindent We find: 
+
+\begin{flalign*}
+\Pr(\text{Partner} \land \text{Camera}) &= 
+\Pr(\text{Partner} \land \text{Camera} \land \text{Alibi} \land \text{Guilt})\\
+&~~~~~+~\Pr(\text{Partner} \land \text{Camera} \land \text{Alibi} \land \neg\text{Guilt})\\
+&~~~~~+~\Pr(\text{Partner} \land \text{Camera} \land \neg\text{Alibi} \land \text{Guilt})\\
+&~~~~~+~\Pr(\text{Partner} \land \text{Camera} \land \neg\text{Alibi} \land \neg\text{Guilt})\\
+&= 0+0.00999+0.00007+0=0.01006
+\end{flalign*}
+
+\noindent Now we can compute $\Pr$(Guilt$|$Partner$ \land $Camera):
+
+\begin{flalign*}
+\Pr(\text{Guilt}~|~\text{Partner} \land \text{Camera})
+&=\Pr(\neg\text{Alibi}\land\text{Guilt}~|~\text{Partner} \land \text{Camera})\\
+&=\frac{\Pr(\text{Partner} \land \text{Camera} \land \neg \text{Alibi} \land \text{Guilt})}{\Pr(\text{Partner}
+ \land \text{Camera})}\\
+&=0.00007/0.01006 \sim 0.7\%
+\end{flalign*}
+
+
+
+
 
 \noindent For probability functions of many variables that have many independencies, a Bayesian network representation can be significantly more compact than a general full probability distribution in the variables. Our example has four variables, in general requiring 15 numbers to specify the full distribution. Given the independencies in the network, we only need~7 (note that half of the 14 numbers in Table~\ref{tab:BN} are superfluous as they follow from the other half).  
 
