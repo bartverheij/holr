@@ -1743,11 +1743,13 @@ discuss Bayesian networks, formal tools for the representation of complex bodies
 %\paragraph{The likelihood ratio formula shows how new evidence changes the odds of a hypothesis.} 
 
 \paragraph{The likelihood ratio formula shows how to find the posterior odds given the evidence.} 
-The odds of a hypothesis $H$ are defined as the ratio $\Pr(H)/P(\neg H)$ of the probability of the hypothesis and the probability of its negation. Given evidence $E$, the odds $\Pr(H)/P(\neg H)$ 
-of the hypothesis unconditioned on the evidence are called the \emph{prior odds} of the hypothesis, and the odds $\Pr(H | E)/P(\neg H | E)$ of the hypothesis 
-conditioned on the evidence the \emph{posterior odds}.%\endnote{On the distinction between priors and posteriors, see note \ref{conditioning}.}
+The odds of a hypothesis $H$ are  the ratio $\Pr(H)/P(\neg H)$ of the probability of the hypothesis and the probability of its negation. 
+The odds $\Pr(H)/P(\neg H)$ of the hypothesis, unconditioned on the evidence, 
+are called the \emph{prior odds} of the hypothesis, and the odds $\Pr(H | E)/P(\neg H | E)$ of the hypothesis, 
+conditioned on evidence $E$, are called the \emph{posterior odds}. %\endnote{On the distinction between priors and posteriors, see note \ref{conditioning}.}
 %\endnote{See footnote \ref{footnote:prior}.} 
-It follows from Bayes' theorem (Section~\ref{sec:normfram:prob}) that the posterior odds can 
+%By Bayes' theorem (Section~\ref{sec:normfram:prob}), 
+These can 
 be found by multiplying the prior odds with the likelihood ratio: 
 
 	\[ \frac{\Pr(H|E)}{\Pr(\neg H | E)} = \frac{\Pr(E | H)}{\Pr(E| \neg H)}\cdot \frac{\Pr(H)}{\Pr(\neg H)}.\endnote{To derive the likelihood ratio formula, 
@@ -1767,12 +1769,10 @@ be found by multiplying the prior odds with the likelihood ratio:
 
 \noindent 
 This formula shows that an estimate of the (incremental) evidential value of the evidence for a hypothesis, expressed by the likelihood ratio $\frac{\Pr(E | H)}{\Pr(E| \neg H)}$, 
-does not by itself give an estimate of the posterior odds of a hypothesis. One needs an estimate of the prior odds. % too. 
+does not by itself give an estimate of the posterior odds. The prior odds are needed as well. % too. 
 %As such, the likelihood ratio is a constraint that must be obeyed in a coherent interpretation of the evidence concerning a hypothesis.
-
-To arrive at the \textit{posterior probability} $\Pr(H|E)$ of a hypothesis conditional 
-on the evidence, from the posterior odds $\frac{\Pr(E|H)}{\Pr(E|\neg H)}$
-of the hypothesis given the evidence, the following formula applies:
+If the posterior odds $\frac{\Pr(E|H)}{\Pr(E|\neg H)}$ are known, 
+the \textit{posterior probability} $\Pr(H|E)$ can be derived by applying the following formula:
 %
 \[\Pr(H|E) = \frac{\frac{\Pr(H|E)}{\Pr(\neg H|E)}}{1+ \frac{\Pr(H|E)}{\Pr(\neg H|E)}}.\endnote{$\Pr(H|E)=\frac{\Pr(H|E)}{\Pr(H|E)+\Pr(\neg H|E)}=\frac{\frac{\Pr(H|E)}{\Pr(\neg H|E)}}{\frac{\Pr(H|E)+\Pr(\neg H|E)}{\Pr(\neg H|E)}}=\frac{\frac{\Pr(H|E)}{\Pr(\neg H|E)}}{\frac{\Pr(H|E)}{\Pr(\neg H|E)}+1}$.}
 \]
@@ -1790,16 +1790,17 @@ Suppose, also, that the prior odds are as follows:
 % 
 The posterior odds of the hypothesis given the match $\frac{\Pr(G|M)}{\Pr(\neg G|M)}$ are therefore as follows:
 %
-\[\frac{\Pr(G|M)}{\Pr(\neg G|M)}= \frac{\Pr(M |G)}{\Pr( M | \neg G)}\cdot \frac{\Pr(G)}{\Pr(\neg G)} \approx 2,000,000 \cdot \frac{1}{200,000}=\frac{20}{1}.\]
+\[\frac{\Pr(G|M)}{\Pr(\neg G|M)}= \frac{\Pr(M |G)}{\Pr( M | \neg G)}\cdot \frac{\Pr(G)}{\Pr(\neg G)} \approx 2,000,000 \cdot \frac{1}{200,000}=20.\]
 % 
 So the poster probability of the hypothesis is as follows:
 %
-\[\Pr(G|M)= \frac{\frac{\Pr(G|M)}{\Pr(\neg G|M)}}{1+ \frac{\Pr(G|M)}{\Pr(\neg G|M)}} \approx \frac{20}{1+20}\approx 0.95.\]
+\[\Pr(G|M)= \frac{\frac{\Pr(G|M)}{\Pr(\neg G|M)}}{1+ \frac{\Pr(G|M)}{\Pr(\neg G|M)}} \approx \frac{20}{1+20}\approx 95\%.\]
 %
  
 
 
-\paragraph{A generalization of the formula shows how to handle more pieces of evidence.} 
+\paragraph{A generalization of the formula shows 
+how to handle more pieces of evidence.} 
 So far we have considered only one piece of evidence. 
 %The likelihood ratio formula to more than one piece of evidence, the posterior odds are found by the repeated multiplication of the likelihood ratios of the individual pieces of evidence. 
 For two pieces of evidence $E_1$ and $E_2$, the formula can be generalized 
@@ -1813,7 +1814,7 @@ by multiplying the likelihood ratios of the individual pieces of evidence, as fo
 %\noindent Appealing as it is, this naive generalization is false in general and does not hold in the probability calculus. 
 This simple generalization holds provided that the two pieces of evidence are 
 independent conditional on the hypothesis, that is, $\Pr(E_2| H)=P(E_2| H \wedge E_1)$. 
-(More on this below.) 
+%(More on this below.) 
 
 To illustrate, consider now two pieces of evidence: a DNA match and a witness testimony.
 The DNA match, call it $M$, holds between the crime traces and the defendant, and 
@@ -1834,14 +1835,14 @@ than the two pieces considered independently.
 If the prior odds $\frac{\Pr(G)}{\Pr(\neg G)}$ are roughly $\frac{1}{200,000}$
 as before, the posterior odds are therefore as follows:
 %
-\[\frac{\Pr(G|M\wedge W)}{\Pr(\neg G|M\wedge W)}= \frac{\Pr(M |G)}{\Pr( M | \neg G)}\cdot \frac{\Pr(W |G)}{\Pr( W | \neg G)}\cdot \frac{\Pr(G)}{\Pr(\neg G)} \approx 2,000,000 \cdot 1,000 \cdot \frac{1}{200,000}= \frac{20,000}{1}.\]
+\[\frac{\Pr(G|M\wedge W)}{\Pr(\neg G|M\wedge W)}= \frac{\Pr(M |G)}{\Pr( M | \neg G)}\cdot \frac{\Pr(W |G)}{\Pr( W | \neg G)}\cdot \frac{\Pr(G)}{\Pr(\neg G)} \approx 2,000,000 \cdot 1,000 \cdot \frac{1}{200,000}= 20,000.\]
 % 
 So the posterior probability of the hypothesis given the two pieces of evidence is as follows:
 %
-\[\Pr(G|M\wedge W) \approx \frac{20,000}{1+20,000}\approx 0.99.\]
+\[\Pr(G|M\wedge W) \approx \frac{20,000}{1+20,000}\approx 99\%.\]
 %
 Compare this probability with $\Pr(G|M)$, which 
-was 0.95, a lower value. The probability calculus can offer a numerical 
+was 95\%, a lower value. The probability calculus can offer a numerical 
 representation of the intuitive fact that two pieces of evidence, taken together, 
 have a higher (overall) evidential value than one piece alone. 
 
@@ -1881,15 +1882,27 @@ can change in the face of other evidence.
 % E1 and E2 are independent, but mutually strengthening as evidence for H. In fact, LR(E2, H) = 11, LR(E2, H |E1) = infinite. 
 
 
-\paragraph{For the combination of multiple pieces of evidence and multiple hypotheses, more complex analytic tools can be used, in particular Bayesian networks.} Probabilistic analyses as above become more and more complex when more elements are involved. Since many realistic crime cases involve many pieces of evidence and several hypotheses, probabilistic calculations quickly become unmanageable without appropriate modeling tools. As a prominent example of a modeling tool that allows for complex probabilistic representations and calculations, we discuss Bayesian networks. Bayesian networks have been proposed in computer science and artificial intelligence, and exploit probabilistic independencies to simplify representations and calculations.
+\paragraph{%For the combination of multiple pieces of evidence and multiple hypotheses, 
+More complex analytic tools can be used, in particular Bayesian networks.} 
+Probabilistic analyses become more complex when more elements are involved, 
+%Since many realistic crime cases involve many pieces of evidence and several hypotheses, 
+%Probabilistic 
+and calculations quickly become unmanageable without appropriate modeling tools. 
+We discuss Bayesian networks, 
+a prominent example of a modeling tool that allows for complex probabilistic representations and calculations.
+%Bayesian networks have been proposed in computer science and artificial intelligence, and exploit probabilistic independencies to simplify representations and calculations.
 
 A Bayesian network has a graphical and a numeric part. The graphical part is a directed, acyclic graph of the relevant probabilistic variables. 
-Each node in the graph represent a variable, a hypothesis or a piece of evidence, that 
-can take value `true' or `false'. 
-The arrows connecting the nodes do not have an intuitive interpretation, 
-but indicate dependency relations between the variables in the nodes. 
-The numeric part consists of conditional probability tables. In these tables, the conditional probabilities of a variable are specified, conditioned on the different values of its parent variables. Consider for instance the Bayesian network shown in Figure~\ref{fig:BN}. At the top, two hypotheses are shown, one expressing the suspect's guilt, the other that the suspect has an alibi. By the arrow between them, the alibi variable has the guilt variable as a parent. The arrow, in this case, expresses a dependency between the hypotheses: when one is true, the other is false, and vice versa. At the bottom, two pieces of evidence are shown: security camera footage that shows the suspect, and the testimony of the suspect's partner who provides an alibi. The evidence depends on the hypotheses, 
-hence each evidence variable have an hypothesis as parent. 
+Each node in the graph represents a variable---a hypothesis or a piece of evidence---that 
+can take the value `true' or `false'. 
+Consider, for instance, the Bayesian network in Figure~\ref{fig:BN}. At the top, two hypotheses are shown. One is that the suspect is guilty (abbreviated, `Guilt'), and 
+the other hypothesis is that the suspect was somewhere else when the crime was committed (abbreviated, `Alibi').  %The arrow, in this case, expresses a particular dependency between the hypotheses: when one is true, the other is false, and vice versa. 
+At the bottom, two pieces of evidence are shown: security camera footage that incriminates the suspect (abbreviated, `Camera'), and the testimony of the suspect's partner 
+who provides an alibi (abbreviated, `Partner'). 
+The arrows connecting the nodes indicate dependency relations. %Dependencies are important. By the arrow between them, 
+The alibi variable has the guilt variable as a parent, and 
+%Each piece of evidence depends on a hypotheses, 
+each evidence node have a hypothesis as parent. 
 
 \begin{figure}[t]
 \centering
@@ -1942,34 +1955,39 @@ hence each evidence variable have an hypothesis as parent.
 \caption{An example Bayesian network: conditional probability tables\label{tab:BN}}
 \end{table*}
 
-Table~\ref{tab:BN} contains the numeric part of the Bayesian network, and contains four tables of conditional probabilities, one per variable. 
-The probability assignment in the two tables on top should be straightforward. The prior probability of guilt was set to a very low value, 0.01\% or 1 in a 1000 (top left table). 
-This is, of course, an arbitrary value. Since the two hypotheses---`guilt' and `alibi'---logically exclude one another, it is never the case that they are 
-either both true or both false (top right table). Consider now the two bottom tables. 
+The numeric part of a Bayesian network consists of conditional probability tables. In these tables, 
+the conditional probabilities of each variable are
+specified, conditioned on the different values of the parent variables. %If a variable does not have a parent variable, no conditional
+% probability should be specified for that variable. 
+Table~\ref{tab:BN}, for example, contains four tables of conditional probabilities, one per variable. 
+Consider first the probability assignments in the top two tables. The prior probability of guilt 
+is set to a very low value, 0.01\% or 1 in a 1000 (top left table). 
+This is, of course, arbitrary. Since the two hypotheses---`guilt' and `alibi'---are assumed to exclude one another, 
+it can never be they are both true or both false (top right table). Consider now the two bottom tables. 
 %The two tables at the bottom specify how the occurrence of the evidence depends on the truth of the hypotheses. 
-The bottom left table shows how the camera identification depends on the guilt of the suspect. If the suspect is guilty, 
+The bottom left table shows how the camera identification depends on the suspect's guilt. If the suspect is guilty, 
 there is a 70\% probability that the suspect is correctly identified in the security camera footage. 
-If the suspect is instead not guilty, this probability is much lower, 1\%. The likelihood ratio $\frac{\Pr(\text{Camera} | \text{Guilt})}{\Pr(\text{Camera} | \neg \text{Guilt})}$ 
-expressing the strenght of the evidence (in this case, the camera footage) relative to the pair of hypotheses `guilt' and `not-guilt' 
+If the suspect is not guilty, this probability is much lower, 1\%. The likelihood ratio $\frac{\Pr(\text{Camera} | \text{Guilt})}{\Pr(\text{Camera} | \neg \text{Guilt})}$ 
+expressing the strenght of the evidence (in this case, the camera footage) relative to hypotheses `guilt' and `not-guilt' 
 is therefore 70.
 %If the suspect is not guilty, there is a 1\% chance that the suspect is mistakenly 
 %identified in security camera footage. If the suspect is instead guilty, there is a 30\% chance that the suspect is not identified, e.g., because he is not recognizable. 
 The bottom left table shows how the partner's testimony depends on the truth of the suspect's alibi.
-If the alibi is true, the partner will surely testifies in favor of the defendant. If the alibi is instead false, there is a 10\% chance that 
-the suspect's partner still testifies in favor of the defendants. The likelihood ratio $\frac{\Pr(\text{Partner} | \text{Alibi})}{\Pr(\text{Partner} | \neg \text{Alibi})}$ 
-expressing the strength of the evidence (in this case, the partner's testimony) relative to the pair of hypotheses `alibi' and `not-alibi' 
+If the alibi is true, the partner will surely testifies in favor of the defendant. If the alibi is false, there is a 10\% chance that 
+the suspect's partner still testifies in favor of the defendant. The likelihood ratio $\frac{\Pr(\text{Partner} | \text{Alibi})}{\Pr(\text{Partner} | \neg \text{Alibi})}$ 
+expressing the strength of the evidence (in this case, the partner's testimony) relative to hypotheses `alibi' and `not-alibi' 
 is therefore 10.
 
 The question now is how to combine the two pieces of evidence, the incriminating camera footage and the exculpatory partner's testimony, 
-and then how to estimate the probability of the defendant's guilt. The task is difficult because multiplying the likelihood 
-ratios for each piece of evidence will not do. Bayes' networks can be of service. The calculations are, however, tedious. 
-We write them up in full for illustrative purposes, but computers can also be used instead. 
+and thus how to estimate the probability of the defendant's guilt. This task is difficult because multiplying the likelihood 
+ratios for each piece of evidence will not do. Fortunately,  Bayesian networks can be of help here. The calculations are tedious, 
+but we will write them up for illustrative purposes. %, but computers can also be used instead. 
 Now, if the goal is to calculate $\Pr$(Guilt$|$Partner$ \land $Camera)---that is, the conditional probability of guilt given 
-both the partner's alibi testimony----we need to calculate both $\Pr$(Partner$ \land $Camera) 
+both the camera footage and the partner's alibi testimony----we need to calculate both $\Pr$(Partner$ \land $Camera) 
 and $\Pr$(Guilt$ \land $Partner$ \land $Camera). 
-Given a Bayesian network, these can be found by chaining conditional probabilities and using the dependencies and independencies represented in the graph. 
+%Given a Bayesian network, these can be found by chaining conditional probabilities and using the dependencies and independencies represented in the graph. 
 
-To begin with,  $\Pr$(Partner$ \land $Camera) 
+$\Pr$(Partner$ \land $Camera) 
 can be broken down as the sum of four probabilities. That is, 
 \begin{flalign*}
 \Pr(\text{Partner} \land \text{Camera}) &= 
@@ -1992,13 +2010,17 @@ Let us calculate each in turn. First, we have:
 Note that we relied on the equalities 
 %
 \begin{description}
-	\item $\Pr$(Partner$ | $Camera$ \land $Alibi$ \land $ Guilt) = $\Pr$(Partner$ | $Alibi) 
-	\item $\Pr$(Camera$ | $Alibi$ \land$ Guilt) = 	$\Pr$(Camera$ | $ Guilt) 
+	\item $\Pr$(Partner$ | $Camera$ \land $Alibi$ \land $ Guilt) = $\Pr$(Partner$ | $Alibi); and 
+	\item $\Pr$(Camera$ | $Alibi$ \land$ Guilt) = 	$\Pr$(Camera$ | $ Guilt).
 \end{description}
-which holds because of independence 
-relations as modeled in the Bayesian network. 
-These independencies follow from the graph of the Bayesian network as the 
-node representing the partner's testimony has only the alibi variable node as a parent, and the camera node only the guilt node.
+They hold because % of the independence 
+%relations modeled in the Bayesian network. 
+%These independencies follow from the graph of the Bayesian network as 
+the node representing the partner's testimony has only 
+the alibi variable node as a parent, and the camera node only the guilt node.
+Given the Bayesian network, 
+the partner variable does not depend on the camera or guilt variable, 
+and the camera variable does not depend on the alibi variable. 
 \noindent Second, we have:
 %
 \begin{description}
@@ -2011,11 +2033,11 @@ node representing the partner's testimony has only the alibi variable node as a 
 Note that we relied on the equalities 
 %
 \begin{description}
-	\item $\Pr$(Partner$ | $Camera$ \land $Alibi$ \land \neg$Guilt) = $\Pr$(Partner$ | $Alibi) 
-	\item $\Pr$(Camera$ | $Alibi$ \land \neg$Guilt) = 	$\Pr$(Camera$ | \neg$Guilt) 
+	\item $\Pr$(Partner$ | $Camera$ \land $Alibi$ \land \neg$Guilt) = $\Pr$(Partner$ | $Alibi); and
+	\item $\Pr$(Camera$ | $Alibi$ \land \neg$Guilt) = 	$\Pr$(Camera$ | \neg$Guilt).
 \end{description}
-which holds because of independence 
-relations as modeled in the Bayesian network, as before.
+They hold, as before, because of the independence 
+relations among variables in the Bayesian network. %, as before.
 %These independencies follow from the graph of the Bayesian network as the 
 %node representing the partner's testimony has only the alibi variable node as a parent, and the camera node only the guilt node.
 %
@@ -2027,11 +2049,11 @@ relations as modeled in the Bayesian network, as before.
 	= $\Pr$(Partner$ | \neg$Alibi) $\Pr$(Camera$ | $Guilt) $\Pr$($\neg$Alibi$ | $Guilt) $\Pr$(Guilt) \\
 	= 0.1*0.7*1*0.001 = 0.00007
 \end{description}
-Once again, we relied on independencies relations, in particular, the node 
-representing the partner's testimony has only the alibi variable node as a parent, 
-and the camera node only the guilt node.
+Once again, we relied on independence relations. %, in particular, the node 
+%representing the partner's testimony has only the alibi variable node as a parent, 
+%and the camera node only the guilt node.
 %
-\noindent Finally, since `guilt' and 'alibi' are logically inconsistent, we have: 
+\noindent Fourth, since `guilt' and 'alibi' are logically inconsistent, we have: 
 %
 \begin{description}
 	\item $\Pr$(Partner$ \land $Camera$ \land \neg$Alibi$ \land \neg$Guilt) = 0
@@ -2061,7 +2083,7 @@ and the camera node only the guilt node.
 %the probability that the suspect is guilty and the alibi is false, while the partner testifies for the alibi and he is identified.
 %\noindent As the two hypotheses exclude one another, some probabilities are equal to 0:
 
-\noindent Now we can compute $\Pr$(Guilt$|$Partner$ \land $Camera):
+\noindent Finally, we can compute the guilt probability based on the camera footage and the partner's testimony, as follows:
 %
 \begin{flalign*}
 \Pr(\text{Guilt}~|~\text{Partner} \land \text{Camera})
@@ -2070,15 +2092,22 @@ and the camera node only the guilt node.
  \land \text{Camera})}\\
 &=0.00007/0.01006 \sim 0.7\%
 \end{flalign*}
+%
+The 0.7\% probability is relatively low, but recall that 
+the prior guilt probability was set to a much lower value, 
+0.01\%.  It is also important to note that
+$\Pr$(Guilt$|$Camera) equals (roughly) 6.5\%.\endnote{Since $\frac{\Pr(\text{Guilt})}{\Pr(\neg \text{Guilt})}=\frac{0.001}{0.999}$  
+and $\frac{\Pr(\text{Camera} | \text{Guilt})}{\Pr(\text{Camera} | \neg \text{Guilt})}=70$, by Bayes' theorem, $\frac{\Pr(\text{Guilt} | \text{Camera})}{\Pr(\neg \text{Guilt} \text{Camera})}=\frac{0.001}{0.999}\times 70 \approx 0.07$ and thus
+$\Pr$(Guilt$|$Camera)$\approx \frac{0.07}{1+0.07}=6.5\%$.} This is a low probability, but still greater than 0.7\% or 0.01\%. 
+This shows that the camera evidence is has (incremental) value, for it 
+can raise the guilt probability from 0.01\% to 6.5\%. However, 
+the camera evidence, together with the partner's testimony, lends a 
+weaker support to the guilt hypothesis. 
 
-This is a relatively low probability. It is instructive, however, 
-to note that, by Bayes' theorem, $\Pr$(Guilt$|$Camera) equals roughly 6.5\%.\endnote{Since $\frac{\Pr(\text{Guilt})}{\Pr(\neg \text{Guilt})}$=\frac{0.001}{0.999}  and $\frac{\Pr(\text{Camera} | \text{Guilt})}{\Pr(\text{Camera} | \neg \text{Guilt})}=\frac{70}{1}$, then by Bayes' theorem, $\frac{\Pr(\text{Guilt} | \text{Camera})}{\Pr(\neg \text{Guilt} \text{Camera})}=\frac{0.001}{0.999}\times 70 \sim 7$ and thus
-$\Pr$(Guilt$|$Camera)$\sim 6.5\%$.} This is also a low probability, mostly became the prior guilt probability was set to 0.01\%.
-All in all, this shows that the camera evidence is probative. It can raise the guilt probability from 0.01\% to 6.5\%. However, 
-the camera evidence together with the partner's testimony, while still probative 
-of guilt, is much less probative.
-
-For probability functions of many variables that have many independencies, a Bayesian network representation can be significantly more compact than a general full probability distribution in the variables. Our example has four variables, in general requiring 15 numbers to specify the full distribution. Given the independencies in the network, we only need~7 (note that half of the 14 numbers in Table~\ref{tab:BN} are superfluous as they follow from the other half).  
+Finally, a note about complexity. For probability functions of many variables that have many independencies, a Bayesian network representation can be significantly 
+more compact than a general full probability distribution in the variables. Our example has four variables, in general requiring 
+15 numbers to specify the full distribution. Given the independencies in the network, 
+we only need~7 (note that half of the 14 numbers in Table~\ref{tab:BN} are superfluous as they follow from the other half).  
 
 
 \paragraph{Further readings}
@@ -2100,7 +2129,7 @@ Arguments, scenarios and probabilities~\citep{keppensSchafer2006,keppens2012,vle
 
 %\subsection{Beyond a reasonable doubt}
 
-So far we have focused on how the evidence can be evaluated and combined, and how inferences can be drawn. 
+So far we have focused on how the evidence can be evaluated and combined. %, and how inferences can be drawn. 
 %This does not take place in vacuum. 
 %The legal system contains rules for the discovery, admission and exclusion of the evidence. 
 %The legal system also contains 
@@ -2109,7 +2138,7 @@ So far we have focused on how the evidence can be evaluated and combined, and ho
 %presumed innocent until proven guilty. 
 %During the dialectical confrontation between two parties, each defending their side of the case, 
 %the role of judge is sometimes that of a mere arbiter or an active participant as well. 
-But once the evidence has been introduced at trial, examined and cross examined, it comes a time when the fact finders, either a 
+But once the evidence has been introduced at trial, examined and cross-examined, it comes a time when the fact finders, either a 
 trained judge or a group of lay jurors, must reason from the evidence, reach a conclusion and decide 
 whether to convict or acquit the defendant. 
 %The decision should be based on the evidence presented 
@@ -2300,7 +2329,7 @@ But who is this 'reasonable objector'?
 
 Another problem consists in identifying the threshold. While the probability based account can identify a specific probability threshold, 
 at least in theory, by applying the principle of expected utility theory, the argumentation based framework cannot. 
-How could the principle of expected utility theory be applied to the argument framework as well?
+How could expected utility theory be applied to the argument framework, as well?
 
 
 
@@ -2334,9 +2363,10 @@ with two or more competing scenarios, the best explanation must be chosen. The n
 consistency with the evidence, explanatory power (predictive power and causal fit), plausibility, completeness, coherence (temporal and causal structure). 
 Other criteria might also play a role, such as the simplicity of the scenario. The best explanation is the scenario that fares 
 best on some combination of these criteria. %This is a matter of degrees. The scenarios get higher or lower scores relative to the applicable evaluation criteria. 
-A decision rule could stipulate that the best explanatory scenario %that gets the best score %, and that 
+In this background, the decision rule would stipulate that 
+the best explanatory scenario %that gets the best score %, and that 
 %meets a suitable threshold level, 
-is selected. 
+should be selected. 
 
 
 \paragraph{It is not obvious how to identify the scenarios and how to compare them.}
@@ -2436,7 +2466,8 @@ Conflicts between reasons can be addressed by exceptions, preferences and weighi
 
 The likelihood ratio formula shows how to find the posterior odds given the evidence.
 A generalization of the formula shows how to handle more pieces of evidence.
-For the combination of multiple pieces of evidence and multiple hypotheses, more complex analytic tools can be used, in particular Bayesian networks.
+%For the combination of multiple pieces of evidence and multiple hypotheses, 
+More complex analytic tools can be used, in particular Bayesian networks.
 
 \subsection*{Reasoning and decision making}
 
