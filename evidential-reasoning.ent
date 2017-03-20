@@ -226,11 +226,11 @@ by
 the
 terminology
 of
-prior
+`prior'
 and
-posterior
+`posterior'
 probability.
-The
+This
 terminology
 is
 standard
@@ -240,7 +240,6 @@ approaches
 of
 Bayesian
 updating.
-
 \@endanenote 
 \@doanenote {7}
 macro:->To

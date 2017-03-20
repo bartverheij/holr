@@ -128,13 +128,13 @@ Marcello Di Bello \& Bart Verheij -- \today \\
 
 \noindent When a suspect appears in front of a criminal court, there is a very high probability that he will be found guilty. 
 %MDB [NOT SURE ABOUT THE DUTCH FIGURE BEING FIRST]
-In the United States, the conviction rate in federal courts has been roughly 90\% in recent years, and in Japan reaches as high a rate as 99\%.\endnote{On the conviction 
+In the United States, statistics for recent years show that the conviction rate in federal courts is roughly 90\%, and in Japan reaches as high a rate as 99\%.\endnote{On the conviction 
 rate in US federal courts, see the statistical reports of the Offices of the United States Attorneys, available at \url{www.justice.gov/usao/resources/annual-statistical-reports}. Most of these convictions are guilty pleas, not convictions after trial. On Japan's conviction rate, see \textit{White Paper on Crime 2014}, Part 2, Chapter 3, Section 1, available at \url{hakusyo1.moj.go.jp/en/63/nfm/mokuji.html}.} 
 In the United Kingdom, the numbers are slightly lower, with a conviction rate of roughly 80\%, while in the Netherlands 
 the conviction rate is around 90\%.\endnote{On the UK conviction rate, see \textit{Criminal Justice Statistics--March 2014}, available at 
 \url{www.gov.uk/government/statistics}. As in the US case, the rate include mostly guilty pleas. 
 For the Netherlands, see CBS, the Dutch central bureau of statistics, publishing its data at \url{www.cbs.nl}.} 
-This does not mean that the fact-finders deciding about the facts of a case have an easy job. Whether laypeople, such as jury members selected from the general public, or professionals, often experienced judges having completed postgraduate education, all face the difficulties associated with handling the evidence that is presented in court. What to do with conflicting testimonies? Does an established DNA match outweigh the testimony that the suspect was not on the crime scene? How to coherently interpret a large body of evidence? 
+This does not mean that the fact-finders deciding about the facts of a case have an easy job. Whether laypeople, such as jury members selected from the general public, or professionals, often experienced judges having completed postgraduate education, all face the difficulties associated with handling the evidence that is presented in court. What to do with conflicting testimonies? Does an established DNA match outweigh the testimony that the suspect was not seen at the crime scene? How to coherently interpret a large body of evidence? 
 %What to do with illegally obtained evidence? %MDB [WE DO NOT ADDRESS THIS QUESTION IN THE TEXT, SO REMOVE?] 
 When is there enough evidence to convict? % `beyond a reasonable doubt'? 
 
@@ -177,7 +177,7 @@ Q: Can you describe the shooter?
 
 A: He was a young men, in his twenties, I think. Tall, blonde, with a very white skin, and unusually blue eyes. 
 He looked unhealthy, with bad teeth, 
-like a drug addict. He was wearing a perfectly ironed Armani shirt%MDB removed: an FC Groningen t-shirt
+like a drug addict. He was wearing a perfectly ironed  shirt%MDB removed: an FC Groningen t-shirt
 , which surprised me. %because he did not look like one who could afford it. 
 %MDB removed: as we were in the Vondelpark. 
 %MDB [THIS REFERENCES TO GRONINGEN AND VONDELPARK, WHILE GOOD TO ILLUSTRATE THE IDEA OF SPECIFICITY OF THE TESTIMONY, WILL BE OBSCURE TO MOST READERS]
@@ -357,14 +357,18 @@ the famous Bayes' theorem:
 %\noindent One of the lessons of Bayes' theorem is that the more surprising 
 %=======
 This formula---which can be easily proven from 
-the probability axioms\endnote{Bayes' theorem can be derived using the definition of conditional probability. 
+the probability axioms---shows how the 
+conditional probability $\Pr(H|E)$ of hypothesis $H$ given evidence $E$ 
+can be computed by the probability $\Pr(H)$ and the 
+factor $\Pr(E|H)/\Pr(E)$.\endnote{Bayes' theorem can be derived using the definition of conditional probability. 
 We have $\Pr(E|H) = \Pr(H\land E)/\Pr(H)$. Here we use logical conjunction $\land$ to write the combined event $H$ and $E$. 
 Hence, $\Pr(H\land E)=\Pr(E|H)\cdot \Pr(H)$. It follows that
-$\Pr(H|E) = \Pr(H \land E)/\Pr(E) = \Pr(E|H)\cdot \Pr(H)/\Pr(E)$, proving Bayes' theorem. Note that the theorem holds generally for probability functions and does not assume a temporal ordering of taking evidence into account, as suggested by the terminology of prior and posterior probability. The terminology is standard usage in approaches of Bayesian updating.
-}---shows how the 
-conditional probability $\Pr(H|E)$ of hypothesis $H$ given evidence $E$ 
-can be computed by the prior probability $\Pr(H)$ and the 
-factor $\Pr(E|H)/\Pr(E)$. 
+$\Pr(H|E) = \Pr(H \land E)/\Pr(E) = \Pr(E|H)\cdot \Pr(H)/\Pr(E)$, proving Bayes' theorem. Note that the theorem holds generally for probability 
+functions and does not assume a temporal ordering of taking evidence into account, as suggested by the terminology of `prior' and `posterior' probability. 
+This terminology is standard usage in approaches of Bayesian updating.}
+
+
+
 
 %\endnote{The language of prior and posterior probability is standard 
 %in the legal literature, but is misleading. The prior and posterior probabilities are not temporally ordered. The former is $\Pr(H)$  and the latter is
