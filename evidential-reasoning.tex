@@ -321,7 +321,7 @@ ways in which such conflicts arise?
 Some evidence is stronger than other evidence. This is most obvious in the case of DNA evidence, where DNA profiles are associated with different Random Match Probabilities. But also some eyewitness testimonies are stronger than others. For instance, the description of a criminal by a witness who could only view the crime scene in bad lighting conditions, is of lesser value. How to address the strength of evidence?
 %MDB [WE LATER CALL THIS "VALUE" OF THE EVIDENCE, NOT STRENGTH, RIGHT?]
 
-\textit{Question 3:	How should we combine the available evidence?}
+\textit{Question 3:	How should we coherently interpret the available evidence?}
 A DNA match can support the claim that the suspect is the source, and a witness can add information about how the crime was committed. In general, there is a lot of evidence that needs to be coherently combined in order to make sense of what has happened. How do we combine all information in a coherent whole?
 
 \begin{comment}
@@ -861,14 +861,14 @@ and `attack' are described in probabilistic terms.
 %MDB : used the expression "probability changes" because relevant is general and might apply also to a likelihood ratio greater than one. 
 A piece of evidence $E$ supports an 
 hypothesis $H$ whenever $E$ raises the probability of $H$, or in symbols, 
-$\Pr(H|E) > P(H)$. 
+$\Pr(H|E) > \Pr(H)$. 
 For example, a witness 
 testifies that she saw the defendant around the crime scene
  at the time of the crime. The testimony supports the hypothesis 
  that the defendant is guilty. 
 This can be described probabilistically, as follows:
  %
- \[ P(\textit{guilt}|\textit{testimony}) > P(\textit{guilt}).\] 
+ \[ \Pr(\textit{guilt}|\textit{testimony}) > \Pr(\textit{guilt}).\] 
  %
 
 \noindent There is another characterization of evidential support. 
@@ -890,7 +890,7 @@ increase and positive likelihood ratio---are
 in fact equivalent. For the following statements hold:
 %
 %\[\textit{\text{$E$ favors (or supports) $H$} iff }  P(H|E)> P(H) \textit{ iff }\frac{\Pr(E|H)}{\Pr(E|\neg H)}>1.\]
-\[ P(H|E)> P(H) \text{ iff }\frac{\Pr(E|H)}{\Pr(E|\neg H)}>1.\endnote{To see why, recall that 
+\[ \Pr(H|E)> P(H) \text{ iff }\frac{\Pr(E|H)}{\Pr(E|\neg H)}>1.\endnote{To see why, recall that 
 %
 \[ \frac{\Pr(H|E)}{\Pr(\neg H | E)} = \frac{\Pr(E | H)}{\Pr(E| \neg H)}\cdot \frac{\Pr(H)}{\Pr(\neg H)},\]
 %
@@ -901,14 +901,14 @@ which implies
 %
 \[\frac{\Pr(E|H)}{\Pr(E|\neg H)}>1 \text{ iff } \frac{\Pr(H|E)}{\Pr(\neg H | E)} > \frac{\Pr(H)}{\Pr(\neg H)}.\]
 %
-For one direction, if $\Pr(H|E)> P(H)$, then $1- P(H|E)< 1- P(H)$. This means that 
-$\frac{\Pr(H|E)}{1- P(H | E)} > \frac{\Pr(H)}{1- P(H)}$, and thus
+For one direction, if $\Pr(H|E)> P(H)$, then $1- \Pr(H|E)< 1- \Pr(H)$. This means that 
+$\frac{\Pr(H|E)}{1- \Pr(H | E)} > \frac{\Pr(H)}{1- \Pr(H)}$, and thus
 $\frac{\Pr(H|E)}{\Pr(\neg H | E)} > \frac{\Pr(H)}{\Pr(\neg H)}$. So, by the equivalence above, $\frac{\Pr(E|H)}{\Pr(E|\neg H)}>1$.
 For the other direction, if $\frac{\Pr(E|H)}{\Pr(E|\neg H)}>1$, then $\frac{\Pr(H|E)}{\Pr(\neg H | E)} > \frac{\Pr(H)}{\Pr(\neg H)}$, again 
 by the equivalence above. 
-The latter is the same as $\frac{\Pr(H|E)}{1- P(H | E)} > \frac{\Pr(H)}{1- P(H)}$. To establish $\Pr(H|E)> P(H)$, suppose for contradiction that
-$\Pr(H|E) \leq P(H)$, which implies $1- P(H|E) \geq 1- P(H)$. This means that $\frac{\Pr(H|E)}{1- P(H | E)} \leq \frac{\Pr(H)}{1- P(H)}$. 
-This contradicts $\frac{\Pr(H|E)}{1- P(H | E)} > \frac{\Pr(H)}{1- P(H)}$, and thus $\Pr(H|E)> P(H)$.}\]
+The latter is the same as $\frac{\Pr(H|E)}{1- \Pr(H | E)} > \frac{\Pr(H)}{1- \Pr(H)}$. To establish $\Pr(H|E)> \Pr(H)$, suppose for contradiction that
+$\Pr(H|E) \leq \Pr(H)$, which implies $1- \Pr(H|E) \geq 1- \Pr(H)$. This means that $\frac{\Pr(H|E)}{1- \Pr(H | E)} \leq \frac{\Pr(H)}{1- \Pr(H)}$. 
+This contradicts $\frac{\Pr(H|E)}{1- \Pr(H | E)} > \frac{\Pr(H)}{1- \Pr(H)}$, and thus $\Pr(H|E)> \Pr(H)$.}\]
 %
 The equivalence, however, only holds if the two hypotheses 
 being compared in the likelihood ratio are one 
@@ -920,12 +920,12 @@ the negation of the other, such as \textit{guilt} and $\neg$\textit{guilt}.
 \paragraph{Attack can be characterized as ``probability decrease'' or ``negative likelihood ratio''.} 
 
 By contrast, a piece of evidence $E$ attacks a hypothesis $H$ whenever $E$ lowers 
-the probability of $H$, or in symbols, $\Pr(H|E) < P(H)$.
+the probability of $H$, or in symbols, $\Pr(H|E) < \Pr(H)$.
 For example, if a DNA test shows no match between the traces found at the crime
  scene and the defendant, this evidence attacks the hypothesis that the defendant is guilty. 
  Probabilistically, 
 %
-\[ P(\textit{guilt}|\textit{no DNA match}) < P(\textit{guilt}).\] 
+\[ \Pr(\textit{guilt}|\textit{no DNA match}) < \Pr(\textit{guilt}).\] 
 %
 
 \noindent Similarly, a piece of evidence $E$ attacks a hypothesis $H$ whenever 
@@ -939,7 +939,7 @@ Just as the two characterizations
 of evidential support are equivalent, so are the two characterizations of evidential attack, 
 that is:
  %
-\[ P(H|E) < P(H) \text{ iff} \frac{\Pr(E|H)}{\Pr(E|\neg H)} < 1.\]
+\[ \Pr(H|E) < \Pr(H) \text{ iff} \frac{\Pr(E|H)}{\Pr(E|\neg H)} < 1.\]
 %
 The same proviso as before holds. The equivalence only holds if the two hypotheses 
 being compared in the likelihood ratio are one 
@@ -993,13 +993,13 @@ can be quantified probabilistically in various ways.
 %The are different approaches in the literature. % (FITELSON REFERENCE HERE). 
 %Let us begin with quantifying the value of the evidence \textit{for} an hypothesis. 
 One approach considers the difference between the probability of 
-the hypothesis with and without the evidence, that is, $\Pr(H | E) - P(H)$.
+the hypothesis with and without the evidence, that is, $\Pr(H | E) - \Pr(H)$.
 %If $\Pr(H | E)$ is higher than $\Pr(H)$, this means that the evidence lends some support to
 %the hypothesis. 
 The larger the positive difference, the higher the value of the evidence 
 for the hypothesis. 
 %By contrast, the larger the negative difference, the higher the value of the evidence against the hypothesis. 
-An alternative approach is given by the likelihood ratio $\Pr(E|H)/P(E| \neg H)$. 
+An alternative approach is given by the likelihood ratio $\Pr(E|H)/\Pr(E| \neg H)$. 
 %For the evidence to offer some support to the hypothesis, the likelihood ratio should be at least greater than one. 
 For any value greater than one, the higher the likelihood ratio, 
 the higher the value of the evidence for the hypothesis. 
@@ -1013,7 +1013,7 @@ the higher the value of the evidence for the hypothesis.
 %
 %By contrast, for any value lower than one, the lower the likelihood ratio 
 %the higher value of the evidence against the hypothesis. 
-By contrast, a negative difference $\Pr(H | E) - P(H)$ and a likelihood ratio lower than one 
+By contrast, a negative difference $\Pr(H | E) - \Pr(H)$ and a likelihood ratio lower than one 
 quantify the value of the evidence \textit{against} a hypothesis.
 The larger the negative difference and the lower the likelihood ratio (for any value below one), 
 the higher the value of the evidence against the hypothesis.
@@ -1032,7 +1032,7 @@ offers some illustrations:
 \begin{centering}
 \begin{tabular}{lccccc}
 \hline
-$\Pr(H)$ & Likelihood Ratio & $\Pr(H | E)$ & $\Pr(H|E)-P(H)$ \\
+$\Pr(H)$ & Likelihood Ratio & $\Pr(H | E)$ & $\Pr(H|E)-\Pr(H)$ \\
 \hline
 0.0001 & 1,000 & 0.09 & 0.0899  \\
 %0.001 & 1,000 & 0.049 & 0.5 \\
@@ -1051,7 +1051,7 @@ $\Pr(H)$ & Likelihood Ratio & $\Pr(H | E)$ & $\Pr(H|E)-P(H)$ \\
 \noindent
 %Note that even if the likelihood ratio is high, the probability $\Pr(G|E)$ can 
 %still be low if the initial probability $\Pr(H)$ is itself low. 
-All in all, a positive difference $\Pr(H|E) - P(H)$ and a likelihood ratio ${\Pr(E|H)}/{\Pr(E| \neg H)}$ greater than one
+All in all, a positive difference $\Pr(H|E) - \Pr(H)$ and a likelihood ratio ${\Pr(E|H)}/{\Pr(E| \neg H)}$ greater than one
 %tell us how much a piece of evidence $E$ can impact upwards the initial 
 %probability of a hypothesis $H$. They 
 quantify, albeit in different ways, the value of the evidence \textit{for} 
@@ -1072,7 +1072,8 @@ a hypothesis.
 \paragraph{The overall evidential value is measured by the overall conditional probability. }
 
 In contrast with the incremental evidential value of evidence that is measured by a probabilistic difference or likelihood ratio, the overall evidential value of the full body of evidence is measured by the conditional probability of the hypothesis given the evidence. The higher, or lower, the probability $\Pr(H|E)$, the higher 
-the overall value of the evidence for, or against, the hypothesis. If there are different pieces of evidence $E_1, \ldots, E_n$, the overall evidential value of the evidence is measured as $\Pr(H|E_1, \ldots, E_n)$.
+the overall value of the evidence for, or against, the hypothesis. If there are different pieces of evidence $E_1, \ldots, E_k$, 
+the overall evidential value of the evidence is measured as $\Pr(H|E_1, \ldots, E_k)$.
 
 Overall and incremental evidential value should not be confused. To illustrate, suppose we have strong evidence $E_1$ for the hypothesis $H$ 
 that a suspect was at the crime scene, for instance, security camera footage in which the suspect is easily recognizable. 
@@ -1082,7 +1083,11 @@ the hypothesis is strongly supported, i.e.\ $\Pr(H|E_1)$ is high. In this case, 
 But suppose a witness testifies that the defendant was not at the crime scene (evidence $E_2$), but as it turns out, the witness is unreliable 
 as a known accomplice of the suspect. Consider now the overall evidential value $\Pr(H|E_1, E_2)$ of the two pieces of evidence together. This will not have changed much when compared to $\Pr(H|E_1)$. As a result, the incremental evidential value of $E_2$ is low, while still the overall evidential value $\Pr(H|E_1, E_2)$ is high, even though $E_2$ did not contribute much. 
 
-The difference between overall and incremental evidential value can be especially confusing when there is a single piece of evidence and there is a misalignment between the two values. Consider the hypothesis $\neg H$ that the suspect was not at the crime scene and the evidence $E_2$, the testimony of the unreliable witness. Then $\Pr(\neg H)$ is high and also $\Pr(\neg H | E_2)$ is high. Uncritically interpreted, the high value of $\Pr(\neg H | E_2)$ suggests that the testimony of the unreliable witness has a high evidential value. But incrementally $E_2$ did not change much. The hypothesis $\neg H$ is, in totality, still strongly supported after the incrementally weak evidence $E_2$, since the hypothesis was already strongly supported before that evidence. 
+The difference between overall and incremental evidential value can be especially confusing when there is a single piece of evidence. % and there is a misalignment between the two values. 
+Consider the hypothesis $\neg H$ that the suspect was not at the crime scene and the evidence $E_2$, the testimony of the unreliable witness. Now, 
+if $\Pr(\neg H)$ is high, then $\Pr(\neg H | E_2)$ will be equally high because
+$E_2$ has no incremental value. 
+Uncritically interpreted, the high value of $\Pr(\neg H | E_2)$ suggests that the testimony of the unreliable witness has a high evidential value. But incrementally $E_2$ did not change much. The hypothesis $\neg H$ is, in totality, still strongly supported after the incrementally weak evidence $E_2$, since the hypothesis was already strongly supported before that evidence. 
 
 %In this case, the incremental evidential value of the testimony in favor of guilt can be regarded as slightly incriminating. Hence we expect the probabilistic difference $\Pr(\textit{guilt} | \textit{drunk witness})$ to be a small positive value, and the likelihood ratio $\Pr(\textit{guilt} | \textit{drunk witness})/P(\textit{guilt} | \neg\textit{drunk witness})$ to be slightly above one.
 %
@@ -1134,8 +1139,7 @@ of a DNA match. %, where the match is between
 %the crime scene's genetic profile and the defendant's. 
 %Suppose the DNA test reports a match between the crime traces and the defendant. %Given our simplifying assumptions, 
 When introduced in court, a DNA match comes with an 
-estimated Random Match Probability (RMP). One way to interpret this probability is 
-as the probability that a random person, who 
+estimated Random Match Probability (RMP). This is the probability that a random person, who 
 had nothing to do with the crime, would match. %An RMP is derived from the estimated frequency of the DNA profile across a sample population. 
 %We should bear in mind that genetic profiles are not unique. 
 %Based on statistical and genetic modeling, a profile is expected to occur 
@@ -1143,7 +1147,8 @@ had nothing to do with the crime, would match. %An RMP is derived from the estim
 %
 Now, with some simplifications (on these later), 
 the evidential value of the DNA 
-match $M$ in favor of the suspect being the source of the sample $S$, in terms of a likelihood ratio, 
+match $M$ in favor of the hypothesis that the 
+suspect is the source of the crime traces, abbreviated $S$, % in terms of a likelihood ratio, 
 is as follows %~\citep{Dawid02, Balding2005Weight}:
 %
 \[
@@ -1153,19 +1158,19 @@ is as follows %~\citep{Dawid02, Balding2005Weight}:
 %BV RMP is as yet undefined
 The numerator $\Pr(M | S)$ equals 1 because we assume that %of our simplifying assumption that 'source' and guilt' are interchangeable 
 %and the laboratory test is infallible. If 
-if the defendant is the source of the sample%and thus the source of the crime traces
-, the lab test will report a match. As for the denominator, 
+if the defendant is the source of the crime traces%and thus the source of the crime traces
+, the laboratory test will report a match. As for the denominator, 
 %keep in mind that $RMP$ is the probability that a random person, 
 %unrelated to the crime or the defendant, would be found to have a matching DNA. 
-putting $\Pr(M | \neg S)=RMP$ is plausible because the probability that a match would be reported assuming that the defendant was \textit{not} 
-the source is roughly the same as the chance that a random person---someone who had no contact with the victim---would match anyway. 
+assuming $\Pr(M | \neg S)=RMP$ is plausible because the probability that a match would be reported if the defendant was \textit{not} 
+the source is roughly the same as the chance that someone who had no contact with the victim would randomly match. 
 %and because (2) 'source' and 'guilt' are, by assumption, equivalent.
 For example, if the RMP is 1 in 200 million, the likelihood ratio would be
 %
 \[\frac{\Pr(M |S)}{\Pr( M | \neg S)}=\frac{1}{\frac{1}{\text{200 million}}}=\text{200 million}.\]
 %
-Since the likelihood ratio in question is a high number, the DNA match in favor of the suspect being the source
-has a high evidential value. More generally, a low RMP corresponds to a match with a rare profile, hence has a high evidential value. 
+Since the likelihood ratio in question is a high number, the DNA match has strong evidential value in favor of the hypothesis that the suspect is the source. 
+More generally, a low RMP corresponds to a match with a rare profile, and thus has a high evidential value. 
 
 Still, even with a low RMP one should beware of the complications when using a DNA match in a criminal case. %to establish the guilt of a suspect. 
 Consider the following, non-equivalent hypotheses: %which are progressively more removed from guilt: 
@@ -1196,15 +1201,21 @@ The defendant is \textit{guilty}.
 \noindent
 The inferential path from `reported match' 
 to `guilt', passing through the intermediate steps `true match', `source' and `visit', is a long one, 
-and each step comes with sources of error that undermine the inference along the way. 
+and each step comes with sources of error that may undermine the inference along the way. 
 
-First, the inference from `reported match' to `true match' depends on the question whether the laboratory has made a mistake. A key source of lab mistakes originates in human error, much less rare than a good DNA profile.
+First, the inference from `reported match' to `true match' depends on whether or not 
+the laboratory made a mistake. A key source of laboratory mistakes are human errors, much more frequent than DNA profiles.
 %A more sophisticated probabilistic analysis will show that a RMP as low as 1/1 billion----which in our simplistic analysis would give rise to a likelihood ratio as high as 1 billion--- reduces to about 100 likelihood ratio if the laboratory error rate is 1\%.
-Second, the inference from `true match' to `source' can go wrong in several ways. Of course, even a rare match can be accidental, as measured by the RMP. But another cause of a match without the suspect being the source occurs in cases of close family relations. For instance, a suspect's genetically identical twin has identical DNA. %, and twins are much less rare than good DNA profiles. 
+Second, the inference from `true match' to `source' can go wrong in several ways. For one, 
+someone who is entirely unrelated with the crime could 
+be, by sheer coincidence, a true match. This could happen, although the chance of this happening remains typically low as 
+measured by the Random Match Probability. For another, a suspect who is not 
+the source of the crime traces could still match because of close family relations with the actual perpetrator. 
+Think of a perpetrator who has a genetically identical twin. %A suspect's genetically identical twin has identical DNA. %, and twins are much less rare than good DNA profiles. 
 %There is also the possibility that synthetic genetic material, perfectly matching one's DNA, was planted. 
 %In this background, the second simplifying assumption we made was that the inference from `true match' to `source' can be undermined by one source of error only, namely the possibility that another random individual could coincidentally match. This possibility of error is captured by the Random Match Probability. 
 %If RMP equal 1 in 200, we would expected 1 such profile every two hundred people or the RMP equals 0.5\%. Other sources of error, for example, a twin brother or an artificially synthesized matching DNA, were disregard. 
-Third, the inference from `source' to `visiting the crime scene' is not infallible. In particular, the traces can have been accidentally transferred to the crime scene or have been planted there. Fourth, the inference from `visiting the crime scene' to `guilt' can go wrong in many ways, because having visited a crime scene is not nearly the same as having committed the crime investigated.
+Third, the inference from `source' to `visiting the crime scene' is not infallible. In particular, the traces can have been accidentally transferred to the crime scene or have been planted there. Fourth, the inference from `visiting the crime scene' to `guilt' can go wrong in many ways, because having visited a crime scene is not the same as having committed the crime.
 
 %From a probabilistic point of view, laboratory errors can be quantified if the lab error rates are available, 
 %but other sources of error are more difficult to quantify. How often does it happen that 
@@ -1279,12 +1290,15 @@ Someone with the same genetic profile as John might have left the trace.
 \paragraph{Arguments can be evaluated by asking critical questions} % and the evaluation of the argument depends on the answers given.} 
 %Defeasible reasons are characterized by the possibility of circumstances that have the effect that the conclusion of the reason does not follow, given the reason. [YOU TALK ABOUT CONCLUSION OF THE REASON. LOOKS LIKE YOU ARE USING 'REASON' AS THE SAME AS 'ARGUMENT'. ISN'T THIS STRANGE?]The occurrence of such defeating circumstances can be guided by asking critical questions. 
 %The answers to those critical questions provide insight into the evidential value of the reasons. 
-Consider again the one-step argument from the reason `The witness reports that she saw the suspect at the crime' to the conclusion `The suspect was at the crime scene'. 
+Consider again the one-step argument from the reason `The witness reports that she saw the suspect at the crime scene' to the conclusion `The suspect was at the crime scene'. 
 %[NOW YOU USE 'REASON' AS THE SAME AS 'PREMISE'.] 
 Critical questions can be asked about the argument. They include, for example, whether there are reasons to doubt the suspect was at the crime scene, such as an alibi; whether there 
 are reasons to doubt that the witness testimony supports the conclusion that the suspect was at the crime scene, for instance, the witness is lying; and whether there are 
 reasons to doubt the existence of the witness testimony, such as a fraudulent report. The first of these questions is directed at the argument's conclusion, the second at the argument step from reason to conclusion, and the third at the argument's reason. These different kinds of critical questions are connected to the three kinds of argument attack discussed in Section~\ref{sec:confArg} (see in particular Figure~\ref{fig:arg3}, page~\pageref{fig:arg3}). 
-Suppose that initially it is believed that the suspect was at the crime scene because of the witness testimony. A positive answer to any of the questions will weaken the support for the conclusion that the suspect was at the crime scene, perhaps up to the point of making it non-believable.
+
+But what do critical questions do? How do they help us assess the strength of arguments?
+Suppose that initially it is believed that the suspect was at the crime scene because of the witness testimony. A positive answer to any of the critical questions mentioned 
+above will weaken the support for the conclusion that the suspect was at the crime scene, perhaps up to the point of making it no longer believable.
 
 \paragraph{It can be subject to debate whether a reason supports or attacks a conclusion.} 
 Whether a reason supports a conclusion depends on an underlying general rule. For instance, the argument from a witness testimony (the reason) to the suspect's being at the crime scene (the conclusion) rests on the general rule that what witnesses say can generally be believed. Following~\citet{toulmin1958}'s terminology, such general rules making explicit how to get from the reason to the conclusion are referred to as \textit{warrants}. Support for a warrant is called the backing of the warrant.
@@ -1390,7 +1404,7 @@ At least, a scenario should not violate the laws of nature or common sense. If a
 at the same time, or moved from one location to another in too short amount of time, the scenario would lack plausibility. 
 The scenario `an alien did it' lacks plausibility because it describes something that rarely happens. 
 Lack of plausibility can become so pronounced that it amounts to a lack of \textit{logical consistency}, for example, claiming that 
- the defendant had and did \textit{not} have a motive for killing the victim
+ the defendant had and did \textit{not} have a motive for killing the victim.
  
 Recall now the two conflicting scenarios we considered earlier:
 %
@@ -1713,8 +1727,9 @@ the suspect committed the crime, and this is the second subargument. If the firs
 the subargument supporting the intermediate conclusion that the suspect was at the crime scene breaks down and its conclusion no longer follows. %Since its subargument breaks down, so does the larger argument. 
 Since the subargument does not successfully support the intermediate conclusion, also the larger argument for the final conclusion does not successfully support its conclusion.
 
-\paragraph{The evaluation of an argument can depend on chains of attacks.} When an argument is successfully attacked, it no longer successfully supports its conclusion. But 
-a further source of complexity in the analysis of arguments is that attacks can be chained. An attack against an argument can be countered by a further attack. When an attack is countered by a further attack, 
+\paragraph{The evaluation of an argument can depend on chains of attacks.} %When an argument is successfully attacked, it no longer successfully supports its conclusion. 
+Besides the modular relationship between arguments and sub-arguments, a further source of complexity in the analysis of 
+arguments is that attacks can be chained. An attack against an argument can be countered by a further attack. When an attack is countered by a further attack, 
 the original argument can be reinstated, in the sense that it again successfully supports its conclusion. Figure~\ref{fig:reinstatement} shows an example. A first witness, witness $A$, testifies that the suspect was at the crime scene. This testimony successfully 
 supports the conclusion that the suspect was at the crime scene. However, suppose a second witness, witness B, claims that A is lying. 
 The claim by witness B attacks the original argument, and thus 
@@ -1829,13 +1844,13 @@ discuss Bayesian networks, formal tools for the representation of complex bodies
 %\paragraph{The likelihood ratio formula shows how new evidence changes the odds of a hypothesis.} 
 
 \paragraph{The likelihood ratio formula shows how to find the posterior odds given the evidence.} 
-The odds of a hypothesis $H$ are  the ratio $\Pr(H)/P(\neg H)$ of the probability of the hypothesis and the probability of its negation. 
+The odds of a hypothesis $H$ are given by the ratio $\Pr(H)/P(\neg H)$ of the probability of the hypothesis and the probability of its negation. 
 The odds $\Pr(H)/P(\neg H)$ of the hypothesis, unconditioned on the evidence, 
 are called the \emph{prior odds} of the hypothesis, and the odds $\Pr(H | E)/P(\neg H | E)$ of the hypothesis, 
 conditioned on evidence $E$, are called the \emph{posterior odds}. %\endnote{On the distinction between priors and posteriors, see note \ref{conditioning}.}
 %\endnote{See footnote \ref{footnote:prior}.} 
 %By Bayes' theorem (Section~\ref{sec:normfram:prob}), 
-These can 
+The latter can 
 be found by multiplying the prior odds with the likelihood ratio: 
 
 	\[ \frac{\Pr(H|E)}{\Pr(\neg H | E)} = \frac{\Pr(E | H)}{\Pr(E| \neg H)}\cdot \frac{\Pr(H)}{\Pr(\neg H)}.\endnote{To derive the likelihood ratio formula, 
@@ -1912,7 +1927,7 @@ and the witness testimony a likelihood ratio $\frac{\Pr(W | G)}{\Pr( W | \neg G)
 These numbers are purely illustrative, but are needed to perform the probabilistic calculations. (Of course, there remains the 
 question of how the numbers can be obtained and whether the numbers 
 needed to carry out the calculations are available in the first place. This is a topic of debate.) Finally, assume the two pieces are independent conditional on the hypothesis $G$, that is, 
-$\Pr(W|G)=P(W| G\wedge M)$. 
+$\Pr(W|G)=\Pr(W| G\wedge M)$. 
 
 The combined (incremental) evidential value of the two pieces of evidence is given by multiplying the two likelihood 
 ratios, that is, $2,000,000\times 1,000=2,000,000,000$, which is a higher value 
@@ -2070,7 +2085,7 @@ Bayesian networks can be of help here. For illustrative purposes, we write down 
 There is software that can do them automatically. 
 %but we will write them up for illustrative purposes. %, but computers can also be used instead. 
 Now, if the goal is to calculate $\Pr$(Guilt$|$Partner$ \land $Camera)---that is, the conditional probability of guilt given 
-both the camera footage and the partner's alibi testimony----we need to calculate both $\Pr$(Partner$ \land $Camera) 
+both the camera footage and the partner's alibi testimony---we need to calculate both $\Pr$(Partner$ \land $Camera) 
 and $\Pr$(Guilt$ \land $Partner$ \land $Camera). 
 %Given a Bayesian network, these can be found by chaining conditional probabilities and using the dependencies and independencies represented in the graph. 
 
@@ -2114,7 +2129,7 @@ and the camera variable does not depend on the alibi variable.
 	\item $\Pr$(Partner$ \land $Camera$ \land $Alibi$ \land \neg$Guilt)\\
 	= $\Pr$(Partner$ | $Camera$ \land $Alibi$ \land \neg$Guilt) $\Pr$(Camera$ | $Alibi$ \land \neg$Guilt) $\Pr$(Alibi$ | \neg$Guilt) $\Pr$($\neg$Guilt)\\
 	= $\Pr$(Partner$ | $Alibi) $\Pr$(Camera$ | \neg$Guilt) $\Pr$(Alibi$ | \neg$Guilt) $\Pr$($\neg$Guilt) \\
-	= 1*0.01*1*0.999 = 0.00999 $\sim$ 1\%
+	= 1*0.01*1*0.999 = 0.00999 %$\approx$ 1\%
 \end{description}
 %
 Note that we relied on the equalities 
@@ -2177,7 +2192,7 @@ Once again, we relied on independence relations. %, in particular, the node
 &=\Pr(\neg\text{Alibi}\land\text{Guilt}~|~\text{Partner} \land \text{Camera})\\
 &=\frac{\Pr(\text{Partner} \land \text{Camera} \land \neg \text{Alibi} \land \text{Guilt})}{\Pr(\text{Partner}
  \land \text{Camera})}\\
-&=0.00007/0.01006 \sim 0.7\%
+&=0.00007/0.01006 \approx 0.7\%
 \end{flalign*}
 %
 The 0.7\% probability is low, but recall that 
@@ -2185,8 +2200,8 @@ the prior guilt probability was lower,
 0.1\%.  Also note that
 $\Pr$(Guilt$|$Camera) equals (roughly) 6.5\%.\endnote{Since $\frac{\Pr(\text{Guilt})}{\Pr(\neg \text{Guilt})}=\frac{0.001}{0.999}$  
 and $\frac{\Pr(\text{Camera} | \text{Guilt})}{\Pr(\text{Camera} | \neg \text{Guilt})}=70$, by Bayes' theorem, $\frac{\Pr(\text{Guilt} | \text{Camera})}{\Pr(\neg \text{Guilt} \text{Camera})}=\frac{0.001}{0.999}\times 70 \approx 0.07$ and thus
-$\Pr$(Guilt$|$Camera)$\approx \frac{0.07}{1+0.07}~\sim~6.5\%$.} This is a low probability, but still greater than 0.7\% or 0.01\%. 
-This shows that the camera evidence by itself has incriminating evidential value, as it raises the guilt probability from 0.01\% to 6.5\%. However, when the partner's testimony is added as evidence, the support for the guilt hypothesis is weakened to 0.7\%. 
+$\Pr$(Guilt$|$Camera)$\approx \frac{0.07}{1+0.07}~\sim~6.5\%$.} This is a low probability, but still greater than 0.7\% or 0.1\%. 
+This shows that the camera evidence by itself has incriminating evidential value, as it raises the guilt probability from 0.1\% to 6.5\%. However, when the partner's testimony is added as evidence, the support for the guilt hypothesis is weakened to 0.7\%. 
 
 Finally, a note about complexity. For probability functions of many variables that have many independencies, a Bayesian network representation can be significantly 
 more compact than a general full probability distribution in the variables. Our example has four variables, in general requiring 
@@ -2257,17 +2272,19 @@ Paraphrases of the formulation `proof beyond a reasonable doubt'
 abound in the case law. Yet, it is unclear 
 whether they improve our understanding. The US Supreme Court might have been right when, in Holland v.\ United States (1954), 348 U.S. 121, 
 it wrote that that `attempts to explain the term ``reasonable doubt'' do not result in making it any clearer' (140).
-The three frameworks we considered---probability, arguments and narratives---can be used to characterize 
-more precisely the standard of proof, although they are not immune from shortcomings, 
+The three frameworks we considered---probability, arguments and narratives---can be supplemented by a decision-theoretic 
+layer and then used to characterize the standard of proof, although they are not immune from shortcomings, 
 as we shall soon see.
 
 
 \paragraph{Further readings}
 Evidence law manuals~\citep{fisher2008, mendez2008}. 
 Criminal Procedure manuals~\citep{allenEtAl2011}.
-Character evidence and its exclusion~\citep{redmayne2015}.
 %Free proof, legal arithmetic and rules of weight.
- 
+On difficulties and confusions while defining proof 
+beyond a reasonable doubt~\citep{laudan2006}.
+Character evidence and 
+its exclusion~\citep{redmayne2015}. 
 
  
  
@@ -2314,14 +2331,14 @@ of acquitting a guilty defendant. For a conviction to be justified, the
 expected cost of convicting an innocent must be lower than the expected 
 cost of acquitting an innocent, that is, 
 %
-\[ P(G|E) \cdot c(AG) > [1-P(G|E)] \cdot c(CI) .\]
+\[ \Pr(G|E) \cdot c(AG) > [1-\Pr(G|E)] \cdot c(CI) .\]
 %
 %The inequality represents a situation in which the expected cost resulting from convicting an innocent is lower than the expected cost
 %resulting from a cutting a guilty defendant. Given the inevitable possibility of error, such a situation would be one in which 
 %convicting is less costly than acquitting, so convicting is justified. Crucially, 
 The inequality holds just in case 
 %
-\[ \frac{\Pr(G|E)}{1- P(G|E)} > \frac{c(CI)}{c(AG)}.\]
+\[ \frac{\Pr(G|E)}{1- \Pr(G|E)} > \frac{c(CI)}{c(AG)}.\]
 %
 %This formula gives a precise indication of how high the probability 
 %of guilt must be to justify a guilty verdict, relative to the ratio between $D_i$ and $D_g$. 
@@ -2441,7 +2458,7 @@ fewer scenarios will survive. The goal would be to select one scenario, or at le
 the answer to the question `guilty or not?' would be univocal. On this picture, a scenario meets the demands of the standard 
 of proof whenever it is the \textit{only} scenario left.
 
-But, once again, we confront a recurrent problem. The selection of a scenario is not always an all or nothing affair.
+But, once again, we confront a recurrent problem. The selection of a scenario is not always an all-or-nothing affair.
 The term `abduction' or the expression `inference to the best explanation' is sometimes used in this context. The basic idea is that, when confronted 
 with two or more competing scenarios, the best explanation must be chosen. The notion of `best explanation' here is wide ranging. It includes criteria such as 
 consistency with the evidence, explanatory power (predictive power and causal fit), plausibility, completeness, coherence (temporal and causal structure). 
