@@ -112,6 +112,23 @@ macro:->See
 {www.cstl.nist.gov/strbase/str\_CSF1PO.htm}.
 \@endanenote 
 \@doanenote {5}
+macro:->The
+locution
+'factually
+guilty'
+or
+simply
+`guilty'
+are
+factual
+categories
+independent
+of
+the
+legal
+verdict.
+\@endanenote 
+\@doanenote {6}
 macro:->At
 a
 rate
@@ -136,7 +153,7 @@ Source
 \url
 {en.wikipedia.org/wiki/Twin\#Statistics}.
 \@endanenote 
-\@doanenote {6}
+\@doanenote {7}
 macro:->Bayes'
 theorem
 can
@@ -242,7 +259,7 @@ of
 Bayesian
 updating.
 \@endanenote 
-\@doanenote {7}
+\@doanenote {8}
 macro:->To
 see
 why,
@@ -459,7 +476,7 @@ $\Pr
 \Pr
 (H)$.
 \@endanenote 
-\@doanenote {8}
+\@doanenote {9}
 macro:->To
 derive
 the
@@ -547,7 +564,7 @@ likelihood
 ratio
 formula.
 \@endanenote 
-\@doanenote {9}
+\@doanenote {10}
 macro:->$\Pr
 (H|E)=\frac
 {\Pr
@@ -576,7 +593,7 @@ H|E)}}{\frac
 (\neg
 H|E)}+1}$.
 \@endanenote 
-\@doanenote {10}
+\@doanenote {11}
 macro:->Since
 $\frac
 {\Pr
