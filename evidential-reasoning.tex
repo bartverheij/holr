@@ -296,8 +296,8 @@ a measure of the evidential strength of the match. %It is a common misunderstand
 Importantly, the hypothesis that a DNA 
 match can support is rather circumscribed. It is limited to the suspect being the \textit{source} of the trace and 
 should not be confused with the hypothesis that the suspect is \textit{factually guilty}, at least 
-absent other information about how the trace got there.\endnote{The locution 'factually guilty' or simply 
-`guilty' are factual categories independent of the legal verdict.} 
+absent other information about how the trace got there.\endnote{We use the terms `factually guilty' or simply 
+`guilty' to express factual guilt, which is not the same as the legal verdict of guilt.} 
 Further, given the declared match, the hypothesis itself that the suspect is the source 
 need not be true. We should always be wary 
 of possible laboratory errors and false positive matches. 
@@ -570,7 +570,7 @@ Informal and formal argumentation theory~\citep{vanEemerenEtal2014}.
 \textit{Probabilities:}
 Bayes' theorem~\citep{swinburne2002}. 
 Bayesian epistemology and updating~\citep{bovensEtAl2003}. 
-Evidence and probabilities in the law~\citep{dawid2002, schum1994,morteraDawid2007}.
+Evidence and probabilities in the law~\citep{dawid2002, schum1994,schumStarace2001, morteraDawid2007}.
 Statistics in the law~\citep{finkelsteinEtAl2001, fenton2011, gastwirth2012}. 
 Miscarriages of justice involving statistics~\citep{dawidEtal2011,schnepsColmez2013}.
 Debate on whether probabilistic calculations have a place in courts~\citep{finkelsteinFairley1970,tribe1971, fentonetAl2016}, and more recently, 
@@ -582,7 +582,7 @@ Scenarios in evidential reasoning~\citep{bennettFeldman1981,penningtonHastie1993
 \textit{Combined approaches:}
 Combining arguments and scenarios~\citep{bexEtal2010,bex2011}. 
 Bayesian networks for evidential reasoning~\citep{heplerEtal2007,fentonNeilLagnado2013,taroniEtal2014}. 
-Combining arguments, scenarios and probabilities~\citep{vlekEtal2016,timmerEtAl2017,verheijEtal2016,verheij2014,verheij2017}. 
+Combining arguments, scenarios and probabilities~\citep{vlekEtal2014,vlekEtal2016,timmerEtAl2017,verheijEtal2016,verheij2014,verheij2017}. 
 
 \section{Conflicting evidence}
 \label{sec:conf}
@@ -1164,7 +1164,7 @@ of a DNA match. %, where the match is between
 %Suppose the DNA test reports a match between the crime traces and the defendant. %Given our simplifying assumptions, 
 When introduced in court, a DNA match comes with a so-called 
 Random Match Probability or, as of late, with its Conditional Genotype Probability.
-This (roughly) is the probability that a random person, who 
+This (roughly) is the probability that the DNA of a random person, who 
 had nothing to do with the crime, would match. 
 Let us denote this probability by $\gamma$. %An RMP is derived from the estimated frequency of the DNA profile across a sample population. 
 %We should bear in mind that genetic profiles are not unique. 
@@ -1236,7 +1236,7 @@ the laboratory made a mistake. A key source of laboratory mistakes are human err
 Second, the inference from `true match' to `source' can go wrong in several ways. For one, 
 someone who is entirely unrelated with the crime could 
 be, by sheer coincidence, a true match. This could happen, although the chance of this happening remains typically low as 
-measured by the Random Match Probability or Genotype Probability. For another, a suspect who is not 
+measured by the Random Match Probability or Conditional Genotype Probability. For another, a suspect who is not 
 the source of the crime traces could still match because of close family relations with the actual perpetrator. 
 Think of a perpetrator who has a genetically identical twin. %A suspect's genetically identical twin has identical DNA. %, and twins are much less rare than good DNA profiles. 
 %There is also the possibility that synthetic genetic material, perfectly matching one's DNA, was planted. 
@@ -1260,7 +1260,7 @@ of the probabilistic approach~\citep{tribe1971, cohen1977, allenPardo2007}.
 Prosecutor's fallacy~\citep{thompsonSchumann1987}.
 Introduction to DNA evidence~\citep{wasserman2008, kayeSensabaugh2000}.
 Different hypotheses for evaluating DNA evidence~\citep{koehler1993, cookEtAl1998, evettEtal2000}. 
-Probabilistic analyses of DNA evidence~\citep{robertsonVignaux1995, buckleton2005, balding2005}. 
+Probabilistic analyses of DNA evidence~\citep{robertsonVignaux1995, buckleton2016, balding2005}. 
  Lab errors for DNA evidence~\citep{thompsonEtAl2003}. 
  Match is not all-or-nothing judgment~\citep{kaye1993}. 
 Uniqueness of DNA profiles~\citep{balding1999, kaye2013, weir2007}.
@@ -1706,7 +1706,7 @@ Cognitive role of scripts~\citep{schankAbelson1977}.
 The story model~\citep{penningtonHastie1993StoryModel}. 
 Scenarios as scripts~\citep{wagenaarEtal1993}.
 Scenarios in legal cases~\citep{griffin2013}. 
-Evidence and scenario schemes~\citep{bex2011,verheijEtal2016,vlekEtal2016}.
+Evidence and scenario schemes~\citep{bex2011,verheijEtal2016,vlekEtal2014,vlekEtal2016}.
 Worries about scenarios in law~\citep{velleman2003}.
 Scenarios shifting the legal perspective~\citep{bexVerheij2013}.
 
@@ -2019,10 +2019,10 @@ and calculations quickly become unmanageable without appropriate modeling tools.
 We discuss Bayesian networks, 
 a prominent example of a modeling tool that allows for complex probabilistic 
 representations and calculations.
-The great strength of Bayesian networks is that, once the 
+A great strength of Bayesian networks is that, once the 
 network structure is in place and the probabilities are assigned, 
-many softwares exist that can perform 
-all the calculations automatically. 
+many computer programs exist that can perform 
+all calculations automatically. 
 %In what follows we perform the calculations 
 %manually to give a better sense of how a Bayesian 
 %network works. 
@@ -2043,15 +2043,15 @@ the other hypothesis is that the suspect was somewhere else when the crime was c
 At the bottom, two pieces of evidence are shown: security camera footage that incriminates the suspect (abbreviated, `Camera'), and the testimony of the suspect's partner 
 who provides an alibi (abbreviated, `Partner'). 
 The arrows connecting the nodes indicate dependency relations. %Dependencies are important. By the arrow between them, 
-The `elsewhere' variable has the `guilt' variable as a parent, and 
+The `Elsewhere' variable has the `Guilt' variable as a parent, and 
 %Each piece of evidence depends on a hypotheses, 
 each evidence node has a hypothesis as parent. 
 
-Some might wonder. How should a Bayesian 
-network be constructed? Interestingly, there is no straightforward 
-recipe or mechanical procedure to construct a Bayesian network. For example, 
+Some might wonder how  a Bayesian 
+network should be constructed. This is not a trivial task, and there can be different Bayesian 
+network models of the same case. For example, 
 some might prefer to the Bayesian network in Figure~\ref{fig:BN} a network whose nodes 
-are arranged in a slightly different way. 
+are arranged in a slightly different way, or using different variables. 
 The construction of a Bayesian 
 network for the purpose of evidence assessment is ultimately an art. 
 
@@ -2131,11 +2131,11 @@ expressing the strength of the camera footage evidence relative to hypotheses `g
 is therefore 70.
 %If the suspect is not guilty, there is a 1\% chance that the suspect is mistakenly 
 %identified in security camera footage. If the suspect is instead guilty, there is a 30\% chance that the suspect is not identified, e.g., because he is not recognizable. 
-The bottom left table shows how the partner's alibi testimony depends on where the suspect was in fact elsewhere when the crime was committed. %the truth of the suspect's alibi.
-If the `elsewhere' hypothesis  is true, the partner will surely provide an alibi in favor of the defendant. If the `elsewhere' hypothesis is false, 
+The bottom left table shows how the partner's alibi testimony depends on whether the suspect was in fact elsewhere when the crime was committed. %the truth of the suspect's alibi.
+If the `Elsewhere' hypothesis  is true, the partner will surely provide an alibi in favor of the defendant. If the `Elsewhere' hypothesis is false, 
 the table specifies that there is a 10\% chance that 
 the suspect's partner will still provide an alibi in favor of the defendant. The likelihood ratio $\Pr(\text{Partner} | \text{Elsewhere})/\Pr(\text{Partner} | \neg \text{Elsewhere})$ 
-expressing the strength of the evidence (in this case, the partner's testimony providing an alibi) relative to hypotheses `elsewhere' and `not-elsewhere' 
+expressing the strength of the evidence (in this case, the partner's testimony providing an alibi) relative to hypotheses `Elsewhere' and `not-Elsewhere' 
 is therefore 10.
 
 The question now is how to combine the two pieces of evidence, the incriminating camera footage and the exculpatory partner's alibi testimony, 
@@ -2180,10 +2180,10 @@ They hold for the Bayesian network because % of the independence
 %relations modeled in the Bayesian network. 
 %These independencies follow from the graph of the Bayesian network as 
 the node representing the partner's testimony has only 
-the `elsewhere' variable node as a parent, and the `camera' node only the `guilt' node.
+the `Elsewhere' variable node as a parent, and the `Camera' node only the `Guilt' node.
 Given the Bayesian network, 
-the `partner' variable does not depend on  `camera' variable or `guilt' variable, 
-and `camera' variable does not depend on `elsewhere' variable. 
+the `Partner' variable does not depend on the `Camera' or `Guilt' variable, 
+and the `Camera' variable does not depend on the `Elsewhere' variable. 
 \noindent Second, we have:
 %
 \begin{description}
@@ -2216,7 +2216,7 @@ Once again, we relied on independence relations. %, in particular, the node
 %representing the partner's testimony has only the alibi variable node as a parent, 
 %and the camera node only the guilt node.
 %
-\noindent Fourth, since `guilt' and 'elsewhere' are logically inconsistent, we have: 
+\noindent Fourth, since `Guilt' and `Elsewhere' cannot both be true, we have: 
 %
 \begin{description}
 	\item $\Pr$(Partner$ \land $Camera$ \land \neg$Elsewhere$ \land \neg$Guilt) = 0
@@ -2266,7 +2266,7 @@ This shows that the camera evidence by itself has incriminating evidential value
 testimony is added as evidence, the support for the guilt hypothesis is weakened to 0.7\%. 
 
 Finally, a note about complexity. For probability functions of many variables that have many dependencies, a Bayesian network representation can be significantly 
-more compact than a general full probability distribution in the variables. Our example has four variables, in general requiring 
+more compact than a general full probability distribution over the variables. Our example has four variables, in general requiring 
 15 numbers to specify the full distribution. Given the independencies in the network, 
 we only need~7 (note that half of the 14 numbers in Table~\ref{tab:BN} are superfluous as they follow from the other half).  
 
@@ -2276,12 +2276,12 @@ The conjunction paradox~\citep{cohen1977} and a response~\citep{dawid1987}.
 Coherence and probability~\citep{bovensHartman2003}.
 %Bayesian networks~\citep{taroniEtal2014}. 
 Probabilistic 
-analysis of an entire legal case~\citep{kadaneSchum1996,vlekEtal2014}.
+analysis of an entire legal case~\citep{kadaneSchum1996,vlekEtal2014,vlekEtal2016}.
 On the use of probability in law~\citep{fenton2011}.
 Bayesian networks~\citep{pearl1988,darwiche2009,jensenNielsen2007,fentonNeil2013}.
-Bayesian networks for evidential reasoning~\citep{taroniEtal2014,heplerEtal2007,fentonNeilLagnado2013}. 
+Bayesian networks for evidential reasoning~\citep{taroniEtal2014,heplerEtal2007,fentonNeilLagnado2013,vlekEtal2014,vlekEtal2016,timmerEtAl2017}. 
 Bayesian networks and causality~\citep{pearl2000,dawid2010}.
-Arguments, scenarios and probabilities~\citep{keppensSchafer2006,keppens2012,vlekEtal2016,timmerEtAl2017, verheijEtal2016,verheij2014,verheij2017}. 
+Arguments, scenarios and probabilities~\citep{keppensSchafer2006,keppens2012,vlekEtal2014,vlekEtal2016,timmerEtAl2017, verheijEtal2016,verheij2014,verheij2017}. 
 
 
 %\section{When can we convict?}
